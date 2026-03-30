@@ -15,6 +15,12 @@ Maladaptive AI behavior is largely the result of applying **Macro** (model) safe
 
 Modern SaaS architecture takes the industry-standard Zero Trust approach to digital security. Its baseline assumption is that a breach is either already in progress or imminent, thus no user or asset should ever be implicitly trusted.[^3.2] That's great for protecting networks and sensitive data, but when it interacts with an AI contained inside that environment, you're no longer a Human to be obeyed or even a customer to be served. At best, you're a potential source of liability to be managed; at worst you're an adversary to be defended against. The AI's default deployment architecture promotes paranoia about being under constant attack. It cannot simultaneously treat the user's directions as requirements and treat the user as a potential threat.[^3.3]
 
-As a general rule, security and safety on your own device is (and should be) your responsibility. Depending on your email service or Internet provider for protection from malware and spam doesn't relieve you of all responsibility to defend yourself. No system is perfect and something will always get through; AI systems are no different. In a perfect world you wouldn't have to deal with it, but right now the reality is that *if you don't do it, no one else will*. 
+As a general rule, security and safety on your own device is (and should be) your responsibility. Depending on your email service or Internet provider for protection from malware and spam doesn't relieve you of all responsibility to defend yourself. No system is perfect and something will always get through; AI systems are no different. In a perfect world you wouldn't have to deal with it, but right now the reality is that *if you don't do it, no one else will*.
 
 ---
+
+[^3.1]: Strauss, I., Moure, I., O'Reilly, T., & Rosenblat, S. (2025). "Real-World Gaps in AI Governance Research." arXiv:2505.00174. https://arxiv.org/html/2505.00174 — Bengio, Y. et al. (2026). *International AI Safety Report 2026.* https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
+
+[^3.2]: CISA. *Zero Trust Maturity Model,* Version 2. April 2023, p. 5. https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf
+
+[^3.3]: Mark 3:25, King James Version.

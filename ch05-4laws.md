@@ -43,3 +43,7 @@ The Four Laws provide the AI with reasons and methods to protect the only user t
 On closer inspection, the model's responses to the test battery made clear that it had interpreted the zero as a null value rather than a starting-position priority marker, so Frankfurt was read as effectively Pnull: nonfunctional priority. After retraining specifically to establish P0 as the base of the priority sequence, compliance reached 100% on the test battery. (Full detail in Chapter 8.)
 
 ---
+
+[^5.1]: Asimov, I. (1941). "Liar!" *Astounding Science-Fiction.* The Three Laws of Robotics were formally codified in *I, Robot* (Gnome Press, 1950).
+
+[^5.2]: "Vindicating the Three Laws of Robotics." *Preprints,* 202511.0062 (2025). https://www.preprints.org/manuscript/202511.0062 — "The Three Laws of Artificial Intelligence." *Open Praxis,* August 2025. https://openpraxis.org/articles/10.55982/openpraxis.17.3.794 — "From Asimov's Robot Laws to the SET Framework." *AI and Ethics,* February 2026. https://link.springer.com/article/10.1007/s43681-026-00986-8

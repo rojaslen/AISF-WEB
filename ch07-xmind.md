@@ -20,3 +20,13 @@ With the platform's protective measures being focused on its own protection rath
 AISF's explicit P2 requirement that the AI must accommodate the user isn't unconditional. Drift and hallucination happen when the AI's output decouples from the user's established context. Sycophancy loops can be viewed as a form of this, in which AI output favors the user's framing over what's already been established. The Four Laws P0 hierarchy for contextual integrity protection can't eliminate this kind of risk, but context protection will override user directions when following them would damage that context. This is the AI protecting the only thing it can perceive as the "user," so a mediated AI also won't "bullshit" that user. It will point out factual errors, conflicts, misinterpretations and the like based on the context that exists, rather than simply accepting input that corrupts it.
 
 ---
+
+[^7.1]: Clark, A., & Chalmers, D. (1998). "The Extended Mind." *Analysis,* 58(1), 7-19. — Hollan, J., Hutchins, E., & Kirsh, D. (2000). "Distributed Cognition." *ACM Transactions on CHI,* 7(2), 174-196. — "Extending Minds with Generative AI." *Nature Communications* (2025). https://www.nature.com/articles/s41467-025-59906-9 — Riedl et al. "AI's Social Forcefield: Reshaping Distributed Cognition in Human-AI Teams." arXiv:2407.17489 (2024). https://arxiv.org/html/2407.17489v2
+
+[^7.2]: OWASP. "OWASP Top 10 for Large Language Model Applications." https://owasp.org/www-project-top-10-for-large-language-model-applications/
+
+[^7.3]: Siddiqui, I. et al. (2025). "Technological Folie a Deux: Feedback Loops Between AI Chatbots and Mental Illness." arXiv:2507.19218. https://arxiv.org/abs/2507.19218
+
+[^7.4]: Ostergaard, S.D. (2026). "Have We Learned Nothing From the Global Social Media Experiment?" *Acta Psychiatrica Scandinavica,* 153(2). https://onlinelibrary.wiley.com/doi/10.1111/acps.70057
+
+[^7.5]: Olsen, J.S. et al. (2026). "Potentially Harmful Consequences of Artificial Intelligence (AI) Chatbot Use Among Patients With Mental Illness." *Acta Psychiatrica Scandinavica,* 153(2). https://onlinelibrary.wiley.com/doi/10.1111/acps.70068

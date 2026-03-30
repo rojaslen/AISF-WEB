@@ -99,3 +99,7 @@ Eventually, yes. Context windows have limitations, and there's nothing you can d
 Context decay is real and noticeable but manageable. Using STRUCTURE and STABILIZE is a bit like occasionally saving a document you're working on, rather than trusting that nothing will crash. Context decay even provides evidence for the framework's premise: if AI behavior noticeably changes as AISF anchoring is evicted from context, that confirms the anchoring was doing something. The degradation curve is the control.
 
 ---
+
+[^F.1]: AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/
+
+[^F.2]: FisherMap. "Caesar Creek Lake, OH -- Depth Map." https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/

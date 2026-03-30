@@ -19,3 +19,7 @@ Being stateless in the virtualized void, the AI has no baseline of reality or pu
 Even after accessibility was applied the AI's output was still unreliable, indicating that accessibility is necessary but not sufficient for reliability. Accessibility work forces you to solve for the whole system, meaning that *the user is included in the system specs*. When it has to work for someone using a screen reader, voice control, alternative navigation or some other tech, you can't hide behind technobabble. It either works or it doesn't.
 
 ---
+
+[^4.1]: Frankfurt, H. G. (2005). *On Bullshit.* Princeton University Press. https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf
+
+[^4.2]: Hicks, M. T., Humphries, J., & Slater, J. (2024). "ChatGPT is bullshit." *Ethics and Information Technology,* 26, 38. https://link.springer.com/article/10.1007/s10676-024-09775-5 — *See also:* Fredrikzon, J. (2025). "Rethinking Error: 'Hallucinations' and Epistemological Indifference." *Critical AI* (Duke University Press). https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and
