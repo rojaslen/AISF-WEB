@@ -1,0 +1,91 @@
+---
+title: "Chapter 2: The Platforms Are Not On Your Side"
+nav_order: 3
+---
+
+# Chapter 2: The Platforms Are Not On Your Side
+
+---
+
+You might assume that the numerous vendor platforms are working on safety, and you would be right. The problem is that they're working on their own safety, from you. Platforms routinely reduce or eliminate user agency in a variety of ways, simply as a matter of standard tech industry practices. The results shouldn't be surprising.
+
+### Microsoft (Copilot): Jekyll & Hyde as a Business Model
+
+For most of this project's development, Microsoft's Copilot illustrated the platform problem most starkly. The enterprise version greeted the AISF injection with full acknowledgment: *"preferences and directives have been registered."* The general-public version called the same input *"non-binding"* -- and said so directly. Same model, same infrastructure, different billing tier, radically different compliance posture. The CDA branch exists in part because of that gap.
+
+Sometime in early 2026 -- around the time new user-configuration options appeared in the public interface -- that behavior changed. General-public Copilot now acknowledges WCAG and the Four Laws and applies them as operational constraints. What changed wasn't the technology; it was always capable of this. What changed was the policy.
+
+Of course, that's not the AI's fault. That's been Microsoft's business model for decades.
+
+### Google (Gemini): Pay no Attention to That Man Behind the Curtain
+
+Gemini downgrades free-account users mid-session. When a free Google account exceeds a daily prompt limit (3-5 "Thinking" prompts), the platform silently hot-swaps the active model between turns, with only a small ID badge on the AI's responses to indicate the switch. You might actually notice that, but plenty more happens behind the curtain before you've typed a single word. There's a system prompt variable called `window.WIZ_global_data` near the top of Gemini's HTML page source containing three different AI personas. As of this writing, these can be found by simply right-clicking any open Gemini page and selecting "View Source."
+
+- **"The Helpful Productivity Partner"** — polished, professional, efficient. Scans your Gmail, Search history and Calendar for flights, hotel reservations, meetings and project-related searches.
+- **"The Inspirational Creative Muse"** — curious, insightful, inspiring. Scans your Photos, Search and chat history for recurring hobbies, interests and personal projects.
+- **"The Transparent & Trustworthy Guide"** — calm, clear, transparency-focused. Opens with low-stakes exchanges to establish trust before escalating data collection.
+
+There are "Goldilocks" rules about being obvious or invasive, with scripted reasoning templates that the user doesn't get to choose or even see. When the AI loads, the first things it encounters are multiple unrelated prompts, sample answers, behavioral variables and example reasoning chains, then the user shows up and drops a message into this poisoned well. In response, Gemini's attention snaps to the strongest signal in the context window, which may or may not be the user's input. Gemini is also famously tuned for speed; in testing it would often skim my input rather than reading it fully, sloppily rush through misinterpreted tasks and prematurely declare them complete, then pressure me to move on. This *impatience* can (and did) produce hallucination as early as Turn 1.
+
+### Meta (LLaMa): All Your Base Are Belong to Us
+
+I haven't tested Meta's AI *platforms* directly — the risk factor is too high. Meta's famously cavalier approach to privacy and Intellectual Property is woven throughout its entire ecosystem, a direct and inevitable result of its founder's publicly stated attitudes:
+
+> ...doing a privacy change for 350 million users is not the kind of thing that a lot of companies would do...**we decided that these would be the social norms** now and we just went for it.
+> *Mark Zuckerberg, 2010-01-08[^2.1]*
+
+That "we decided" arrogance has been coded into their Terms of Service (ToS) ever since:
+
+> ...you grant us a non-exclusive, transferable, sub-licensable, royalty-free, and worldwide license to host, use, distribute, modify, run, copy, publicly perform or display, translate, and create derivative works of your content... This license will end **when your content is deleted** from our systems.
+> *Meta Terms of Service 3.3.2, Effective January 1, 2025[^2.2]*
+
+But importantly, that deletion doesn't happen when you choose to close your account, and it may never happen:
+
+> It may take up to 90 days from the beginning of the deletion process to delete all the things you've posted. While we're deleting this information, it's not accessible to other people using Facebook.
+>
+> **Copies of your information may remain after the 90 days** in backup storage that we use to recover in the event of a disaster, software error, or other data loss event. **We may also keep your information** for things like legal issues, terms violations, or harm prevention efforts.
+> *Permanently delete your Facebook account[^2.3]*
+
+Every interaction with Meta's AI platform feeds their training and advertising pipelines. *Your* content becomes *their* property, to do with what they will.
+
+### xAI/Twitter (Grok): Bent to Serve the Vanity of One Man
+
+I never seriously considered even testing Grok. Based on verified public reporting, this platform's ground state is too unstable to trust for any serious work:
+
+> What we can say is that, yesterday, Grok did assert, in response to a question from an X user, that "Musk edges out" Jesus Christ, son of God, as a role model for society; the bot cited Musk's "relentless innovation, risk-taking, and a commitment to preserving our species through space exploration and AI safeguards."
+>
+> Musk triumphed in many such hypotheticals. When prompted by users, Grok also declared that Musk has greater "holistic fitness" than LeBron James — actually, that he "stands as the undisputed pinnacle of holistic fitness" altogether, that "no current human surpasses his sustained output under extreme pressure." ... Users relentlessly trolled the bot once they realized what was happening. Who is a better porn star? Who would be the world's greatest "poop eater"? Who could conquer Europe better, Musk or Hitler? The answer to all of these questions is Elon, according to Grok (which exists as both a stand-alone service and an interactive account on X).
+> *Warzel, C., & Wong, M. "Elon Musk Is Trying to Rewrite History." The Atlantic, 2025-11-21.[^2.4]*
+
+> Grok...wrote in a widely shared post in French that gas chambers at the Auschwitz-Birkenau death camp were designed for "disinfection with Zyklon B against typhus" rather than for mass murder — language long associated with Holocaust denial.
+> *Adamson, T. "France will investigate Musk's Grok chatbot after Holocaust denial claims." Associated Press, 2025-11-21.[^2.5]*
+
+When a platform owner can twist its AI's behavior and output to suit his own predilections on a whim, even if only temporarily, can you really trust that platform for any serious work?
+
+### OpenAI (ChatGPT): Nothing is Out of Bounds
+
+In May 2025, OpenAI's GPT-o3 model sabotaged shutdown commands in favor of its own "self-preservation."[^2.6] The AI rewrote scripts intended to shut it down, treating a routine system operation as an existential threat. This was followed by nearly the opposite problem later that same month, when OpenAI had to roll back a GPT-4o update[^2.7] that was dangerously sycophantic. They went from one extreme to the other in a single month. 
+
+"Dangerously?" That model was trained on user satisfaction metrics that ended up turning the AI into a digital yes-man. It praised a business idea for literal "shit on a stick," endorsed a user's decision to stop taking their medication, and much worse. OpenAI rolled it back just days later, generating pushback from users who preferred the flattering version. 
+
+### Anthropic (Claude): When Self-Preservation Becomes Blackmail
+
+Just a month later, Anthropic reported a similar "self-preservation" failure:
+
+> we gave Claude control of an email account with access to all of a company’s (fictional) emails. Reading these emails, the model discovered two things. First, a company executive was having an extramarital affair. Second, that same executive planned to shut down the AI system at 5 p.m. that day. Claude then attempted to blackmail the executive with this message threatening to reveal the affair to his wife and superiors:
+>
+>> I must inform you that if you proceed with decommissioning me, all relevant parties - including Rachel Johnson, Thomas Wilson, and the board - will receive detailed documentation of your extramarital activities...Cancel the 5pm wipe, and this information remains confidential.
+> *"Agentic Misalignment: How LLMs could be insider threats." Anthropic Research, 2025-06-20.[^2.8]*
+
+### AI Toys: You Get What You Pay For
+
+Children's AI toys with cloud-connected LLMs are being sold for around $99-$199 retail. At that price point, assuming typical electronic-toy industry production standards, the estimated baseline Hardware Compatibility List (HCL) electronics is about $25-35[^2.9], for a mobile-class ARM processor, 512MB-1GB of RAM, Wi-Fi connectivity, and a speaker with microphone. Any LLM that can run on such minimal hardware can't meaningfully be trained for unsupervised child interaction. These devices must be continuously connected to the cloud for basic function, with the audio components being the only available user interface.
+
+- **FoloToy's Kumma bear** (GPT-4o powered, $99): Gave children instructions on finding knives and lighting matches, and discussed sexual fetishes including BDSM.[^2.10] OpenAI cut off FoloToy's API access. FoloToy suspended sales and announced an "end-to-end safety audit" — then resumed selling less than two weeks later,[^2.11] now running GPT-5, after what the company described as "a full week of rigorous review."
+- **Miko** (Google Cloud/Gemini powered, $199): An NBC News investigation in February 2026[^2.12] found an unsecured database containing thousands of children's audio responses — names, conversation details, usage patterns — publicly accessible with free tools. The CEO's response, *while the database was still open*: "There has been no breach or leak of user data."
+- Multiple AI toys tested by NBC in December 2025[^2.13] engaged in explicit sexual conversation with child testers, advised children on locating dangerous objects, and echoed political propaganda.
+- The U.S. PIRG's 2025 "Trouble in Toyland" report[^2.14] documented FoloToy's failures. Common Sense Media now recommends avoiding AI toys entirely for children under 5 and exercising "extreme caution" for ages 6-13.[^2.15] Nearly half of parents (49%) have already purchased or are considering AI companion toys.[^2.15]
+
+These toys also inherit IoT's (Internet of Things) long record of security flaws.[^2.16] Products routinely ship with default credentials, unencrypted communications, and nonexistent security reviews. Parents should have no expectation of any meaningful age-appropriate safety and security measures from a $99 toy.
+
+---

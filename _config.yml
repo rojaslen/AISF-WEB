@@ -1,0 +1,17 @@
+title: AI Stability Framework
+description: "Anti-hallucination middleware for AI chat platforms."
+remote_theme: just-the-docs/just-the-docs
+
+# Update both lines when custom domain goes live (baseurl becomes ""):
+url: "https://rojaslen.github.io"
+baseurl: "/AISF-WEB"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+search_enabled: true
+nav_sort: order
+color_scheme: light
+
+footer_content: "© 2025-2026 Leonard Rojas. All rights reserved."
