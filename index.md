@@ -45,4 +45,4 @@ The framework's simple tool applies structural and behavioral fixes that effecti
 
 ---
 **Author:** Leonard Rojas
-**Contact:** [LeonardRojas.com](https://LeonardRojas.com)
+**Contact:** AISF at LeonardRojas dot com
