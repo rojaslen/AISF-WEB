@@ -15,3 +15,9 @@ nav_sort: order
 color_scheme: custom
 
 footer_content: "© 2025-2026 Leonard Rojas. All rights reserved."
+
+kramdown:
+  input: kramdown
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false

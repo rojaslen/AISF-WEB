@@ -43,6 +43,12 @@ On platforms that offer user preferences storage, whatever you put in there gets
 
 In the absence of any meaningful preferences feature, figuring out how to apply that "not for discussion" effect via the chat-input box required lots of trial and error. Getting the AI to view it at that non-conversational level, where it's just more "semantic headers" and "structured paragraphs" background with the other page formatting metadata, was quite a challenge. Once I hit upon the right framing to suppress the unwanted meta-chatter, no subsequent AI instance ever independently recognized AISF mediation until explicitly told to examine its own session parameters. The discovery that AISF was there all along comes as a surprise every time.
 
+<div class="chapter-nav">
+  <a href="/ch10-tryit">Next: Chapter 10</a>
+  <span aria-hidden="true">|</span>
+  <a href="/ch08-olm">Previous: Chapter 8</a>
+</div>
+
 ---
 
 [^9.1]: Demiliani, C. (2025). "Understanding LLM Performance Degradation: A Deep Dive into Context Window Limits." https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/ — "Large Language Models Hallucination: A Comprehensive Survey." arXiv:2510.06265 (2025). https://arxiv.org/abs/2510.06265

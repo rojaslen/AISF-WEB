@@ -18,6 +18,12 @@ Being stateless in the virtualized void, the AI has no baseline of reality or pu
 
 Even after accessibility was applied the AI's output was still unreliable, indicating that accessibility is necessary but not sufficient for reliability. Accessibility work forces you to solve for the whole system, meaning that *the user is included in the system specs*. When it has to work for someone using a screen reader, voice control, alternative navigation or some other tech, you can't hide behind technobabble. It either works or it doesn't.
 
+<div class="chapter-nav">
+  <a href="/ch05-4laws">Next: Chapter 5</a>
+  <span aria-hidden="true">|</span>
+  <a href="/ch03-stack">Previous: Chapter 3</a>
+</div>
+
 ---
 
 [^4.1]: Frankfurt, H. G. (2005). *On Bullshit.* Princeton University Press. https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf

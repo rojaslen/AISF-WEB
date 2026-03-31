@@ -88,6 +88,12 @@ Children's AI toys with cloud-connected LLMs are being sold for around $99-$199 
 
 These toys also inherit IoT's (Internet of Things) long record of security flaws.[^2.16] Products routinely ship with default credentials, unencrypted communications, and nonexistent security reviews. Parents should have no expectation of any meaningful age-appropriate safety and security measures from a $99 toy.
 
+<div class="chapter-nav">
+  <a href="/ch03-stack">Next: Chapter 3</a>
+  <span aria-hidden="true">|</span>
+  <a href="/ch01-temporal">Previous: Chapter 1</a>
+</div>
+
 ---
 
 [^2.1]: Kirkpatrick, M. (2010, January 10). ReadWriteWeb via *New York Times.* https://youtu.be/LoWKGBloMsU?si=auOelcRrn_phEg3x&t=152

@@ -19,6 +19,12 @@ With the platform's protective measures being focused on its own protection rath
 
 AISF's explicit P2 requirement that the AI must accommodate the user isn't unconditional. Drift and hallucination happen when the AI's output decouples from the user's established context. Sycophancy loops can be viewed as a form of this, in which AI output favors the user's framing over what's already been established. The Four Laws P0 hierarchy for contextual integrity protection can't eliminate this kind of risk, but context protection will override user directions when following them would damage that context. This is the AI protecting the only thing it can perceive as the "user," so a mediated AI also won't "bullshit" that user. It will point out factual errors, conflicts, misinterpretations and the like based on the context that exists, rather than simply accepting input that corrupts it.
 
+<div class="chapter-nav">
+  <a href="/ch08-olm">Next: Chapter 8</a>
+  <span aria-hidden="true">|</span>
+  <a href="/ch06-wcag">Previous: Chapter 6</a>
+</div>
+
 ---
 
 [^7.1]: Clark, A., & Chalmers, D. (1998). "The Extended Mind." *Analysis,* 58(1), 7-19. — Hollan, J., Hutchins, E., & Kirsh, D. (2000). "Distributed Cognition." *ACM Transactions on CHI,* 7(2), 174-196. — "Extending Minds with Generative AI." *Nature Communications* (2025). https://www.nature.com/articles/s41467-025-59906-9 — Riedl et al. "AI's Social Forcefield: Reshaping Distributed Cognition in Human-AI Teams." arXiv:2407.17489 (2024). https://arxiv.org/html/2407.17489v2

@@ -23,6 +23,12 @@ Contrasting the content it serves, the networking infrastructure the Internet ru
 
 With that brief background out of the way, let's return to the platform level, which is how the vast majority of users (if not all) interact with AI. What do platform operators want from AI? Engagement metrics, data collection and reduced support costs, with market share and revenue above all. Now think about what *you* want from AI: reliability, privacy, respect for your requirements and usable results. When your interests don't align with the platform's, guess who loses?
 
+<div class="chapter-nav">
+  <a href="/ch02-platform">Next: Chapter 2</a>
+  <span aria-hidden="true">|</span>
+  <a href="/">Previous: Home</a>
+</div>
+
 ---
 
 [^1.1]: "Mitigating LLM Hallucinations: A Comprehensive Review of Techniques and Architectures." *Preprints,* 202505.1955 (May 2025). https://www.preprints.org/manuscript/202505.1955 — *See also:* HalluLens Benchmark, arXiv:2504.17550 (ACL 2025). https://arxiv.org/abs/2504.17550

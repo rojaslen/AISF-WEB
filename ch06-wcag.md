@@ -23,6 +23,12 @@ Meaningful compliance with WCAG accessibility guidelines[^6.4] alone, if consist
 
 Combined with recognition that "user" means "session data," that provides the accessibility system specification. The user, as perceived by the AI, literally *cannot* be externalized from the system. AISF acts as a form of shared Adaptive Technology not only for Human users, but also for the AI by supplying the temporal, structural and cognitive anchoring that helps it function effectively within its constrained deployment environment. Universal Design benefits even non-Human use cases.
 
+<div class="chapter-nav">
+  <a href="/ch07-xmind">Next: Chapter 7</a>
+  <span aria-hidden="true">|</span>
+  <a href="/ch05-4laws">Previous: Chapter 5</a>
+</div>
+
 ---
 
 [^6.1]: "Time Dysperception Perspective for Acquired Brain Injury." *PMC,* PMC3888944. https://pmc.ncbi.nlm.nih.gov/articles/PMC3888944/

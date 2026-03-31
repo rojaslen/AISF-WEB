@@ -5,3 +5,11 @@ $link-color: #0066cc;
   align-items: center;
   gap: 0.6rem;
 }
+
+.chapter-nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}

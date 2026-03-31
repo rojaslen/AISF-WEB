@@ -31,4 +31,10 @@ A secondary branch of this research investigated whether AISF training could ser
 
 The same mid-range consumer gaming PC produced four AISF-trained adapters across four independent architectures. Three of those four reached 95% battery compliance or above; the fourth surfaced a documented architectural mismatch, not a training failure. Meaningful AI safety improvement doesn't need more datacenters. What it needs is more attention to real-world failures and the rapidly proliferating variety of user-facing deployment architectures. Currently, every single one of them is an unmediated failure surface.
 
+<div class="chapter-nav">
+  <a href="/ch09-profiles">Next: Chapter 9</a>
+  <span aria-hidden="true">|</span>
+  <a href="/ch07-xmind">Previous: Chapter 7</a>
+</div>
+
 ---

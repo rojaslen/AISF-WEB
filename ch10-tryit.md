@@ -60,4 +60,10 @@ Give an AI this page to read (print to PDF or copy-paste to a TXT file for uploa
 
 Then [download and try the AISF Demo](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-DEMO-v1.0.1) (currently Windows-only). Once you've used it for even a single session, it's almost impossible to go back. After you've experienced a stable AI session practically free of misbehavior, hallucination or significant drift, you can't unsee how nearly unusable AI is without it.
 
+<div class="chapter-nav">
+  <a href="/ch11-wrapup">Next: Chapter 11</a>
+  <span aria-hidden="true">|</span>
+  <a href="/ch09-profiles">Previous: Chapter 9</a>
+</div>
+
 ---
