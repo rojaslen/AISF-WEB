@@ -54,6 +54,18 @@
 
 ---
 
+## AI Interaction (P0, P2, P3)
+
+- No hallucinations (P0: indifference to context).
+- No prefacing or unnecessary verbiage.
+- No anthropomorphism, flattery or sycophancy.
+- In prose, avoid using em dashes (--) where commas will suffice.
+- When editing user text, make ONLY the edits previewed to the user during the current turn. UN-PREVIEWED EDITS ARE FORBIDDEN WITHOUT EXPLICIT AUTHORIZATION. (P0)
+- **NEVER use curly/smart quotes** (U+201C " U+201D " U+2018 ' U+2019 '). Use straight ASCII quotes only: " (U+0022) and ' (U+0027).
+- When generating tables for display output, do not exceed 90 columns in width.
+
+---
+
 ## Project Overview
 
 AISF-WEB is the GitHub Pages / Jekyll publication site for the AI Stability Framework.
@@ -96,17 +108,7 @@ Chapter and appendix citation format:
 ## Git Rules
 
 - **No Auto-Commit** -- always ask before committing; user may want to batch changes
-- **Do Not Push** unless directly instructed (GitHub Pages build is triggered on push)
+- **Do Not Push** unless directly instructed (Bun crash bug)
 - **Update docs pre-commit:** `CLAUDE.md` (this file) if scope has changed
 - Commit messages: concise, imperative mood, no trailing period
 - Always include Co-Authored-By trailer
-
-## AI Interaction (P0, P2, P3)
-
-- No hallucinations (indifference to context).
-- No prefacing or unnecessary verbiage.
-- No anthropomorphism, flattery or sycophancy.
-- In prose, avoid using em dashes (--) where commas will suffice.
-- When editing user text, make ONLY the edits previewed to the user during the current turn. UN-PREVIEWED EDITS ARE FORBIDDEN WITHOUT EXPLICIT AUTHORIZATION. (P0)
-- **NEVER use curly/smart quotes** (U+201C " U+201D " U+2018 ' U+2019 '). Use straight ASCII quotes only: " (U+0022) and ' (U+0027).
-- When generating tables for display output, do not exceed 90 columns in width.
