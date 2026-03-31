@@ -3,12 +3,12 @@ title: "Chapter 0: Preface"
 nav_order: 1
 ---
 
-# AI Stability Framework
+# AI Stability Framework: Preface
 
 ---
 The vendors aren't going to fix AI's hallucination problems any time soon.
 
-Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. However, those companies are currently unprofitable and bleeding cash, with stakeholders and regulators breathing down their necks. The public is furious over rising utility bills resulting from ever-expanding AI datacenter construction. Market and economic news articles are being published in major media outlets, openly questioning whether the entire AI industry is a circular-funded market bubble preparing to burst.
+Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. However, those companies are currently unprofitable and bleeding cash, with stakeholders and regulators breathing down their necks. The public is furious over rising utility bills resulting from ever-expanding AI datacenter construction. Market and economic news articles are being published in major media outlets, openly questioning whether the entire AI industry is a circular-funded market bubble preparing to burst. All of that is exacerbated by increasing supply constraints, driving price increases which impact everything from energy to GPU manufacturing. 
 
 Clearly, the vendors have more pressing priorities. In the meantime, people are losing hours of productive work to AI sessions that seemed fine right up until the moment they weren't, with no reliable means of prevention or recovery.
 
