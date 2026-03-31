@@ -26,10 +26,11 @@ With that brief background out of the way, let's return to the platform level, w
 <div class="chapter-nav">
   <a href="/ch02-platform">Next: Chapter 2</a>
   <span aria-hidden="true">|</span>
-  <a href="/">Previous: Home</a>
+  <a href="/">Previous: Preface</a>
 </div>
 
 ---
+
 
 [^1.1]: "Mitigating LLM Hallucinations: A Comprehensive Review of Techniques and Architectures." *Preprints,* 202505.1955 (May 2025). https://www.preprints.org/manuscript/202505.1955 — *See also:* HalluLens Benchmark, arXiv:2504.17550 (ACL 2025). https://arxiv.org/abs/2504.17550
 
