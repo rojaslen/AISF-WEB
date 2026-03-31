@@ -20,6 +20,9 @@ The AI Stability Framework approaches this as a client-side problem with a clien
 
 The framework's simple tool applies structural and behavioral fixes that effectively stabilize AI sessions NOW. Not when the AI companies get around to it, and not when regulators force them to do it. AISF lets you fix it for yourself, today. It's unconventional, but it works.
 
+<div class="chapter-nav">
+  <a href="/ch01-temporal">Next: Chapter 1</a></div>
+
 ---
 
 ## Contents
@@ -42,9 +45,6 @@ The framework's simple tool applies structural and behavioral fixes that effecti
     Appendix  2.  OLM: Behavioral Compliance Training  . . . . . . . . .  apx02
     Appendix  3.  TOY: Child-Safe Model Training . . . . . . . . . . . .  apx03
 </pre>
-
-<div class="chapter-nav">
-  <a href="/ch01-temporal">Next: Chapter 1</a></div>
 
 ---
 **Author:** Leonard Rojas
