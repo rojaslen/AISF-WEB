@@ -3,7 +3,7 @@ title: "Chapter 0: Preface"
 nav_order: 1
 ---
 
-# Chapter 0: Preface
+# AI Stability Framework
 
 ---
 The vendors aren't going to fix AI's hallucination problems any time soon.
@@ -20,8 +20,7 @@ The AI Stability Framework approaches this as a client-side problem with a clien
 
 The framework's simple tool applies structural and behavioral fixes that effectively stabilize AI sessions NOW. Not when the AI companies get around to it, and not when regulators force them to do it. AISF lets you fix it for yourself, today. It's unconventional, but it works.
 
-<div class="chapter-nav">
-  <a href="/ch01-temporal">Next: Chapter 1</a></div>
+<div class="chapter-nav"><a href="/ch01-temporal">Next: Chapter 1</a></div>
 
 ---
 
@@ -44,6 +43,7 @@ The framework's simple tool applies structural and behavioral fixes that effecti
     Appendix  1.  Foreseeably Asked Questions  . . . . . . . . . . . . .  apx01
     Appendix  2.  OLM: Behavioral Compliance Training  . . . . . . . . .  apx02
     Appendix  3.  TOY: Child-Safe Model Training . . . . . . . . . . . .  apx03
+    Appendix  4.  Downloads . . . . . . . . . . . . . . . . . . . . . . . apx04
 </pre>
 
 ---

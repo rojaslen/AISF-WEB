@@ -1,0 +1,18 @@
+WEB FIX/REMEDIATION:
+
+inline footnotes are not jumplinks, cites randomly cut from footers, seek & destroy plm
+
+find plm content in web and compare/fix or restore from main: Commit a334f7c, Commit ac9c232
+
+ch00 add Next nav to ch01
+ch01 ok
+ch02 Copilot
+ch03 ok
+ch04 pp1
+ch05 pp1-2 lots of connective tissue missing, de-AI phrasing throughout
+ch06 line1 minor tweak, move "both user & screen reader" up to img-create pp
+ch07 final pp reorder last 2 sent after "established"
+ch08 de-AI
+ch09
+ch10
+ch11
