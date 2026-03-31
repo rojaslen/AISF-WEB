@@ -43,6 +43,9 @@ The framework's simple tool applies structural and behavioral fixes that effecti
     Appendix  3.  TOY: Child-Safe Model Training . . . . . . . . . . . .  apx03
 </pre>
 
+<div class="chapter-nav">
+  <a href="/ch01-temporal">Next: Chapter 1</a></div>
+
 ---
 **Author:** Leonard Rojas
 **Contact:** AISF at LeonardRojas dot com
