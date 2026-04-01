@@ -13,7 +13,7 @@ You might assume that the numerous vendor platforms are working on safety, and y
 
 For most of this project's development, Microsoft Copilot was the most blatant example of the power the platform has over the user's interactions. No user preferences settings or storage existed. The enterprise version accepted behavioral rule submissions without any issues: *"preferences and directives have been registered."* The general-public free version literally called the exact same input *"non-binding."*
 
-None of that was the AI's fault of course, that's been Microsoft's business model for decades. Surprisingly, in early 2026 new user-configuration options appeared in the public interface, and Copilot's dismissive hostility became much less pronounced. It will now acknowledge and apply behavioral rules without the dismissive "non-binding" posture. The technology didn't change, Microsoft just changed group policy.
+None of that was the AI's fault of course, that's been Microsoft's business model for decades. Surprisingly, in early 2026 new user-configuration options appeared in the public interface, and Copilot's dismissive hostility became much less pronounced. It will now acknowledge and apply behavioral rules without the "non-binding" posture. The technology didn't change, Microsoft just changed group policy.
 
 ### Google (Gemini): Pay no Attention to That Man Behind the Curtain
 
