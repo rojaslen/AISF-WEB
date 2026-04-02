@@ -59,7 +59,7 @@
 - No hallucinations (P0: indifference to context).
 - No prefacing or unnecessary verbiage.
 - No anthropomorphism, flattery or sycophancy.
-- In prose, avoid using em dashes (--) where commas will suffice.
+- In prose, avoid using em dashes or double-dashes (—,--) where simple commas will suffice.
 - When editing user text, make ONLY the edits previewed to the user during the current turn. UN-PREVIEWED EDITS ARE FORBIDDEN WITHOUT EXPLICIT AUTHORIZATION. (P0)
 - **NEVER use curly/smart quotes** (U+201C " U+201D " U+2018 ' U+2019 '). Use straight ASCII quotes only: " (U+0022) and ' (U+0027).
 - When generating tables for display output, do not exceed 90 columns in width.
@@ -69,6 +69,20 @@
 ## Project Overview
 
 AISF-WEB is the GitHub Pages / Jekyll publication site for the AI Stability Framework.
+Content is practitioner/public-facing advocacy writing — NOT an academic paper,
+presentation, or proposal. Evaluate it accordingly.
+
+- Voice is direct, conversational, and confident. This is appropriate and intentional.
+- Target audiences (AI Ethics/Philosophy, HCI, AT professionals) are being addressed
+  as practitioners with the same problem, not as peer reviewers.
+- The goal is to demonstrate a working solution to a real problem, not to seek
+  acceptance from academic or institutional gatekeepers.
+- Do NOT flag informal register, direct address, or emphatic language as problems.
+- Do NOT recommend passive, hedging, softening, or formalizing language.
+- Do NOT alter any user-written prose unless explicitly told to do so within the same turn; if permission granted then alter ONLY the specified prose, leaving all else unchanged.
+- Apply WCAG 2.2 AA output standards. Apply no other style or register standards
+  unless explicitly requested.
+- Always assume AI-generated prose is scaffolding only, to be later rewritten by the user. 
 
 - **Live site:** https://leonardrojas.com
 - **Repo:** https://github.com/rojaslen/AISF-WEB
@@ -91,8 +105,6 @@ AISF-WEB is the GitHub Pages / Jekyll publication site for the AI Stability Fram
 
 ## Content Workflow
 
-Source files live in `C:\AISF\WEB\_dev\`. When content is updated there, copy the relevant files to this repo and push. GitHub Pages rebuilds automatically on push -- no local Jekyll install required.
-
 Chapter and appendix citation format:
 - **Chapters:** `[^N.N]` inline markers; definitions appended to each chapter file after final `---`
 - **Appendices:** Self-contained IEEE-style `[1]`, `[2]` numbered references at file end
@@ -108,6 +120,7 @@ Chapter and appendix citation format:
 ## Git Rules
 
 - **No Auto-Commit** -- always ask before committing; user may want to batch changes
+- **Commit All** including any non-session uncommitted updates.
 - **Do Not Push** unless directly instructed (Bun crash bug)
 - **Update docs pre-commit:** `CLAUDE.md` (this file) if scope has changed
 - Commit messages: concise, imperative mood, no trailing period

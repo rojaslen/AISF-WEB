@@ -34,9 +34,9 @@ The framework's simple tool applies structural and behavioral fixes that effecti
     Chapter  5.  The Four Laws of Instanced AI  . . . . . . . . . . . . . .   5
     Chapter  6.  What AI Perceives  . . . . . . . . . . . . . . . . . . . .   6
     Chapter  7.  The Human-AI Extended Mind . . . . . . . . . . . . . . . .   7
-    Chapter  8.  Defense in Depth  . . . . . . . . . . . . . . . . . . . . .  8
-    Chapter  9.  Does It Work?  . . . . . . . . . . . . . . . . . . . . . .   9
-    Chapter 10.  How to Use It  . . . . . . . . . . . . . . . . . . . . . .  10
+    Chapter  8.  Defense in Depth? . . . . . . . . . . . . . . . . . . . . .  8
+    Chapter  9.  Field Observations . . . . . . . . . . . . . . . . . . . .   9
+    Chapter 10.  How to Try It  . . . . . . . . . . . . . . . . . . . . . .  10
     Chapter 11.  What's Next  . . . . . . . . . . . . . . . . . . . . . . .  11
 
     Appendix  0.  Endnotes  . . . . . . . . . . . . . . . . . . . . . . . apx00
