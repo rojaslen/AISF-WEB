@@ -101,18 +101,23 @@ presentation, or proposal. Evaluate it accordingly.
 - **Main AISF project:** `C:\AISF\` (`\\debbie\Tech\APP\_DEV\AISF\AI Stability Framework\`)
 - **Project reference:** `.claude\MAIN_PROJECT_README.md` -- full branch map and status for the parent AISF project of which this site is the WEB (publication) branch
 
+## Design Principles
+
+- **KISS (Keep It Simple, Stupid):** Prefer plain HTML and CSS. Avoid JavaScript, Java, embeds, and third-party dependencies unless there is no simpler alternative.
+- **Universal Design:** Accessibility is assumed at build, not added as a QC pass after the fact. All markup must be natively accessible before any AT-specific adjustments are considered.
+
 ## Site Structure
 
-- **Theme:** Just the Docs (remote_theme: just-the-docs/just-the-docs)
+- **Theme:** None -- custom layout (`_layouts/default.html`); no remote_theme dependency
+- **Stylesheet:** `assets/css/style.css` -- plain CSS, system light/dark via prefers-color-scheme, no Sass, no framework
 - **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, apx00 through apx04, appendices.md (nav parent)
-- **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`
-- **Appendix nav parent:** `appendices.md` in repo root
+- **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`; layout is set globally via `_config.yml` defaults (do not add `layout:` to individual pages)
+- **Appendix nav parent:** `appendices.md` (has_children: true in front matter drives nav grouping in layout)
 - **Home page:** `index.md` (Preface content; nav_order: 1)
 - **Endnotes:** `apx00-endnotes.md` -- plain bibliography format (`**N.N** text`); footnote definitions live in each chapter file as `[^N.N]:` at file end
-- **Custom color scheme:** `_sass/color_schemes/custom.scss` (color_scheme: custom in _config.yml)
-- **Theme overrides:** `_includes/title.html` (logo + title side by side)
 - **Logo:** `assets/images/logo.png`
 - **Favicon:** `favicon.ico` in repo root
+- **Orphaned files (do not delete):** `_includes/head_custom.html`, `_includes/title.html`, `_sass/color_schemes/custom.scss` -- superseded by custom layout, kept for reference
 
 ## Content Workflow
 

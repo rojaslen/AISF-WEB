@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="site-wrap">
+
+    <nav class="site-nav" aria-label="Site navigation">
+      <div class="nav-header">
+        {% if site.logo %}
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" class="nav-logo">
+        {% endif %}
+        <span class="nav-title">{{ site.title }}</span>
+      </div>
+      <ul>
+        {% assign all_pages = site.pages | sort: "nav_order" %}
+        {% for p in all_pages %}
+          {% if p.nav_order %}
+            {% unless p.parent %}
+              <li>
+                <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} aria-current="page"{% endif %}>{{ p.title }}</a>
+              </li>
+              {% if p.has_children %}
+                {% assign children = site.pages | where: "parent", p.title | sort: "nav_order" %}
+                {% for child in children %}
+                <li class="nav-child">
+                  <a href="{{ child.url | relative_url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}</a>
+                </li>
+                {% endfor %}
+              {% endif %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <main id="main-content" tabindex="-1">
+      {{ content }}
+      <footer>
+        <p>{{ site.footer_content }}</p>
+      </footer>
+    </main>
+
+  </div>
+</body>
+</html>
