@@ -89,11 +89,12 @@ presentation, or proposal. Evaluate it accordingly.
 - **Local clone:** `\\debbie\Tech\APP\_DEV\AISF-WEB`
 - **Source content:** `C:\AISF\WEB\_dev\` (main AISF project)
 - **Main AISF project:** `C:\AISF\` (`\\debbie\Tech\APP\_DEV\AISF\AI Stability Framework\`)
+- **Project reference:** `.claude\MAIN_PROJECT_README.md` -- full branch map and status for the parent AISF project of which this site is the WEB (publication) branch
 
 ## Site Structure
 
 - **Theme:** Just the Docs (remote_theme: just-the-docs/just-the-docs)
-- **Pages:** Markdown files in repo root -- ch00 through ch11, apx00 through apx03
+- **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, apx00 through apx04, appendices.md (nav parent)
 - **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`
 - **Appendix nav parent:** `appendices.md` in repo root
 - **Home page:** `index.md` (Preface content; nav_order: 1)

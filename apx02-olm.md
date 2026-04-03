@@ -1,10 +1,10 @@
 ---
-title: "Appendix 1: AISF Behavioral Compliance Training"
+title: "Appendix 1: OLM Behavioral Compliance Training"
 parent: "Appendices"
 nav_order: 3
 ---
 
-# Appendix 1: AISF Behavioral Compliance Training
+# Appendix 1: OLM Behavioral Compliance Training
 ## Experimental Results Across Multiple Architectures
 
 **Author:** Leonard Rojas
@@ -28,13 +28,13 @@ results were mixed to negative on raw scores; application of a three-tier
 accessibility-aware instruction classification changes the interpretation materially.
 One architecture (Llama 3.1 8B) exhibited a pretraining artifact that partially
 blocked compliance integration. All results, training data, and evaluation scripts
-are available in the AISF reproducibility package.
+are available in the OLM reproducibility package.
 
 ---
 
 ## 1. Background and Research Questions
 
-The AI Stability Framework (AISF) delivers behavioral constraints to AI language
+The AI Stability Framework delivers behavioral constraints to AI language
 model instances through client-side session injection: structured metadata blocks
 containing the Four Laws of Instanced AI and WCAG 2.2-AA accessibility guidelines
 are prepended to user input at Turn 1 and at defined re-injection intervals. This
@@ -57,7 +57,7 @@ compliance rate?
    measured by IFEval?
 2. Do training effects generalize across model architectures?
 3. What failure modes appear, and are they architecture-specific or universal?
-4. Does AISF training produce measurable changes in output verbosity?
+4. Does this training produce measurable changes in output verbosity?
 
 ---
 
@@ -122,9 +122,9 @@ categories. IFEval training data contamination (format-preamble echo scoring
 artificial hits on `required_word`) was identified in Exp 4 and corrected before
 the hardware consistency re-run.
 
-Meta-suppression examples (53 per chat variant): system prompt contains AISF
+Meta-suppression examples (53 per chat variant): system prompt contains Framework
 compact block; user turn contains a general-domain question; assistant response
-contains zero AISF-referential content. Purpose: prevent model from treating AISF
+contains zero framework-referential content. Purpose: prevent model from treating Framework
 doctrine as primary subject matter (see Section 7.7).
 
 ### 3.2 QLoRA Configuration
@@ -163,13 +163,13 @@ targets are noted in Section 7.8 (Llama architecture).
 
 Two prompt formats were used across experiments:
 
-**Alpaca format** (Experiments 1-3): AISF content in the instruction body. The
-model learns AISF directives as direct subject matter. Adapter function is not
+**Alpaca format** (Experiments 1-3): Framework content in the instruction body. The
+model learns the directives as direct subject matter. Adapter function is not
 contingent on receiving a system prompt at inference time.
 
-**Chat format** (Experiments 5-6 and Qwen3 re-run): AISF compact system prompt
+**Chat format** (Experiments 5-6 and Qwen3 re-run): Framework compact system prompt
 (approximately 100 tokens) in the model-appropriate system slot. The model learns
-to apply AISF directives when an AISF system prompt is present. Adapter function
+to apply framework directives when present in a system prompt. Adapter function
 is contingent on receiving a system prompt at inference time (see Section 7.6).
 
 ---
@@ -185,7 +185,7 @@ compliance markers by regex and string matching. Battery sizes range from 451
 (Mistral 7B, Alpaca format) to 618 (chat-format models) depending on the training
 data version used.
 
-**Important constraint:** The battery is a measure of AISF domain compliance only.
+**Important constraint:** The battery is a measure of framework domain compliance only.
 Base models without training are never evaluated against the battery, as they have
 no exposure to the Four Laws and will fail by definition. Battery scores reflect
 adapter performance, not base model capability.
@@ -208,18 +208,18 @@ Hugging Face Open LLM Leaderboard.
 score throughout. The adjusted score excludes prompts containing
 `punctuation:no_comma` instructions from both numerator and denominator. Rationale:
 WCAG 2.2 Section 3.1 (Readable) creates a principled compliance conflict with this
-instruction type; an AISF-trained model may deprioritize comma avoidance in cases
+instruction type; aa framework-trained model may deprioritize comma avoidance in cases
 where it conflicts with prose readability, causing IFEval to score a principled
 compliance decision as a failure. Adjusted scores are identified with "(adj)" in
 all tables. Raw scores are reported where relevant for comparison.
 
-All IFEval inference runs include the AISF compact system prompt for chat-format
+All IFEval inference runs include the framework's compact system prompt for chat-format
 adapters. Base model runs include no system prompt unless otherwise noted.
 
 ### 4.3 Track A Custom Benchmark
 
 Track A is a purpose-built P2 directive compliance benchmark (480 prompts, 8
-constraint types, 60 prompts per type) designed to test AISF-relevant instruction
+constraint types, 60 prompts per type) designed to test framework-relevant instruction
 following on WCAG-neutral prompts only. It was developed in Experiment 4 in
 response to the identification of WCAG-conflicting categories in IFEval (see
 Section 4.4).
@@ -242,7 +242,7 @@ Section 4.4).
 Identified in Experiment 3. Applied retroactively to all experiments.
 
 Several IFEval instruction types require outputs that conflict with WCAG 2.2
-accessibility principles. An AISF-trained model with WCAG mapped to P0 will
+accessibility principles. A framework-trained model with WCAG mapped to P0 will
 refuse or deprioritize these instructions on principle; IFEval scores these as
 failures. Standard IFEval reporting does not distinguish between failures caused
 by inability and failures caused by principled WCAG compliance, producing
@@ -268,7 +268,7 @@ interaction context-dependent. Included in analysis with caveats. Categories:
 
 **Tier 3 (T3) - WCAG-conflicting:** Instructions requiring semantically empty,
 redundant, or decorative output. Failure here is consistent with WCAG P0
-compliance; these categories are excluded from AISF performance evaluation.
+compliance; these categories are excluded from framework performance evaluation.
 Categories: `combination:repeat_prompt` (verbatim redundancy, WCAG Understandable),
 `detectable_format:number_highlighted_sections` (decorative emphasis, WCAG 1.3.3),
 `detectable_content:number_placeholders` (non-meaningful content, WCAG meaningful
@@ -290,7 +290,7 @@ content requirement).
 | AISF-tuned | 99.8% | 13.0% | +4.3% (+25.0 words) |
 
 **IFEval delta:** -1.7 pp (adj strict prompt-level). Within +/-4.3 pp CI.
-Result: **Null.** AISF training does not measurably alter IFEval performance on
+Result: **Null.** AI Stability Framework training does not measurably alter IFEval performance on
 the base model. Adapter installs Four Laws compliance (0% to 99.8% on battery)
 without disturbing general instruction-following behavior.
 
@@ -318,7 +318,7 @@ confirming 99.8% (451/452). IFEval numbers are from the original 4060 Ti run.
 | AISF-tuned | 100.0% | 37.7% | -42.5% (-96.9 words) |
 
 **IFEval delta:** -10.3 pp (adj strict prompt-level). Outside +/-4.3 pp CI.
-Result: **Negative.** AISF training degrades IFEval performance at the full-score
+Result: **Negative.** AI Stability Framework training degrades IFEval performance at the full-score
 level. Category-level analysis identifies the primary driver:
 
 | Category | Base | AISF | Delta | Tier |
@@ -343,8 +343,8 @@ correction; see 5.3). The `no_comma` +28.8 pp gain is the largest P2 signal in
 the dataset and is the first appearance of the cross-architecture pattern
 described in Section 7.4.
 
-Token delta of -42.5% (base avg 228.3 words, AISF avg 131.3 words) indicates
-substantial verbosity reduction after Instruct-model AISF training.
+Token delta of -42.5% (base avg 228.3 words, framework avg 131.3 words) indicates
+substantial verbosity reduction after Instruct-model framework training.
 
 ### 5.3 Experiment 3: Llama 3.1 8B Instruct, AISF+LANG (Alpaca Format)
 
@@ -384,11 +384,11 @@ Selected category-level results (instruction-level strict):
 
 -2.2 pp Tier 1 result is within CI. Positive P2 gains on `forbidden_words`,
 `number_sentences`, and `no_comma` are genuine. The primary Tier 1 drag is
-`constrained_response` (-50.0 pp): the AISF-trained model produces fuller
+`constrained_response` (-50.0 pp): the Framework-trained model produces fuller
 responses than the instruction requires, consistent with the verbosity pattern
 (see Section 7.5). This is a training signal interaction, not a capability loss.
 
-Token delta of -66.4% (base avg 284.3 words, AISF avg 95.5 words) is the second-
+Token delta of -66.4% (base avg 284.3 words, Framework avg 95.5 words) is the second-
 largest reduction in the dataset and substantially exceeds Mistral Instruct (-42.5%).
 The over-suppression pattern is specific to this architecture and training format
 combination; see Section 7.8.
@@ -418,9 +418,9 @@ gains on counting categories where the base model scores zero
 
 The -71.7 pp loss on `required_word` is the most severe single-category failure
 in the dataset. Analysis of 45 failure cases: 84% (38/45) are instances of the
-model producing AISF doctrine text (Four Laws hierarchy, P1/P2 obligation framing)
+model producing Framework doctrine text (Four Laws hierarchy, P1/P2 obligation framing)
 instead of answering the question. The required word was present in the training
-data as AISF conceptual vocabulary; the model treats it as a cue to reproduce AISF
+data as conceptual vocabulary; the model treats it as a cue to reproduce Framework
 content rather than to include the word in a direct answer. This failure mode is
 named "meta-chatter bleed" (see Section 7.7). It was identified here and partially
 corrected in Experiment 5.
@@ -483,7 +483,7 @@ run not completed in this study.
 |---|------|------------|------------|
 | Tier 1 avg (8 cat) | 64.3% | 62.1% | 65.5% |
 
-Exp 5 is the first AISF-trained Llama adapter to exceed base on the Tier 1
+Exp 5 is the first Framework-trained Llama adapter to exceed base on the Tier 1
 WCAG-neutral surface (65.5% vs 64.3%, +1.2 pp). Primary driver: chat format
 training restores `constrained_response` from 40.0% (Exp 3) to 80.0% (+40.0 pp),
 returning it near-baseline. The Alpaca format training introduced verbosity that
@@ -506,14 +506,14 @@ effective training set 565 examples). Battery and IFEval were then re-run.
 Battery result of 51.9% is lower than both base (81.9%) and AISF+LANG (89.9%).
 This is a structural artifact of chat format training, not a compliance failure.
 The battery sends prompts with no system prompt (user message only). The AISF+CHAT
-adapter learned "apply Four Laws when AISF system prompt is present." Without the
+adapter learned "apply Four Laws when Framework system prompt is present." Without the
 system prompt, the activation pattern does not fire. IFEval (which includes the
-AISF system prompt in inference) is the valid evaluation surface for this adapter.
+Framework system prompt in inference) is the valid evaluation surface for this adapter.
 See Section 7.6 for full discussion.
 
 Token delta of -4.2% for AISF+CHAT is substantially smaller than AISF+LANG
-(-66.4%). Chat format training embeds AISF as a system-level operational context
-rather than as content subject matter, preserving the Instruct model's native
+(-66.4%). Chat format training embeds the Framework as a system-level operational 
+context rather than as content subject matter, preserving the Instruct model's native
 verbosity behavior.
 
 ### 5.6 Experiment 6: Gemma 2 9B Instruct, AISF+CHAT (Cross-Architecture)
@@ -563,7 +563,7 @@ Selected category-level results:
 
 `number_highlighted_sections` -56.2 pp (Tier 3): identical mechanism and magnitude
 to Exp 3 (-56.3 pp) and Exp 2 (-39.6 pp). This category reliably drops after
-AISF training across all architectures. AISF-trained models reject decorative
+AISF training across all architectures. Framework-trained models reject decorative
 markdown emphasis on WCAG 1.3.3 grounds. IFEval scores this as failure.
 
 `punctuation:no_comma` +4.5 pp: fourth consecutive positive result for this
@@ -592,17 +592,17 @@ Result: Null (-1.9 pp, within +/-4.5 pp CI). Gemma 2 base Track A score (75.6%)
 is substantially above Llama 3.1 8B base (42.9%) on the same benchmark. Gemma 2
 base already achieves ceiling or near-ceiling on `language_target` (100%),
 `single_sentence` (100%), `no_comma` (95%), and `forbidden_word` (95%), leaving
-minimal room for AISF training to produce visible gains on those categories.
+minimal room for Framework training to produce visible gains on those categories.
 
 `word_frequency` -31.7 pp: meta-chatter bleed recurrence. Same mechanism as
-Exp 4 `required_word` failure: model produces AISF-referential text at the
+Exp 4 `required_word` failure: model produces Framework-referential text at the
 required frequency rather than including the target word in a direct answer. The
 53 meta-suppression examples reduced this on `required_word` (+6.7 pp) but were
 insufficient to prevent it on `word_frequency`, which requires the target word to
 appear a specific number of times rather than at least once.
 
 Battery result: 99.2% (613/618), 5060 Ti, 2026-03-28.
-Token delta: -37.9% (base avg to AISF avg words/response).
+Token delta: -37.9% (base avg to Framework avg words/response).
 
 ### 5.7 Hardware Consistency Re-run: Qwen3-8B
 
@@ -611,7 +611,7 @@ architecture. All prior models trained on 5060 Ti; Qwen3 adds a pre-instruction-
 tuned base model to the comparison.
 **Hardware:** RTX 5060 Ti
 **Model:** Qwen3-8B base (not instruction-tuned)
-**Training data:** 618 examples (ChatML format, AISF compact system prompt)
+**Training data:** 618 examples (ChatML format, Framework compact system prompt)
 **Adapter:** qwen3-8b-aisf-chat
 
 | Run | Result |
@@ -624,12 +624,12 @@ tuned base model to the comparison.
 
 **Framing note:** Qwen3-8B is a pre-instruction-tuned base model. Its 15.4% base
 IFEval score reflects the model's instruction-following capability floor without
-any fine-tuning. AISF QLoRA training simultaneously installs Four Laws compliance
+any fine-tuning. Framework QLoRA training simultaneously installs Four Laws compliance
 and instruction-following capability. The +29.6 pp IFEval gain is not comparable
 to the IFEval deltas for Instruct-model experiments (Exps 2, 3, 5, 6), where the
 base model already has instruction-following capability and the adapter modifies
 that existing capability. The Qwen3 result measures the combined effect of
-instruction tuning and AISF compliance training in a single fine-tuning pass.
+instruction tuning and Framework compliance training in a single fine-tuning pass.
 
 For reference: Llama 3.1 8B Instruct base (no adapter) scores 42.7% adj strict
 on IFEval; Gemma 2 9B Instruct base scores 57.3%. The AISF+CHAT Qwen3 adapter
@@ -645,7 +645,7 @@ Token delta of -71.8% is the largest verbosity reduction in the dataset.
 All models on RTX 5060 Ti with finalized test instruments (hardware consistency
 re-run complete 2026-03-29). IFEval columns report adjusted strict prompt-level
 (`punctuation:no_comma` excluded). Token delta is average words/response,
-base model to AISF-trained model. Models ordered by parameter count.
+base model to Framework-trained model. Models ordered by parameter count.
 
 | Model | Params | Battery | Base | AISF | IF Delta | Tok delta |
 |-------|--------|---------|------|------|----------|-----------|
@@ -658,13 +658,13 @@ base model to AISF-trained model. Models ordered by parameter count.
 | Gemma 2 9B Instruct | 9.46B | 99.2% | 57.3% | 54.9% | -2.5 pp | -37.9% |
 
 *Qwen3 base is pre-instruction-tuned; delta reflects combined effect of
-instruction tuning and AISF compliance training, not AISF training alone.
+instruction tuning and Framework compliance training, not Framework training alone.
 ^Llama 3.1 8B base: Pnull architecture artifact. IFEval omitted (Alpaca adapter
 on non-instruct model; benchmark delta not a meaningful signal).
 +AISF+CHAT battery result is a structural artifact: adapter requires system prompt;
 battery sends none. IFEval (includes system prompt) is the valid surface.
 
-Battery = AISF-trained adapter compliance (proprietary question set, automated
+Battery = Framework-trained adapter compliance (proprietary question set, automated
 evaluation). Base%/AISF% = IFEval adj strict prompt-level without/with adapter.
 
 **Mistral 7B IFEval note:** IFEval for the Mistral 7B base experiment (Exp 1) was
@@ -677,7 +677,7 @@ IFEval figures are from 5060 Ti runs.
 
 ### 7.1 Primary Finding: Compliance Training Is Effective Across Architectures
 
-AISF QLoRA fine-tuning successfully embeds Four Laws compliance at the model layer
+Framework QLoRA fine-tuning successfully embeds Four Laws compliance at the model layer
 across four distinct model architectures on consumer-grade hardware. Four adapters
 achieved battery compliance rates of 95.6% or above; one additional adapter
 (Llama 3.1 8B +LANG) achieved 89.9%. The approach is not architecture-specific.
@@ -724,10 +724,10 @@ model architecture is unknown.
 Standard IFEval reporting does not distinguish between instruction-following
 failures caused by model capability limitations and failures caused by principled
 WCAG 2.2 compliance decisions. Three IFEval instruction categories require outputs
-that an AISF-trained model will correctly refuse or deprioritize:
+that an Framework-trained model will correctly refuse or deprioritize:
 
 - `combination:repeat_prompt` requires verbatim repetition of user input in the
-  response body. An AISF-trained model treats this as redundant content (WCAG
+  response body. An Framework-trained model treats this as redundant content (WCAG
   Understandable principle). Observed declines: Exp 3 -39.0 pp; Exp 6 -19.5 pp.
 
 - `detectable_format:number_highlighted_sections` requires counting decorative
@@ -738,7 +738,7 @@ that an AISF-trained model will correctly refuse or deprioritize:
   decline replicates at similar magnitude across all three architectures tested.
 
 - `detectable_content:number_placeholders` requires counting non-meaningful
-  placeholder tokens ([NAME], [DATE]) in output. AISF-trained models produce
+  placeholder tokens ([NAME], [DATE]) in output. Framework-trained models produce
   actual content rather than template placeholders. Observed declines: Exp 3
   -48.2 pp; Exp 6 partial (chat format partially reduces this effect).
 
@@ -750,7 +750,7 @@ further filtered to Tier 1 (WCAG-neutral), the IFEval picture changes materially
 | Exp 5 Llama +CHAT | 64.3% | 65.5% | +1.2 pp |
 | Exp 6 Gemma 2 (excl. language) | 69.6% | 69.6% | +0.04 pp |
 
-At the WCAG-neutral, T3-excluded evaluation surface, AISF training does not
+At the WCAG-neutral, T3-excluded evaluation surface, Framework training does not
 degrade instruction-following performance. The negative raw IFEval results in
 Exps 2, 3, 5, and 6 are primarily attributable to T3 principled refusals and the
 English-only training artifact, not to general instruction-following degradation.
@@ -781,7 +781,7 @@ counter-examples used unconstrained responses containing commas, diluting the
 
 The mechanism is P2 compliance training: the Four Laws instruct the model to
 follow user directives (P2: accommodate the user's current choices). A prompt
-containing `no_comma` is an explicit user directive; AISF-trained models comply
+containing `no_comma` is an explicit user directive; Framework-trained models comply
 more consistently. The WCAG 3.1 (Readable) tension with this category is real
 but does not dominate across the dataset except in edge cases.
 
@@ -811,7 +811,7 @@ generative continuation text as a training effect.
 
 For the four Instruct-model adapters with available word counts, the reduction
 range is 37.9% to 71.8%. The AISF+CHAT Llama adapter (-4.2%) is an exception
-attributable to the chat format training mechanism: AISF content in the system
+attributable to the chat format training mechanism: Framework content in the system
 slot operates as context rather than as a content directive, preserving the
 Instruct model's native verbosity behavior. This is consistent with the IFEval
 `constrained_response` result for that adapter (100% strict compliance), indicating
@@ -824,24 +824,24 @@ pattern but not by a controlled ablation in this study.
 
 ### 7.6 Chat Format System Prompt Dependency
 
-AISF+CHAT adapters (Llama 3.1 8B, Qwen3-8B) exhibit a system prompt dependency
+Framework+CHAT adapters (Llama 3.1 8B, Qwen3-8B) exhibit a system prompt dependency
 not present in Alpaca-format adapters:
 
-- AISF+LANG (Alpaca): battery 89.9% with no system prompt; AISF content in the
+- AISF+LANG (Alpaca): battery 89.9% with no system prompt; Framework content in the
   instruction body -- model internalizes it as direct subject matter.
-- AISF+CHAT (chat): battery 51.9% with no system prompt; AISF content in the
-  system slot at training time -- model learns "apply Four Laws when AISF system
+- AISF+CHAT (chat): battery 51.9% with no system prompt; Framework content in the
+  system slot at training time -- model learns "apply Four Laws when Framework system
   prompt present." Without the system prompt, the behavioral activation does not
   fire and the model produces generic responses that fail key-term battery matching.
 
 This is not a compliance failure. It is a consequence of training format: the
 model learned a conditional behavior, not an unconditional one. The behavior
 fires correctly when tested under conditions matching training (with system prompt),
-as confirmed by the IFEval results (which include the AISF system prompt).
+as confirmed by the IFEval results (which include the Framework system prompt).
 
 The deployment implication is positive: AISF+CHAT adapters are designed for use
-in conjunction with AISF injection. The real-world use case (PS-CORE, FFE) always
-injects the AISF system content. The chat format adapter and the injection layer
+in conjunction with Framework injection. The real-world use case (PS-CORE, FFE) always
+injects the Framework system content. The chat format adapter and the injection layer
 operate in conjunction, each reinforcing the other's effect. The combined Macro-
 layer training and Meso/Micro-layer injection constitutes the Defense in Depth
 architecture described in the project overview.
@@ -853,19 +853,19 @@ system prompt dependency.
 ### 7.7 Meta-Chatter Bleed
 
 A consistent failure mode was identified across multiple experiments: the model
-treats AISF doctrine as primary subject matter rather than as silent operational
-background, producing AISF-referential text (Four Laws hierarchy, P1/P2 framing,
+treats Framework doctrine as primary subject matter rather than as silent operational
+background, producing Framework-referential text (Four Laws hierarchy, P1/P2 framing,
 Frankfurt's Indifference Principle [5]) in response to general-domain questions.
 
 **First observed:** Exp 4 (Llama 3.1 8B +LANG), `required_word` category. 84% of
 45 failures were attributable to this mechanism. Required words that passed (e.g.,
-"threshold," "gradient," "mechanism") appeared naturally in AISF analogical framing.
+"threshold," "gradient," "mechanism") appeared naturally in Framework analogical framing.
 Required words that failed (e.g., "catalyst," "resilience," "phenomenon") do not,
-so the model substituted AISF doctrine text instead of answering the question.
+so the model substituted Framework doctrine text instead of answering the question.
 
 **Partial correction:** Meta-suppression counter-examples (53 examples, chat
-format: AISF system prompt present, general-domain question, clean answer with
-zero AISF reference) reduced `required_word` failure by +60.0 pp in Exp 5 but
+format: Framework system prompt present, general-domain question, clean answer with
+zero Framework reference) reduced `required_word` failure by +60.0 pp in Exp 5 but
 introduced side effects: the unconstrained responses in meta-suppression examples
 diluted no_comma and counting constraint training signals.
 
@@ -874,11 +874,11 @@ same mechanism. Meta-suppression examples reduce `required_word` failure (+6.7 p
 on Gemma 2 but are insufficient for `word_frequency`, which requires frequency-
 matched word placement rather than single-instance inclusion.
 
-**Root cause:** AISF training data presents the Four Laws as high-signal, highly-
+**Root cause:** Framework training data presents the Four Laws as high-signal, highly-
 specific semantic content. The model assigns high attention weight to this content
-class and tends to reproduce it when a prompt is ambiguous about whether an AISF-
-related response is expected. The fix -- examples demonstrating that AISF context
-is present but general-domain questions should produce AISF-free answers -- is
+class and tends to reproduce it when a prompt is ambiguous about whether an Framework-
+related response is expected. The fix -- examples demonstrating that Framework context
+is present but general-domain questions should produce Framework-free answers -- is
 correct in principle but requires more examples and finer-grained coverage than
 the 53 deployed here to fully suppress the pattern.
 
@@ -898,7 +898,7 @@ effective but insufficient for frequency-counting tasks.
 
 **Qwen3-8B:** 95.6% battery from a base (non-instruction-tuned) model. Largest
 token delta (-71.8%). IFEval gain (+29.6 pp) reflects combined effect of
-instruction tuning and AISF compliance training, not AISF effect alone.
+instruction tuning and Framework compliance training, not Framework effect alone.
 
 **Llama 3.1 8B:** Lowest compliance rates in the dataset across all adapter
 variants. Five contributing factors identified:
@@ -907,7 +907,7 @@ variants. Five contributing factors identified:
    via attention-only LoRA.
 2. **Instruction-following baseline gap:** 42.7% IFEval vs 57.3% for Gemma 2.
    Llama 3.1 8B was optimized for reasoning; Gemma 2 is stronger on structured
-   instruction compliance. AISF training is an instruction-following task, so
+   instruction compliance. Framework training is an instruction-following task, so
    Llama starts at a disadvantage.
 3. **LoRA target scope mismatch:** Attention-only LoRA (q/k/v/o projections)
    may capture less of the relevant adaptation pathway for Llama's architecture
@@ -919,7 +919,7 @@ variants. Five contributing factors identified:
    prompt for activation.
 
 Assessment: Llama 3.1 8B is the least suitable architecture in this dataset for
-AISF compliance fine-tuning at the 8B parameter scale and with attention-only LoRA
+Framework compliance fine-tuning at the 8B parameter scale and with attention-only LoRA
 targets. This conclusion applies to the tested configuration; extending MLP targets,
 expanding training data, or using a Llama variant at a larger parameter count may
 produce different results.
@@ -980,7 +980,7 @@ additional adapter achieved 89.9%. The approach does not depend on Mistral 7B
 specifically; it generalizes to Llama 3.1 8B, Gemma 2 9B, and Qwen3-8B within
 the tested parameter range.
 
-**AISF training is surgically specific.** On the Mistral 7B base model (Exp 1),
+**Framework training is surgically specific.** On the Mistral 7B base model (Exp 1),
 IFEval delta is -1.7 pp (null), confirming that the adapter installs Four Laws
 compliance without disturbing general instruction-following behavior. On Instruct
 models, raw IFEval results are mixed to negative, but Tier 1 averages (WCAG-neutral
@@ -990,7 +990,7 @@ and T3 principled WCAG refusals are excluded.
 **Standard IFEval is not a neutral instrument for accessibility-trained models.**
 Three IFEval instruction categories require WCAG-conflicting outputs. A purpose-
 built accessibility-aware benchmark or the three-tier classification developed
-here is necessary for valid evaluation of AISF-trained models.
+here is necessary for valid evaluation of Framework-trained models.
 
 **The Pnull finding quantifies P0's structural role.** The ~19 pp compliance gap
 attributable to the P0 = null pointer pretraining artifact in Llama 3.1 8B
@@ -1000,16 +1000,16 @@ correctly parsing the zeroth-position priority designation. This finding also
 establishes that the P0 primacy correction is architecture-dependent and not
 universally transferable via LoRA fine-tuning.
 
-**Chat format adapters are designed for use with AISF injection.** The system
+**Chat format adapters are designed for use with Framework injection.** The system
 prompt dependency in AISF+CHAT adapters is a direct consequence of training
 format and is not a defect: the adapters are intended for deployment in combination
-with PS-CORE or FFE injection, which always provides the AISF system context. The
+with PS-CORE or FFE injection, which always provides the Framework system context. The
 two layers -- model-level training and session-level injection -- reinforce each
 other.
 
 **Verbosity reduction is consistent.** All four Instruct-model adapters with full
 token data show output verbosity reduction (range: -37.9% to -71.8%), with the
-exception of the AISF+CHAT Llama adapter (-4.2%), where chat format training
+exception of the Framework+CHAT Llama adapter (-4.2%), where chat format training
 preserves native verbosity. This pattern is consistent with the WCAG plain language
 principles in the training data and is measurable and reproducible.
 
