@@ -108,9 +108,11 @@ nav_order: 1
 
 ## FAQ
 
-**F.1** AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/
+**F.1** Orwell, G., Nineteen Eighty‑Four, appendix, "The Principles of Newspeak" (London: Secker & Warburg, 1949). *"Newspeak was designed not to extend but to diminish the range of thought...The grammar of Newspeak had two outstanding peculiarities. The first of these was an almost complete interchangeability between different parts of speech."*
 
-**F.2** FisherMap. "Caesar Creek Lake, OH -- Depth Map." https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/
+**F.2** AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/
+
+**F.3** FisherMap. "Caesar Creek Lake, OH -- Depth Map." https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/
 
 ---
 
