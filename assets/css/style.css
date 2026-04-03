@@ -90,9 +90,7 @@ body {
 }
 
 /* --- Sidebar --- */
-/* Nav is second in DOM (content-first for AT) but visually first via order. */
 .site-nav {
-  order: -1;
   width: var(--sidebar-width);
   flex-shrink: 0;
   background-color: var(--color-nav-bg);
