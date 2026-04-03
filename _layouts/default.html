@@ -53,5 +53,11 @@
     </nav>
 
   </div>
+  <script>
+    if (window.matchMedia('(max-width: 700px)').matches) {
+      var nd = document.querySelector('.nav-details');
+      if (nd) nd.removeAttribute('open');
+    }
+  </script>
 </body>
 </html>
