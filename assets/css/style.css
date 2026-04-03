@@ -122,16 +122,10 @@ body {
 }
 
 /* --- Nav details/summary (mobile collapse) --- */
-/* Desktop: force list visible, hide toggle */
+/* Desktop: hide toggle; open attribute keeps list visible */
 .nav-summary {
   display: none;
 }
-
-.nav-details > ul {
-  display: block !important;
-}
-
-/* Mobile: summary becomes visible toggle; details collapses by default */
 
 .nav-title {
   font-weight: 700;
@@ -340,10 +334,6 @@ footer p {
     cursor: pointer;
     padding: 0.3rem 0.5rem;
     font-weight: 600;
-  }
-
-  .nav-details > ul {
-    display: revert !important;
   }
 
   main {
