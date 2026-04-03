@@ -116,9 +116,22 @@ body {
 }
 
 .nav-logo {
+  display: block;
   height: 2rem;
   width: auto;
 }
+
+/* --- Nav details/summary (mobile collapse) --- */
+/* Desktop: force list visible, hide toggle */
+.nav-summary {
+  display: none;
+}
+
+.nav-details > ul {
+  display: block !important;
+}
+
+/* Mobile: summary becomes visible toggle; details collapses by default */
 
 .nav-title {
   font-weight: 700;
@@ -140,7 +153,6 @@ body {
 .site-nav a {
   display: block;
   padding: 0.3rem 0.5rem;
-  color: var(--color-link);
   text-decoration: none;
   border-radius: 3px;
   line-height: 1.4;
@@ -320,6 +332,18 @@ footer p {
     border-right: none;
     border-bottom: 1px solid var(--color-nav-border);
     overflow-y: visible;
+  }
+
+  /* Show summary toggle; let details collapse naturally */
+  .nav-summary {
+    display: block;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    font-weight: 600;
+  }
+
+  .nav-details > ul {
+    display: revert !important;
   }
 
   main {
