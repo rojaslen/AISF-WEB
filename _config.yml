@@ -10,7 +10,7 @@ plugins:
   - jekyll-seo-tag
 
 logo: "/assets/images/logo.png"
-search_enabled: true
+search_enabled: false
 nav_sort: order
 color_scheme: custom
 
