@@ -44,7 +44,7 @@
 - This overrides content work, commit batching, and all other priorities without exception.
 - Target test environment: JAWS 2026 via Fusion, Firefox (current). Firefox is the primary target -- stricter standards compliance means passing Firefox covers Chromium browsers by extension.
 - Also verify: Chrome/Edge (Chromium, #1 AT browser in real-world use on PC); iOS VoiceOver + Safari (WebKit, distinct engine); Android/TalkBack covered by Chrome verification (Samsung and Android default to Chromium).
-- Known platform issue: JAWS 2026 virtual buffer fails in Firefox 149 (site-wide regression, not a site bug). Use Chrome/Chromium for AT testing until resolved. See `.claude/CHANGELOG.md` for incident details.
+- Known platform issue: JAWS 2026 virtual buffer fails in Firefox 149 (site-wide regression, not a site bug). Use Chrome/Chromium for AT testing until resolved. See `.claude/change.log` for incident details.
 
 ---
 
