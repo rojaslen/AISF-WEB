@@ -44,9 +44,7 @@
 - This overrides content work, commit batching, and all other priorities without exception.
 - Target test environment: JAWS 2026 via Fusion, Firefox (current). Firefox is the primary target -- stricter standards compliance means passing Firefox covers Chromium browsers by extension.
 - Also verify: Chrome/Edge (Chromium, #1 AT browser in real-world use on PC); iOS VoiceOver + Safari (WebKit, distinct engine); Android/TalkBack covered by Chrome verification (Samsung and Android default to Chromium).
-- Platform note 2026-04-03: JAWS 2026 reads nothing in Firefox 149 site-wide -- confirmed platform compatibility regression, not a site bug. ZoomText component (same Fusion install) reads normally. Chrome confirmed full read. Monitor for a Freedom Scientific Firefox compatibility patch.
-  - Symptoms: links list (Insert+F7) returns "must be in a virtual document" -- JAWS is not entering virtual buffer/browse mode at all in Firefox. F5 refresh normally forces a virtual buffer rebuild but does not resolve here. Site-wide, not specific to this site.
-  - Chromium (Chrome/Edge) handles virtual buffer correctly with JAWS 2026; confirmed working.
+- Known platform issue: JAWS 2026 virtual buffer fails in Firefox 149 (site-wide regression, not a site bug). Use Chrome/Chromium for AT testing until resolved. See `.claude/CHANGELOG.md` for incident details.
 
 ---
 
