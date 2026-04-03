@@ -27,26 +27,29 @@
         {% endif %}
         <span class="nav-title">{{ site.title }}</span>
       </div>
-      <ul>
-        {% assign all_pages = site.pages | sort: "nav_order" %}
-        {% for p in all_pages %}
-          {% if p.nav_order %}
-            {% unless p.parent %}
-              <li>
-                <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} aria-current="page"{% endif %}>{{ p.title }}</a>
-              </li>
-              {% if p.has_children %}
-                {% assign children = site.pages | where: "parent", p.title | sort: "nav_order" %}
-                {% for child in children %}
-                <li class="nav-child">
-                  <a href="{{ child.url | relative_url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}</a>
+      <details class="nav-details">
+        <summary class="nav-summary">Contents</summary>
+        <ul>
+          {% assign all_pages = site.pages | sort: "nav_order" %}
+          {% for p in all_pages %}
+            {% if p.nav_order %}
+              {% unless p.parent %}
+                <li>
+                  <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} aria-current="page"{% endif %}>{{ p.title }}</a>
                 </li>
-                {% endfor %}
-              {% endif %}
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
-      </ul>
+                {% if p.has_children %}
+                  {% assign children = site.pages | where: "parent", p.title | sort: "nav_order" %}
+                  {% for child in children %}
+                  <li class="nav-child">
+                    <a href="{{ child.url | relative_url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}</a>
+                  </li>
+                  {% endfor %}
+                {% endif %}
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </details>
     </nav>
 
   </div>
