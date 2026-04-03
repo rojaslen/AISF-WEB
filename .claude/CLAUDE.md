@@ -42,7 +42,8 @@
 **ANY failure of JAWS (any version) to read site content is an immediate emergency.**
 - Stop all other work. Fix and push before anything else.
 - This overrides content work, commit batching, and all other priorities without exception.
-- Target test environment: JAWS 2026 via Fusion, Firefox (current). Firefox is the primary target -- stricter standards compliance means passing Firefox covers Chromium browsers by extension. Chrome/Edge (Chromium) should also be verified as the #1 AT browser in real-world use.
+- Target test environment: JAWS 2026 via Fusion, Firefox (current). Firefox is the primary target -- stricter standards compliance means passing Firefox covers Chromium browsers by extension.
+- Also verify: Chrome/Edge (Chromium, #1 AT browser in real-world use on PC); iOS VoiceOver + Safari (WebKit, distinct engine); Android/TalkBack covered by Chrome verification (Samsung and Android default to Chromium).
 - Platform note 2026-04-03: JAWS 2026 reads nothing in Firefox 149 site-wide -- confirmed platform compatibility regression, not a site bug. ZoomText component (same Fusion install) reads normally. Chrome confirmed full read. Monitor for a Freedom Scientific Firefox compatibility patch.
 - Known issue resolved 2026-04-03: Just the Docs `.main-content-wrap` overflow:auto + tabindex=-1 combination excluded all body content from JAWS virtual buffer. Moot -- Just the Docs theme replaced with custom layout on same date.
 
