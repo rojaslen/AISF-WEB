@@ -4,6 +4,15 @@
    No JS. No framework. No theme dependency.
    ================================================================ */
 
+/* --- Inter variable font (self-hosted, SIL OFL) --- */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-Variable/web/InterVariable.woff2") format("woff2");
+}
+
 /* --- Light mode (default) --- */
 :root {
   --color-bg:           #ffffff;
@@ -16,8 +25,7 @@
   --color-code-bg:      #f0f0f0;
   --color-muted:        #555555;
   --sidebar-width:      260px;
-  --font-body:          Georgia, 'Times New Roman', serif;
-  --font-ui:            system-ui, -apple-system, sans-serif;
+  --font-body:          "Inter", system-ui, -apple-system, sans-serif;
   --font-mono:          'Courier New', Courier, monospace;
 }
 
@@ -59,7 +67,7 @@ body {
   top: -100%;
   left: 0;
   padding: 0.5rem 1rem;
-  font-family: var(--font-ui);
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
@@ -83,7 +91,7 @@ body {
   background-color: var(--color-nav-bg);
   border-right: 1px solid var(--color-nav-border);
   padding: 1.5rem 1rem;
-  font-family: var(--font-ui);
+  font-family: var(--font-body);
   font-size: 0.875rem;
   position: sticky;
   top: 0;
@@ -154,7 +162,7 @@ main {
 
 /* --- Headings --- */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-ui);
+  font-family: var(--font-body);
   color: var(--color-heading);
   line-height: 1.3;
   margin: 2rem 0 0.5rem 0;
@@ -227,7 +235,7 @@ pre code {
 table {
   border-collapse: collapse;
   width: 100%;
-  font-family: var(--font-ui);
+  font-family: var(--font-body);
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -280,7 +288,7 @@ footer {
   margin-top: 3rem;
   padding-top: 1rem;
   border-top: 1px solid var(--color-rule);
-  font-family: var(--font-ui);
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--color-muted);
 }
