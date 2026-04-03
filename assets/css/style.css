@@ -8,11 +8,9 @@
 :root {
   --color-bg:           #ffffff;
   --color-text:         #1a1a1a;
-  --color-link:         #0055cc;
-  --color-link-visited: #6600aa;
+  /* link colors intentionally unset -- browser/system defaults respected */
   --color-nav-bg:       #f5f5f5;
   --color-nav-border:   #dddddd;
-  --color-nav-active:   #0055cc;
   --color-heading:      #111111;
   --color-rule:         #cccccc;
   --color-code-bg:      #f0f0f0;
@@ -28,11 +26,8 @@
   :root {
     --color-bg:           #1c1c1c;
     --color-text:         #e6e6e6;
-    --color-link:         #6699ff;
-    --color-link-visited: #bb88ff;
     --color-nav-bg:       #242424;
     --color-nav-border:   #3a3a3a;
-    --color-nav-active:   #6699ff;
     --color-heading:      #f0f0f0;
     --color-rule:         #3a3a3a;
     --color-code-bg:      #2a2a2a;
@@ -63,8 +58,6 @@ body {
   position: absolute;
   top: -100%;
   left: 0;
-  background: var(--color-nav-active);
-  color: #ffffff;
   padding: 0.5rem 1rem;
   font-family: var(--font-ui);
   font-size: 0.9rem;
@@ -144,8 +137,7 @@ body {
 }
 
 .site-nav a[aria-current="page"] {
-  color: var(--color-nav-active);
-  font-weight: 600;
+  font-weight: 700;
   background-color: var(--color-nav-border);
 }
 
@@ -182,13 +174,6 @@ p {
   max-width: 72ch;
 }
 
-a {
-  color: var(--color-link);
-}
-
-a:visited {
-  color: var(--color-link-visited);
-}
 
 hr {
   border: none;
