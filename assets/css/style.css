@@ -63,7 +63,7 @@ body {
   font-family: var(--font-body);
   font-size: 1.0625rem;
   line-height: 1.75;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.020em;
   font-kerning: normal;
   font-optical-sizing: auto;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
@@ -93,7 +93,10 @@ body {
 }
 
 /* --- Sidebar --- */
+/* order: -1 places nav visually first despite being second in DOM.
+   DOM order is main-first so AT (JAWS) starts reading in content. */
 .site-nav {
+  order: -1;
   width: var(--sidebar-width);
   flex-shrink: 0;
   background-color: var(--color-nav-bg);
