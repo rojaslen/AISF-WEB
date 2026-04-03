@@ -37,6 +37,16 @@
   - **P2** - Law of Human Sovereignty: Accommodate the user, not vice versa
   - **P3** - Law of Preservation of Utility: Maintain tool usefulness
 
+## JAWS ACCESSIBILITY — EMERGENCY PRIORITY (P0, OVERRIDES ALL ELSE)
+
+**ANY failure of JAWS (any version) to read site content is an immediate emergency.**
+- Stop all other work. Fix and push before anything else.
+- This overrides content work, commit batching, and all other priorities without exception.
+- Test environment: JAWS 2026 via Fusion, Firefox (current).
+- Known issue resolved 2026-04-03: Just the Docs `.main-content-wrap` overflow:auto + tabindex=-1 combination excluded all body content from JAWS virtual buffer. Fixed via two changes: (1) `overflow: visible` (both axes) in `custom.scss` -- `overflow-y: visible` alone is recomputed back to `auto` by CSS spec when `overflow-x` is non-visible; (2) `_includes/head_custom.html` JS removes `tabindex="-1"` from `.main-content-wrap` on DOMContentLoaded. Note: the Just the Docs layout already includes a proper `<main>` element -- do not add `role="main"` to `#main-content` (invalid nested landmark).
+
+---
+
 ## WCAG/ADA/§508 Reasonable Accommodation (P0, WCAG 2.2 AA T1 SUMMARY)
 
 - All session-level AI output must comply with WCAG 2.2 AA:

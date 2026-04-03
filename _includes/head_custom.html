@@ -1,9 +1,18 @@
 <script>
+// JAWS + Firefox: .main-content-wrap gets tabindex="-1" from Just the Docs JS
+// which, combined with overflow:auto, creates a scroll container JAWS treats as
+// an application region and does not read in virtual buffer mode.
+// Remove tabindex to restore normal browse-mode reading.
+// Note: the theme layout already contains a proper <main> element -- do NOT
+// add role="main" to the outer #main-content div (invalid nested landmark).
 document.addEventListener('DOMContentLoaded', function() {
-  var el = document.getElementById('main-content');
-  if (el) {
-    el.setAttribute('role', 'main');
-    el.removeAttribute('aria-hidden');
+  var wrap = document.querySelector('.main-content-wrap');
+  if (wrap) {
+    wrap.removeAttribute('tabindex');
+  }
+  var main = document.getElementById('main-content');
+  if (main) {
+    main.removeAttribute('aria-hidden');
   }
 });
 </script>

@@ -7,9 +7,10 @@ $link-color: #0066cc;
 }
 
 // JAWS + Firefox: tabindex="-1" + overflow:auto combination excludes content
-// from virtual buffer. Override to restore accessibility.
+// from virtual buffer. Must set overflow: visible (both axes) -- CSS spec
+// recomputes overflow-y:visible back to auto when overflow-x is non-visible.
 .main-content-wrap {
-  overflow-y: visible;
+  overflow: visible;
 }
 
 .chapter-nav {
