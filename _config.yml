@@ -11,6 +11,7 @@ plugins:
 
 logo: "/assets/images/logo.png"
 search_enabled: false
+heading_anchors: false
 nav_sort: order
 color_scheme: custom
 
