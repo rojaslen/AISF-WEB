@@ -6,6 +6,12 @@ $link-color: #0066cc;
   gap: 0.6rem;
 }
 
+// JAWS + Firefox: tabindex="-1" + overflow:auto combination excludes content
+// from virtual buffer. Override to restore accessibility.
+.main-content-wrap {
+  overflow-y: visible;
+}
+
 .chapter-nav {
   display: flex;
   flex-direction: row-reverse;
