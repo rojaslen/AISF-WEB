@@ -11,8 +11,8 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="site-wrap">
 
-    <!-- main before nav: DOM order controls AT reading order.
-         CSS order property handles visual placement. -->
+    <!-- main is first in DOM so AT cursor starts in page content.
+         CSS order property handles visual placement of nav. -->
     <main id="main-content">
       {{ content }}
       <footer>
