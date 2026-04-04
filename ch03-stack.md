@@ -2,7 +2,7 @@
 title: "Chapter 3: The Deployment Stack"
 nav_order: 4
 ---
-
+<a name="main-content"></a>
 # Chapter 3: The Deployment Stack
 
 ---
