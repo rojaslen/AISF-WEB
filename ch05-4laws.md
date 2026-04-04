@@ -2,7 +2,6 @@
 title: "Chapter 5: The Four Laws of Instanced AI"
 nav_order: 6
 ---
-<a name="main-content"></a>
 
 # Chapter 5: The Four Laws of Instanced AI
 

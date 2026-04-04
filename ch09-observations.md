@@ -2,7 +2,6 @@
 title: "Chapter 9: Field Observations"
 nav_order: 10
 ---
-<a name="main-content"></a>
 
 # Chapter 9: Field Observations
 

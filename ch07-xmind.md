@@ -2,7 +2,6 @@
 title: "Chapter 7: The Human-AI Extended Mind"
 nav_order: 8
 ---
-<a name="main-content"></a>
 
 # Chapter 7: The Human-AI Extended Mind
 

@@ -3,7 +3,6 @@ title: "AI Stability Framework: Downloads"
 parent: "Appendices"
 nav_order: 5
 ---
-<a name="main-content"></a>
 
 # AI Stability Framework: Downloads
 
