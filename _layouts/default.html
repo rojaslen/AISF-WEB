@@ -9,54 +9,22 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <div class="site-wrap">
-
-    <nav class="site-nav" aria-label="Site navigation">
-      <div class="nav-header">
-        {% if site.logo %}
-        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" class="nav-logo">
-        {% endif %}
-        <span class="nav-title">{{ site.title }}</span>
-      </div>
-      <details class="nav-details" open>
-        <summary class="nav-summary">Contents</summary>
-        <ul>
-          {% assign all_pages = site.pages | sort: "nav_order" %}
-          {% for p in all_pages %}
-            {% if p.nav_order %}
-              {% unless p.parent %}
-                <li>
-                  <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} aria-current="page"{% endif %}>{{ p.title }}</a>
-                </li>
-                {% if p.has_children %}
-                  {% assign children = site.pages | where: "parent", p.title | sort: "nav_order" %}
-                  {% for child in children %}
-                  <li class="nav-child">
-                    <a href="{{ child.url | relative_url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.title }}</a>
-                  </li>
-                  {% endfor %}
-                {% endif %}
-              {% endunless %}
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </details>
-    </nav>
-
-    <main id="main-content">
-      {{ content }}
-      <footer>
-        <p>{{ site.footer_content }}</p>
-      </footer>
-    </main>
-
-  </div>
-
-  <script>
-    if (window.matchMedia('(max-width: 700px)').matches) {
-      var nd = document.querySelector('.nav-details');
-      if (nd) nd.removeAttribute('open');
-    }
-  </script>
+  <header class="site-header">
+    <a href="{{ '/' | relative_url }}" class="site-brand">
+      {% if site.logo %}
+      <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" class="site-logo">
+      {% endif %}
+      <span class="site-name">{{ site.title }}</span>
+    </a>
+  </header>
+  <main id="main-content">
+    {{ content }}
+    {% unless page.url == '/' or page.parent %}
+    <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+    {% endunless %}
+    <footer>
+      <p>{{ site.footer_content }}</p>
+    </footer>
+  </main>
 </body>
 </html>
