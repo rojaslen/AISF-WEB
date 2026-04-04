@@ -2,7 +2,7 @@
 title: "Chapter 6: What AI Perceives"
 nav_order: 7
 ---
-
+<a name="main-content"></a>
 # Chapter 6: What AI Perceives
 
 ---
