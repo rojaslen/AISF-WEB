@@ -12,7 +12,7 @@ nav_order: 1
 
 **1.1** "Mitigating LLM Hallucinations: A Comprehensive Review of Techniques and Architectures." *Preprints,* 202505.1955 (May 2025). https://www.preprints.org/manuscript/202505.1955 — *See also:* HalluLens Benchmark, arXiv:2504.17550 (ACL 2025). https://arxiv.org/abs/2504.17550
 
-**1.2** O'Keeffe, E., Mukhtar, O., & O'Keeffe, S. T. (2011). "Orientation to time as a guide to the presence and severity of cognitive impairment in older hospital patients." *Journal of Neurology, Neurosurgery & Psychiatry,* 82(5), 500-504. https://pubmed.ncbi.nlm.nih.gov/20852313/ — NHS: https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/
+**1.2** Microsoft. "Time Sync for Windows VMs in Azure." https://learn.microsoft.com/en-us/azure/virtual-machines/windows/time-sync — "Configure an External Time Source for Windows VMs." https://learn.microsoft.com/en-us/azure/virtual-machines/windows/external-ntpsource-configuration — "KVM Timekeeping." *Linux Kernel Documentation,* v5.8, §4. https://www.kernel.org/doc/html/v5.8/virt/kvm/timekeeping.html
 
 ## Chapter 2
 
@@ -72,7 +72,7 @@ nav_order: 1
 
 **6.1** "Time Dysperception Perspective for Acquired Brain Injury." *PMC,* PMC3888944. https://pmc.ncbi.nlm.nih.gov/articles/PMC3888944/
 
-**6.2** NHS dementia symptom guidance: https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/ — Alzheimer's Society. "Time-shifting and dementia." https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting
+**6.2** NHS dementia symptom guidance: https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/ — Alzheimer's Society. "Time-shifting and dementia." https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting — *See also:* O'Keeffe, E., Mukhtar, O., & O'Keeffe, S. T. (2011). "Orientation to time as a guide to the presence and severity of cognitive impairment in older hospital patients." *Journal of Neurology, Neurosurgery & Psychiatry,* 82(5), 500-504. https://pubmed.ncbi.nlm.nih.gov/20852313/
 
 **6.3** W3C Web Accessibility Initiative: https://www.w3.org/WAI/standards-guidelines/wcag/ — W3C. "Making Content Usable for People with Cognitive and Learning Disabilities." https://www.w3.org/TR/coga-usable/
 

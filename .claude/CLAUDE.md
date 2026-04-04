@@ -136,6 +136,10 @@ Chapter and appendix citation format:
 - **NEVER use backtick line continuation** in PowerShell output
 - Use **Read/Write tools** for file I/O -- bash heredocs fail on strings containing single quotes
 
+## TODO
+
+- Synchronize `CITATIONS_MASTER.md` with `apx00-endnotes.md` once content edits are finalized; numeric alignment expected to be off until post-edit sanity check.
+
 ## Git Rules
 
 - **No Auto-Commit** -- always ask before committing; user may want to batch changes
