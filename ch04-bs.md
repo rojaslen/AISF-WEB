@@ -3,6 +3,7 @@ title: "Chapter 4: What Good Is Accessible Bullshit?"
 nav_order: 5
 ---
 <a name="main-content"></a>
+
 # Chapter 4: What Good Is Accessible Bullshit?
 
 ---
