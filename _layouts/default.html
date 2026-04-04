@@ -19,9 +19,6 @@
   </header>
   <main id="main-content">
     {{ content }}
-    {% unless page.url == '/' or page.parent %}
-    <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
-    {% endunless %}
     <footer>
       <p>{{ site.footer_content }}</p>
     </footer>

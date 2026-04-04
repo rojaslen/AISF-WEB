@@ -43,9 +43,9 @@ The Four Laws provide the AI with reasons and methods to protect the only user t
 
 <div class="chapter-nav">
   <a href="/ch06-wcag">Next: Chapter 6</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch04-bs">Previous: Chapter 4</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 

@@ -53,9 +53,9 @@ But it works.
 
 <div class="chapter-nav">
   <a href="/appendices">Next: Appendices</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch10-tryit">Previous: Chapter 10</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 

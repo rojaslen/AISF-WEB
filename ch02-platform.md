@@ -88,9 +88,9 @@ These toys also inherit IoT's (Internet of Things) long record of security flaws
 
 <div class="chapter-nav">
   <a href="/ch03-stack">Next: Chapter 3</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch01-temporal">Previous: Chapter 1</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 

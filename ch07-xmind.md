@@ -25,9 +25,9 @@ Each field of research mentioned here deserves more investigation, particularly 
 
 <div class="chapter-nav">
   <a href="/ch08-olm">Next: Chapter 8</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch06-wcag">Previous: Chapter 6</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 

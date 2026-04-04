@@ -55,8 +55,8 @@ The PowerShell desktop app isn't just the proof of concept; it's a flexible, fun
 
 <div class="chapter-nav">
   <a href="/ch11-wrapup">Next: Chapter 11</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch09-observations">Previous: Chapter 9</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
