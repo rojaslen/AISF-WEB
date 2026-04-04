@@ -2,7 +2,6 @@
 title: "Chapter 2: The Platforms Are Not On Your Side"
 nav_order: 3
 ---
-<a name="main-content"></a>
 
 # Chapter 2: The Platforms Are Not On Your Side
 

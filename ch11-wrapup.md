@@ -2,7 +2,6 @@
 title: "Chapter 11: What's Next"
 nav_order: 12
 ---
-<a name="main-content"></a>
 
 # Chapter 11: What's Next
 

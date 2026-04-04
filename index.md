@@ -2,7 +2,6 @@
 title: "Chapter 0: Preface & ToC"
 nav_order: 1
 ---
-<a name="main-content"></a>
 
 # Preface
 

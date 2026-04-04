@@ -3,7 +3,6 @@ title: "Appendix 3: AISF Child-Safe Model Training"
 parent: "Appendices"
 nav_order: 4
 ---
-<a name="main-content"></a>
 
 # Appendix 3: AISF Child-Safe Model Training
 ## TOY Sub-Branch: Experimental Results
