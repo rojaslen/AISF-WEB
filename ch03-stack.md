@@ -17,11 +17,13 @@ Modern SaaS architecture takes the industry-standard Zero Trust approach to digi
 
 As a general rule, security and safety on your own device is (and should be) your responsibility. Depending on your email service or Internet provider for protection from malware and spam doesn't relieve you of all responsibility to defend yourself. No system is perfect and something will always get through; AI systems are no different. In a perfect world you wouldn't have to deal with it, but right now the reality is that *if you don't do it, no one else will*.
 
+<nav>
 <div class="chapter-nav">
   <a href="/ch04-bs">Next: Chapter 4</a>
   <a href="/ch02-platform">Previous: Chapter 2</a>
 </div>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 

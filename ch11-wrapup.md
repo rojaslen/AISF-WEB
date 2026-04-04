@@ -51,11 +51,13 @@ The AI Stability Framework project is a practitioner's documented experience of 
 
 But it works.
 
+<nav>
 <div class="chapter-nav">
   <a href="/appendices">Next: Appendices</a>
   <a href="/ch10-tryit">Previous: Chapter 10</a>
 </div>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 

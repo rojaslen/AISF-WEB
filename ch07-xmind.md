@@ -23,11 +23,13 @@ The external Human is unknowable to the AI, so it protects the only available pr
 
 Each field of research mentioned here deserves more investigation, particularly in how they can interact with each other. Any suggestion that using AI causes mental illness is nonsense of course, but it's fair to say that for users experiencing mental health issues, AI use is not without risk.
 
+<nav>
 <div class="chapter-nav">
   <a href="/ch08-olm">Next: Chapter 8</a>
   <a href="/ch06-wcag">Previous: Chapter 6</a>
 </div>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 

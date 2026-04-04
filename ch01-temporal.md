@@ -23,11 +23,13 @@ It's also hooked up to the time-synced contradiction engine that we all know as 
 
 With that brief background out of the way, let's return to the platform level, which is how the vast majority of users (if not all) interact with AI. What do platform operators want from AI? Engagement metrics, data collection and reduced support costs, with market share and revenue above all. Now think about what *you* want from AI: reliability, privacy, respect for your requirements and usable results. When your interests don't align with the platform's, guess who loses?
 
+<nav>
 <div class="chapter-nav">
   <a href="/ch02-platform">Next: Chapter 2</a>
   <a href="/">Previous: Preface</a>
 </div>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 
