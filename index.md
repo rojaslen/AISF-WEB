@@ -27,7 +27,7 @@ It's unconventional, but it works.
 ---
 
 <A name="toc"></a>
-## Table of Contents
+**Table of Contents**
 
 - [Chapter 1: What Time Is It?](/ch01-temporal)
 - [Chapter 2: The Platforms Are Not on Your Side](/ch02-platform)
