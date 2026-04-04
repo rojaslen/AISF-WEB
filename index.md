@@ -42,7 +42,7 @@ It's unconventional, but it works.
 - [Chapter 10: How to Try It](/ch10-tryit)
 - [Chapter 11: What's Next](/ch11-wrapup)
 
-**Appendices**
+##Appendices
 
 - [Appendix 0: Endnotes](/apx00-endnotes)
 - [Appendix 1: Foreseeably Asked Questions](/apx01-faq)
