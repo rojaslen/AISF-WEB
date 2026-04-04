@@ -25,9 +25,9 @@ With that brief background out of the way, let's return to the platform level, w
 
 <div class="chapter-nav">
   <a href="/ch02-platform">Next: Chapter 2</a>
-  <span aria-hidden="true">|</span>
   <a href="/">Previous: Preface</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 

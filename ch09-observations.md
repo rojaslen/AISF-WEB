@@ -45,9 +45,9 @@ In the absence of any meaningful preferences feature, figuring out how to apply 
 
 <div class="chapter-nav">
   <a href="/ch10-tryit">Next: Chapter 10</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch08-olm">Previous: Chapter 8</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 

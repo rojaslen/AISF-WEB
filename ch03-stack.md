@@ -19,9 +19,9 @@ As a general rule, security and safety on your own device is (and should be) you
 
 <div class="chapter-nav">
   <a href="/ch04-bs">Next: Chapter 4</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch02-platform">Previous: Chapter 2</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 

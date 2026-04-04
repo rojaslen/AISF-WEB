@@ -25,9 +25,9 @@ Combined with recognition that "user" means "session data," that provides the ac
 
 <div class="chapter-nav">
   <a href="/ch07-xmind">Next: Chapter 7</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch05-4laws">Previous: Chapter 5</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 

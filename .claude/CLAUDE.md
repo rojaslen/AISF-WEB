@@ -102,9 +102,11 @@ presentation, or proposal. Evaluate it accordingly.
 - **Main AISF project:** `C:\AISF\` (`\\debbie\Tech\APP\_DEV\AISF\AI Stability Framework\`)
 - **Project reference:** `.claude\MAIN_PROJECT_README.md` -- full branch map and status for the parent AISF project of which this site is the WEB (publication) branch
 
-## Design Principles
+## Design Principles (P0 -- no exceptions)
 
-- **KISS (Keep It Simple, Stupid):** Prefer plain HTML and CSS. Avoid JavaScript, Java, embeds, and third-party dependencies unless there is no simpler alternative.
+- **KISS (Keep It Simple, Stupid):** The simplest solution that works is the correct solution. Prefer plain HTML and CSS. Avoid JavaScript, embeds, and third-party dependencies unless there is no simpler alternative.
+- **YAGNI (You Aren't Gonna Need It):** Do not add code, markup, attributes, or abstractions for hypothetical future needs. Build only what is required now.
+- **Occam's Razor:** When two solutions work, the simpler one is correct. Complexity must justify itself or it does not belong.
 - **Universal Design:** Accessibility is assumed at build, not added as a QC pass after the fact. All markup must be natively accessible before any AT-specific adjustments are considered.
 
 ## Site Structure

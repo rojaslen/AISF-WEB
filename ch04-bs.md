@@ -20,9 +20,9 @@ Being stateless in a virtualized void, the AI has no baseline of reality or purp
 
 <div class="chapter-nav">
   <a href="/ch05-4laws">Next: Chapter 5</a>
-  <span aria-hidden="true">|</span>
   <a href="/ch03-stack">Previous: Chapter 3</a>
 </div>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 
 ---
 
