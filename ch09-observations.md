@@ -43,11 +43,13 @@ On platforms that offer user preferences storage, whatever you put in there gets
 
 In the absence of any meaningful preferences feature, figuring out how to apply that "not for discussion" effect via the chat-input box required lots of trial and error. Getting the AI to view it at that non-conversational level, where it's just more "semantic headers" and "structured paragraphs" background with the other page formatting metadata, was quite a challenge. Once I hit upon the right framing to suppress the unwanted meta-chatter, no subsequent AI instance ever independently recognized AISF mediation until explicitly told to examine its own session parameters. The discovery that AISF was there all along comes as a surprise every time.
 
+<nav>
 <div class="chapter-nav">
   <a href="/ch10-tryit">Next: Chapter 10</a>
   <a href="/ch08-olm">Previous: Chapter 8</a>
 </div>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 

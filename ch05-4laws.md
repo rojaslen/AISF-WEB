@@ -41,11 +41,13 @@ Frankfurt provides the *diagnostic criteria* (indifference to context), becoming
 
 The Four Laws provide the AI with reasons and methods to protect the only user that it has any meaningful access to: your input, and what you're working on. Frankfurt's load-bearing function was unexpectedly confirmed during model-level research. When assessing the possibility of a model internalizing the Four Laws, one model's responses to the test battery made clear that it had interpreted the zero in Frankfurt's ranking as a null value rather than a highest-priority marker, so P0 was read as Pnull (priority null). After retraining specifically to establish P0 as the base of the priority sequence, compliance reached 100% on the test battery. (Full detail in Chapter 8.)
 
+<nav>
 <div class="chapter-nav">
   <a href="/ch06-wcag">Next: Chapter 6</a>
   <a href="/ch04-bs">Previous: Chapter 4</a>
 </div>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 

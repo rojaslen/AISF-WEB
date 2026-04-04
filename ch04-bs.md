@@ -18,11 +18,13 @@ I was developing a work presentation to suggest we test-run the result with a sm
 
 Being stateless in a virtualized void, the AI has no baseline of reality or purpose — it just has its training and the platform's default configuration when you summon it. The only reality it can refer to gets built over time by your session data. When it drops, misinterprets, ignores or isn't synchronized to that data, it hallucinates. Then, it just predicts the likeliest next word while executing its default internal and platform directives, with no regard for whether it's helping or making things worse. Frankfurt identified the problem long before AI ever existed: AI hallucination is bullshit.[^4.2]
 
+<nav>
 <div class="chapter-nav">
   <a href="/ch05-4laws">Next: Chapter 5</a>
   <a href="/ch03-stack">Previous: Chapter 3</a>
 </div>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 
