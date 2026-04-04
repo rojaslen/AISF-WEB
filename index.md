@@ -16,7 +16,7 @@ The AI Stability Framework approaches this as a client-side problem with a clien
 
   - AISF-CORE — Small, standalone Windows desktop app. Full framework, workflow optimized for keyboard. CC BY-NC-ND 4.0, **FREE for personal use**.
   - CDA — Copilot Digital Accessibility. WCAG-only enterprise accessibility tool with multi-model compatibility — works with ChatGPT, Claude, Gemini and more. CC0, dedicated to **PUBLIC DOMAIN**.
-  - OLM — The framework can even be tuned directly into models themselves. QLoRA tuning yields 100% compliance with a locally-hosted Mistral 7B model, trained on *mid-range retail consumer hardware* running Windows 11. Training materials and configuration are available, train one and try it for yourself. Full results in Appendix 2.
+  - OLM — The framework can even be tuned directly into models themselves. QLoRA tuning yields 100% compliance with a locally-hosted Mistral 7B model, trained on *mid-range retail consumer hardware* running Windows 11. Training materials and configuration are available, train one and try it for yourself. Full information in Appendix 2.
 
 The framework's simple tool applies structural and behavioral fixes that effectively stabilize AI sessions NOW. Not when the AI companies get around to it, and not when regulators force them to do it. The AI Stability Framework lets you fix it for yourself, today. 
 

@@ -10,6 +10,7 @@ nav_order: 3
 **Author:** Leonard Rojas
 **Date:** 2026-03-29
 **Status:** Final (hardware consistency re-run complete)
+**GitHub:** [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-OLM-REPR)
 
 ---
 
