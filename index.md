@@ -46,7 +46,7 @@ The framework's simple tool applies structural and behavioral fixes that effecti
 
 It's unconventional, but it works.
 
-<div class="chapter-nav"><a href="/ch01-temporal">Next: Chapter 1</a></div>
+<div class="chapter-nav"><a href="/ch01-temporal">Next: Chapter 1</a> | <a href="#toc">Top of Page</a></div>
 
 ---
 
