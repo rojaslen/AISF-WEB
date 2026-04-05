@@ -247,6 +247,12 @@ Fairplay for Kids. "AI Toys are NOT Safe for Kids — Advisory." November 2025. 
 
 "AI Toys Off Script: Safety Concerns — PIRG 2025 Report Warnings." Enkrypt AI, December 2025. https://www.enkryptai.com/blog/ai-toys-off-script-safety-concerns-pirg-2025
 
+[Sesame Street](https://www.sesamestreet.org/)
+
+[Mister Rogers' Neighborhood](https://www.fredrogers.org/production/mister-rogers-neighborhood/)
+
+[Bob Ross - The Joy of Painting](https://www.youtube.com/@bobross_thejoyofpainting)
+
 Archiwaranguprok et al. (2025). "Simulating Psychological Risks in Human-AI Interactions: Real-Case Informed Modeling of AI-Induced Addiction, Anorexia, Depression, Homicide, Psychosis, and Suicide." MIT Media Lab. arXiv:2511.08880. https://arxiv.org/html/2511.08880v1
 
 "AI brain fry." *CNN,* March 13, 2026. https://lite.cnn.com/2026/03/13/business/ai-brain-fry-nightcap
