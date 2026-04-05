@@ -2,7 +2,7 @@
 title: "Chapter 0: ToC & Preface"
 nav_order: 1
 ---
-<a name="toc"></a>
+<a name="top"></a>
 
 # Table of Contents
 
@@ -46,7 +46,7 @@ The framework's simple tool applies structural and behavioral fixes that effecti
 
 It's unconventional, but it works.
 
-<div class="chapter-nav"><a href="/ch01-temporal">Next: Chapter 1</a> | <a href="#toc">Top of Page</a></div>
+<div class="chapter-nav"><a href="/ch01-temporal">Next: Chapter 1</a> | <a href="#top">Top of Page</a></div>
 
 ---
 
