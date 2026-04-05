@@ -2,18 +2,18 @@
 
 Client-side anti-hallucination middleware for AI chat platforms.
 
-## Current Status (2026-03-30)
+## Current Status (2026-04-05)
 
 | Component | Status |
 |-----------|--------|
 | PS-CORE+ (PowerShell Core+) | **Source of Truth** — most complete variant; Options panel + CST add-ins |
 | PS-CORE (PowerShell tool) | Complete — derived from PS-CORE+ (Options panel removed) |
-| PS-DEMO (Demo Distribution) | Complete — [GitHub Release](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-DEMO-v1.0.1) (CC BY-NC-ND 4.0) |
+| PS-DEMO (Demo Distribution) | **Deprecated 2026-04-01** — PS-CORE is the public downloadable |
 | CDA — WCAG-only (Copilot Accessibility) | Complete — ITSEC-approved (WCAG-only module), [GitHub Release](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CDA-v1.0) (CC0) |
 | FFE 0.2 (Firefox Extension) | Active — **5/5 platforms working** (ChatGPT, Gemini, Claude, DuckDuckGo, Copilot); session token tally added (v0.2.7); keyboard-first; mouse support pending |
 | OLM (Local model training) | **Research complete** — all models validated on RTX 5060 Ti (hardware consistency re-run complete 2026-03-29); Mistral 7B 100%; Gemma 2 9B 99.2%; Qwen3-8B 95.6% battery / IFEval +29.6pp; Llama 3.1 8B Pnull finding |
 | OLM/TOY (Child-safe models) | **Research complete** — Ph.1 Mistral 7B 577/584 (98.8%) NEAR PASS / DEPLOYMENT GATE: BLOCKED; Ph.2 FAIL TinyLlama 66/584; Ph.3 FAIL StableLM 142/584; Ph.4 FAIL Phi-2 187/584; zero-failure gate not cleared; floor above 2.7B |
-| WEB (Publication) | Active — 11 chapters + apx00-apx03 drafted; voice/edit + proofread pass complete; OLM repro_package published + linked; 116 sources; ready for WP publish |
+| WEB (Publication) | **Live** — leonardrojas.com (GitHub Pages); publishing repo AISF-WEB (separate); WEB\ content archived to zzz_Archives |
 | JSS (JAWS Script Port) | Further exploration — desktop apps with AI embed panels; approach TBD |
 | MBL (Mobile) | Scaffolded — medium priority, no Android test surface |
 | DAC (Azure M365 Copilot) | Deferred indefinitely — pending specs/test environment |
@@ -45,14 +45,14 @@ Adapted from Frankfurt's Indifference Principle and Asimov's Three Laws of Robot
 |------------|-------------------------|--------------------|-----------------------|-------------|
 | **PAR**    | Parent Ruleset          | Text               | Stable/LTS (7 Priors recovered) | Proprietary |
 | **PS-CORE+**| PowerShell Core+       | PowerShell, EXE    | **Source of Truth** — Options panel + CST | Proprietary |
-| **PS-CORE**| PowerShell Core         | PowerShell, EXE    | Complete (derived from PS-CORE+, Options removed) | Proprietary |
-| **PS-DEMO**| Demo Distribution       | PowerShell, EXE    | Complete (derived from PS-CORE+, trial friction) | CC BY-NC-ND 4.0 |
+| **PS-CORE**| PowerShell Core         | PowerShell, EXE    | Complete (derived from PS-CORE+, Options removed) | CC BY-NC-ND 4.0 |
+| **PS-DEMO**| Demo Distribution       | PowerShell, EXE    | **Deprecated 2026-04-01** — PS-CORE is the public downloadable | CC BY-NC-ND 4.0 |
 | **CST**    | Custom Modules          | Text               | Deferred (paid add-ins) | Proprietary |
 | **CDA**    | Copilot Digital Accessibility (WCAG-only) | PowerShell, EXE | ITSEC-approved (WCAG-only module) | **CC0**     |
 | **FFE**    | Firefox Extension       | JavaScript (MV3)   | Active development    | Proprietary |
 | **OLM**    | Ollama Local Model      | Modelfiles, Python | Research complete     | Proprietary |
 | **OLM/TOY**| Child-Safe Models       | Python             | Research complete — all 4 phases done; floor at 7B | Proprietary |
-| **WEB**    | Publication             | WordPress/Markdown | Active — 11ch + apx00-apx03 drafted; voice/edit + proofread pass complete; OLM repro_package published + linked; ready for WP publish | Proprietary |
+| **WEB**    | Publication             | HTML/CSS/MD        | **Live** — leonardrojas.com (GitHub Pages, custom); AISF-WEB repo (separate); WEB\ archived | Proprietary |
 | **JSS**    | JAWS Script Port        | JAWS Scripting     | Exploratory           | Freeware    |
 | **MBL**    | Mobile                  | Android/iOS        | Scaffolded            | Proprietary |
 | **DAC**    | Azure M365 Copilot Digital Accessibility | TBD | Deferred indefinitely — pending specs/test environment | Proprietary |
@@ -69,10 +69,9 @@ Windows PowerShell GUI application — most complete variant. Manual workflow: u
 Derived from PS-CORE+; Options panel removed.
 - `PS-CORE/1.1 Core/AISF-CORE.ps1` — Source
 
-### PS-DEMO
-Public demonstration version with OPTIONS removed and 30-day trial system.
-- 120-minute session limit per boot
-- Escalating friction delays post-trial (5/10/15 sec)
+### PS-DEMO — Deprecated 2026-04-01
+PS-CORE is the public downloadable. PS-DEMO (CC BY-NC-ND 4.0, v1.0.1) remains available in the
+AISF-downloads GitHub release archive but is no longer the primary distribution vehicle.
 
 ### FFE (Firefox Extension)
 Manifest V3 WebExtension for automatic injection on AI chat platforms.
@@ -115,8 +114,10 @@ Native API-layer multi-backend client. Medium priority, no Android test surface.
 - Architecture: direct device-to-provider API calls; AISF injection at API payload level
 
 ### WEB (Publication)
-Ebook-style explainer (WordPress site), 12 chapters + FAQ. 
-Target: AI Ethics, Human-Computer Interaction (HCI), Accessibility/AT.
+Live at leonardrojas.com (GitHub Pages, custom HTML/CSS/MD). 11 chapters + apx00-apx03. 116 sources.
+Target audience: AI Ethics, Human-Computer Interaction (HCI), Accessibility/AT.
+- Publishing repo: `\\debbie\Tech\APP\_DEV\AISF-WEB` (separate git repo)
+- Pre-existing WEB\ content (WP exports, _dev source, CL exports) archived to `zzz_Archives\`
 
 ## Project Origin
 
@@ -134,8 +135,6 @@ Target: AI Ethics, Human-Computer Interaction (HCI), Accessibility/AT.
 | `PAR/`                        | Parent ruleset definitions (read-only)        |
 | `PAR/Priors/`                 | 7 recovered pre-corpus artifacts (Jul-Nov 2025) |
 | `WEB/`                        | Published documentation and exports           |
-| `WEB/WP-export/phase4-roadmap/` | Analytical output: topic/decision/artifact indexes, gap analysis |
-| `WEB/CL-export/`             | Claude Code session log extractions + 21 structured summaries |
 | `zzz_Archives/_Canon/`        | Philosophical framework documents             |
 | `lib/uspto/`                  | Trademark application documentation (local only, gitignored) |
 
@@ -149,8 +148,6 @@ Target: AI Ethics, Human-Computer Interaction (HCI), Accessibility/AT.
 | `CANON_INDEX.md`                 | Index of _Canon philosophical documents         |
 | `CITATIONS_MASTER.md`            | 116 sources (39 inline-cited + additional reading; no categories) |
 | `00_PROJECT_OVERVIEW.md`                              | Project overview with timeline |
-| `WEB/20260212_gap_analysis_full.txt`                  | Full gap analysis v2.1 (updated 2026-02-17) |
-| `WEB/_dev/`                                           | Chapter files (ch00–ch11 + FAQ + endnotes) |
 | `20260214_FULL-CONTEXT_EVAL_v2.txt`                   | Full-context evaluation v2    |
 | `OLM/llm-training/MODEL_TEST_STATUS.TXT`             | OLM training results          |
 
@@ -158,7 +155,9 @@ Target: AI Ethics, Human-Computer Interaction (HCI), Accessibility/AT.
 
 (C) 2025-2026 Leonard Rojas, all rights reserved.
 
-**Exceptions:** PS-DEMO v1.0.1 is CC BY-NC-ND 4.0. CDA is CC0 Public Domain. JSS is Freeware.
+**Public downloads:** PS-CORE (CC BY-NC-ND 4.0, primary), CDA (CC0), OLM reproducibility package.
+
+**Exceptions:** PS-CORE is CC BY-NC-ND 4.0. PS-DEMO v1.0.1 is CC BY-NC-ND 4.0 (deprecated 2026-04-01; archive only). CDA is CC0 Public Domain. JSS is Freeware.
 
 **Trademark:** USPTO application filed 2026-02-23, serial # 99664948. Documentation in `lib/uspto/` (local only).
 
