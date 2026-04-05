@@ -13,7 +13,7 @@ As a standard IT security measure, AI is stateless and virtualized. In IT terms,
 
 The problem is that no one seems to have fully considered the deployment plan beyond that, with those decisions having largely been left up to the companies that licensed the AI models for use in their own products and services. Those licensees promptly crammed AI into all sorts of ecosystems and architectures that it wasn't ready for, hooked it all up to the Internet, gave everybody its contact and sat back to watch the "engagement" (i.e. profits) roll in. What could possibly go wrong?
 
-Typical AI deployment scenarios are a hallucinatory recipe for frustration, ruined work, missed deadlines and worse. [^1.1] These all clearly represent direct user harm due to productivity loss (at minimum). Every major AI platform operator has built a system that serves its own revenue model instead of the user's needs, which examination of their AI platform designs expose. These corporate platforms aren't neutral infrastructure. They're operated by active participants with their own interests, which are not the same as the user's.
+Typical AI deployment scenarios are a hallucinatory recipe for frustration, ruined work, missed deadlines and worse.[^1.1] These all clearly represent direct user harm due to productivity loss (at minimum). Every major AI platform operator has built a system that serves its own revenue model instead of the user's needs, which examination of their AI platform designs expose. These corporate platforms aren't neutral infrastructure. They're operated by active participants with their own interests, which are not the same as the user's.
 
 ---
 
