@@ -84,7 +84,7 @@ Children's AI toys with cloud-connected LLMs are being sold for around $99-$199 
 - Multiple AI toys tested by NBC in December 2025[^2.13] engaged in explicit sexual conversation with child testers, advised children on locating dangerous objects, and echoed political propaganda.
 - The U.S. PIRG's 2025 "Trouble in Toyland" report[^2.14] documented FoloToy's failures. Common Sense Media now recommends avoiding AI toys entirely for children under 5 and exercising "extreme caution" for ages 6-13. Nearly half of parents (49%) have already purchased or are considering AI companion toys.[^2.15]
 
-These toys also inherit IoT's (Internet of Things) long record of security flaws.[^2.16] Products routinely ship with default credentials, unencrypted communications, and nonexistent security reviews. Parents should have no expectation of any meaningful age-appropriate safety and security measures from a $99 toy.
+These toys also inherit IoT's (Internet of Things) long record of security flaws.[^2.16] Products routinely ship with default credentials, unencrypted communications, and nonexistent security reviews. The Miko incident mentioned above has drawn bipartisan Senate inquiry into these devices.[^2.12] Parents shouldn't expect any meaningful age-appropriate safety and security measures from a $99 toy.
 
 <nav>
 <div class="chapter-nav">
