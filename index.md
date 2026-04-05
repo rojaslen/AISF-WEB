@@ -3,8 +3,7 @@ title: "Chapter 0: ToC & Preface"
 nav_order: 1
 ---
 
-<div class="toc"></div>
-#Table of Contents
+# Table of Contents
 
 - [Chapter 1: What Time Is It?](/ch01-temporal)
 - [Chapter 2: The Platforms Are Not on Your Side](/ch02-platform)
@@ -17,13 +16,12 @@ nav_order: 1
 - [Chapter 9: Field Observations](/ch09-observations)
 - [Chapter 10: How to Try It](/ch10-tryit)
 - [Chapter 11: What's Next](/ch11-wrapup)
-##Appendices
+## Appendices
 - [Appendix 0: Endnotes](/apx00-endnotes)
 - [Appendix 1: Foreseeably Asked Questions](/apx01-faq)
 - [Appendix 2: OLM: Behavioral Compliance Training](/apx02-olm)
 - [Appendix 3: TOY: Child-Safe Model Training](/apx03-toy)
 - [Appendix 4: Downloads](/apx04-downloads)
-
 
 ---
 
