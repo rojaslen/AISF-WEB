@@ -76,7 +76,7 @@ nav_order: 1
 
 **6.3** W3C Web Accessibility Initiative: https://www.w3.org/WAI/standards-guidelines/wcag/ — W3C. "Making Content Usable for People with Cognitive and Learning Disabilities." https://www.w3.org/TR/coga-usable/
 
-**6.4** W3C. "Web Content Accessibility Guidelines (WCAG) 2.1." W3C Recommendation. https://www.w3.org/TR/WCAG21/ — *See also:* W3C Web Accessibility Initiative. https://www.w3.org/WAI/standards-guidelines/wcag/
+**6.4** W3C. "Web Content Accessibility Guidelines (WCAG) 2.2." W3C Recommendation. https://www.w3.org/TR/WCAG22/ — *See also:* W3C Web Accessibility Initiative. https://www.w3.org/WAI/standards-guidelines/wcag/
 
 ## Chapter 7
 

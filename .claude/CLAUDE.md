@@ -84,8 +84,9 @@ Content is practitioner/public-facing advocacy writing — NOT an academic paper
 presentation, or proposal. Evaluate it accordingly.
 
 - Voice is direct, conversational, and confident. This is appropriate and intentional.
-- Target audiences (AI Ethics/Philosophy, HCI, AT professionals) are being addressed
+- Primary target audiences (AI Ethics/Philosophy, HCI, AT professionals) are being addressed
   as practitioners with the same problem, not as peer reviewers.
+- Secondary/optional audiences: IT admins/sysops/netadmins, policymakers, general-tech-interest readers.
 - The goal is to demonstrate a working solution to a real problem, not to seek
   acceptance from academic or institutional gatekeepers.
 - Do NOT flag informal register, direct address, or emphatic language as problems.
@@ -138,7 +139,7 @@ Chapter and appendix citation format:
 
 ## TODO
 
-- Synchronize `CITATIONS_MASTER.md` with `apx00-endnotes.md` once content edits are finalized; numeric alignment expected to be off until post-edit sanity check.
+- Citations sanity pass (deferred): update `CITATIONS_MASTER.md` to match `apx00-endnotes.md` (current apx00 is placeholder content); once master is fully current, replace apx00 content with master. Numeric alignment expected to be off until pass is complete.
 
 ## Git Rules
 
