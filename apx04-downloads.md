@@ -10,7 +10,7 @@ nav_order: 5
 
 [All Releases](https://github.com/rojaslen/AISF-downloads/releases)
 
-[AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CORE-v1.1.2)
+[AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CORE-V1.3)
 
 [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-OLM-REPR)
 
