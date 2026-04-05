@@ -16,7 +16,9 @@ nav_order: 1
 - [Chapter 9: Field Observations](/ch09-observations)
 - [Chapter 10: How to Try It](/ch10-tryit)
 - [Chapter 11: What's Next](/ch11-wrapup)
+
 ## Appendices
+
 - [Appendix 0: Endnotes](/apx00-endnotes)
 - [Appendix 1: Foreseeably Asked Questions](/apx01-faq)
 - [Appendix 2: OLM: Behavioral Compliance Training](/apx02-olm)
