@@ -3,7 +3,7 @@ title: "Chapter 0: ToC & Preface"
 nav_order: 1
 ---
 
-<div class="toc">
+<div class="toc"></div>
 #Table of Contents
 
 - [Chapter 1: What Time Is It?](/ch01-temporal)
@@ -23,7 +23,7 @@ nav_order: 1
 - [Appendix 2: OLM: Behavioral Compliance Training](/apx02-olm)
 - [Appendix 3: TOY: Child-Safe Model Training](/apx03-toy)
 - [Appendix 4: Downloads](/apx04-downloads)
-</div>
+
 
 ---
 
