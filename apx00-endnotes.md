@@ -6,7 +6,7 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ---
 
-<section role="region" aria-label="Citations by Chapter">
+<section role="region" aria-label="Citations by Chapter"></section>
 
 ## Chapter 1
 
@@ -136,11 +136,9 @@ Chau, A. (2025, January 29). "Toy Manufacturing Costs: A Guide to Pricing and Ec
 
 "Toy Store Business Costs, Revenue Potential & Profitability." Sheets Market, April 15, 2025. [https://sheets.market/toy-store-business-costs-revenue-potential-profitability/](https://sheets.market/toy-store-business-costs-revenue-potential-profitability/){: target="_blank" rel="noopener noreferrer" }
 
-</section>
-
 ---
 
-<section role="region" aria-label="Additional Reading">
+<section role="region" aria-label="Additional Reading"></section>
 
 ## Additional Reading (Not Referenced)
 
@@ -314,8 +312,6 @@ Myra Cheng et al., "Sycophantic AI decreases prosocial intentions and promotes d
 [https://www.science.org/doi/10.1126/science.aec8352](https://www.science.org/doi/10.1126/science.aec8352){: target="_blank" rel="noopener noreferrer" }
 
 State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, February 3, 2026.
-
-</section>
 
 ---
 
