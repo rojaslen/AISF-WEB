@@ -52,4 +52,4 @@ In the absence of any meaningful preferences feature, figuring out how to apply 
 </nav>
 
 
-[^9a]: Demiliani, C. (2025). "Understanding LLM Performance Degradation: A Deep Dive into Context Window Limits." https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/ — "Large Language Models Hallucination: A Comprehensive Survey." arXiv:2510.06265 (2025). https://arxiv.org/abs/2510.06265
+[^9a]: Demiliani, C. (2025). "Understanding LLM Performance Degradation: A Deep Dive into Context Window Limits." [https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/](https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/){: target="_blank" rel="noopener noreferrer" } — "Large Language Models Hallucination: A Comprehensive Survey." arXiv:2510.06265 (2025). [https://arxiv.org/abs/2510.06265](https://arxiv.org/abs/2510.06265){: target="_blank" rel="noopener noreferrer" }

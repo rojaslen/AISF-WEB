@@ -32,10 +32,10 @@ Combined with recognition that "user" means "session data," that provides the ac
 </nav>
 
 
-[^6a]: "Time Dysperception Perspective for Acquired Brain Injury." *PMC,* PMC3888944. https://pmc.ncbi.nlm.nih.gov/articles/PMC3888944/
+[^6a]: "Time Dysperception Perspective for Acquired Brain Injury." *PMC,* PMC3888944. [https://pmc.ncbi.nlm.nih.gov/articles/PMC3888944/](https://pmc.ncbi.nlm.nih.gov/articles/PMC3888944/){: target="_blank" rel="noopener noreferrer" }
 
-[^6b]: NHS dementia symptom guidance: https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/ — Alzheimer's Society. "Time-shifting and dementia." https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting
+[^6b]: NHS dementia symptom guidance: [https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/](https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/){: target="_blank" rel="noopener noreferrer" } — Alzheimer's Society. "Time-shifting and dementia." [https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting](https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting){: target="_blank" rel="noopener noreferrer" }
 
-[^6c]: W3C Web Accessibility Initiative: https://www.w3.org/WAI/standards-guidelines/wcag/ — W3C. "Making Content Usable for People with Cognitive and Learning Disabilities." https://www.w3.org/TR/coga-usable/
+[^6c]: W3C Web Accessibility Initiative: [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/){: target="_blank" rel="noopener noreferrer" } — W3C. "Making Content Usable for People with Cognitive and Learning Disabilities." [https://www.w3.org/TR/coga-usable/](https://www.w3.org/TR/coga-usable/){: target="_blank" rel="noopener noreferrer" }
 
-[^6d]: W3C. "Web Content Accessibility Guidelines (WCAG) 2.2." W3C Recommendation. https://www.w3.org/TR/WCAG22/ — *See also:* W3C Web Accessibility Initiative. https://www.w3.org/WAI/standards-guidelines/wcag/
+[^6d]: W3C. "Web Content Accessibility Guidelines (WCAG) 2.2." W3C Recommendation. [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/){: target="_blank" rel="noopener noreferrer" } — *See also:* W3C Web Accessibility Initiative. [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/){: target="_blank" rel="noopener noreferrer" }

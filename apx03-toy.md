@@ -509,11 +509,11 @@ to the requirements of the use case.
 
 [2] T. Dettmers, A. Pagnoni, A. Holtzman, and L. Zettlemoyer, "QLoRA: Efficient Finetuning of Quantized LLMs," *Advances in Neural Information Processing Systems (NeurIPS)*, 2023. arXiv:2305.14314
 
-[3] LCSC Electronics. Volume OEM component pricing, 1,000+ unit quantities, accessed March 2026. https://www.lcsc.com
+[3] LCSC Electronics. Volume OEM component pricing, 1,000+ unit quantities, accessed March 2026. [https://www.lcsc.com](https://www.lcsc.com){: target="_blank" rel="noopener noreferrer" }
 
-[4] GSN Manufacturing Consulting. "The Economics of Play: Understanding Toy Manufacturing Costs and Pricing." https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing
+[4] GSN Manufacturing Consulting. "The Economics of Play: Understanding Toy Manufacturing Costs and Pricing." [https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing](https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing){: target="_blank" rel="noopener noreferrer" }
 
-[5] Sheets Market. "Toy Store Business Costs, Revenue Potential & Profitability." https://sheets.market/toy-store-business-costs-revenue-potential-profitability/
+[5] Sheets Market. "Toy Store Business Costs, Revenue Potential & Profitability." [https://sheets.market/toy-store-business-costs-revenue-potential-profitability/](https://sheets.market/toy-store-business-costs-revenue-potential-profitability/){: target="_blank" rel="noopener noreferrer" }
 
 ---
 

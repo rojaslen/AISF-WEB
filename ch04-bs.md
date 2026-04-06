@@ -27,6 +27,6 @@ Being stateless in a virtualized void, the AI has no baseline of reality or purp
 </nav>
 
 
-[^4a]: Frankfurt, H. G. (2005). *On Bullshit.* Princeton University Press. https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf
+[^4a]: Frankfurt, H. G. (2005). *On Bullshit.* Princeton University Press. [https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf](https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf){: target="_blank" rel="noopener noreferrer" }
 
-[^4b]: Hicks, M. T., Humphries, J., & Slater, J. (2024). "ChatGPT is bullshit." *Ethics and Information Technology,* 26, 38. https://link.springer.com/article/10.1007/s10676-024-09775-5 — *See also:* Fredrikzon, J. (2025). "Rethinking Error: 'Hallucinations' and Epistemological Indifference." *Critical AI* (Duke University Press). https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and
+[^4b]: Hicks, M. T., Humphries, J., & Slater, J. (2024). "ChatGPT is bullshit." *Ethics and Information Technology,* 26, 38. [https://link.springer.com/article/10.1007/s10676-024-09775-5](https://link.springer.com/article/10.1007/s10676-024-09775-5){: target="_blank" rel="noopener noreferrer" } — *See also:* Fredrikzon, J. (2025). "Rethinking Error: 'Hallucinations' and Epistemological Indifference." *Critical AI* (Duke University Press). [https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and](https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and){: target="_blank" rel="noopener noreferrer" }

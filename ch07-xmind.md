@@ -32,12 +32,12 @@ Each field of research mentioned here deserves more investigation, particularly 
 </nav>
 
 
-[^7a]: Clark, A., & Chalmers, D. (1998). "The Extended Mind." *Analysis,* 58(1), 7-19. — Hollan, J., Hutchins, E., & Kirsh, D. (2000). "Distributed Cognition." *ACM Transactions on CHI,* 7(2), 174-196. — "Extending Minds with Generative AI." *Nature Communications* (2025). https://www.nature.com/articles/s41467-025-59906-9 — Riedl et al. "AI's Social Forcefield: Reshaping Distributed Cognition in Human-AI Teams." arXiv:2407.17489 (2024). https://arxiv.org/html/2407.17489v2
+[^7a]: Clark, A., & Chalmers, D. (1998). "The Extended Mind." *Analysis,* 58(1), 7-19. — Hollan, J., Hutchins, E., & Kirsh, D. (2000). "Distributed Cognition." *ACM Transactions on CHI,* 7(2), 174-196. — "Extending Minds with Generative AI." *Nature Communications* (2025). [https://www.nature.com/articles/s41467-025-59906-9](https://www.nature.com/articles/s41467-025-59906-9){: target="_blank" rel="noopener noreferrer" } — Riedl et al. "AI's Social Forcefield: Reshaping Distributed Cognition in Human-AI Teams." arXiv:2407.17489 (2024). [https://arxiv.org/html/2407.17489v2](https://arxiv.org/html/2407.17489v2){: target="_blank" rel="noopener noreferrer" }
 
-[^7b]: OWASP. "OWASP Top 10 for Large Language Model Applications." https://owasp.org/www-project-top-10-for-large-language-model-applications/
+[^7b]: OWASP. "OWASP Top 10 for Large Language Model Applications." [https://owasp.org/www-project-top-10-for-large-language-model-applications/](https://owasp.org/www-project-top-10-for-large-language-model-applications/){: target="_blank" rel="noopener noreferrer" }
 
-[^7c]: Siddiqui, I. et al. (2025). "Technological Folie a Deux: Feedback Loops Between AI Chatbots and Mental Illness." arXiv:2507.19218. https://arxiv.org/abs/2507.19218
+[^7c]: Siddiqui, I. et al. (2025). "Technological Folie a Deux: Feedback Loops Between AI Chatbots and Mental Illness." arXiv:2507.19218. [https://arxiv.org/abs/2507.19218](https://arxiv.org/abs/2507.19218){: target="_blank" rel="noopener noreferrer" }
 
-[^7d]: Ostergaard, S.D. (2026). "Have We Learned Nothing From the Global Social Media Experiment?" *Acta Psychiatrica Scandinavica,* 153(2). https://onlinelibrary.wiley.com/doi/10.1111/acps.70057
+[^7d]: Ostergaard, S.D. (2026). "Have We Learned Nothing From the Global Social Media Experiment?" *Acta Psychiatrica Scandinavica,* 153(2). [https://onlinelibrary.wiley.com/doi/10.1111/acps.70057](https://onlinelibrary.wiley.com/doi/10.1111/acps.70057){: target="_blank" rel="noopener noreferrer" }
 
-[^7e]: Olsen, J.S. et al. (2026). "Potentially Harmful Consequences of Artificial Intelligence (AI) Chatbot Use Among Patients With Mental Illness." *Acta Psychiatrica Scandinavica,* 153(2). https://onlinelibrary.wiley.com/doi/10.1111/acps.70068
+[^7e]: Olsen, J.S. et al. (2026). "Potentially Harmful Consequences of Artificial Intelligence (AI) Chatbot Use Among Patients With Mental Illness." *Acta Psychiatrica Scandinavica,* 153(2). [https://onlinelibrary.wiley.com/doi/10.1111/acps.70068](https://onlinelibrary.wiley.com/doi/10.1111/acps.70068){: target="_blank" rel="noopener noreferrer" }

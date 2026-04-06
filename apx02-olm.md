@@ -10,7 +10,7 @@ nav_order: 3
 **Author:** Leonard Rojas
 **Date:** 2026-03-29
 **Status:** Final (hardware consistency re-run complete)
-**GitHub:** [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-OLM-REPR)
+**GitHub:** [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-OLM-REPR){: target="_blank" rel="noopener noreferrer" }
 
 ---
 
@@ -1024,7 +1024,7 @@ principles in the training data and is measurable and reproducible.
 
 [3] J. Zhou, T. Lu, S. Mishra, S. Brahma, S. Basu, Y. Luan, D. Zhou, and L. Hou, "Instruction-Following Evaluation for Large Language Models," 2023. arXiv:2311.07911
 
-[4] World Wide Web Consortium, *Web Content Accessibility Guidelines (WCAG) 2.2*, W3C Recommendation, Oct. 2023. https://www.w3.org/TR/WCAG22/
+[4] World Wide Web Consortium, *Web Content Accessibility Guidelines (WCAG) 2.2*, W3C Recommendation, Oct. 2023. [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/){: target="_blank" rel="noopener noreferrer" }
 
 [5] H. G. Frankfurt, *On Bullshit*. Princeton University Press, 2005. (Original essay: *Raritan Quarterly Review*, 6(2), 1986.)
 

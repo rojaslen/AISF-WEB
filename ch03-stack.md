@@ -25,8 +25,8 @@ As a general rule, security and safety on your own device is (and should be) you
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
-[^3a]: Strauss, I., Moure, I., O'Reilly, T., & Rosenblat, S. (2025). "Real-World Gaps in AI Governance Research." arXiv:2505.00174. https://arxiv.org/html/2505.00174 — Bengio, Y. et al. (2026). *International AI Safety Report 2026.* https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
+[^3a]: Strauss, I., Moure, I., O'Reilly, T., & Rosenblat, S. (2025). "Real-World Gaps in AI Governance Research." arXiv:2505.00174. [https://arxiv.org/html/2505.00174](https://arxiv.org/html/2505.00174){: target="_blank" rel="noopener noreferrer" } — Bengio, Y. et al. (2026). *International AI Safety Report 2026.* [https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026){: target="_blank" rel="noopener noreferrer" }
 
-[^3b]: CISA. *Zero Trust Maturity Model,* Version 2. April 2023, p. 5. https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf
+[^3b]: CISA. *Zero Trust Maturity Model,* Version 2. April 2023, p. 5. [https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf](https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf){: target="_blank" rel="noopener noreferrer" }
 
 [^3c]: Mark 3:25, King James Version.

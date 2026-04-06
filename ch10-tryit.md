@@ -34,12 +34,12 @@ The keyboard-forward workflow is necessarily manual — type, submit, switch, pa
 
 **A note on trust:** Always scan any downloaded software before running it — *including AISF*. A few solid options, including free and low-cost:
 
-- [Avast](https://www.avast.com/en-us/index#pc)
-- [AVG](https://www.avg.com/en-us/homepage#pc)
-- [Bitdefender](https://www.bitdefender.com/)
-- [CrowdStrike](https://www.crowdstrike.com/)
-- [McAfee](https://www.mcafee.com/)
-- [Norton 360](https://us.norton.com/)
+- [Avast](https://www.avast.com/en-us/index#pc){: target="_blank" rel="noopener noreferrer" }
+- [AVG](https://www.avg.com/en-us/homepage#pc){: target="_blank" rel="noopener noreferrer" }
+- [Bitdefender](https://www.bitdefender.com/){: target="_blank" rel="noopener noreferrer" }
+- [CrowdStrike](https://www.crowdstrike.com/){: target="_blank" rel="noopener noreferrer" }
+- [McAfee](https://www.mcafee.com/){: target="_blank" rel="noopener noreferrer" }
+- [Norton 360](https://us.norton.com/){: target="_blank" rel="noopener noreferrer" }
 
 *(Malwarebytes users: you may encounter a false-positive flag on the AISF executable. Manually exempting it from quarantine works around this. Vendor whitelist submission pending.)*
 

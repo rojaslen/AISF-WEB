@@ -118,7 +118,7 @@ presentation, or proposal. Evaluate it accordingly.
 - **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`; layout is set globally via `_config.yml` defaults (do not add `layout:` to individual pages)
 - **Appendix nav parent:** `appendices.md` (has_children: true in front matter drives nav grouping in layout)
 - **Home page:** `index.md` (Preface content; nav_order: 1)
-- **Endnotes:** `apx00-endnotes.md` -- bibliography using `[^Na]:` definitions matching chapter footnote IDs; FAQ endnotes in `apx01-faq.md` use `[^Fa]`, `[^Fb]` etc.
+- **Endnotes:** `apx00-endnotes.md` -- display-only bibliography; uses `***Na:***` bold-italic labels (NOT kramdown footnote syntax -- orphaned `[^]` defs without inline refs on the same page produce no visible output). FAQ endnotes in `apx01-faq.md` use standard `[^Fa]` inline refs + definitions (refs exist on that page).
 - **Logo:** `assets/images/logo.png`
 - **Favicon:** `favicon.ico` in repo root
 - **Orphaned files (do not delete):** `_includes/head_custom.html`, `_includes/title.html`, `_sass/color_schemes/custom.scss` -- superseded by custom layout, kept for reference

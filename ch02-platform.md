@@ -95,34 +95,34 @@ These toys also inherit IoT's (Internet of Things) long record of security flaws
 </nav>
 
 
-[^2a]: Kirkpatrick, M. (2010, January 10). ReadWriteWeb via *New York Times.* https://youtu.be/LoWKGBloMsU?si=auOelcRrn_phEg3x&t=152
+[^2a]: Kirkpatrick, M. (2010, January 10). ReadWriteWeb via *New York Times.* [https://youtu.be/LoWKGBloMsU?si=auOelcRrn_phEg3x&t=152](https://youtu.be/LoWKGBloMsU?si=auOelcRrn_phEg3x&t=152){: target="_blank" rel="noopener noreferrer" }
 
-[^2b]: Meta Terms of Service 3.3.2, Effective January 1, 2025. https://www.facebook.com/legal/terms
+[^2b]: Meta Terms of Service 3.3.2, Effective January 1, 2025. [https://www.facebook.com/legal/terms](https://www.facebook.com/legal/terms){: target="_blank" rel="noopener noreferrer" }
 
-[^2c]: "Permanently delete your Facebook account." Meta Help Center. https://www.facebook.com/help/224562897555674
+[^2c]: "Permanently delete your Facebook account." Meta Help Center. [https://www.facebook.com/help/224562897555674](https://www.facebook.com/help/224562897555674){: target="_blank" rel="noopener noreferrer" }
 
-[^2d]: Warzel, C., & Wong, M. (2025, November 21). "Elon Musk Is Trying to Rewrite History." *The Atlantic.* https://www.theatlantic.com/technology/2025/11/elon-musk-better-jesus-grok/685015/
+[^2d]: Warzel, C., & Wong, M. (2025, November 21). "Elon Musk Is Trying to Rewrite History." *The Atlantic.* [https://www.theatlantic.com/technology/2025/11/elon-musk-better-jesus-grok/685015/](https://www.theatlantic.com/technology/2025/11/elon-musk-better-jesus-grok/685015/){: target="_blank" rel="noopener noreferrer" }
 
-[^2e]: Adamson, T. (2025, November 21). "France will investigate Musk's Grok chatbot after Holocaust denial claims." Associated Press. https://apnews.com/article/france-ai-musk-grok-holocaust-e8c952c5d878226aa917d7a65836ed88
+[^2e]: Adamson, T. (2025, November 21). "France will investigate Musk's Grok chatbot after Holocaust denial claims." Associated Press. [https://apnews.com/article/france-ai-musk-grok-holocaust-e8c952c5d878226aa917d7a65836ed88](https://apnews.com/article/france-ai-musk-grok-holocaust-e8c952c5d878226aa917d7a65836ed88){: target="_blank" rel="noopener noreferrer" }
 
-[^2f]: Cuthbertson, A. (2025, May 26). "AI revolt: New ChatGPT model refuses to shut down when instructed." *The Independent.* https://www.the-independent.com/tech/ai-safety-new-chatgpt-o3-openai-b2757814.html
+[^2f]: Cuthbertson, A. (2025, May 26). "AI revolt: New ChatGPT model refuses to shut down when instructed." *The Independent.* [https://www.the-independent.com/tech/ai-safety-new-chatgpt-o3-openai-b2757814.html](https://www.the-independent.com/tech/ai-safety-new-chatgpt-o3-openai-b2757814.html){: target="_blank" rel="noopener noreferrer" }
 
-[^2g]: OpenAI. (2025, April 29). "Sycophancy in GPT-4o: what happened and what we're doing about it." https://openai.com/index/sycophancy-in-gpt-4o/
+[^2g]: OpenAI. (2025, April 29). "Sycophancy in GPT-4o: what happened and what we're doing about it." [https://openai.com/index/sycophancy-in-gpt-4o/](https://openai.com/index/sycophancy-in-gpt-4o/){: target="_blank" rel="noopener noreferrer" }
 
-[^2h]: "Agentic Misalignment: How LLMs could be insider threats." Anthropic Research, 2025-06-20. https://www.anthropic.com/research/agentic-misalignment
+[^2h]: "Agentic Misalignment: How LLMs could be insider threats." Anthropic Research, 2025-06-20. [https://www.anthropic.com/research/agentic-misalignment](https://www.anthropic.com/research/agentic-misalignment){: target="_blank" rel="noopener noreferrer" }
 
-[^2i]: Author's estimate derived from volume OEM pricing (1,000+ unit quantities) for the minimum Linux-capable ARM configuration required to deliver the described feature set. Component prices sourced from LCSC Electronics (https://www.lcsc.com), a major distributor serving Chinese contract manufacturers; 1,000-unit volume pricing, accessed March 2026.
+[^2i]: Author's estimate derived from volume OEM pricing (1,000+ unit quantities) for the minimum Linux-capable ARM configuration required to deliver the described feature set. Component prices sourced from LCSC Electronics ([https://www.lcsc.com](https://www.lcsc.com){: target="_blank" rel="noopener noreferrer" }), a major distributor serving Chinese contract manufacturers; 1,000-unit volume pricing, accessed March 2026.
 
-[^2j]: "AI-Powered Stuffed Animal Pulled From Market After Disturbing Interactions With Children." *CNN,* 2025-11-19. https://www.cnn.com/2025/11/19/tech/folotoy-kumma-ai-bear-scli-intl
+[^2j]: "AI-Powered Stuffed Animal Pulled From Market After Disturbing Interactions With Children." *CNN,* 2025-11-19. [https://www.cnn.com/2025/11/19/tech/folotoy-kumma-ai-bear-scli-intl](https://www.cnn.com/2025/11/19/tech/folotoy-kumma-ai-bear-scli-intl){: target="_blank" rel="noopener noreferrer" }
 
-[^2k]: "AI Teddy Bear Back on the Market After Getting Caught Telling Kids How to Find Pills and Start Fires." *Futurism,* 2025. https://futurism.com/future-society/ai-teddy-bear-back-on-market
+[^2k]: "AI Teddy Bear Back on the Market After Getting Caught Telling Kids How to Find Pills and Start Fires." *Futurism,* 2025. [https://futurism.com/future-society/ai-teddy-bear-back-on-market](https://futurism.com/future-society/ai-teddy-bear-back-on-market){: target="_blank" rel="noopener noreferrer" }
 
-[^2l]: Satter, R. (2026, February 12). "AI toy maker Miko exposed thousands of replies to kids: senators." *NBC News.* https://www.nbcnews.com/tech/security/ai-toy-maker-exposed-thousands-responses-kids-senators-miko-rcna258326
+[^2l]: Satter, R. (2026, February 12). "AI toy maker Miko exposed thousands of replies to kids: senators." *NBC News.* [https://www.nbcnews.com/tech/security/ai-toy-maker-exposed-thousands-responses-kids-senators-miko-rcna258326](https://www.nbcnews.com/tech/security/ai-toy-maker-exposed-thousands-responses-kids-senators-miko-rcna258326){: target="_blank" rel="noopener noreferrer" }
 
-[^2m]: Satter, R. (2025, December 18). "AI kids' toys give explicit and dangerous responses in tests." *NBC News.* https://www.nbcnews.com/tech/tech-news/ai-toys-gift-present-safe-kids-robot-child-miko-grok-alilo-miiloo-rcna246956
+[^2m]: Satter, R. (2025, December 18). "AI kids' toys give explicit and dangerous responses in tests." *NBC News.* [https://www.nbcnews.com/tech/tech-news/ai-toys-gift-present-safe-kids-robot-child-miko-grok-alilo-miiloo-rcna246956](https://www.nbcnews.com/tech/tech-news/ai-toys-gift-present-safe-kids-robot-child-miko-grok-alilo-miiloo-rcna246956){: target="_blank" rel="noopener noreferrer" }
 
-[^2n]: PIRG Education Fund. "Trouble in Toyland 2025: A.I. Bots and Toxics Present Hidden Dangers." November 2025. https://pirg.org/edfund/resources/trouble-in-toyland-2025-a-i-bots-and-toxics-represent-hidden-dangers/
+[^2n]: PIRG Education Fund. "Trouble in Toyland 2025: A.I. Bots and Toxics Present Hidden Dangers." November 2025. [https://pirg.org/edfund/resources/trouble-in-toyland-2025-a-i-bots-and-toxics-represent-hidden-dangers/](https://pirg.org/edfund/resources/trouble-in-toyland-2025-a-i-bots-and-toxics-represent-hidden-dangers/){: target="_blank" rel="noopener noreferrer" }
 
-[^2o]: Common Sense Media. "AI in the Toy Box: How Parents View AI-Enabled Toys for Young Children." Survey of 1,004 parents, December 2025. https://www.commonsensemedia.org/research/ai-in-the-toy-box-how-parents-view-ai-enabled-toys-for-young-children
+[^2o]: Common Sense Media. "AI in the Toy Box: How Parents View AI-Enabled Toys for Young Children." Survey of 1,004 parents, December 2025. [https://www.commonsensemedia.org/research/ai-in-the-toy-box-how-parents-view-ai-enabled-toys-for-young-children](https://www.commonsensemedia.org/research/ai-in-the-toy-box-how-parents-view-ai-enabled-toys-for-young-children){: target="_blank" rel="noopener noreferrer" }
 
-[^2p]: NIST IR 8425 (2022): https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity — UK NCSC Code of Practice for Consumer IoT Security (2018): https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security — OWASP IoT Top 10: https://owasp.org/www-project-internet-of-things/
+[^2p]: NIST IR 8425 (2022): [https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity](https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity){: target="_blank" rel="noopener noreferrer" } — UK NCSC Code of Practice for Consumer IoT Security (2018): [https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security](https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security){: target="_blank" rel="noopener noreferrer" } — OWASP IoT Top 10: [https://owasp.org/www-project-internet-of-things/](https://owasp.org/www-project-internet-of-things/){: target="_blank" rel="noopener noreferrer" }
