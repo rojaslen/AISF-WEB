@@ -68,7 +68,7 @@ It's possible, but that's due to a property of AI models, not of the framework. 
 
 ### "The AI industry talks about 'compute' a lot, why do you barely even mention it?"
 
-The word "compute" is primarily defined as a verb; it's not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term, and over time it's been normalized to the point where most people don't even notice anymore. This usage of "compute" elides hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware). Compressing all of that into one word just makes it disappear into unthinking Newspeak.[^F.1]
+The word "compute" is primarily defined as a verb; it's not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term, and over time it's been normalized to the point where most people don't even notice anymore. This usage of "compute" elides hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware). Compressing all of that into one word just makes it disappear into unthinking Newspeak.[^Fa]
 
 The stack's resulting invisibility means the client layer (the only part of the whole thing that's directly available to users) is consistently absent from AI discourse, and its absence mostly goes unnoticed. Accessibility suffers as a direct result, with AI platforms routinely failing ADA, §508, and WCAG compliance requirements because the inconvenient user-facing part of the deal has vanished into "compute." If the entire industry's mental model stops at the SaaS platform layer, it will invariably miss client-side stability failures, not to mention the accessibility failures that affect disabled users every time they try to use these tools. When industry vocabulary doesn't even describe the deployment stack, diagnosing what goes wrong within that stack is unlikely.
  
@@ -76,7 +76,7 @@ The stack's resulting invisibility means the client layer (the only part of the 
 
 Because any serious discussion of AI has to account for the physical infrastructure behind it. The AI instance exists in a virtual void, but the data centers that run it don't. Compare "negligible deployment footprint" to "400+ new data centers in Texas alone," and the reason is clear.
 
-Using the IEA's figure of approximately 415 TWh of global data center electricity consumption in 2024 as a baseline, and applying a conservative 20% AI inference share estimate, a 33% reduction in AI inference cycles would conserve on the order of 27 TWh per year, which is roughly enough to power every home in Los Angeles plus most of Chicago. At the industry-average Water Usage Effectiveness (WUE) of about 1.8 liters per kWh[^F.2], that same reduction translates to around 48.6 billion liters of water annually. That's the equivalent of 39,600 Olympic-sized swimming pools, or southwest Ohio's Caesar Creek Lake[^F.3].
+Using the IEA's figure of approximately 415 TWh of global data center electricity consumption in 2024 as a baseline, and applying a conservative 20% AI inference share estimate, a 33% reduction in AI inference cycles would conserve on the order of 27 TWh per year, which is roughly enough to power every home in Los Angeles plus most of Chicago. At the industry-average Water Usage Effectiveness (WUE) of about 1.8 liters per kWh[^Fb], that same reduction translates to around 48.6 billion liters of water annually. That's the equivalent of 39,600 Olympic-sized swimming pools, or southwest Ohio's Caesar Creek Lake[^Fc].
 
 AISF-trained Instruct models across three of four independently tested architectures all featured reduced output verbosity, with consistent direction and a measured range of 37.9% to 71.8% fewer words per response than their baselines. *Fewer tokens per turn is a measurable proxy for reduced resource consumption per task*. The full token delta analysis is in Appendix 2.
 
@@ -98,9 +98,9 @@ Context decay is real and noticeable but manageable. Using STRUCTURE and STABILI
 
 ---
 
-[^F.1]: Orwell, G., Nineteen Eighty‑Four, appendix, "The Principles of Newspeak" (London: Secker & Warburg, 1949). *"Newspeak was designed not to extend but to diminish the range of thought...The grammar of Newspeak had two outstanding peculiarities. The first of these was an almost complete interchangeability between different parts of speech."*
+[^Fa]: Orwell, G., Nineteen Eighty‑Four, appendix, "The Principles of Newspeak" (London: Secker & Warburg, 1949). *"Newspeak was designed not to extend but to diminish the range of thought...The grammar of Newspeak had two outstanding peculiarities. The first of these was an almost complete interchangeability between different parts of speech."*
 
-[^F.2]: AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/
+[^Fb]: AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/
 
-[^F.3]: FisherMap. "Caesar Creek Lake, OH -- Depth Map." https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/
+[^Fc]: FisherMap. "Caesar Creek Lake, OH -- Depth Map." https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/
 

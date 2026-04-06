@@ -118,7 +118,7 @@ presentation, or proposal. Evaluate it accordingly.
 - **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`; layout is set globally via `_config.yml` defaults (do not add `layout:` to individual pages)
 - **Appendix nav parent:** `appendices.md` (has_children: true in front matter drives nav grouping in layout)
 - **Home page:** `index.md` (Preface content; nav_order: 1)
-- **Endnotes:** `apx00-endnotes.md` -- plain bibliography format (`**N.N** text`); footnote definitions live in each chapter file as `[^N.N]:` at file end
+- **Endnotes:** `apx00-endnotes.md` -- bibliography using `[^Na]:` definitions matching chapter footnote IDs; FAQ endnotes in `apx01-faq.md` use `[^Fa]`, `[^Fb]` etc.
 - **Logo:** `assets/images/logo.png`
 - **Favicon:** `favicon.ico` in repo root
 - **Orphaned files (do not delete):** `_includes/head_custom.html`, `_includes/title.html`, `_sass/color_schemes/custom.scss` -- superseded by custom layout, kept for reference
@@ -126,7 +126,7 @@ presentation, or proposal. Evaluate it accordingly.
 ## Content Workflow
 
 Chapter and appendix citation format:
-- **Chapters:** `[^N.N]` inline markers; definitions appended to each chapter file after final `---`
+- **Chapters:** `[^Na]`, `[^Nb]` etc. inline markers (e.g. `[^1a]`, `[^2b]`); definitions appended to each chapter file after final `---`. **Periods are not permitted in kramdown footnote IDs on GitHub Pages** -- use letter suffixes only (a, b, c...).
 - **Appendices:** Self-contained IEEE-style `[1]`, `[2]` numbered references at file end
 
 ## Platform Constraints
