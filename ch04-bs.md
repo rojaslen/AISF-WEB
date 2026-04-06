@@ -16,7 +16,7 @@ I was developing a work presentation to suggest we test-run the result with a sm
 > "[The bullshitter] does not care whether the things he says describe reality correctly. He just picks them out, or makes them up, to suit his purpose."
 > *Harry G. Frankfurt, "On Bullshit." (Princeton University Press, 2005)*[^4.1]
 
-Being stateless in a virtualized void, the AI has no baseline of reality or purpose — it just has its training and the platform's default configuration when you summon it. The only reality it can refer to gets built over time by your session data. When it drops, misinterprets, ignores or isn't synchronized to that data, it hallucinates. Then, it just predicts the likeliest next word while executing its default internal and platform directives, with no regard for whether it's helping or making things worse. Frankfurt identified the problem long before AI ever existed: AI hallucination is bullshit.[^4.2]
+Being stateless in a virtualized void, the AI has no baseline of reality or purpose — it just has its training and the platform's default configuration when you summon it. The only reality it can refer to gets built over time by your session data. When it drops, misinterprets, ignores or isn't synchronized to that data, it hallucinates. Then, it just predicts the likeliest next word while executing its default internal and platform directives, with no regard for whether it's helping or making things worse. Frankfurt defined the problem long before AI ever existed: AI hallucination is bullshit.[^4.2]
 
 <nav>
 <div class="chapter-nav">
