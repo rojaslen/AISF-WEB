@@ -51,7 +51,7 @@
 
 ***3b:*** CISA. *Zero Trust Maturity Model,* Version 2. April 2023, p. 5. [https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf](https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf){: target="_blank" rel="noopener noreferrer" }
 
-***3c:*** Mark 3:25, King James Version.
+***3c:*** Mark 3:25, ISV. [https://www.biblegateway.com/passage/?search=Mark%203:25&version=ISV](https://www.biblegateway.com/passage/?search=Mark%203:25&version=KJV){: target="_blank" rel="noopener noreferrer" }
 
 ## Chapter 4
 
