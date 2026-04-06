@@ -104,3 +104,7 @@ Context decay is real and noticeable but manageable. Using STRUCTURE and STABILI
 
 [^Fc]: FisherMap. "Caesar Creek Lake, OH -- Depth Map." [https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/](https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/){: target="_blank" rel="noopener noreferrer" }
 
+<nav>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
+

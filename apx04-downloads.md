@@ -16,5 +16,9 @@ nav_order: 5
 
 [Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CDA-v1.0){: target="_blank" rel="noopener noreferrer" }
 
+<nav>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
+
 ---
 

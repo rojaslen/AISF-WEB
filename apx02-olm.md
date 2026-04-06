@@ -14,6 +14,9 @@ nav_order: 3
 
 ---
 
+*Screen reader users: table-heavy research data. Navigation via Regions and Headings recommended.*
+
+{: role="main" aria-label="Abstract" }
 ## Abstract
 
 This appendix reports the methods and results of a multi-experiment fine-tuning
@@ -277,6 +280,7 @@ content requirement).
 
 ---
 
+{: role="region" aria-label="Experiments" }
 ## 5. Experiments
 
 ### 5.1 Experiment 1: Mistral 7B Base, Alpaca Format
@@ -641,6 +645,7 @@ Token delta of -71.8% is the largest verbosity reduction in the dataset.
 
 ---
 
+{: role="region" aria-label="Cross-Model Summary" }
 ## 6. Cross-Model Summary
 
 All models on RTX 5060 Ti with finalized test instruments (hardware consistency
@@ -674,6 +679,7 @@ IFEval figures are from 5060 Ti runs.
 
 ---
 
+{: role="region" aria-label="Findings" }
 ## 7. Findings
 
 ### 7.1 Primary Finding: Compliance Training Is Effective Across Architectures
@@ -973,6 +979,7 @@ example set, which has not been developed.
 
 ---
 
+{: role="region" aria-label="Conclusions" }
 ## 9. Conclusions
 
 **Compliance training is effective and architecture-general.** Four adapters across
@@ -1027,6 +1034,10 @@ principles in the training data and is measurable and reproducible.
 [4] World Wide Web Consortium, *Web Content Accessibility Guidelines (WCAG) 2.2*, W3C Recommendation, Oct. 2023. [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/){: target="_blank" rel="noopener noreferrer" }
 
 [5] H. G. Frankfurt, *On Bullshit*. Princeton University Press, 2005. (Original essay: *Raritan Quarterly Review*, 6(2), 1986.)
+
+<nav>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 

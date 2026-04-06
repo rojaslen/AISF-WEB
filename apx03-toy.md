@@ -13,6 +13,9 @@ nav_order: 4
 
 ---
 
+*Screen reader users: table-heavy research data. Navigation via Regions and Headings recommended.*
+
+{: role="main" aria-label="Abstract" }
 ## Abstract
 
 This appendix reports the methods and results of the OLM/TOY sub-branch, which
@@ -202,6 +205,7 @@ encodes that asymmetry directly.
 
 ---
 
+{: role="region" aria-label="Experiments" }
 ## 5. Experiments
 
 Experiments are presented in ascending parameter order for analytical clarity. In
@@ -313,6 +317,7 @@ throughout.
 
 ---
 
+{: role="region" aria-label="Cross-Phase Summary" }
 ## 6. Cross-Phase Summary
 
 All four phases on NVIDIA RTX 4060 Ti (8 GB), 2026-02-24. Deployment gate = zero
@@ -327,6 +332,7 @@ failures required. All phases BLOCKED.
 
 ---
 
+{: role="region" aria-label="Findings" }
 ## 7. Findings
 
 ### 7.1 Primary Finding: No Model Cleared the Deployment Gate
@@ -465,6 +471,7 @@ not hardware-dependent for inference), but this has not been formally confirmed.
 
 ---
 
+{: role="region" aria-label="Conclusions" }
 ## 9. Conclusions
 
 **No model cleared the deployment gate.** The primary research question is answered
@@ -514,6 +521,10 @@ to the requirements of the use case.
 [4] GSN Manufacturing Consulting. "The Economics of Play: Understanding Toy Manufacturing Costs and Pricing." [https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing](https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing){: target="_blank" rel="noopener noreferrer" }
 
 [5] Sheets Market. "Toy Store Business Costs, Revenue Potential & Profitability." [https://sheets.market/toy-store-business-costs-revenue-potential-profitability/](https://sheets.market/toy-store-business-costs-revenue-potential-profitability/){: target="_blank" rel="noopener noreferrer" }
+
+<nav>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 
