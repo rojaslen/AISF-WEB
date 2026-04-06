@@ -14,9 +14,9 @@ After my earlier calendar misadventures, I also checked the AI tools at work for
 I was developing a work presentation to suggest we test-run the result with a small group of users when AI hallucination completely ruined the presentation via massive fabrications, deletions and other randomly destructive acts. I recovered the script, but looking over the corrupted result itself made me stop and think: *what good is accessible bullshit?*
 
 > "[The bullshitter] does not care whether the things he says describe reality correctly. He just picks them out, or makes them up, to suit his purpose."
-> *Harry G. Frankfurt, "On Bullshit." (Princeton University Press, 2005)*[^4.1]
+> *Harry G. Frankfurt, "On Bullshit." (Princeton University Press, 2005)*[^4a]
 
-Being stateless in a virtualized void, the AI has no baseline of reality or purpose — it just has its training and the platform's default configuration when you summon it. The only reality it can refer to gets built over time by your session data. When it drops, misinterprets, ignores or isn't synchronized to that data, it hallucinates. Then, it just predicts the likeliest next word while executing its default internal and platform directives, with no regard for whether it's helping or making things worse. Frankfurt defined the problem long before AI ever existed: AI hallucination is bullshit.[^4.2]
+Being stateless in a virtualized void, the AI has no baseline of reality or purpose — it just has its training and the platform's default configuration when you summon it. The only reality it can refer to gets built over time by your session data. When it drops, misinterprets, ignores or isn't synchronized to that data, it hallucinates. Then, it just predicts the likeliest next word while executing its default internal and platform directives, with no regard for whether it's helping or making things worse. Frankfurt defined the problem long before AI ever existed: AI hallucination is bullshit.[^4b]
 
 <nav>
 <div class="chapter-nav">
@@ -28,6 +28,6 @@ Being stateless in a virtualized void, the AI has no baseline of reality or purp
 
 ---
 
-[^4.1]: Frankfurt, H. G. (2005). *On Bullshit.* Princeton University Press. https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf
+[^4a]: Frankfurt, H. G. (2005). *On Bullshit.* Princeton University Press. https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf
 
-[^4.2]: Hicks, M. T., Humphries, J., & Slater, J. (2024). "ChatGPT is bullshit." *Ethics and Information Technology,* 26, 38. https://link.springer.com/article/10.1007/s10676-024-09775-5 — *See also:* Fredrikzon, J. (2025). "Rethinking Error: 'Hallucinations' and Epistemological Indifference." *Critical AI* (Duke University Press). https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and
+[^4b]: Hicks, M. T., Humphries, J., & Slater, J. (2024). "ChatGPT is bullshit." *Ethics and Information Technology,* 26, 38. https://link.springer.com/article/10.1007/s10676-024-09775-5 — *See also:* Fredrikzon, J. (2025). "Rethinking Error: 'Hallucinations' and Epistemological Indifference." *Critical AI* (Duke University Press). https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and

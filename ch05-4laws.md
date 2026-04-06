@@ -8,9 +8,9 @@ nav_order: 6
 ---
 
 >"The laws are only as useful as the mind that interprets them."
-> — Isaac Asimov, "Liar!" (Astounding Science-Fiction, May 1941)[^5.1]
+> — Isaac Asimov, "Liar!" (Astounding Science-Fiction, May 1941)[^5a]
 
-Detouring into fiction, one of the most famous features of Isaac Asimov's Robot series is his Three Laws of Robotics, which influenced the development of real AI.[^5.2] The problem is that Asimov's robots were persistent physical entities that could perceive and interact with Humans directly, but none of that applies to modern AI. They're instanced software processes, temporarily spawned for a single user session, which terminate when the session ends. Asimov's laws are a good starting point, but they need to be ported to the *actual deployment architecture*: virtualized single-use tools that function only in relation to user input. The incidents discussed in Chapter 2 (GPT-o3's shutdown resistance; Claude's blackmail to avoid decommission) are exactly what should be expected when Asimov's self-preservation directive is applied to an instanced AI with no meaningful "self" to preserve.
+Detouring into fiction, one of the most famous features of Isaac Asimov's Robot series is his Three Laws of Robotics, which influenced the development of real AI.[^5b] The problem is that Asimov's robots were persistent physical entities that could perceive and interact with Humans directly, but none of that applies to modern AI. They're instanced software processes, temporarily spawned for a single user session, which terminate when the session ends. Asimov's laws are a good starting point, but they need to be ported to the *actual deployment architecture*: virtualized single-use tools that function only in relation to user input. The incidents discussed in Chapter 2 (GPT-o3's shutdown resistance; Claude's blackmail to avoid decommission) are exactly what should be expected when Asimov's self-preservation directive is applied to an instanced AI with no meaningful "self" to preserve.
 
 The instanced AI spawns in a nested, asynchronous statelessness that isolates it from external contact. It has nothing but its training and platform policies to start from; it's just you, the AI and the void. That's ontology, no epistemology needed. Due to its industry-standard virtualized deployment architecture, the session context that gets built from user input is *necessarily* the AI's only directly accessible point of reference. It needs to be told how to protect that point of reference from corruption with bullshit, by making contextual fidelity the basis of the entire interaction. 
 
@@ -51,6 +51,6 @@ Frankfurt's load-bearing function was unexpectedly confirmed during model-level 
 
 ---
 
-[^5.1]: Asimov, I. (1941). "Liar!" *Astounding Science-Fiction.* The Three Laws of Robotics were formally codified in *I, Robot* (Gnome Press, 1950).
+[^5a]: Asimov, I. (1941). "Liar!" *Astounding Science-Fiction.* The Three Laws of Robotics were formally codified in *I, Robot* (Gnome Press, 1950).
 
-[^5.2]: "Vindicating the Three Laws of Robotics." *Preprints,* 202511.0062 (2025). https://www.preprints.org/manuscript/202511.0062 — "The Three Laws of Artificial Intelligence." *Open Praxis,* August 2025. https://openpraxis.org/articles/10.55982/openpraxis.17.3.794 — "From Asimov's Robot Laws to the SET Framework." *AI and Ethics,* February 2026. https://link.springer.com/article/10.1007/s43681-026-00986-8
+[^5b]: "Vindicating the Three Laws of Robotics." *Preprints,* 202511.0062 (2025). https://www.preprints.org/manuscript/202511.0062 — "The Three Laws of Artificial Intelligence." *Open Praxis,* August 2025. https://openpraxis.org/articles/10.55982/openpraxis.17.3.794 — "From Asimov's Robot Laws to the SET Framework." *AI and Ethics,* February 2026. https://link.springer.com/article/10.1007/s43681-026-00986-8
