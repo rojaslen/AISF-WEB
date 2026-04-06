@@ -315,6 +315,8 @@ Myra Cheng et al., "Sycophantic AI decreases prosocial intentions and promotes d
 
 State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, February 3, 2026.
 
+</section>
+
 ---
 
 [AI Stability Framework](https://LeonardRojas.com){: target="_blank" rel="noopener noreferrer" } (C) 2026 by Leonard Rojas. All Rights Reserved.
