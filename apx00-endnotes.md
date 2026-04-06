@@ -2,7 +2,11 @@
 
 All footnotes cited within body text are compiled here for comprehensive reference. Following this list are links to additional material of interest that was not directly referenced in any chapter. 
 
+*Screen reader users: URL-heavy content. Navigation via Regions and Chapter Headers recommended.*
+
 ---
+
+<section role="region" aria-label="Citations by Chapter">
 
 ## Chapter 1
 
@@ -131,6 +135,12 @@ All footnotes cited within body text are compiled here for comprehensive referen
 Chau, A. (2025, January 29). "Toy Manufacturing Costs: A Guide to Pricing and Economics." GSN Manufacturing Consulting. [https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing](https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing){: target="_blank" rel="noopener noreferrer" }
 
 "Toy Store Business Costs, Revenue Potential & Profitability." Sheets Market, April 15, 2025. [https://sheets.market/toy-store-business-costs-revenue-potential-profitability/](https://sheets.market/toy-store-business-costs-revenue-potential-profitability/){: target="_blank" rel="noopener noreferrer" }
+
+</section>
+
+---
+
+<section role="region" aria-label="Additional Reading">
 
 ## Additional Reading (Not Referenced)
 
