@@ -49,7 +49,6 @@ Frankfurt's load-bearing function was unexpectedly confirmed during model-level 
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
 
 [^5a]: Asimov, I. (1941). "Liar!" *Astounding Science-Fiction.* The Three Laws of Robotics were formally codified in *I, Robot* (Gnome Press, 1950).
 

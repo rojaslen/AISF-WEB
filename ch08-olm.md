@@ -38,5 +38,3 @@ A mid-range consumer gaming PC produced four AISF-trained adapters across four i
 </div>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
-
----

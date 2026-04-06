@@ -51,6 +51,5 @@ In the absence of any meaningful preferences feature, figuring out how to apply 
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
 
 [^9a]: Demiliani, C. (2025). "Understanding LLM Performance Degradation: A Deep Dive into Context Window Limits." https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/ — "Large Language Models Hallucination: A Comprehensive Survey." arXiv:2510.06265 (2025). https://arxiv.org/abs/2510.06265

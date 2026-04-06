@@ -59,6 +59,5 @@ But it works.
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
 
 [^11a]: International Energy Agency. "Energy and AI: Energy Demand from AI." IEA, 2025. https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai — Goldman Sachs Research. "AI is poised to drive 160% increase in data center power demand." 2024. https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand — AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/ — Visual Capitalist. "Mapped: U.S. States With the Most Data Centers in 2025." December 2025. https://www.visualcapitalist.com/mapped-u-s-states-with-the-most-data-centers-in-2025/ — JLL. "North America Data Center Report Year-End 2025." https://www.jll.com/en-us/newsroom/jll-north-america-data-center-report-year-end-2025 — Texas Tribune. Data center / ERCOT grid reporting, 2025-2026. https://www.texastribune.org/2026/01/20/texas-top-data-center-market-power-grid/ — Water Desk. "Data centers: a small but growing factor in Arizona's water budget." April 2025. https://waterdesk.org/2025/04/data-centers-a-small-but-growing-factor-in-arizonas-water-budget/

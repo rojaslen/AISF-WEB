@@ -94,8 +94,6 @@ These toys also inherit IoT's (Internet of Things) long record of security flaws
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
-
 
 [^2a]: Kirkpatrick, M. (2010, January 10). ReadWriteWeb via *New York Times.* https://youtu.be/LoWKGBloMsU?si=auOelcRrn_phEg3x&t=152
 

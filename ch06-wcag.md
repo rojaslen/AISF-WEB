@@ -31,7 +31,6 @@ Combined with recognition that "user" means "session data," that provides the ac
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
 
 [^6a]: "Time Dysperception Perspective for Acquired Brain Injury." *PMC,* PMC3888944. https://pmc.ncbi.nlm.nih.gov/articles/PMC3888944/
 

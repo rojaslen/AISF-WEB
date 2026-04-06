@@ -31,7 +31,6 @@ Each field of research mentioned here deserves more investigation, particularly 
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
 
 [^7a]: Clark, A., & Chalmers, D. (1998). "The Extended Mind." *Analysis,* 58(1), 7-19. — Hollan, J., Hutchins, E., & Kirsh, D. (2000). "Distributed Cognition." *ACM Transactions on CHI,* 7(2), 174-196. — "Extending Minds with Generative AI." *Nature Communications* (2025). https://www.nature.com/articles/s41467-025-59906-9 — Riedl et al. "AI's Social Forcefield: Reshaping Distributed Cognition in Human-AI Teams." arXiv:2407.17489 (2024). https://arxiv.org/html/2407.17489v2
 
