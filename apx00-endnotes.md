@@ -318,7 +318,3 @@ State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, Feb
 <nav>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
-
----
-
-[AI Stability Framework](https://LeonardRojas.com){: target="_blank" rel="noopener noreferrer" } (C) 2026 by Leonard Rojas. All Rights Reserved.
