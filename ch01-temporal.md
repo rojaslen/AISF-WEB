@@ -31,8 +31,6 @@ With that brief background out of the way, let's return to the platform level, w
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
-
 
 [^1a]: "Mitigating LLM Hallucinations: A Comprehensive Review of Techniques and Architectures." *Preprints,* 202505.1955 (May 2025). https://www.preprints.org/manuscript/202505.1955 — *See also:* HalluLens Benchmark, arXiv:2504.17550 (ACL 2025). https://arxiv.org/abs/2504.17550
 

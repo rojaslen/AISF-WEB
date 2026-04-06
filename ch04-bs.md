@@ -26,7 +26,6 @@ Being stateless in a virtualized void, the AI has no baseline of reality or purp
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
 
 [^4a]: Frankfurt, H. G. (2005). *On Bullshit.* Princeton University Press. https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf
 

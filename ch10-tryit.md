@@ -61,4 +61,3 @@ The PowerShell desktop app isn't just the proof of concept; it's a flexible, fun
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
----
