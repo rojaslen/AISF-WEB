@@ -1,5 +1,7 @@
 # Endnotes
 
+All footnotes cited within body text are compiled here for comprehensive reference. Following this list are links to additional material of interest that was not directly referenced in any chapter. 
+
 ---
 
 ## Chapter 1
@@ -133,7 +135,6 @@ Chau, A. (2025, January 29). "Toy Manufacturing Costs: A Guide to Pricing and Ec
 ## Additional Reading (Not Referenced)
 
 Goodacre, E., & Gibson, J. (2026, February 27). "AI in the Early Years: Examining the Implications of GenAI Toys for Young Children." University of Cambridge, Faculty of Education / PEDAL Centre. [https://doi.org/10.17863/CAM.126270](https://doi.org/10.17863/CAM.126270){: target="_blank" rel="noopener noreferrer" }
-
 
 "What Is the Alignment Tax?" arXiv:2603.00047, March 2026. [https://arxiv.org/abs/2603.00047](https://arxiv.org/abs/2603.00047){: target="_blank" rel="noopener noreferrer" }
 
