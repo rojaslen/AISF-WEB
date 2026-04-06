@@ -6,7 +6,7 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ---
 
-{: role="Main" aria-label="Citations by Chapter" }
+{: role="main" aria-label="Citations by Chapter" }
 ## Chapter 1
 
 ***1a:*** "Mitigating LLM Hallucinations: A Comprehensive Review of Techniques and Architectures." *Preprints,* 202505.1955 (May 2025). [https://www.preprints.org/manuscript/202505.1955](https://www.preprints.org/manuscript/202505.1955){: target="_blank" rel="noopener noreferrer" } — *See also:* HalluLens Benchmark, arXiv:2504.17550 (ACL 2025). [https://arxiv.org/abs/2504.17550](https://arxiv.org/abs/2504.17550){: target="_blank" rel="noopener noreferrer" }
@@ -137,8 +137,10 @@ Chau, A. (2025, January 29). "Toy Manufacturing Costs: A Guide to Pricing and Ec
 
 ---
 
-{: role="Supplemental" aria-label="Additional Reading" }
+{: role="complementary" aria-label="Additional Reading" }
 ## Additional Reading (Not Referenced)
+
+*NOTE: Items below are in no particular order.*
 
 Goodacre, E., & Gibson, J. (2026, February 27). "AI in the Early Years: Examining the Implications of GenAI Toys for Young Children." University of Cambridge, Faculty of Education / PEDAL Centre. [https://doi.org/10.17863/CAM.126270](https://doi.org/10.17863/CAM.126270){: target="_blank" rel="noopener noreferrer" }
 
@@ -310,6 +312,12 @@ Myra Cheng et al., "Sycophantic AI decreases prosocial intentions and promotes d
 [https://www.science.org/doi/10.1126/science.aec8352](https://www.science.org/doi/10.1126/science.aec8352){: target="_blank" rel="noopener noreferrer" }
 
 State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, February 3, 2026.
+
+---
+
+<nav>
+<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
 
 ---
 
