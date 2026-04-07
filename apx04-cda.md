@@ -13,40 +13,39 @@ nav_order: 5
 
 ## What It Does
 
-*[SCAFFOLD]* CDA is a lightweight Windows clipboard utility that prepends a WCAG 2.1-AA
-compliance header to your text before you paste it into any AI chat platform. Named for
-Microsoft Copilot where it was first deployed, it is platform-agnostic -- it works with
-any AI interface that accepts typed or pasted input.
+The Copilot Digital Accessibility app (CDA) is a lightweight Windows utility that sends a WCAG 2.1 AA compliance directive directly to your clipboard, ready to paste into any AI chat platform. Named for Microsoft Copilot where it was first deployed, but it's platform-agnostic and works with any AI interface that accepts typed or pasted input. 
 
+- Works with Copilot, ChatGPT, Claude, Gemini, and other AI chat platforms
 - No installation required; standalone .exe, approximately 76 KB
-- No dependencies; no network calls; no data collection
-- Works with Copilot, ChatGPT, Claude, Gemini, or any other AI chat platform
+- No dependencies; no network calls; no data access
 - Silent operation; no configuration needed
+- Simple 3-step (open-close-paste) workflow
+
+### Directive Contents
+
+>Single‑session ADA/§508 request with silent‑compliance: apply but never mention accessibility unless requested or compliance is impossible.
+>Apply mandatory WCAG 2.1 A Floor to all AI output; the AI cannot alter tiers without user approval.
+>User may adjust the tier (AA or AAA) but never below floor, and all output must meet the resulting tier without exception.
+>Rules:
+>- Email/Summary → WCAG 2.1 A structural clarity.
+>- UI/Docs → WCAG 2.1 AA technical practices.
+>- Image generation → ALT text mandatory.
+>- Image‑related output → descriptive ALT text required.
+>- Language alignment: auto‑translate only when needed for accessibility alignment; verify consistency; honor explicit user language.
+
+![CDA application window displaying the ready-to-paste WCAG 2.1-AA accessibility compliance block, with a Close button at the bottom](/assets/images/cdapopup.jpg)
 
 ## Origin
 
-*[SCAFFOLD]* CDA is a sub-branch of the [AI Stability Framework](https://leonardrojas.com){: target="_blank" rel="noopener noreferrer" }
-(AISF), an independent personal project. AISF is a client-side middleware system for
-AI behavioral compliance; CDA is the accessibility layer extracted from it, simplified
-for general use, and donated to the public domain. It was built as a practical tool for
-coworkers and IT support staff -- not designed as a product. The full AISF project is
-separate and remains a personal project; CDA is a gift out of it.
-
-Lineage: AISF Parent Ruleset (PAR) → Digital Accessibility Copilot (DAC) → Copilot
-Digital Accessibility (CDA).
+CDA is a sub-branch of the [AI Stability Framework](https://leonardrojas.com){: target="_blank" rel="noopener noreferrer" }, an independent personal project. The Framework is a client-side middleware system for AI behavioral compliance; CDA is its accessibility layer, extracted, simplified for general use, and donated to the public domain. It was built as a simple, practical tool for coworkers and IT support staff, not designed as a commercial product. The full project is a separate, far larger body of work and remains a personal project; CDA is a public gift derived from it.
 
 ## Validation and Deployment
 
-*[SCAFFOLD]* CDA was independently validated by a blind JAWS screen reader user, who
-subsequently proposed statewide deployment within their organization. It has been reviewed
-and approved by an enterprise IT security team at a state government disability services
-agency and is in active production use there. It cleared ITSEC review because its design
-leaves nothing to review: no network calls, no data storage, no elevated permissions.
+CDA has been independently tested and validated by a blind JAWS screen reader user, who subsequently proposed statewide deployment within the organization (a state government disability services agency). The application and its source code were reviewed and approved by the agency's enterprise IT security team, and it is now in active production use by multiple JAWS users. It cleared ITSEC review because its simple design has nothing to hide and leaves nothing to review: no network functions, no data access or storage, no elevated permissions, no installation.
 
 ## License
 
-CC0 1.0 Universal Public Domain Dedication. No attribution required. Free for any use --
-personal, commercial, government, or institutional -- without restriction.
+CC0 1.0 Universal Public Domain Dedication. No attribution required. Free for any use -- personal, commercial, government, or institutional -- without restriction.
 
 [Download CDA v1.0](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CDA-v1.0){: target="_blank" rel="noopener noreferrer" }
 
