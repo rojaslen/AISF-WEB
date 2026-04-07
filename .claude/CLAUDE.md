@@ -114,7 +114,7 @@ presentation, or proposal. Evaluate it accordingly.
 
 - **Theme:** None -- custom layout (`_layouts/default.html`); no remote_theme dependency
 - **Stylesheet:** `assets/css/style.css` -- plain CSS, system light/dark via prefers-color-scheme, no Sass, no framework
-- **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, apx00 through apx04, appendices.md (nav parent)
+- **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, apx00 through apx05, appendices.md (nav parent)
 - **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`; layout is set globally via `_config.yml` defaults (do not add `layout:` to individual pages)
 - **Appendix nav parent:** `appendices.md` (has_children: true in front matter drives nav grouping in layout)
 - **Home page:** `index.md` (Preface content; nav_order: 1)
@@ -145,3 +145,7 @@ Chapter and appendix citation format:
 - **Update docs pre-commit:** `CLAUDE.md` (this file) if scope has changed
 - Commit messages: concise, imperative mood, no trailing period
 - Always include Co-Authored-By trailer
+
+## Optional Future Actions
+
+- **Zenodo preprint:** Publish OLM research (Apx02 + Ch06 framing) as a citable PDF on Zenodo (CERN-hosted open repository). Zero friction, free DOI, no endorsement or institutional affiliation required. arXiv rejected -- requires sponsor/endorsement from existing arXiv author, not worth the overhead for independent work.

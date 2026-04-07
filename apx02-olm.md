@@ -184,7 +184,7 @@ is contingent on receiving a system prompt at inference time (see Section 7.6).
 
 ## 4. Validation Instruments
 
-### 4.1 Proprietary Compliance Battery
+### 4.1 Custom Compliance Battery
 
 The compliance battery is a domain-specific question-answer set covering the 25
 instruction types represented in the Four Laws training data. Evaluation is
@@ -216,7 +216,7 @@ Hugging Face Open LLM Leaderboard.
 score throughout. The adjusted score excludes prompts containing
 `punctuation:no_comma` instructions from both numerator and denominator. Rationale:
 WCAG 2.2 Section 3.1 (Readable) creates a principled compliance conflict with this
-instruction type; aa framework-trained model may deprioritize comma avoidance in cases
+instruction type; a framework-trained model may deprioritize comma avoidance in cases
 where it conflicts with prose readability, causing IFEval to score a principled
 compliance decision as a failure. Adjusted scores are identified with "(adj)" in
 all tables. Raw scores are reported where relevant for comparison.
@@ -397,10 +397,10 @@ Selected category-level results (instruction-level strict):
 responses than the instruction requires, consistent with the verbosity pattern
 (see Section 7.5). This is a training signal interaction, not a capability loss.
 
-Token delta of -66.4% (base avg 284.3 words, Framework avg 95.5 words) is the second-
-largest reduction in the dataset and substantially exceeds Mistral Instruct (-42.5%).
-The over-suppression pattern is specific to this architecture and training format
-combination; see Section 7.8.
+Token delta of -66.4% (base avg 284.3 words, Framework avg 95.5 words) is the 
+second-largest reduction in the dataset and substantially exceeds Mistral 
+Instruct (-42.5%). The over-suppression pattern is specific to this architecture 
+and training format combination; see Section 7.8.
 
 ### 5.4 Experiment 4: Track A Benchmark, Llama 3.1 8B
 

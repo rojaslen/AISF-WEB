@@ -10,4 +10,5 @@ has_children: true
 - [Appendix 1: Foreseeably Asked Questions](/apx01-faq)
 - [Appendix 2: OLM: Behavioral Compliance Training](/apx02-olm)
 - [Appendix 3: TOY: Child-Safe Model Training](/apx03-toy)
-- [Appendix 4: Downloads](/apx04-downloads) 
+- [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04-cda)
+- [Appendix 5: Downloads](/apx05-downloads)
