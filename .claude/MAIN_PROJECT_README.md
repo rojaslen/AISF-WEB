@@ -159,6 +159,6 @@ Target audience: AI Ethics, Human-Computer Interaction (HCI), Accessibility/AT.
 
 **Exceptions:** PS-CORE is CC BY-NC-ND 4.0. PS-DEMO v1.0.1 is CC BY-NC-ND 4.0 (deprecated 2026-04-01; archive only). CDA is CC0 Public Domain. JSS is Freeware.
 
-**Trademark:** USPTO application filed 2026-02-23, serial # 99664948. Documentation in `lib/uspto/` (local only).
+**Trademark:** Wordmark application filed 2026-02-23, serial # 99664948; logo mark application filed 2026-04-07, serial # 99749758. Documentation in `lib/uspto/` (local only).
 
 LeonardRojas.com

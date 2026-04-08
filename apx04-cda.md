@@ -56,5 +56,5 @@ CC0 1.0 Universal Public Domain Dedication. No attribution required. Free for an
 ---
 
 *Part of the AI Stability Framework(tm), (c)2025-2026 Leonard Rojas. All rights reserved.*
-*AI Stability Framework is a trademark of Leonard Rojas (USPTO Serial No. 99664948,*
-*registration pending).*
+*AI Stability Framework wordmark and logo are trademarks of Leonard Rojas*
+*(USPTO Serial Nos. 99664948 and 99749758, registration pending).*

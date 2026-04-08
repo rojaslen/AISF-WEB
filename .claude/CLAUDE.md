@@ -74,7 +74,7 @@
 - When editing user text, make ONLY the edits previewed to the user during the current turn. UN-PREVIEWED EDITS ARE FORBIDDEN WITHOUT EXPLICIT AUTHORIZATION. (P0)
 - **NEVER use curly/smart quotes** (U+201C " U+201D " U+2018 ' U+2019 '). Use straight ASCII quotes only: " (U+0022) and ' (U+0027).
 - When generating tables for display output, do not exceed 90 columns in width.
-- **Project name usage:** Prefer "AI Stability Framework" or "the Framework" (capitalized, trademark). Avoid "AISF" except in filenames and contexts where the full name does not fit (e.g., table headers). "AISF" has active trademark applications; the full name is the preferred public-facing form.
+- **Project name usage:** Prefer "AI Stability Framework" or "the Framework" (capitalized, trademark). Avoid "AISF" except in filenames and contexts where the full name does not fit (e.g., table headers). "AISF" has active trademark applications (wordmark serial # 99664948; logo mark serial # 99749758); the full name is the preferred public-facing form.
 
 ---
 
