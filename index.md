@@ -18,15 +18,15 @@ nav_order: 1
 - [Chapter 9: Field Observations](/ch09-observations)
 - [Chapter 10: How to Try It](/ch10-tryit)
 - [Chapter 11: What's Next](/ch11-wrapup)
+- [Epilogue: Foreseeably Asked Questions](/epilogue)
 
 ## Appendices
 
 - [Appendix 0: Endnotes](/apx00-endnotes)
-- [Appendix 1: Foreseeably Asked Questions](/apx01-faq)
+- [Appendix 1: Downloads](/apx01-downloads)
 - [Appendix 2: OLM: Behavioral Compliance Training](/apx02-olm)
 - [Appendix 3: TOY: Child-Safe Model Training](/apx03-toy)
 - [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04-cda)
-- [Appendix 5: Downloads](/apx05-downloads)
 
 </nav>
 

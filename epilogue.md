@@ -1,7 +1,6 @@
 ---
-title: "FAQ: Foreseeably Asked Questions"
-parent: "Appendices"
-nav_order: 2
+title: "Epilogue: Foreseeably Asked Questions"
+nav_order: 13
 ---
 
 # FAQ: Foreseeably Asked Questions

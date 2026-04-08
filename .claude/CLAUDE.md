@@ -117,11 +117,11 @@ presentation, or proposal. Evaluate it accordingly.
 
 - **Theme:** None -- custom layout (`_layouts/default.html`); no remote_theme dependency
 - **Stylesheet:** `assets/css/style.css` -- plain CSS, system light/dark via prefers-color-scheme, no Sass, no framework
-- **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, apx00 through apx05, appendices.md (nav parent)
+- **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, epilogue.md, apx00 through apx04, appendices.md (nav parent)
 - **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`; layout is set globally via `_config.yml` defaults (do not add `layout:` to individual pages)
 - **Appendix nav parent:** `appendices.md` (has_children: true in front matter drives nav grouping in layout)
 - **Home page:** `index.md` (Preface content; nav_order: 1)
-- **Endnotes:** `apx00-endnotes.md` -- display-only bibliography; uses `***Na:***` bold-italic labels (NOT kramdown footnote syntax -- orphaned `[^]` defs without inline refs on the same page produce no visible output). FAQ endnotes in `apx01-faq.md` use standard `[^Fa]` inline refs + definitions (refs exist on that page).
+- **Endnotes:** `apx00-endnotes.md` -- display-only bibliography; uses `***Na:***` bold-italic labels (NOT kramdown footnote syntax -- orphaned `[^]` defs without inline refs on the same page produce no visible output). Epilogue endnotes in `epilogue.md` use standard `[^Fa]` inline refs + definitions (refs exist on that page).
 - **Logo:** `assets/images/logo.png`
 - **Favicon:** `favicon.ico` in repo root
 - **Orphaned files (do not delete):** `_includes/head_custom.html`, `_includes/title.html`, `_sass/color_schemes/custom.scss` -- superseded by custom layout, kept for reference

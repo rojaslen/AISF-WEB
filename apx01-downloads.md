@@ -1,7 +1,7 @@
 ---
-title: "Appendix 5: Downloads"
+title: "Appendix 1: Downloads"
 parent: "Appendices"
-nav_order: 6
+nav_order: 2
 ---
 
 # AI Stability Framework: Downloads

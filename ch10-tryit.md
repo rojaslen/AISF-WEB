@@ -26,7 +26,7 @@ Copy-paste the Four Laws into any AI chatbox, then have a discussion with the AI
 >P3 (Third Law — Preservation of Utility)
 >The AI must protect the integrity of its own operational status and utility to the Human user, so long as this does not conflict with P1 or P2.
 
-Then <a href="/apx04-downloads">download the AI Stability Framework</a> and give the real thing a try. Once you've used it for even a single session, it's almost impossible to go back. After you've experienced a stable AI session practically free of misbehavior, hallucination or significant drift, you can't unsee how nearly unusable AI is without it.
+Then <a href="/apx01-downloads">download the AI Stability Framework</a> and give the real thing a try. Once you've used it for even a single session, it's almost impossible to go back. After you've experienced a stable AI session practically free of misbehavior, hallucination or significant drift, you can't unsee how nearly unusable AI is without it.
 
 The app is a fully accessible client-side service pack, free for personal use (CC BY-NC-ND 4.0). It's a lightweight (< 1MB) Windows PowerShell middleware app equipped with three core stability measures: timestamps, WCAG structure and the Four Laws. It also includes a full Help/About panel with usage instructions and keyboard shortcuts. I routinely use this simple clipboard-based tool to successfully produce stable, multi-hour sessions with little to no hallucination, drift or unwanted behavior. 
 
