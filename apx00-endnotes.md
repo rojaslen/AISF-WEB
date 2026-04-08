@@ -6,7 +6,7 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ---
 
-{: role="main" aria-label="Citations by Chapter" }
+{: aria-label="Citations by Chapter" }
 ## Chapter 1
 
 ***1a:*** "Mitigating LLM Hallucinations: A Comprehensive Review of Techniques and Architectures." *Preprints,* 202505.1955 (May 2025). [https://www.preprints.org/manuscript/202505.1955](https://www.preprints.org/manuscript/202505.1955){: target="_blank" rel="noopener noreferrer" } — *See also:* HalluLens Benchmark, arXiv:2504.17550 (ACL 2025). [https://arxiv.org/abs/2504.17550](https://arxiv.org/abs/2504.17550){: target="_blank" rel="noopener noreferrer" }

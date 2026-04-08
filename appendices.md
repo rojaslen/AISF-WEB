@@ -4,7 +4,7 @@ nav_order: 13
 has_children: true
 ---
 
-#Appendices
+# Appendices
 
 - [Appendix 0: Endnotes](/apx00-endnotes)
 - [Appendix 1: Foreseeably Asked Questions](/apx01-faq)

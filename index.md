@@ -2,6 +2,7 @@
 title: "Chapter 0: ToC & Preface"
 nav_order: 1
 ---
+<nav aria-label="Site navigation" markdown="1">
 <a name="toc"></a>
 
 # Table of Contents
@@ -27,9 +28,11 @@ nav_order: 1
 - [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04-cda)
 - [Appendix 5: Downloads](/apx05-downloads)
 
+</nav>
+
 ---
 
-# Preface
+## Preface
 
 The vendors aren't going to fix AI's hallucination problems any time soon.
 
