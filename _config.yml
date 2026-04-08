@@ -8,7 +8,7 @@ plugins:
   - jekyll-seo-tag
 
 logo: "/assets/images/logo.png"
-footer_content: "© 2025-2026 Leonard Rojas. All rights reserved."
+footer_content: "© 2025-2026 Leonard Rojas. All rights reserved. AI Stability Framework wordmark and logo are trademarks of Leonard Rojas (USPTO Serial Nos. 99664948 and 99749758, registration pending)."
 
 kramdown:
   input: kramdown
