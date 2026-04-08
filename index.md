@@ -49,8 +49,3 @@ Meanwhile, real people are losing real time and effort to AI hallucination (and 
 It's unconventional, but it works. Read more if you want to know why.
 
 <div class="chapter-nav"><a href="/ch01-temporal">Next: Chapter 1</a> | <a href="#toc">Top of Page</a></div>
-
----
-
-**Author:** Leonard Rojas
-**Contact:** AISF at LeonardRojas dot com
