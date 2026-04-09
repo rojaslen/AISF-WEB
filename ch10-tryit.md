@@ -7,8 +7,6 @@ nav_order: 11
 
 ---
 
-<div class="warn">
-
 ## Current Conditions Notice -- AI Platform Functionality (April 2026)
 
 <div role="note" aria-label="Important note" class="note">Users of AI platforms may be experiencing unusual behavior across multiple services, including degraded response quality, incomplete task execution, and mid-session capability changes. Testing conducted in April 2026 across all major platforms indicates platform-layer interventions affecting how thoroughly AI models execute user instructions -- likely reflecting cost-containment measures introduced amid broader economic pressures on the AI industry. These interventions appear to be infrastructure decisions, not model regressions; the underlying models remain capable when platform constraints permit them to operate normally.
