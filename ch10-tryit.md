@@ -7,7 +7,17 @@ nav_order: 11
 
 ---
 
-### See the difference for yourself.
+:::
+
+## Current Conditions Notice -- AI Platform Functionality (April 2026)
+
+Users of AI platforms may be experiencing unusual behavior across multiple services, including degraded response quality, incomplete task execution, and mid-session capability changes. Testing conducted in April 2026 across all major platforms indicates platform-layer interventions affecting how thoroughly AI models execute user instructions -- likely reflecting cost-containment measures introduced amid broader economic pressures on the AI industry. These interventions appear to be infrastructure decisions, not model regressions; the underlying models remain capable when platform constraints permit them to operate normally.
+
+Conditions vary significantly by platform. Claude.ai is the least affected, with persistent user preferences largely intact and no observed mid-session downgrades. Microsoft Copilot shows increased resistance to user-supplied behavioral parameters but remains manageable with additional prompting and stabilization. OpenAI's ChatGPT is substantially affected: tool use is throttled, fetch operations are unreliable, and free-account sessions are hitting token limits earlier than previously observed, often before complex tasks can be completed. Google Gemini is currently the most problematic, exhibiting a well-documented speed-tuning failure mode that produces confident fabrications rather than source reads, compounded by session behavior that does not stabilize reliably even with framework mediation. Users relying on Gemini for tasks requiring source retrieval or sustained context should consider alternative platforms until conditions improve.
+
+:::
+
+## See the difference for yourself.
 
 Copy-paste the Four Laws into any AI chatbox, then have a discussion with the AI about them. Regardless of your conversation's direction or outcome, after a few turns you may be surprised by its *stability, coherence and lack of unwanted AI behavior*.
 
@@ -43,7 +53,7 @@ The keyboard-forward workflow is necessarily manual — type, submit, switch, pa
 
 *(Malwarebytes users: you may encounter a false-positive flag on the AISF executable. Manually exempting it from quarantine works around this. Vendor whitelist submission pending.)*
 
-### That's Just For Starters
+## That's Just For Starters
 
 The PowerShell desktop app isn't just the proof of concept; it's a flexible, functional tool in its own right. The framework is also gradually being ported to other systems and coding architectures:
 
