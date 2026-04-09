@@ -25,6 +25,8 @@
   --color-muted:        #555555;
   --font-body:          "Inter", system-ui, -apple-system, sans-serif;
   --font-mono:          'Courier New', Courier, monospace;
+  --color-alert-bg:     #f0f7ff;
+  --color-alert-border: #0055b3;
 }
 
 /* --- Dark mode --- */
@@ -38,6 +40,8 @@
     --color-rule:         #3a3a3a;
     --color-code-bg:      #2a2a2a;
     --color-muted:        #999999;
+    --color-alert-bg:     #001e3c;
+    --color-alert-border: #4da6ff;
   }
 }
 
@@ -232,6 +236,24 @@ strong {
 
 .footnotes li {
   margin-bottom: 0.4rem;
+}
+
+/* --- Alert / notice --- */
+.alert {
+  background-color: var(--color-alert-bg);
+  border-left: 4px solid var(--color-alert-border);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.alert p {
+  max-width: none;
+  margin-bottom: 0.75rem;
+}
+
+.alert p:last-child {
+  margin-bottom: 0;
 }
 
 /* --- Chapter prev/next nav --- */
