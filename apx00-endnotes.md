@@ -109,7 +109,15 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ## Chapter 10
 
-(NONE)
+***10a:*** "OpenAI resets Codex limits after hitting 3M weekly users." MSN. [https://www.msn.com/en-us/news/other/openai-resets-codex-limits-after-hitting-3m-weekly-users/gm-GM19ED279E](https://www.msn.com/en-us/news/other/openai-resets-codex-limits-after-hitting-3m-weekly-users/gm-GM19ED279E){: target="_blank" rel="noopener noreferrer" }
+
+***10b:*** "Anthropic admits Claude Code users hitting usage limits 'way faster than expected'." The Register (2026). [https://www.theregister.com/2026/03/31/anthropic_claude_code_limits/](https://www.theregister.com/2026/03/31/anthropic_claude_code_limits/){: target="_blank" rel="noopener noreferrer" }
+
+***10c:*** "Anthropic confirms it's been 'adjusting' Claude usage limits." PCWorld. [https://www.pcworld.com/article/3100787/anthropic-confirms-its-been-adjusting-claude-usage-limits.html](https://www.pcworld.com/article/3100787/anthropic-confirms-its-been-adjusting-claude-usage-limits.html){: target="_blank" rel="noopener noreferrer" }
+
+***10d:*** "More control over Gemini API costs." Google Blog. [https://blog.google/innovation-and-ai/technology/developers-tools/more-control-over-gemini-api-costs/](https://blog.google/innovation-and-ai/technology/developers-tools/more-control-over-gemini-api-costs/){: target="_blank" rel="noopener noreferrer" }
+
+***10e:*** "Release Notes for Microsoft 365 Copilot." Microsoft Learn. [https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes](https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes){: target="_blank" rel="noopener noreferrer" }
 
 ## Chapter 11
 
