@@ -29,12 +29,15 @@
   --font-mono:          'Courier New', Courier, monospace;
   --color-alert-bg:     #f0f7ff;
   --color-alert-border: #0055b3;
+  --color-btn-bg:       #605838;   /* Harvest Gold */
+  --color-btn-hover:    #4E4830;
+  --color-btn-text:     #FFFFFF;
 }
 
 /* --- Dark mode --- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg:           #0A0C26;   /* brand dark main */
+    --color-bg:           #090B21;   /* Deep Indigo -- outer page bg */
     --color-text:         #C8C4C0;
     --color-header-bg:    #090B21;   /* Deep Indigo */
     --color-header-border:transparent;
@@ -46,6 +49,11 @@
     --color-link-visited: #8A7A4C;
     --color-alert-bg:     #001e3c;
     --color-alert-border: #4da6ff;
+    --color-btn-hover:    #746C44;
+  }
+
+  main {
+    background-color: #0A0C26;   /* Dark Blue -- content area */
   }
 }
 
@@ -99,15 +107,18 @@ a:visited { color: var(--color-link-visited); }
   padding: 0.75rem 2rem;
 }
 
-.site-brand {
+.site-brand,
+.site-brand:visited {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
-.site-brand:hover {
+.site-brand:hover,
+.site-brand:focus-visible {
+  color: #605838;   /* Harvest Gold */
   text-decoration: underline;
 }
 
@@ -268,7 +279,7 @@ strong {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin: 2rem 0 0.5rem 0;
 }
 
@@ -276,6 +287,40 @@ strong {
 .toc-link {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+/* --- Nav buttons (prev/next/toc links styled as buttons) --- */
+.chapter-nav a,
+.chapter-nav a:visited,
+.toc-link a,
+.toc-link a:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  min-height: 44px;
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.15s;
+}
+
+.chapter-nav a:hover,
+.chapter-nav a:focus-visible,
+.toc-link a:hover,
+.toc-link a:focus-visible {
+  background-color: var(--color-btn-hover);
+  color: var(--color-btn-text);
+  text-decoration: none;
+}
+
+.chapter-nav a:focus-visible,
+.toc-link a:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
 }
 
 /* --- Footer --- */
