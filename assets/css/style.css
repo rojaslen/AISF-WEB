@@ -44,10 +44,10 @@
     --color-header-border:transparent;
     --color-heading:      #C0BDB9;
     --color-rule:         transparent;
-    --color-code-bg:      #0D1033;   /* Dark Blue */
+    --color-code-bg:      #0D1033;   /* functional surface -- not a brand color */
     --color-muted:        #C0BDB9;
     --color-link:         #E7D789;   /* Pale Gold */
-    --color-link-visited: #A07840;   /* mid-amber gold ~4.8:1 on Dark Blue */
+    --color-link-visited: #A07840;   /* Amber Gold ~4.8:1 on Midnight Blue */
     --color-alert-bg:     #001e3c;
     --color-alert-border: #4da6ff;
     --color-btn-hover:    #746C44;
@@ -149,7 +149,7 @@ main {
 }
 
 @media (prefers-color-scheme: dark) {
-  main { background-color: #0A0C26; }   /* Dark Blue -- content area over Deep Indigo page bg */
+  main { background-color: #0A0C26; }   /* Midnight Blue -- content area over Deep Indigo page bg */
 }
 
 /* --- Headings --- */
