@@ -51,10 +51,6 @@
     --color-alert-border: #4da6ff;
     --color-btn-hover:    #746C44;
   }
-
-  main {
-    background-color: #0A0C26;   /* Dark Blue -- content area */
-  }
 }
 
 /* --- Reset --- */
@@ -141,6 +137,10 @@ main {
   padding: 2rem 1.5rem;
   background-color: var(--color-bg);
   color: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  main { background-color: #0A0C26; }   /* Dark Blue -- content area over Deep Indigo page bg */
 }
 
 /* --- Headings --- */
