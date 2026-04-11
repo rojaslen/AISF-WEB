@@ -5,8 +5,7 @@ nav_order: 11
 
 # Chapter 10: How to Try It
 
----
-<div role="alert" aria-live="assertive" aria-atomic="true" class="alert" markdown="1">
+---<div role="alert" aria-live="assertive" aria-atomic="true" class="alert" markdown="1">
 ## Current Conditions Notice -- AI Platform Functionality (April 2026)
 
 Reports from March and April 2026 document cost-containment measures across all major AI platforms, in response to escalating energy costs, increased usage, supply constraints and other factors. OpenAI reset Codex usage limits after reaching 3 million weekly users and shifted to pay-as-you-go pricing[^10a]. Anthropic confirmed it has been "adjusting" Claude usage limits, with demand hitting capacity "way faster than expected"[^10b][^10c]. Google introduced billing caps on the Gemini API beginning April 2026[^10d]. Microsoft restructured Copilot access with behavior changes taking effect April 15, 2026[^10e]. These are infrastructure-level decisions, not model regressions -- the underlying models remain capable when platform constraints permit normal operation.

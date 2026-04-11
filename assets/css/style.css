@@ -15,14 +15,14 @@
 
 /* --- Light mode (default) --- */
 :root {
-  --color-bg:           #ffffff;
-  --color-text:         #1a1a1a;
-  --color-header-bg:    #f5f5f5;
-  --color-header-border:#dddddd;
-  --color-heading:      #111111;
-  --color-rule:         #cccccc;
-  --color-code-bg:      #f0f0f0;
-  --color-muted:        #555555;
+  --color-bg:           #FFF8F0;   /* 2850K warm white */
+  --color-text:         #1A1209;   /* warm near-black */
+  --color-header-bg:    #F5EEE4;   /* warm header */
+  --color-header-border:#C8BAA8;
+  --color-heading:      #1A1209;
+  --color-rule:         #C8BAA8;
+  --color-code-bg:      #EDE5D8;
+  --color-muted:        #6B5E50;
   --font-body:          "Inter", system-ui, -apple-system, sans-serif;
   --font-mono:          'Courier New', Courier, monospace;
   --color-alert-bg:     #f0f7ff;
@@ -32,14 +32,14 @@
 /* --- Dark mode --- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg:           #1c1c1c;
-    --color-text:         #e6e6e6;
-    --color-header-bg:    #242424;
-    --color-header-border:#3a3a3a;
-    --color-heading:      #f0f0f0;
-    --color-rule:         #3a3a3a;
-    --color-code-bg:      #2a2a2a;
-    --color-muted:        #999999;
+    --color-bg:           #0A0C26;   /* brand dark main */
+    --color-text:         #FFFFFF;
+    --color-header-bg:    #090B21;   /* Deep Indigo */
+    --color-header-border:transparent;
+    --color-heading:      #FFFFFF;
+    --color-rule:         transparent;
+    --color-code-bg:      #0D1033;   /* Dark Blue */
+    --color-muted:        #C0BDB9;
     --color-alert-bg:     #001e3c;
     --color-alert-border: #4da6ff;
   }

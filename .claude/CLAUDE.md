@@ -140,6 +140,16 @@ Chapter and appendix citation format:
 - **NEVER use backtick line continuation** in PowerShell output
 - Use **Read/Write tools** for file I/O -- bash heredocs fail on strings containing single quotes
 
+### Button Color Standard (validated 2026-04-11)
+
+Derived from logo gold (`#E7D789`) darkened to a muted harvest gold. White text on both.
+Applies to all UI button elements across all branches and AISF-WEB.
+
+| Mode | Background | Hover | Text | Contrast |
+|---|---|---|---|---|
+| Light | `#605838` | `#4E4830` | `#FFFFFF` | 6.2:1 |
+| Dark | `#605838` | `#746C44` | `#FFFFFF` | 6.2:1 |
+
 ## Git Rules
 
 - **Never Auto-Commit** -- always ask before committing; user may want to batch changes

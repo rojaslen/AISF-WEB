@@ -12,6 +12,8 @@
  ® (registered) Alt+0174
  
  ± (plus/minus) Alt+0177
+ 
+ ≈ (approx.)    Alt+247
 
 ---
 
