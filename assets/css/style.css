@@ -15,6 +15,7 @@
 
 /* --- Light mode (default) --- */
 :root {
+  color-scheme: light dark;
   --color-bg:           #FFF8F0;   /* 2850K warm white */
   --color-text:         #1A1209;   /* warm near-black */
   --color-header-bg:    #F5EEE4;   /* warm header */
