@@ -51,6 +51,11 @@
     --color-alert-border: #4da6ff;
     --color-btn-hover:    #746C44;
   }
+
+  .site-brand:hover,
+  .site-brand:focus-visible {
+    color: #E7D789;   /* Pale Gold -- Harvest Gold is too dark on Deep Indigo */
+  }
 }
 
 /* --- Reset --- */
