@@ -33,10 +33,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg:           #0A0C26;   /* brand dark main */
-    --color-text:         #FFFFFF;
+    --color-text:         #C8C4C0;
     --color-header-bg:    #090B21;   /* Deep Indigo */
     --color-header-border:transparent;
-    --color-heading:      #FFFFFF;
+    --color-heading:      #C8C4C0;
     --color-rule:         transparent;
     --color-code-bg:      #0D1033;   /* Dark Blue */
     --color-muted:        #C0BDB9;
