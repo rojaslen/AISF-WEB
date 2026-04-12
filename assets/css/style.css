@@ -356,6 +356,7 @@ figure.screenshot {
   padding: 4px;
   cursor: zoom-in;
   display: inline-block;
+  width: 200px;
 }
 
 .thumb-btn:focus-visible {
@@ -365,9 +366,7 @@ figure.screenshot {
 
 .thumbnail {
   display: block;
-  max-width: 280px;
-  max-height: 200px;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
