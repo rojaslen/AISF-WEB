@@ -16,14 +16,14 @@
 /* --- Light mode (default) --- */
 :root {
   color-scheme: light dark;
-  --color-bg:           #FFF8F0;   /* 2850K warm white */
-  --color-text:         #1A1209;   /* warm near-black */
-  --color-header-bg:    #F5EEE4;   /* warm header */
-  --color-header-border:#C8BAA8;
-  --color-heading:      #1A1209;
+  --color-bg:           #F5F1D3;   /* White Gold -- page/outer bg */
+  --color-text:         #111111;
+  --color-header-bg:    #F5F1D3;   /* White Gold -- header chrome matches page */
+  --color-header-border:transparent;
+  --color-heading:      #111111;
   --color-rule:         #C8BAA8;
   --color-code-bg:      #EDE5D8;
-  --color-muted:        #6B5E50;
+  --color-muted:        #444444;
   --color-link:         #283198;   /* TM Navy */
   --color-link-visited: #1A2470;
   --font-body:          "Inter", system-ui, -apple-system, sans-serif;
@@ -31,7 +31,7 @@
   --color-alert-bg:     #f0f7ff;
   --color-alert-border: #0055b3;
   --color-btn-bg:       #605838;   /* Harvest Gold */
-  --color-btn-hover:    #4E4830;
+  --color-btn-hover:    #746C44;   /* Antique Gold */
   --color-btn-text:     #FFFFFF;
 }
 
@@ -144,8 +144,9 @@ main {
   max-width: 780px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  background-color: var(--color-bg);
+  background-color: #F5EEE4;   /* Bone -- content area over White Gold page */
   color: var(--color-text);
+  border: 1px solid #746C44;   /* Antique Gold -- both modes */
 }
 
 @media (prefers-color-scheme: dark) {
