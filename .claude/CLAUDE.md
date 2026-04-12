@@ -164,6 +164,13 @@ Applies to all UI button elements across all branches and AISF-WEB.
 
 - **Zenodo preprint:** Publish OLM research (Apx02 + Ch06 framing) as a citable PDF on Zenodo (CERN-hosted open repository). Zero friction, free DOI, no endorsement or institutional affiliation required. arXiv rejected -- requires sponsor/endorsement from existing arXiv author, not worth the overhead for independent work.
 
+## TODO (Branch Fixes -- Observed via Screenshots 2026-04-12)
+
+- **FFE popup messaging:** Turn-based vs token-based refresh interval -- verify which is
+  implemented; popup text and ch10 FFE entry may need updating once confirmed.
+- **CORE light mode:** Text entry box needs 1px color-canon outline in light mode (vanishes
+  into frame). Dark mode fine. Update screenshot once fixed. See main project TODO.
+
 ## TODO (Post-Integration Polish)
 
 - **Epilogue / "prompt engineering" FAQ (pending HTM go-live):** The layer-agnostic claim in the
