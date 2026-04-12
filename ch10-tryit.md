@@ -69,11 +69,32 @@ Its keyboard-forward workflow is necessarily manual — type, submit, switch, pa
 
 The PowerShell desktop app isn't just a proof of concept; it's a flexible, functional tool in its own right. The framework is also gradually being ported to other systems and coding architectures:
 
+<figure class="screenshot float-right">
+  <button class="thumb-btn" data-src="/assets/images/htm-welcome-dark.png" data-alt="Meso Chat welcome screen, dark mode" aria-label="View full size: Meso Chat welcome screen">
+    <img src="/assets/images/htm-welcome-dark.png" alt="" aria-hidden="true" class="thumbnail">
+  </button>
+  <figcaption>Meso Chat — welcome</figcaption>
+</figure>
+
 **Meso Chat (HTM)** is a browser-based multi-model chat interface that delivers the Framework directly in your browser. There's no Micro-layer clipboard window-swapping workflow, it's an online Meso-layer demo companion to this e-book, soon to be hosted right here. Claude, GPT, and Gemini backends are selectable from the sidebar; WCAG 2.2 AA throughout; plaintext session logs saved to your device on demand.
 
 <p><button class="demo-btn" disabled aria-disabled="true">Coming Soon: Try Meso Chat</button></p>
 
+<figure class="screenshot float-right">
+  <button class="thumb-btn" data-src="/assets/images/htm-turn1-dark.png" data-alt="Meso Chat active session, dark mode" aria-label="View full size: Meso Chat active session">
+    <img src="/assets/images/htm-turn1-dark.png" alt="" aria-hidden="true" class="thumbnail">
+  </button>
+  <figcaption>Meso Chat — session</figcaption>
+</figure>
+
 **Local Model Training (OLM)** embeds AISF principles directly into locally-hosted AI models themselves through QLoRA fine-tuning. Full methodology and results are in Chapter 8, reproducibility package available for download.
+
+<figure class="screenshot float-right">
+  <button class="thumb-btn" data-src="/assets/images/gpt-ffe-turn1.png" data-alt="Firefox Extension active on GPT, Turn 1 with popup" aria-label="View full size: Firefox Extension on GPT">
+    <img src="/assets/images/gpt-ffe-turn1.png" alt="" aria-hidden="true" class="thumbnail">
+  </button>
+  <figcaption>FFE on GPT — Turn 1</figcaption>
+</figure>
 
 **Firefox Extension (FFE)** automates the CORE app's manual workflow directly in the browser. Instead of the manual copy-paste cycle, the extension detects your submissions on AI chat platforms and automatically prepends timestamps, with an initial load and periodic refreshes for WCAG structure and the Four Laws. Soon to be ported to Chromium browsers (CRE: Chrome/Edge).
 
