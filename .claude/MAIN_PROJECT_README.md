@@ -2,18 +2,20 @@
 
 Client-side anti-hallucination middleware for AI chat platforms.
 
-## Current Status (2026-04-05)
+## Current Status (2026-04-11)
 
 | Component | Status |
 |-----------|--------|
-| PS-CORE+ (PowerShell Core+) | **Source of Truth** — most complete variant; Options panel + CST add-ins |
-| PS-CORE (PowerShell tool) | Complete — derived from PS-CORE+ (Options panel removed) |
+| PS-CORE+ (PowerShell Core+) | **Source of Truth** — Options panel + CST add-ins; branding pass complete 2026-04-11 |
+| PS-CORE (PowerShell tool) | Complete — derived from PS-CORE+; branding pass complete 2026-04-11 |
+| CST (Custom Modules) | Functional — 4 modules (Cicero, Cyrano, Hammurabi, Startup_Ritual); branding pass complete 2026-04-11; .cst encryption pending |
 | PS-DEMO (Demo Distribution) | **Deprecated 2026-04-01** — PS-CORE is the public downloadable |
-| CDA — WCAG-only (Copilot Accessibility) | Complete — ITSEC-approved (WCAG-only module), [GitHub Release](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CDA-v1.0) (CC0) |
-| FFE 0.2 (Firefox Extension) | Active — **5/5 platforms working** (ChatGPT, Gemini, Claude, DuckDuckGo, Copilot); session token tally added (v0.2.7); keyboard-first; mouse support pending |
-| OLM (Local model training) | **Research complete** — all models validated on RTX 5060 Ti (hardware consistency re-run complete 2026-03-29); Mistral 7B 100%; Gemma 2 9B 99.2%; Qwen3-8B 95.6% battery / IFEval +29.6pp; Llama 3.1 8B Pnull finding |
-| OLM/TOY (Child-safe models) | **Research complete** — Ph.1 Mistral 7B 577/584 (98.8%) NEAR PASS / DEPLOYMENT GATE: BLOCKED; Ph.2 FAIL TinyLlama 66/584; Ph.3 FAIL StableLM 142/584; Ph.4 FAIL Phi-2 187/584; zero-failure gate not cleared; floor above 2.7B |
-| WEB (Publication) | **Live** — leonardrojas.com (GitHub Pages); publishing repo AISF-WEB (separate); WEB\ content archived to zzz_Archives |
+| CDA — WCAG-only (Copilot Accessibility) | Complete — ITSEC-approved; [GitHub Release](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CDA-v1.0) (CC0) |
+| FFE 0.2 (Firefox Extension) | Active — **5/5 platforms working**; v0.2.7; popup branding pass + logo button 2026-04-11 |
+| HTM (HTML Multi-Model Frontend) | v0.1.7 — local Flask proxy; Claude/GPT/Gemini; branding pass complete 2026-04-11 |
+| OLM (Local model training) | **Research complete** — all models on RTX 5060 Ti; Mistral 7B 100%; Gemma 2 9B 99.2%; Qwen3-8B +29.6pp IFEval; Llama 3.1 8B Pnull finding |
+| OLM/TOY (Child-safe models) | **Research complete** — floor above 2.7B; zero-failure gate not cleared; all 4 phases done |
+| WEB (Publication) | **Live** — leonardrojas.com (GitHub Pages); publishing repo AISF-WEB (separate); WEB\ archived |
 | JSS (JAWS Script Port) | Further exploration — desktop apps with AI embed panels; approach TBD |
 | MBL (Mobile) | Scaffolded — medium priority, no Android test surface |
 | DAC (Azure M365 Copilot) | Deferred indefinitely — pending specs/test environment |
@@ -44,12 +46,13 @@ Adapted from Frankfurt's Indifference Principle and Asimov's Three Laws of Robot
 | Branch     | Name                    | Codebase           | Status                | License     |
 |------------|-------------------------|--------------------|-----------------------|-------------|
 | **PAR**    | Parent Ruleset          | Text               | Stable/LTS (7 Priors recovered) | Proprietary |
-| **PS-CORE+**| PowerShell Core+       | PowerShell, EXE    | **Source of Truth** — Options panel + CST | Proprietary |
-| **PS-CORE**| PowerShell Core         | PowerShell, EXE    | Complete (derived from PS-CORE+, Options removed) | CC BY-NC-ND 4.0 |
+| **PS-CORE+**| PowerShell Core+       | PowerShell, EXE    | **Source of Truth** — Options + CST; branding pass complete | Proprietary |
+| **PS-CORE**| PowerShell Core         | PowerShell, EXE    | Complete — branding pass complete 2026-04-11 | CC BY-NC-ND 4.0 |
 | **PS-DEMO**| Demo Distribution       | PowerShell, EXE    | **Deprecated 2026-04-01** — PS-CORE is the public downloadable | CC BY-NC-ND 4.0 |
-| **CST**    | Custom Modules          | Text               | Deferred (paid add-ins) | Proprietary |
+| **CST**    | Custom Modules          | PowerShell (.ps1)  | Functional — 4 modules; branding pass complete; .cst encryption pending | Proprietary |
 | **CDA**    | Copilot Digital Accessibility (WCAG-only) | PowerShell, EXE | ITSEC-approved (WCAG-only module) | **CC0**     |
-| **FFE**    | Firefox Extension       | JavaScript (MV3)   | Active development    | Proprietary |
+| **FFE**    | Firefox Extension       | JavaScript (MV3)   | Active — v0.2.7; popup branding pass complete | Proprietary |
+| **HTM**    | HTML Multi-Model Frontend | Python/Flask, JS | v0.1.7 — branding pass complete 2026-04-11 | Proprietary |
 | **OLM**    | Ollama Local Model      | Modelfiles, Python | Research complete     | Proprietary |
 | **OLM/TOY**| Child-Safe Models       | Python             | Research complete — all 4 phases done; floor at 7B | Proprietary |
 | **WEB**    | Publication             | HTML/CSS/MD        | **Live** — leonardrojas.com (GitHub Pages, custom); AISF-WEB repo (separate); WEB\ archived | Proprietary |
@@ -67,15 +70,23 @@ Windows PowerShell GUI application — most complete variant. Manual workflow: u
 
 ### PS-CORE
 Derived from PS-CORE+; Options panel removed.
-- `PS-CORE/1.1 Core/AISF-CORE.ps1` — Source
+- `PS-CORE/1.3 Core/AISF-CORE.ps1` — Source
 
 ### PS-DEMO — Deprecated 2026-04-01
 PS-CORE is the public downloadable. PS-DEMO (CC BY-NC-ND 4.0, v1.0.1) remains available in the
 AISF-downloads GitHub release archive but is no longer the primary distribution vehicle.
 
+### HTM (HTML Multi-Model Frontend)
+Browser-based chat UI with local Flask streaming proxy. AISF injection visible in UI.
+- **v0.1.7** — branding pass complete 2026-04-11 (gold buttons, session naming, export filename)
+- Claude/GPT/Gemini selector; ISO timestamp in every user bubble; [WCAG] and [LAWS] badges on fire turns
+- Session save to plaintext dated log; content-free metrics log
+- Launch via `start.bat`; API keys in `.api/` (gitignored)
+- Gemini key + test pending; GPT (no free tier) pending
+
 ### FFE (Firefox Extension)
 Manifest V3 WebExtension for automatic injection on AI chat platforms.
-- **v0.2.7** — session token tally (~Tokens) added to popup; running total per session
+- **v0.2.7** — session token tally (~Tokens) in popup; branding pass + logo button 2026-04-11
 - Auto-injects timestamps on every submission; turn counter (keyboard-first, Enter capture)
 - Periodic WCAG/Four Laws injection (turn-count based: 10t/20t intervals; popup shows turns remaining)
 - DATALORE hot-swap detection complete (v0.2.5) — CANARY signal, SHUTUP_WESLEY counter, toolbar badge
