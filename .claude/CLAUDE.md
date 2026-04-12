@@ -125,6 +125,7 @@ presentation, or proposal. Evaluate it accordingly.
 - **Logo:** `assets/images/logo.png`
 - **Favicon:** `favicon.ico` in repo root
 - **Orphaned files (do not delete):** `_includes/head_custom.html`, `_includes/title.html`, `_sass/color_schemes/custom.scss` -- superseded by custom layout, kept for reference
+- **HTM integration (Ch10):** `\\debbie\Tech\APP\_DEV\AISF\AI Stability Framework\HTM` is confirmed Ch10 integration target. Placeholder "Coming Soon: Try Meso Chat" button (`.demo-btn` CSS class) is live in ch10. Full HTM files to be copied into this repo when hosting is ready (Debbie cannot handle public traffic). Post-integration epilogue polish item tracked in TODO section below.
 
 ## Content Workflow
 
@@ -162,6 +163,14 @@ Applies to all UI button elements across all branches and AISF-WEB.
 ## Optional Future Actions
 
 - **Zenodo preprint:** Publish OLM research (Apx02 + Ch06 framing) as a citable PDF on Zenodo (CERN-hosted open repository). Zero friction, free DOI, no endorsement or institutional affiliation required. arXiv rejected -- requires sponsor/endorsement from existing arXiv author, not worth the overhead for independent work.
+
+## TODO (Post-Integration Polish)
+
+- **Epilogue / "prompt engineering" FAQ (pending HTM go-live):** The layer-agnostic claim in the
+  "This is just prompt engineering" answer currently rests on OLM data and logic. Once Meso Chat
+  is live, add a forward reference to the demo experience -- "as you may have just experienced" or
+  similar. Small addition; hold until demo is live so tense is correct. See also: TODO.md in
+  main AISF project.
 
 ## Anthropic Injections (P0)
 

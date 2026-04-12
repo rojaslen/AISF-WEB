@@ -302,7 +302,8 @@ strong {
 .chapter-nav a,
 .chapter-nav a:visited,
 .toc-link a,
-.toc-link a:visited {
+.toc-link a:visited,
+.demo-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -330,6 +331,16 @@ strong {
 .toc-link a:focus-visible {
   outline: 2px solid var(--color-link);
   outline-offset: 2px;
+}
+
+/* --- Demo placeholder button (non-interactive; shares button base styles above) --- */
+.demo-btn {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  border: none;
+  cursor: default;
+  opacity: 0.75;
 }
 
 /* --- Footer --- */
