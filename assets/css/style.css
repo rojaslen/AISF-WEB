@@ -343,6 +343,101 @@ strong {
   opacity: 0.75;
 }
 
+/* --- Screenshot thumbnails --- */
+figure.screenshot {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.thumb-btn {
+  background: none;
+  border: 1px solid var(--color-rule);
+  border-radius: 4px;
+  padding: 4px;
+  cursor: zoom-in;
+  display: inline-block;
+}
+
+.thumb-btn:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.thumbnail {
+  display: block;
+  max-width: 280px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+figure.screenshot figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+figure.screenshot.float-right {
+  float: right;
+  clear: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+figure.screenshot.float-left {
+  float: left;
+  clear: left;
+  margin: 0 1.5rem 1rem 0;
+}
+
+@media (max-width: 600px) {
+  figure.screenshot.float-right,
+  figure.screenshot.float-left {
+    float: none;
+    margin: 1.5rem auto;
+  }
+}
+
+/* --- Lightbox --- */
+dialog.lightbox {
+  background: var(--color-bg);
+  border: 1px solid var(--color-rule);
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+dialog.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(90vh - 4rem);
+  width: auto;
+  height: auto;
+}
+
+.lightbox-close {
+  display: block;
+  margin: 0 0 0.5rem auto;
+  background: none;
+  border: 1px solid var(--color-rule);
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.lightbox-close:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
 /* --- Footer --- */
 footer {
   margin-top: 3rem;

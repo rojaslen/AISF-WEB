@@ -25,5 +25,25 @@
   <footer>
     <p>{{ site.footer_content }}</p>
   </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Full-size image">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&#215;</button>
+    <img src="" alt="" class="lightbox-img" id="lightbox-img">
+  </dialog>
+
+  <script>
+  (function () {
+    var dialog = document.getElementById('lightbox');
+    var img    = document.getElementById('lightbox-img');
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.thumb-btn');
+      if (btn) { img.src = btn.dataset.src; img.alt = btn.dataset.alt; dialog.showModal(); }
+    });
+    dialog.addEventListener('click', function (e) {
+      if (e.target === dialog || e.target.id === 'lightbox-close') { dialog.close(); }
+    });
+  })();
+  </script>
+
 </body>
 </html>

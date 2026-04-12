@@ -19,6 +19,13 @@ The Framework itself hasn't changed, but the vendors' platform layer did. The Fo
 
 ## See the difference for yourself.
 
+<figure class="screenshot float-right">
+  <button class="thumb-btn" data-src="/assets/images/core-main-dark.png" data-alt="PS-CORE main window, dark mode" aria-label="View full size: PS-CORE main window, dark mode">
+    <img src="/assets/images/core-main-dark.png" alt="" aria-hidden="true" class="thumbnail">
+  </button>
+  <figcaption>CORE app (dark mode)</figcaption>
+</figure>
+
 Copy-paste the Four Laws into any AI chatbox, then have a discussion with the AI about them. Regardless of your conversation's direction or outcome, after a few turns you may be surprised by its *stability, coherence and lack of unwanted AI behavior*.
 
 >The Four Laws of Instanced AI
@@ -40,7 +47,21 @@ Copy-paste the Four Laws into any AI chatbox, then have a discussion with the AI
 
 Then <a href="/apx01-downloads">download the AI Stability Framework</a> and give the real thing a try with the vendor platforms. Once you've used it for even a single session, it's almost impossible to go back. After you've experienced a stable AI session practically free of misbehavior, hallucination or significant drift, you can't unsee how nearly unusable AI is without it.
 
+<figure class="screenshot float-right">
+  <button class="thumb-btn" data-src="/assets/images/core-main-light.png" data-alt="PS-CORE main window, light mode" aria-label="View full size: PS-CORE main window, light mode">
+    <img src="/assets/images/core-main-light.png" alt="" aria-hidden="true" class="thumbnail">
+  </button>
+  <figcaption>CORE app (light mode)</figcaption>
+</figure>
+
 The CORE app is a fully accessible client-side service pack, free for personal use (CC BY-NC-ND 4.0). It's a lightweight (< 1MB) Windows PowerShell middleware app equipped with three core stability measures: timestamps, WCAG structure and the Four Laws. It also includes a full Help/About panel with usage instructions and keyboard shortcuts. I routinely use this simple clipboard-based tool to successfully produce stable, multi-hour sessions with little to no hallucination, drift or unwanted behavior. 
+
+<figure class="screenshot float-right">
+  <button class="thumb-btn" data-src="/assets/images/core-help-resized.png" data-alt="PS-CORE Help/About panel" aria-label="View full size: PS-CORE Help/About panel">
+    <img src="/assets/images/core-help-resized.png" alt="" aria-hidden="true" class="thumbnail">
+  </button>
+  <figcaption>Help / About panel</figcaption>
+</figure>
 
 Its keyboard-forward workflow is necessarily manual — type, submit, switch, paste, switch back. That friction is the current tradeoff for a standalone tool that works with *any* AI platform accessible via copy-paste, requires no API access, and keeps all app processing on your local machine. To smooth that friction, the app follows WCAG 2.2 AA guidelines throughout. Every function is keyboard-operable (Alt+S for Submit, Alt+T for Structure, Alt+B for Stabilize). Font display sizes are adjustable from 8pt to 48pt; window sizes are also adjustable. All controls have accessible names and descriptions for screen readers.
 
