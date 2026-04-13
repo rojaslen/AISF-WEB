@@ -7,7 +7,7 @@ nav_order: 5
 # Appendix 4: CDA: Copilot Digital Accessibility Tool
 
 **License:** CC0 1.0 Universal Public Domain Dedication
-**Download:** [Copilot Digital Accessibility v1.0](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CDA-v1.0){: target="_blank" rel="noopener noreferrer" }
+**Download:** [Copilot Digital Accessibility v1.0](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" }
 
 ---
 
@@ -47,7 +47,7 @@ CDA has been independently tested and validated by a blind JAWS screen reader us
 
 CC0 1.0 Universal Public Domain Dedication. No attribution required. Free for any use -- personal, commercial, government, or institutional -- without restriction.
 
-[Download CDA v1.0](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CDA-v1.0){: target="_blank" rel="noopener noreferrer" }
+[Download CDA v1.0](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" }
 
 <nav>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>

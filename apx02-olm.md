@@ -14,7 +14,7 @@ nav_order: 3
 
 **Status:** Final (hardware consistency re-run complete)
 
-**GitHub:** [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-OLM-REPR){: target="_blank" rel="noopener noreferrer" }
+**GitHub:** [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" } *(package being updated — check back soon)*
 
 ---
 
