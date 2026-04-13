@@ -67,7 +67,7 @@ Its keyboard-forward workflow is necessarily manual — type, submit, switch, pa
 
 ## That's Just For Starters
 
-The PowerShell desktop app isn't just a proof of concept; it's a flexible, functional tool in its own right. The framework is also gradually being ported to other systems and coding architectures:
+The PowerShell desktop app isn't just a proof of concept; it's a flexible, functional tool in its own right. The framework is also being ported to other systems and coding architectures:
 
 <figure class="screenshot float-right">
   <button class="thumb-btn" data-src="/assets/images/htm-welcome-dark.png" data-alt="Meso Chat welcome screen, dark mode" aria-label="View full size: Meso Chat welcome screen">

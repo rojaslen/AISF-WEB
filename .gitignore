@@ -21,3 +21,7 @@ Desktop.ini
 
 # Temp working files
 temp/
+
+# Local ML model files (base model weights and adapter -- storage only, not for distribution via git)
+mistral-instruct/base/
+mistral-instruct/aisf/adapter_model.safetensors
