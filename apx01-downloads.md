@@ -8,13 +8,13 @@ nav_order: 2
 
 ---
 
-[All Releases](https://github.com/rojaslen/AISF-downloads/releases){: target="_blank" rel="noopener noreferrer" }
+[All Downloads](https://github.com/rojaslen/AISF-downloads){: target="_blank" rel="noopener noreferrer" }
 
-[AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CORE-V1.3){: target="_blank" rel="noopener noreferrer" }
+[AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/tree/main/CORE){: target="_blank" rel="noopener noreferrer" }
 
-[AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-OLM-REPR){: target="_blank" rel="noopener noreferrer" }
+[AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" }
 
-[Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/releases/tag/AISF-CDA-v1.0){: target="_blank" rel="noopener noreferrer" }
+[Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" }
 
 **A note on trust:** Always scan any downloaded software before running it — *including AISF*. A few solid options, including free and low-cost:
 
