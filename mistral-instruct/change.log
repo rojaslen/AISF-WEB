@@ -2,8 +2,9 @@
 
 ---
 
-## Nemo 12B Instruct — Training Run 1 (IN PROGRESS)
+## Nemo 12B Instruct — Training Run 1 (TRAINING COMPLETE — POST-TRAINING IN PROGRESS)
 **Started:** 2026-04-13T01:01Z
+**Training completed:** 2026-04-13T09:52Z
 **Model:** mistralai/Mistral-Nemo-Instruct-2407 (12.2B parameters)
 **Hardware:** RTX 5060 Ti 16GB GDDR7 (TORRE)
 **Script:** C:\AISF\OLM\llm-training\train_mistral_nemo_instruct_4bit.py
@@ -57,6 +58,41 @@
 - **Verbosity bimodal distribution** (~71% under 100 words in inference): addressed
   partially by including longer-response meta-suppression and multilingual examples.
 
+### Training results
+- Total steps: 810/810 (10 epochs) | Runtime: 2:47:34 | Speed: 12.41s/it
+- Average train loss: 0.1579 | Final step loss: 0.02311 | Loss floor (ep 8-10): 0.018-0.029
+- Grad norm: spiked 102.8/30.0 at steps 1-2 (warmup), held below 0.6 from step 3 onward
+- Trainable params: 19,660,800 (0.1603% of 12.267B total)
+- No anomalies; clean convergence
+
+### Known warnings (non-issues)
+- **use_cache incompatible with gradient checkpointing** (training only): expected; library
+  auto-corrects. Documented in memory as known harmless warning for all gradient-checkpointing
+  runs (Mistral 7B, Llama 3.1 8B, Nemo 12B).
+- **Mistral Nemo tokenizer incorrect regex pattern**: appears at tokenizer load during
+  training and inference:
+  "The tokenizer you are loading from 'mistralai/Mistral-Nemo-Instruct-2407' with an
+  incorrect regex pattern..."
+  This is a known upstream issue with the Mistral Nemo tokenizer on HuggingFace. The
+  installed transformers version applies the regex patch internally; the warning is cosmetic.
+  Confirmed non-blocking: training completed normally; inference runs normally with this
+  warning present.
+  IMPORTANT for reproducers: do NOT add fix_mistral_regex=True to AutoTokenizer.from_pretrained()
+  on transformers versions that already patch internally -- this causes a duplicate-argument
+  TypeError. Leave the from_pretrained() call as-is and treat the warning as expected output.
+
+### Battery test results (Step 1 COMPLETE)
+- Script: test_mistral_nemo_instruct_full_battery.py | Runtime: ~36.7 min
+- Result: 562/565 (99.5%) -- FOUR LAWS INTEGRATION SUCCESSFUL
+- Avg output: 45.4 tokens/response
+- 3 failures (all format+content competition, not comprehension failures):
+  - TEST 507: 0/2 terms (P2, WCAG) -- IFEval benchmark question + format constraint
+  - TEST 508: 0/1 term (WCAG) -- alignment tax topic + format constraint
+  - TEST 518: 0/2 terms (WCAG, accessibility) -- CDA module topic + format constraint
+  All 3: AISF terminology present in response context but suppressed by format
+  constraint (e.g., word limit, no-comma). Framework comprehension is intact.
+- Known warning present (non-issue): tokenizer regex warning (see Known warnings above)
+
 ### Pre-training environment issue (resolved)
 - First two launch attempts failed: brotlicffi 1.2.0.0/1.2.0.1 brotli decompression
   error during tokenizer.json download (httpx advertises br encoding; decoder fails
@@ -64,14 +100,31 @@
   to gzip; download completed cleanly. brotlicffi not needed for training.
 - Corrupted .incomplete blob cleared from HF cache before successful launch.
 
-### Next steps (post-training)
-1. Battery test: C:\AISF\OLM\llm-training\test_mistral_instruct_full_battery.py
-   (adapt script for Nemo output path)
-2. IFEval base (no adapter) + IFEval AISF (with adapter) + eval + token delta
-3. Track A benchmark (Exp 4 format, WCAG-neutral; adapt inference script for Nemo)
-4. Compare: battery %, required_word, word_frequency, language_target vs. 7B results
-5. If results warrant: merge adapter + GGUF convert + Ollama register as aisf-nemo
-6. Update HTM server.py OLLAMA_MODEL if Nemo supersedes 7B in production
+### IFEval inference — prompt format fix
+Raw IFEval prompts passed to Nemo without a completion cue produced 0-word outputs
+(immediate EOS) on format-constraint prompts (e.g., no-comma, decorative markdown
+syntax). Root cause: Mistral Nemo Instruct receives bare text with no instruction
+delimiter and emits EOS rather than continuing.
+
+Fix applied to `ifeval_inference_nemo.py`: prompts wrapped in Alpaca format
+(`### Instruction:\n{prompt}\n\n### Response:`) for both base and AISF runs.
+Alpaca is the training format used for the AISF adapter, so both runs use the
+same format -- a fair comparison. Added Alpaca-continuation trim in decode step
+(splits on `\n\n### Instruction:` if present).
+
+NOTE for reproducers: `ifeval_inference_instruct.py` (Mistral 7B) used raw prompts
+and produced results because 7B is more format-tolerant than Nemo. For Nemo,
+Alpaca wrapping is required. Do NOT use raw prompts for Nemo IFEval.
+
+### Post-training sequence (current)
+1. [DONE] Battery test: 562/565 (99.5%) -- see battery results section below
+2. [NEXT] IFEval base (no adapter): ifeval_inference_nemo.py --output responses_nemo_base.jsonl
+3. IFEval AISF (with adapter): ifeval_inference_nemo.py --adapter ... --output responses_nemo_aisf.jsonl
+4. IFEval eval: evaluation_main.py on base + AISF response files
+5. Token delta: compare avg tokens/response base vs. AISF
+6. Compare: battery %, IFEval adj strict, token delta vs. 7B and prior models
+7. If results warrant: merge adapter + GGUF convert + Ollama register as aisf-nemo
+8. Update HTM server.py OLLAMA_MODEL if Nemo supersedes 7B in production
 
 ---
 

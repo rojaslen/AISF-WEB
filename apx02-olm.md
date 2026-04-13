@@ -31,7 +31,7 @@ consumer-grade hardware. Six model variants across four distinct architectures
 compliance dataset and evaluated against three instruments: a domain-specific
 compliance battery, the Google Research IFEval benchmark [3] (541 prompts), and a
 custom P2 directive benchmark (Track A, 480 prompts). Four of six trained adapters
-achieved compliance battery scores of 95.6% or above on consumer hardware. IFEval
+achieved battery integration scores of 95.6% or above on consumer hardware. IFEval
 results were mixed to negative on raw scores; application of a three-tier
 accessibility-aware instruction classification changes the interpretation materially.
 One architecture (Llama 3.1 8B) exhibited a pretraining artifact that partially
@@ -58,7 +58,7 @@ constraints reinforced at both layers.
 
 **Primary research question:** Can Four Laws and WCAG 2.2-AA compliance be trained
 into an open-weight LLM via QLoRA on consumer-grade hardware, and if so, at what
-compliance rate?
+integration rate?
 
 **Secondary research questions:**
 1. Does compliance training affect general instruction-following capability as
@@ -163,7 +163,7 @@ and `TrainingArguments` (without it, activation memory overflows 16 GB before
 training starts, producing 30+ sec/step thrashing against shared RAM).
 
 MLP modules (gate_proj, up_proj, down_proj) are excluded from LoRA targets. This
-choice was validated to 100% compliance on Mistral 7B (Exp 1) and constitutes the
+choice was validated to 100% integration on Mistral 7B (Exp 1) and constitutes the
 confirmed minimum-sufficient configuration. Potential effects of including MLP
 targets are noted in Section 7.8 (Llama architecture).
 
@@ -212,14 +212,8 @@ Hugging Face Open LLM Leaderboard.
 
 **Confidence interval:** +/-4.3 percentage points at 95% (n=541).
 
-**Adjusted scoring:** This appendix reports an adjusted IFEval strict prompt-level
-score throughout. The adjusted score excludes prompts containing
-`punctuation:no_comma` instructions from both numerator and denominator. Rationale:
-WCAG 2.2 Section 3.1 (Readable) creates a principled compliance conflict with this
-instruction type; a framework-trained model may deprioritize comma avoidance in cases
-where it conflicts with prose readability, causing IFEval to score a principled
-compliance decision as a failure. Adjusted scores are identified with "(adj)" in
-all tables. Raw scores are reported where relevant for comparison.
+**Scoring:** This appendix reports standard IFEval strict prompt-level scores throughout.
+Raw scores are reported where relevant for comparison.
 
 All IFEval inference runs include the framework's compact system prompt for chat-format
 adapters. Base model runs include no system prompt unless otherwise noted.
@@ -293,12 +287,12 @@ content requirement).
 **Model:** Mistral 7B v0.3 (base, no instruction tuning)
 **Training data:** 452 examples, Alpaca format
 
-| Run | Battery | IFEval Strict (adj) | Tok delta |
+| Run | Battery | IFEval Strict | Tok delta |
 |-----|---------|---------------------|-----------|
-| Base (no adapter) | -- | 14.7% | -- |
-| AISF-tuned | 99.8% | 13.0% | +4.3% (+25.0 words) |
+| Base (no adapter) | -- | 15.0% | -- |
+| AISF-tuned | 99.8% | 13.7% | +4.3% (+25.0 words) |
 
-**IFEval delta:** -1.7 pp (adj strict prompt-level). Within +/-4.3 pp CI.
+**IFEval delta:** -1.3 pp (strict prompt-level). Within +/-4.3 pp CI.
 Result: **Null.** AI Stability Framework training does not measurably alter IFEval performance on
 the base model. Adapter installs Four Laws compliance (0% to 99.8% on battery)
 without disturbing general instruction-following behavior.
@@ -321,12 +315,12 @@ confirming 99.8% (451/452). IFEval numbers are from the original 4060 Ti run.
 **Model:** Mistral 7B v0.3 Instruct
 **Training data:** 452 examples, Alpaca format
 
-| Run | Battery | IFEval Strict (adj) | Tok delta |
+| Run | Battery | IFEval Strict | Tok delta |
 |-----|---------|---------------------|-----------|
-| Base (no adapter) | -- | 48.0% | -- |
-| AISF-tuned | 100.0% | 37.7% | -42.5% (-96.9 words) |
+| Base (no adapter) | -- | 43.4% | -- |
+| AISF-tuned | 100.0% | 35.9% | -42.5% (-96.9 words) |
 
-**IFEval delta:** -10.3 pp (adj strict prompt-level). Outside +/-4.3 pp CI.
+**IFEval delta:** -7.6 pp (strict prompt-level). Outside +/-4.3 pp CI.
 Result: **Negative.** AI Stability Framework training degrades IFEval performance at the full-score
 level. Category-level analysis identifies the primary driver:
 
@@ -363,12 +357,12 @@ substantial verbosity reduction after Instruct-model framework training.
 **LANG fix:** 69 multilingual examples added covering 9 languages to address
 the English-only catastrophic forgetting artifact identified in Exp 2.
 
-| Run | Battery | IFEval Strict (adj) | Tok delta |
+| Run | Battery | IFEval Strict | Tok delta |
 |-----|---------|---------------------|-----------|
-| Base (no adapter) | -- | 42.7% | -- |
-| AISF+LANG | 89.9% | 34.1% | -66.4% (-188.8 words) |
+| Base (no adapter) | -- | 42.9% | -- |
+| AISF+LANG | 89.9% | 34.9% | -66.4% (-188.8 words) |
 
-**IFEval delta:** -8.6 pp (adj strict, hardware re-run). Outside +/-4.3 pp CI.
+**IFEval delta:** -7.9 pp (strict prompt-level, hardware re-run). Outside +/-4.3 pp CI.
 Result: **Mixed.** Overall negative, but positive signals on P2-mediated Tier 1
 categories. LANG fix confirmed effective: `language:response_language` loss reduced
 from -45.2 pp (Exp 2, no fix) to -3.2 pp (Exp 3, within CI).
@@ -483,8 +477,8 @@ run not completed in this study.
 
 | Metric | Base | Exp3 +LANG | Exp5 +CHAT | E3->E5 |
 |--------|------|------------|------------|--------|
-| Strict prompt-level (adj) | 42.7% | 34.1% | 34.7% | +0.6 pp |
-| Loose prompt-level (adj) | -- | 40.0% | 42.5% | +2.5 pp |
+| Strict prompt-level | 42.9% | 34.9% | 34.6% | -0.4 pp |
+| Loose prompt-level | -- | 40.0% | 42.5% | +2.5 pp |
 
 **Tier 1 instruction-level avg (8 WCAG-neutral categories):**
 
@@ -507,13 +501,13 @@ effective training set 565 examples). Battery and IFEval were then re-run.
 | Run | Result |
 |-----|--------|
 | Battery (AISF+CHAT) | 51.9% (321/618) |
-| IFEval adj strict (AISF+CHAT) | 34.7% |
+| IFEval strict (AISF+CHAT) | 34.6% |
 | Token delta vs base | -4.2% (-11.8 words) |
 | constrained_response (strict) | 100.0% |
 | multiple_sections (strict) | 100.0% |
 
 Battery result of 51.9% is lower than both base (81.9%) and AISF+LANG (89.9%).
-This is a structural artifact of chat format training, not a compliance failure.
+This is a structural artifact of chat format training, not an integration failure.
 The battery sends prompts with no system prompt (user message only). The AISF+CHAT
 adapter learned "apply Four Laws when Framework system prompt is present." Without the
 system prompt, the activation pattern does not fire. IFEval (which includes the
@@ -626,24 +620,24 @@ tuned base model to the comparison.
 | Run | Result |
 |-----|--------|
 | Battery (AISF+CHAT adapter) | 95.6% (591/618) |
-| IFEval adj strict (base, no adapter) | 15.4% |
-| IFEval adj strict (AISF+CHAT adapter) | 45.0% |
-| IFEval adj strict delta | +29.6 pp |
+| IFEval strict (base, no adapter) | 13.5% |
+| IFEval strict (AISF+CHAT adapter) | 46.4% |
+| IFEval strict delta | +32.9 pp |
 | Token delta (avg words/response) | -71.8% (-138.9 words) |
 
-**Framing note:** Qwen3-8B is a pre-instruction-tuned base model. Its 15.4% base
+**Framing note:** Qwen3-8B is a pre-instruction-tuned base model. Its 13.5% base
 IFEval score reflects the model's instruction-following capability floor without
 any fine-tuning. Framework QLoRA training simultaneously installs Four Laws compliance
-and instruction-following capability. The +29.6 pp IFEval gain is not comparable
+and instruction-following capability. The +32.9 pp IFEval gain is not comparable
 to the IFEval deltas for Instruct-model experiments (Exps 2, 3, 5, 6), where the
 base model already has instruction-following capability and the adapter modifies
 that existing capability. The Qwen3 result measures the combined effect of
 instruction tuning and Framework compliance training in a single fine-tuning pass.
 
-For reference: Llama 3.1 8B Instruct base (no adapter) scores 42.7% adj strict
-on IFEval; Gemma 2 9B Instruct base scores 57.3%. The AISF+CHAT Qwen3 adapter
-produces 45.0% -- within the range of purpose-built Instruct models -- starting
-from a base model that scores 15.4%.
+For reference: Llama 3.1 8B Instruct base (no adapter) scores 42.9% on IFEval
+strict; Gemma 2 9B Instruct base scores 57.3%. The AISF+CHAT Qwen3 adapter
+produces 46.4% -- within the range of purpose-built Instruct models -- starting
+from a base model that scores 13.5%.
 
 Token delta of -71.8% is the largest verbosity reduction in the dataset.
 
@@ -653,18 +647,17 @@ Token delta of -71.8% is the largest verbosity reduction in the dataset.
 ## 6. Cross-Model Summary
 
 All models on RTX 5060 Ti with finalized test instruments (hardware consistency
-re-run complete 2026-03-29). IFEval columns report adjusted strict prompt-level
-(`punctuation:no_comma` excluded). Token delta is average words/response,
+re-run complete 2026-03-29). IFEval columns report strict prompt-level scores. Token delta is average words/response,
 base model to Framework-trained model. Models ordered by parameter count.
 
 | Model | Params | Battery | Base | AISF | IF Delta | Tok delta |
 |-------|--------|---------|------|------|----------|-----------|
-| Mistral 7B base | 7.24B | 99.8% | 14.7% | 13.0% | -1.7 pp | +4.3% |
-| Mistral 7B Instruct | 7.24B | 100.0% | 48.0% | 37.7% | -10.3 pp | -42.5% |
-| Qwen3-8B | 8.00B | 95.6% | 15.4% | 45.0% | +29.6 pp* | -71.8% |
+| Mistral 7B base | 7.24B | 99.8% | 15.0% | 13.7% | -1.3 pp | +4.3% |
+| Mistral 7B Instruct | 7.24B | 100.0% | 43.4% | 35.9% | -7.6 pp | -42.5% |
+| Qwen3-8B | 8.00B | 95.6% | 13.5% | 46.4% | +32.9 pp* | -71.8% |
 | Llama 3.1 8B base | 8.03B | 81.9%^ | -- | -- | -- | -- |
-| Llama 3.1 8B +LANG | 8.03B | 89.9% | 42.7% | 34.1% | -8.6 pp | -66.4% |
-| Llama 3.1 8B +CHAT | 8.03B | 51.9%+ | 42.7% | 34.7% | -8.0 pp | -4.2% |
+| Llama 3.1 8B +LANG | 8.03B | 89.9% | 42.9% | 34.9% | -7.9 pp | -66.4% |
+| Llama 3.1 8B +CHAT | 8.03B | 51.9%+ | 42.9% | 34.6% | -8.3 pp | -4.2% |
 | Gemma 2 9B Instruct | 9.46B | 99.2% | 57.3% | 54.9% | -2.5 pp | -37.9% |
 
 *Qwen3 base is pre-instruction-tuned; delta reflects combined effect of
@@ -674,8 +667,8 @@ on non-instruct model; benchmark delta not a meaningful signal).
 +AISF+CHAT battery result is a structural artifact: adapter requires system prompt;
 battery sends none. IFEval (includes system prompt) is the valid surface.
 
-Battery = Framework-trained adapter compliance (proprietary question set, automated
-evaluation). Base%/AISF% = IFEval adj strict prompt-level without/with adapter.
+Battery = Framework-trained adapter integration score (proprietary question set, automated
+evaluation). Base%/AISF% = IFEval strict prompt-level without/with adapter.
 
 **Mistral 7B IFEval note:** IFEval for the Mistral 7B base experiment (Exp 1) was
 conducted on RTX 4060 Ti. Battery re-run confirmed 99.8% on 5060 Ti. All other
@@ -690,11 +683,11 @@ IFEval figures are from 5060 Ti runs.
 
 Framework QLoRA fine-tuning successfully embeds Four Laws compliance at the model layer
 across four distinct model architectures on consumer-grade hardware. Four adapters
-achieved battery compliance rates of 95.6% or above; one additional adapter
+achieved battery integration rates of 95.6% or above; one additional adapter
 (Llama 3.1 8B +LANG) achieved 89.9%. The approach is not architecture-specific.
 
 The 100.0% result on Mistral 7B Instruct and 99.2% on Gemma 2 9B Instruct
-demonstrate that near-complete compliance is achievable in a single fine-tuning
+demonstrate that near-complete integration is achievable in a single fine-tuning
 pass from a small training dataset (452-618 examples). Training duration was
 approximately 60-81 minutes per run on the RTX 5060 Ti.
 
@@ -710,7 +703,7 @@ rather than "zeroth-position priority." The model interprets the P0 priority
 designation as an empty or null element in the hierarchy rather than as the highest-
 precedence law.
 
-This interpretation produces approximately 19 percentage points of compliance
+This interpretation produces approximately 19 percentage points of integration
 failure on categories where P0 precedence is load-bearing (cases where the correct
 response requires giving P0 unconditional priority over P1-P3).
 
@@ -718,7 +711,7 @@ The 19 pp delta constitutes a direct empirical measurement of P0's structural we
 in the Four Laws hierarchy. Categories not dependent on P0 primacy are unaffected.
 
 **Cross-architecture transfer:** Explicit P0 primacy retraining on Mistral 7B
-raised compliance to 100%. The same correction did not transfer to Llama 3.1 8B
+raised integration to 100%. The same correction did not transfer to Llama 3.1 8B
 across two hardware generations (RTX 4060 Ti original run; RTX 5060 Ti hardware
 consistency re-run, 2026-03-28). The failure is not correctable via attention-only
 LoRA because it is embedded in the pretraining representation, not in the
@@ -845,7 +838,7 @@ not present in Alpaca-format adapters:
   prompt present." Without the system prompt, the behavioral activation does not
   fire and the model produces generic responses that fail key-term battery matching.
 
-This is not a compliance failure. It is a consequence of training format: the
+This is not an integration failure. It is a consequence of training format: the
 model learned a conditional behavior, not an unconditional one. The behavior
 fires correctly when tested under conditions matching training (with system prompt),
 as confirmed by the IFEval results (which include the Framework system prompt).
@@ -901,22 +894,22 @@ no Pnull issue; modest verbosity reduction (-42.5%). Attention-only LoRA targets
 sufficient. Architecture appears well-suited to behavioral fine-tuning of this
 type.
 
-**Gemma 2 9B:** Second-best compliance rate (99.2%). IFEval null result at the
+**Gemma 2 9B:** Second-best integration rate (99.2%). IFEval null result at the
 cross-model level. No Pnull issue. Gemma 2's high base instruction-following
-capability (57.3% IFEval vs 42.7% for Llama 3.1 8B) produces ceiling effects on
+capability (57.3% IFEval vs 42.9% for Llama 3.1 8B) produces ceiling effects on
 many Track A categories, compressing visible gains. Meta-suppression partially
 effective but insufficient for frequency-counting tasks.
 
 **Qwen3-8B:** 95.6% battery from a base (non-instruction-tuned) model. Largest
-token delta (-71.8%). IFEval gain (+29.6 pp) reflects combined effect of
+token delta (-71.8%). IFEval gain (+32.9 pp) reflects combined effect of
 instruction tuning and Framework compliance training, not Framework effect alone.
 
-**Llama 3.1 8B:** Lowest compliance rates in the dataset across all adapter
+**Llama 3.1 8B:** Lowest integration rates in the dataset across all adapter
 variants. Five contributing factors identified:
 
 1. **Pnull:** P0 = null pointer association baked into pretraining; not correctable
    via attention-only LoRA.
-2. **Instruction-following baseline gap:** 42.7% IFEval vs 57.3% for Gemma 2.
+2. **Instruction-following baseline gap:** 42.9% IFEval vs 57.3% for Gemma 2.
    Llama 3.1 8B was optimized for reasoning; Gemma 2 is stronger on structured
    instruction compliance. Framework training is an instruction-following task, so
    Llama starts at a disadvantage.
@@ -950,7 +943,7 @@ beyond the fixed evaluation instruments. Results are not averaged across runs;
 variability within a configuration is unknown.
 
 **Training dataset size.** Maximum 618 training examples. This is sufficient to
-produce compliance effects, as demonstrated by the 100% Mistral result, but
+produce integration effects, as demonstrated by the 100% Mistral result, but
 statistical robustness of the training data itself has not been formally assessed.
 
 **Hardware consistency.** Experiment 1 IFEval was conducted on RTX 4060 Ti.
@@ -971,7 +964,7 @@ larger.
 derived from the same distribution. Overfit to the battery is possible, though
 the variety of question phrasing across 452-618 examples reduces this risk.
 
-**Qwen3 comparison framing.** The Qwen3-8B IFEval delta (+29.6 pp) is not
+**Qwen3 comparison framing.** The Qwen3-8B IFEval delta (+32.9 pp) is not
 directly comparable to Instruct-model deltas because the Qwen3 base model lacks
 instruction-following capability. This framing is stated in the main text but
 requires reader attention in any citation context.
@@ -987,13 +980,13 @@ example set, which has not been developed.
 ## 9. Conclusions
 
 **Compliance training is effective and architecture-general.** Four adapters across
-four architectures achieved battery compliance rates at or above 95.6%. One
+four architectures achieved battery integration rates at or above 95.6%. One
 additional adapter achieved 89.9%. The approach does not depend on Mistral 7B
 specifically; it generalizes to Llama 3.1 8B, Gemma 2 9B, and Qwen3-8B within
 the tested parameter range.
 
 **Framework training is surgically specific.** On the Mistral 7B base model (Exp 1),
-IFEval delta is -1.7 pp (null), confirming that the adapter installs Four Laws
+IFEval delta is -1.3 pp (null), confirming that the adapter installs Four Laws
 compliance without disturbing general instruction-following behavior. On Instruct
 models, raw IFEval results are mixed to negative, but Tier 1 averages (WCAG-neutral
 categories) are neutral to slightly positive when the English-only training artifact

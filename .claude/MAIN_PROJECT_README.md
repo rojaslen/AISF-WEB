@@ -94,9 +94,9 @@ Manifest V3 WebExtension for automatic injection on AI chat platforms.
 
 ### OLM — Research Complete
 Four Laws + WCAG trainable at the model level via QLoRA fine-tuning. Enables Defense in Depth: model-level (Macro) + client-side injection (Micro), Meso constrained on both sides.
-- Mistral 7B: 100% on 451-question battery; IFEval adj strict 37.7% AISF / 48.0% base; token delta -42.5%
-- Gemma 2 9B: 99.2% battery; IFEval adj strict 54.9% AISF / 57.3% base; token delta -37.9%
-- Qwen3-8B: 95.6% battery; IFEval adj strict 45.0% AISF / 15.4% base (+29.6pp); token delta -71.8%
+- Mistral 7B: 100% on 451-question battery; IFEval strict 35.9% AISF / 43.4% base; token delta -42.5%
+- Gemma 2 9B: 99.2% battery; IFEval strict 56.0% AISF / 57.5% base; token delta -37.9%
+- Qwen3-8B: 95.6% battery; IFEval strict 46.4% AISF / 13.5% base (+32.9pp); token delta -71.8%
 - Llama 3.1 8B: Pnull architecture finding (P0 primacy fix works on Mistral, not transferable to Llama 3.1 8B)
 - Hardware consistency re-run complete 2026-03-29 (all models on RTX 5060 Ti 16GB)
 - See `OLM/README.md` for full cross-model results table
