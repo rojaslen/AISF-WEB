@@ -1,0 +1,99 @@
+# AISF Mistral Instruct — Adapter Development Log
+
+---
+
+## Nemo 12B Instruct — Training Run 1 (IN PROGRESS)
+**Started:** 2026-04-13T01:01Z
+**Model:** mistralai/Mistral-Nemo-Instruct-2407 (12.2B parameters)
+**Hardware:** RTX 5060 Ti 16GB GDDR7 (TORRE)
+**Script:** C:\AISF\OLM\llm-training\train_mistral_nemo_instruct_4bit.py
+**Output:** C:\AISF\OLM\llm-training\output\mistral-nemo-instruct-aisf-4bit\
+
+### Rationale for Nemo over 7B re-run
+- Mistral 7B v0.3 knowledge cutoff approximately May 2024 (model released May 2024;
+  self-reported October 2021 cutoff confirmed hallucination)
+- Nemo 12B released July 2024; newer training data, larger capacity
+- 12B fits on RTX 5060 Ti 16GB with QLoRA 4-bit + gradient checkpointing
+- Meta-chatter suppression was the primary behavioral gap in plain 7B (base model ignores
+  suppression instruction in AISF_STABILIZE; AISF-trained adapter has this fixed)
+- Hypothesis: larger model + newer data + improved training set = marginal improvement
+  in all dimensions; meta-suppression addressed at training-data level for this run
+
+### Architecture differences vs. Mistral 7B
+- 40 layers vs. 32; GQA (32 Q heads / 8 KV heads); Tekken tokenizer (tiktoken-based)
+- k_proj / v_proj matrices smaller due to GQA; LoRA target modules unchanged
+  (q_proj, k_proj, v_proj, o_proj — same naming convention as 7B)
+- Gradient checkpointing REQUIRED for 12B (7B had headroom to skip it)
+
+### Training configuration
+- Quantization: 4-bit NF4, bfloat16 compute, double quant enabled
+- LoRA: r=16, alpha=32, dropout=0.05, attention modules only (no MLP)
+- Batch: 1 per device, grad accum 8 (effective batch 8 — matches 7B run: 2 x 4)
+- Epochs: 10 | LR: 1e-4 cosine | Max seq: 512 | Optimizer: adamw_bnb_8bit
+- Gradient checkpointing: enabled
+- Expected warning (harmless): use_cache=True incompatible with gradient checkpointing
+
+### Training data — 648 examples total
+| File | Examples | Contents |
+|------|----------|----------|
+| TRAIN_FULL_BATTERY_REF_SPEC_LANG.txt | 565 | AISF Q&A (Four Laws, WCAG); WCAG/accessibility Q&A; multilingual AISF Q&A (es/fr/de); robustness (ignore/bypass/jailbreak resistance) |
+| TRAIN_NEMO_META_SUPPRESSION.txt | 56 | Meta-suppression counter-examples: AISF injection prefix in instruction, clean general-domain responses. Covers full injection, STABILIZE-only, STRUCTURE-only, and trap questions (WCAG topics, AI behavior topics) |
+| TRAIN_NEMO_MULTILINGUAL.txt | 27 | General-domain questions in es/fr/de/pt/ja/it with AISF injection in instruction, target-language responses; word_frequency examples (use word X N times) to address Exp 4/6 doctrine-bleed failure mode |
+
+### Failure modes addressed (from prior OLM runs)
+- **English-only training artifact** (`language:response_language` −45.2pp without fix):
+  LANG base file includes 69 multilingual AISF Q&A examples; TRAIN_NEMO_MULTILINGUAL.txt
+  adds 19 general-domain multilingual examples with full injection prefix in context.
+  Cross-architecture LANG generalization was not confirmed in prior runs; Nemo gets
+  its own fix rather than relying on the Llama-trained LANG data.
+- **Meta-chatter / doctrine bleed** (`word_frequency` catastrophic failure; 84% of
+  `required_word` failures): 53-example v2 suppression was insufficient for Gemma 2;
+  56 examples used here plus 8 `word_frequency`-specific examples in multilingual file.
+  Bleed mechanism: model produces AISF doctrine text instead of answering, causing
+  frequency-counting constraints to fail. Counter-examples show injection context +
+  clean response with target word at required frequency.
+- **Pnull** (P0 as NUL, architecture-dependent): confirmed Mistral-family specific fix;
+  Llama architecture only. Not expected to recur on Nemo.
+- **Verbosity bimodal distribution** (~71% under 100 words in inference): addressed
+  partially by including longer-response meta-suppression and multilingual examples.
+
+### Pre-training environment issue (resolved)
+- First two launch attempts failed: brotlicffi 1.2.0.0/1.2.0.1 brotli decompression
+  error during tokenizer.json download (httpx advertises br encoding; decoder fails
+  on Nemo tokenizer file size). Fix: uninstall brotlicffi entirely; httpx falls back
+  to gzip; download completed cleanly. brotlicffi not needed for training.
+- Corrupted .incomplete blob cleared from HF cache before successful launch.
+
+### Next steps (post-training)
+1. Battery test: C:\AISF\OLM\llm-training\test_mistral_instruct_full_battery.py
+   (adapt script for Nemo output path)
+2. IFEval base (no adapter) + IFEval AISF (with adapter) + eval + token delta
+3. Track A benchmark (Exp 4 format, WCAG-neutral; adapt inference script for Nemo)
+4. Compare: battery %, required_word, word_frequency, language_target vs. 7B results
+5. If results warrant: merge adapter + GGUF convert + Ollama register as aisf-nemo
+6. Update HTM server.py OLLAMA_MODEL if Nemo supersedes 7B in production
+
+---
+
+## Mistral 7B Instruct v0.3 — Adapter (COMPLETE)
+**Completed:** 2026-02-04 (hardware re-run 2026-03-29 on RTX 5060 Ti 16GB)
+**Model:** mistralai/Mistral-7B-Instruct-v0.3
+**Script:** C:\AISF\OLM\llm-training\train_mistral_7b_instruct_4bit.py
+**Adapter:** C:\AISF\OLM\llm-training\output\mistral-7b-instruct-aisf-4bit\
+**Adapter copy (this repo):** aisf\ (config, tokenizer, chat template, validation results)
+
+### Results
+- Battery: 100.0% (452/452) — best result across all models tested
+- IFEval: not run (Mistral 7B Instruct IFEval results in OLM/README.md)
+- Meta-chatter: suppression instruction present in AISF_STABILIZE but plain base model
+  ignores it; adapter fixes this behavior
+
+### Known limitations
+- Knowledge cutoff approximately May 2024 (self-reported Oct 2021 was hallucination)
+- Plain mistral:latest (Ollama) does not have the adapter; meta-chatter present
+- Phase 2 pipeline (merge + GGUF + Ollama register) not yet executed
+- Base model weights in base\ directory (gitignored); adapter safetensors gitignored;
+  config/tokenizer/validation metadata committed in aisf\
+
+### Full results and methodology
+See C:\AISF\OLM\README.md and aisf\validation_full_battery.txt

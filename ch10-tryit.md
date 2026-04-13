@@ -84,7 +84,7 @@ The PowerShell desktop app isn't just a proof of concept; it's a flexible, funct
   <button class="thumb-btn" data-src="/assets/images/htm-turn1-dark.png" data-alt="Meso Chat active session, dark mode" aria-label="View full size: Meso Chat active session">
     <img src="/assets/images/htm-turn1-dark.png" alt="" aria-hidden="true" class="thumbnail">
   </button>
-  <figcaption>Meso Chat — session</figcaption>
+  <figcaption>Meso Chat — Mistral (local)</figcaption>
 </figure>
 
 **Local Model Training (OLM)** embeds AISF principles directly into locally-hosted AI models themselves through QLoRA fine-tuning. Full methodology and results are in Chapter 8, reproducibility package available for download.
