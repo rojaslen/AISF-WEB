@@ -786,8 +786,7 @@ counter-examples used unconstrained responses containing commas, diluting the
 The mechanism is P2 compliance training: the Four Laws instruct the model to
 follow user directives (P2: accommodate the user's current choices). A prompt
 containing `no_comma` is an explicit user directive; Framework-trained models comply
-more consistently. The WCAG 3.1 (Readable) tension with this category is real
-but does not dominate across the dataset except in edge cases.
+more consistently.
 
 The Exp 2 base result (10.6%) is anomalously low for Mistral 7B Instruct, making
 the observed +28.8 pp gain partly a floor effect. Subsequent architectures have

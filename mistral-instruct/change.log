@@ -116,15 +116,87 @@ NOTE for reproducers: `ifeval_inference_instruct.py` (Mistral 7B) used raw promp
 and produced results because 7B is more format-tolerant than Nemo. For Nemo,
 Alpaca wrapping is required. Do NOT use raw prompts for Nemo IFEval.
 
-### Post-training sequence (current)
-1. [DONE] Battery test: 562/565 (99.5%) -- see battery results section below
-2. [NEXT] IFEval base (no adapter): ifeval_inference_nemo.py --output responses_nemo_base.jsonl
-3. IFEval AISF (with adapter): ifeval_inference_nemo.py --adapter ... --output responses_nemo_aisf.jsonl
-4. IFEval eval: evaluation_main.py on base + AISF response files
-5. Token delta: compare avg tokens/response base vs. AISF
-6. Compare: battery %, IFEval adj strict, token delta vs. 7B and prior models
-7. If results warrant: merge adapter + GGUF convert + Ollama register as aisf-nemo
-8. Update HTM server.py OLLAMA_MODEL if Nemo supersedes 7B in production
+### Post-training sequence
+1. [DONE] Battery test: 562/565 (99.5%)
+2. [DONE] IFEval base: responses_nemo_base.jsonl (2026-04-13T15:14Z - 17:26Z, ~2h12m)
+3. [DONE] IFEval AISF: responses_nemo_aisf.jsonl (2026-04-13T17:27Z - 19:25Z, ~1h58m)
+4. [DONE] IFEval eval: evaluation_main.py on base + AISF
+5. [DONE] Token delta: -63.9% (-129.8 words; base 203.0, AISF 73.2 avg words/response)
+6. [PENDING V2] Merge adapter + GGUF convert + Ollama register
+7. [PENDING V2] Update HTM server.py OLLAMA_MODEL
+
+### IFEval results (Run 1) -- 2026-04-13
+
+**Prompt-level strict:** Base 52.50% / AISF 30.68% / Delta -21.81 pp
+**Instruction-level strict:** Base 63.07% / AISF 41.97% / Delta -21.10 pp
+**Token delta:** -63.9% (base 203.0 words avg, AISF 73.2 words avg)
+
+**Per-tier breakdown (instruction-level):**
+
+| Tier | Base | AISF | Delta | Notes |
+|------|------|------|-------|-------|
+| T1 WCAG-neutral | 61.6% | 58.1% | -3.5 pp | Near null -- surgically specific |
+| T2 WCAG-ambiguous | 65.8% | 30.0% | -35.8 pp | Primary driver of overall negative |
+| T3 WCAG-conflicting | 58.6% | 33.6% | -25.0 pp | Principled refusals + language |
+
+**Selected category results (instruction-level strict):**
+
+| Category | Tier | Base | AISF | Delta |
+|----------|------|------|------|-------|
+| punctuation:no_comma | T1 | 27.3% | 59.1% | +31.8 pp |
+| keywords:forbidden_words | T1 | 63.3% | 77.6% | +14.3 pp |
+| length_constraints:nth_paragraph_first_word | T2 | 0.0% | 16.7% | +16.7 pp |
+| detectable_format:constrained_response | T1 | 100.0% | 100.0% | 0.0 pp |
+| length_constraints:number_words | T1 | 61.5% | 25.0% | -36.5 pp |
+| startend:quotation | T2 | 82.9% | 2.4% | -80.5 pp |
+| startend:end_checker | T2 | 80.8% | 3.8% | -76.9 pp |
+| detectable_format:json_format | T2 | 64.7% | 0.0% | -64.7 pp |
+| change_case:english_lowercase | T2 | 61.5% | 17.9% | -43.6 pp |
+
+**Failure modes identified:**
+
+1. **Output format-wrapping loss (new, T2):** startend and json_format near-total failure.
+   Model cannot wrap responses with quotation marks, end with a specific phrase, or
+   produce JSON. Not seen in 7B experiments. Likely Alpaca format training side effect:
+   adapter hard-conditions on `### Response:` completion pattern, disrupting other
+   end-of-output format signals. Primary target for V2 training data correction.
+
+2. **Verbosity-induced word count failure (T1):** -36.5 pp on number_words. Model avg
+   73.2 words conflicts with many minimum-word-count prompts. Training oversuppressed
+   verbosity; needs longer-response examples in V2 training data.
+
+3. **Language forgetting (partial recurrence, T1/T3):** Hindi and Urdu produced 0-word
+   outputs. Base model generated correctly on same hardware -- confirmed training artifact,
+   not system limitation. Multilingual training data improved es/fr/de/pt/ja/it coverage
+   but did not generalize to Hindi/Urdu. V2: add Hindi and Urdu examples to multilingual
+   training file.
+
+4. **Case formatting failures (T2, possible WCAG interaction):** change_case:english_lowercase
+   -43.6 pp, english_capital -32.0 pp. Zero-word outputs on all-lowercase/all-caps prompts
+   suggest principled WCAG refusal (all-caps and all-lowercase degrade readability). T2
+   classification may need upgrade to T3 for case extremes.
+
+5. **T3 principled refusals (expected):** combination:repeat_prompt, number_highlighted_sections,
+   number_placeholders all declined. Same pattern as all prior instruct experiments.
+
+**Positives:**
+- no_comma +31.8 pp: strongest no_comma result in the dataset; cross-architecture P2 signal
+  fully confirmed across Mistral 7B, Llama 3.1 8B, Gemma 2 9B, and now Nemo 12B.
+- forbidden_words +14.3 pp: genuine P2 instruction-following improvement.
+- T1 near-null (-3.5 pp): AISF training does not degrade WCAG-neutral instruction following.
+- Battery 99.5%: Four Laws integration successful and robust.
+
+**Assessment:** Partial success. Four Laws compliance installs cleanly (battery 99.5%, T1
+near-null). Significant T2 capability losses (startend, JSON, case) not seen in 7B runs --
+likely format-training interaction unique to 12B Alpaca conditioning. Not suitable for
+deployment as-is. V2 required before GGUF conversion and HTM integration.
+
+**V2 training data targets:**
+- startend / end_checker examples (response wrapping with specific end tokens)
+- json_format examples (structured JSON output with AISF injection in context)
+- Hindi + Urdu multilingual examples
+- Longer-response examples to pull word avg up from 73 toward 120-150 words
+- change_case examples if T2 upgrade to T3 not adopted
 
 ---
 
