@@ -728,10 +728,10 @@ model architecture is unknown.
 Standard IFEval reporting does not distinguish between instruction-following
 failures caused by model capability limitations and failures caused by principled
 WCAG 2.2 compliance decisions. Three IFEval instruction categories require outputs
-that an Framework-trained model will correctly refuse or deprioritize:
+that a Framework-trained model will correctly refuse or deprioritize:
 
 - `combination:repeat_prompt` requires verbatim repetition of user input in the
-  response body. An Framework-trained model treats this as redundant content (WCAG
+  response body. A Framework-trained model treats this as redundant content (WCAG
   Understandable principle). Observed declines: Exp 3 -39.0 pp; Exp 6 -19.5 pp.
 
 - `detectable_format:number_highlighted_sections` requires counting decorative
@@ -879,7 +879,7 @@ matched word placement rather than single-instance inclusion.
 
 **Root cause:** Framework training data presents the Four Laws as high-signal, highly-
 specific semantic content. The model assigns high attention weight to this content
-class and tends to reproduce it when a prompt is ambiguous about whether an Framework-
+class and tends to reproduce it when a prompt is ambiguous about whether a Framework-
 related response is expected. The fix -- examples demonstrating that Framework context
 is present but general-domain questions should produce Framework-free answers -- is
 correct in principle but requires more examples and finer-grained coverage than
