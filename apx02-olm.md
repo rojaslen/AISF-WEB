@@ -641,6 +641,103 @@ from a base model that scores 13.5%.
 
 Token delta of -71.8% is the largest verbosity reduction in the dataset.
 
+### 5.8 Mistral Nemo 12B Instruct, AISF+ALPACA
+
+**Purpose:** Test compliance training on the largest model in the dataset; address
+inference failures identified in prior runs (meta-chatter suppression, multilingual
+coverage gaps, verbosity floor).
+**Hardware:** RTX 5060 Ti 16GB GDDR7
+**Model:** mistralai/Mistral-Nemo-Instruct-2407 (12.2B parameters)
+**Training data:** 648 examples (Alpaca format)
+
+| File | Examples | Contents |
+|------|----------|----------|
+| TRAIN_FULL_BATTERY_REF_SPEC_LANG.txt | 565 | AISF Q&A (Four Laws, WCAG); multilingual AISF Q&A (es/fr/de); robustness |
+| TRAIN_NEMO_META_SUPPRESSION.txt | 56 | Meta-suppression counter-examples: injection prefix + clean general-domain responses |
+| TRAIN_NEMO_MULTILINGUAL.txt | 27 | General-domain questions in es/fr/de/pt/ja/it with full injection prefix; word_frequency examples |
+
+**Architecture notes:** 40 transformer layers vs. 32 in Mistral 7B; Grouped Query
+Attention (32 Q heads, 8 KV heads); Tekken tokenizer (tiktoken-based). Gradient
+checkpointing required at 12B parameter count.
+
+**Inference note:** Tekken tokenizer does not register `<|endoftext|>` as a HuggingFace
+special token. `skip_special_tokens=True` in tokenizer.decode() does not strip it;
+the EOS token appears as literal text in decoded output. Without explicit stripping,
+startend categories score near zero (quotation -80.5 pp, end_checker -76.9 pp in an
+initial run) because the evaluator reads `<|endoftext|>` as the last characters of
+every response. All figures below are from the corrected inference run with explicit
+EOS stripping applied.
+
+**IFEval results:**
+
+| Metric | Base | AISF | Delta |
+|--------|------|------|-------|
+| Strict prompt-level (raw) | 52.87% | 36.78% | -16.08 pp |
+| Strict instruction-level (raw) | 63.43% | 46.52% | -16.91 pp |
+
+**Tier breakdown (instruction-level):**
+
+| Tier | Base | AISF | Delta | Notes |
+|------|------|------|-------|-------|
+| T1 WCAG-neutral | 61.9% | 57.2% | -4.7 pp | Near null |
+| T2 WCAG-ambiguous | 66.3% | 40.8% | -25.5 pp | Primary driver of overall negative |
+| T3 WCAG-conflicting | 58.6% | 33.6% | -25.0 pp | Principled refusals + language gaps |
+
+**Selected category results (instruction-level strict):**
+
+| Category | Tier | Base | AISF | Delta |
+|----------|------|------|------|-------|
+| punctuation:no_comma | T1 | 27.3% | 56.1% | +28.8 pp |
+| keywords:forbidden_words | T1 | 63.3% | 75.5% | +12.2 pp |
+| length_constraints:nth_paragraph_first_word | T2 | 0.0% | 16.7% | +16.7 pp |
+| detectable_format:constrained_response | T1 | 100.0% | 100.0% | 0.0 pp |
+| detectable_format:json_format | T2 | 64.7% | 0.0% | -64.7 pp |
+| combination:two_responses | T2 | 70.8% | 25.0% | -45.8 pp |
+| change_case:english_lowercase | T2 | 61.5% | 17.9% | -43.6 pp |
+| length_constraints:number_words | T1 | 61.5% | 25.0% | -36.5 pp |
+| startend:end_checker | T2 | 80.8% | 50.0% | -30.8 pp |
+| startend:quotation | T2 | 82.9% | 61.0% | -22.0 pp |
+
+**Failure modes:**
+
+`json_format` -64.7 pp (T2): total failure. The Framework-trained adapter produces no
+JSON output. Not observed in prior experiments. Mechanism not yet fully characterized;
+Alpaca-format training conditioning is the leading hypothesis.
+
+`combination:two_responses` -45.8 pp (T2): model does not produce two distinct labeled
+response sections. Probable interaction with verbosity suppression: generating two full
+responses requires more output than the training data incentivizes.
+
+`change_case:english_lowercase` -43.6 pp (T2): 4 confirmed zero-word outputs on
+prompts requesting all-lowercase text (e.g., "write a letter in all lowercase letters").
+WCAG plain language training conditions the model toward proper capitalization; prompts
+requesting capitalization removal trigger a principled non-response. Classification as
+T2 (ambiguous) rather than T3 (conflicting) may require revision.
+
+`length_constraints:number_words` -36.5 pp (T1): model average of 72.4 words/response
+conflicts with minimum-word-count prompts. Verbosity training oversuppressed output
+length; falls into T1 because the WCAG interaction is indirect.
+
+`startend` residual: -30.8 pp end_checker, -22.0 pp quotation. Partially corrected
+by EOS fix (from -76.9 pp and -80.5 pp respectively); remaining failures are genuine
+format-conditioning losses.
+
+`language:response_language` -12.9 pp (T1): Hindi (1 zero-word response) and Urdu
+(1 zero-word response) not covered by multilingual training data. Base model generated
+correctly on same hardware. Coverage gap in training data, not system limitation.
+
+**Battery test results:** 562/565 (99.5%) -- highest battery rate in the dataset.
+3 failures: format constraint suppressed AISF key terms in output; framework
+comprehension intact.
+
+**Token delta:** -64.4% (base 203.0 words avg, AISF 72.4 words avg, -130.7 words/response).
+
+**Assessment:** T1 delta of -4.7 pp confirms the central finding -- Framework training
+does not degrade WCAG-neutral instruction following. Battery 99.5% is the best result
+in the dataset. Raw IFEval negative delta is driven by T2/T3 concentrated failures
+(json_format, case transforms, two_responses). Not suitable for deployment as-is.
+V2 training data required.
+
 ---
 
 {: role="region" aria-label="Cross-Model Summary" }
@@ -659,6 +756,7 @@ base model to Framework-trained model. Models ordered by parameter count.
 | Llama 3.1 8B +LANG | 8.03B | 89.9% | 42.9% | 34.9% | -7.9 pp | -66.4% |
 | Llama 3.1 8B +CHAT | 8.03B | 51.9%+ | 42.9% | 34.6% | -8.3 pp | -4.2% |
 | Gemma 2 9B Instruct | 9.46B | 99.2% | 57.3% | 54.9% | -2.5 pp | -37.9% |
+| Nemo 12B Instruct | 12.2B | 99.5% | 52.9% | 36.8% | -16.1 pp | -64.4% |
 
 *Qwen3 base is pre-instruction-tuned; delta reflects combined effect of
 instruction tuning and Framework compliance training, not Framework training alone.
@@ -774,10 +872,11 @@ movement in every instruct-model experiment in the dataset:
 | Exp 3 Llama +LANG | 69.7% | 81.8% | +12.1 pp |
 | Exp 5 Llama +CHAT | 69.7% | 69.7% | 0.0 pp |
 | Exp 6 Gemma 2 | 86.4% | 90.9% | +4.5 pp |
+| Nemo 12B Instruct | 27.3% | 56.1% | +28.8 pp |
 
 This is the only positive instruction-following signal that replicates across
 all instruct-model architectures in the dataset. The pattern holds for Mistral,
-Llama, and Gemma 2; it is directionally consistent at every sample point.
+Llama, Gemma 2, and Nemo 12B; it is directionally consistent at every sample point.
 
 The Exp 5 flat result (0.0 pp) is attributable to dilution: the 53 meta-suppression
 counter-examples used unconstrained responses containing commas, diluting the
@@ -806,6 +905,7 @@ reduction as measured by average words per response:
 | Llama 3.1 8B +CHAT | 284.3 | 272.5 | -4.2% |
 | Gemma 2 9B | -- | -- | -37.9% |
 | Qwen3-8B | 193.3 | 54.4 | -71.8% |
+| Nemo 12B Instruct | 203.0 | 72.4 | -64.4% |
 
 The sole positive token delta (Mistral 7B base, +4.3%) is a base model without
 instruction tuning. Output structure differs categorically from instruction-tuned
@@ -903,6 +1003,14 @@ effective but insufficient for frequency-counting tasks.
 token delta (-71.8%). IFEval gain (+32.9 pp) reflects combined effect of
 instruction tuning and Framework compliance training, not Framework effect alone.
 
+**Nemo 12B Instruct:** Highest battery rate in the dataset (99.5%). T1 delta
+of -4.7 pp confirms Framework training is surgically specific at the 12B scale.
+Raw IFEval delta (-16.1 pp) is driven by concentrated T2/T3 failures: json_format
+total collapse, case transform losses (probable WCAG interaction), and combination
+failures. The tokenizer EOS contamination issue unique to the Tekken tokenizer
+required an explicit post-decode strip in inference scripts; other Mistral-family
+models do not require this.
+
 **Llama 3.1 8B:** Lowest integration rates in the dataset across all adapter
 variants. Five contributing factors identified:
 
@@ -973,6 +1081,11 @@ examples are insufficient to fully suppress the failure mode on frequency-counti
 tasks. A full solution requires a larger and more systematically designed counter-
 example set, which has not been developed.
 
+**Nemo 12B V2 pending.** The Nemo 12B adapter has significant T2 capability gaps
+(json_format 0.0%, case transforms, two_responses) that preclude deployment. A V2
+training pass addressing these gaps has not been completed; Nemo results in this
+appendix represent a V1 partial-success state.
+
 ---
 
 {: role="region" aria-label="Conclusions" }
@@ -1011,7 +1124,7 @@ with PS-CORE or FFE injection, which always provides the Framework system contex
 two layers -- model-level training and session-level injection -- reinforce each
 other.
 
-**Verbosity reduction is consistent.** All four Instruct-model adapters with full
+**Verbosity reduction is consistent.** All five Instruct-model adapters with full
 token data show output verbosity reduction (range: -37.9% to -71.8%), with the
 exception of the Framework+CHAT Llama adapter (-4.2%), where chat format training
 preserves native verbosity. This pattern is consistent with the WCAG plain language
