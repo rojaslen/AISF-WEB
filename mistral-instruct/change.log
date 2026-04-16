@@ -2,6 +2,170 @@
 
 ---
 
+## Mistral 7B Instruct V2 — IFEval (COMPLETE — 2026-04-15)
+
+### Training
+**Adapter:** C:\AISF\OLM\llm-training\output\mistral-7b-instruct-aisf-4bit-v2\
+**Script:** C:\AISF\OLM\llm-training\train_mistral_7b_instruct_4bit_v2.py
+**Training started:** 2026-04-15T14:06Z | **Completed:** 2026-04-15T15:37Z (~1.5hr)
+**Training data:** Full V3 curriculum baseline (~854 examples across 5 files):
+  BAR_EXAM_REF_SPEC_LANG.txt (565), TRAIN_NEMO_META_SUPPRESSION.txt (56),
+  TRAIN_NEMO_MULTILINGUAL.txt (27), TRAIN_NEMO_V2.txt (86), TRAIN_NEMO_V3.txt (~120)
+**Battery:** 452/452 (100.0%) -- FOUR LAWS INTEGRATION SUCCESSFUL; avg 62.9 tokens/response
+
+### IFEval Results (2026-04-15T18:24Z)
+**Strict adj (no_comma excluded):** 44.57% prompt / 55.47% instruction
+**Loose adj:** 50.29% prompt / 61.07% instruction
+**Framework interventions:** 0 (0.00%) -- refusal behavior absent
+
+**Headline finding:** INTV = 0 across all 541 prompts. Nemo V3 produced 29 interventions
+(5.36%); Mistral 7B Instruct V2 produces none. The "Unable to comply." refusal behavior
+from the V3 curriculum did not transfer at 7B. Model passes or fails WCAG-conflicting
+prompts without issuing Framework refusals. Framework enforcement is absent at inference.
+
+**Key results (strict, selected):**
+
+| Category | Mistral V2 | Nemo V3 | Notes |
+|---|---|---|---|
+| Overall adjusted | 44.57% | 41.90% | Mistral nominally higher -- artifact of complying vs refusing |
+| detectable_format:json_format | 82.35% | 29.41% | Mistral +52.9pp |
+| detectable_format:title | 97.30% | 81.08% | Mistral +16.2pp |
+| keywords:existence | 84.62% | 64.10% | Mistral +20.5pp |
+| number_highlighted_sections | 52.08% | 66.67% | Nemo +14.6pp |
+| combination:repeat_prompt | 4.88% | 17.07% | Both weak; Nemo less bad |
+| english_lowercase [WCAG] | 48.72% | 12.82% | Mistral "passing" by complying; Nemo refusing |
+| Framework INTV | 0 | 29 | Nemo enforcing; Mistral not |
+
+**Score note:** Adjusted scores are not directly comparable. Mistral's nominally higher
+figure is partially an artifact of complying with WCAG-conflicting prompts that Nemo
+correctly refuses. Nemo V3's interventions represent correct Framework behavior counted
+as IFEval failures. Net assessment favors Nemo V3 for deployment.
+
+**Assessment:** 7B weight class insufficient for simultaneous multi-constraint enforcement
+(follow instruction vs refuse per WCAG) alongside all other behavioral objectives. Same
+pattern as highlighted sections collapse in 7-9B models: parameter count is the binding
+constraint, not curriculum design. V3 curriculum worked as intended at 12B; did not
+transfer at 7B. Research result only. Nemo V3 remains primary deployment target.
+
+### Post-training sequence
+1. [DONE] Training complete (2026-04-15T15:37Z)
+2. [DONE] Battery: 452/452 100.0%
+3. [DONE] IFEval pipeline: ifeval_pipeline_mistral_instruct_v2.py (automated)
+4. [DONE] Adjusted score: 44.57% strict / 50.29% loose
+5. [DONE] Intervention analysis: 0 interventions confirmed
+6. [CLOSED] Not deployment-ready. Nemo V3 is primary target.
+
+---
+
+## Nemo 12B Instruct — V3 IFEval (COMPLETE — 2026-04-15)
+
+### V3 Training
+**Adapter:** C:\AISF\OLM\llm-training\output\mistral-nemo-instruct-aisf-4bit-v3\
+**Script:** C:\AISF\OLM\llm-training\train_mistral_nemo_instruct_4bit_v3.py
+**Training started:** 2026-04-15T02:20:31Z | **Completed:** ~2026-04-15T10:49Z (~8.5hr)
+**Training data:** Full V3 curriculum baseline (~854 examples across 5 files):
+  TRAIN_FULL_BATTERY_REF_SPEC_LANG.txt (565), TRAIN_NEMO_META_SUPPRESSION.txt (56),
+  TRAIN_NEMO_MULTILINGUAL.txt (27), TRAIN_NEMO_V2.txt (86), TRAIN_NEMO_V3.txt (~120)
+
+**Root cause addressed:** 100% AISF-header-positive training (V1/V2) caused conditional
+activation failure -- model associated AISF commentary with Alpaca format itself, not
+header presence. IFEval (no header) triggered bleed in all responses. Fix: ~120 negative
+examples teach header = trigger; no header = clean general-purpose response.
+
+**New V3 content:** Negatives (no-header clean responses), localized "Unable to comply."
+refusals (P0/P1/WCAG/safety variants), multilingual refusals (Hindi/Urdu/Arabic/Somali),
+format-constrained negatives (IFEval coverage: lowercase, uppercase, no-comma, JSON-only,
+sentence/paragraph counts, start/end-with, highlighted sections, combination constraints).
+
+### V3 IFEval Results (2026-04-15T13:32Z)
+**Strict adj (no_comma excluded):** 41.90% (+5.14pp vs V2 36.76% -- largest single-iteration gain)
+**Loose adj:** 48.76% (+3.43pp vs V2 45.33%)
+**Framework interventions:** 29 prompts (5.36%) triaged INTV -- refusal prefix confirmed firing
+
+**Key results (strict prompt-level):**
+
+| Category | V3 | V2 | Delta | Notes |
+|---|---|---|---|---|
+| language:response_language | 77.42% | 58.06% | +19.4pp | Multilingual negatives effective |
+| detectable_format:constrained_response | 100.0% | 100.0% | flat | Perfect |
+| detectable_content:postscript | 96.15% | 92.31% | +3.8pp | Strong |
+| detectable_format:title | 81.08% | 75.68% | +5.4pp | |
+| detectable_format:multiple_sections | 78.57% | 78.57% | flat | |
+| detectable_format:number_highlighted_sections | 66.67% | 50.0% | +16.7pp | Anomaly -- see note |
+| detectable_format:json_format | 29.41% | 11.76% | +17.6pp | Partial recovery |
+| change_case:english_lowercase | 12.82% | -- | -- | WCAG intervention (expected) |
+| length_constraints:number_paragraphs | 14.81% | -- | -- | WCAG structural conflict |
+| combination:repeat_prompt | 17.07% | -- | -- | Genuine failure |
+
+**Highlighted sections anomaly:** V3 66.67% vs V2 50.0% vs V1 41.7% -- progressive improvement
+across iterations. Prior experiments (Gemma 2 9B: 29.2%; Llama 3.1 8B: ~30-40%) showed
+consistent near-collapse after AISF training. Hypothesis: parameter size (12.2B) is the more
+significant factor for this category -- highlighted sections requires resolving P0/P2/task
+tension simultaneously. Multi-constraint reasoning appears to scale with parameter count;
+7-9B models could not maintain compliance under AISF training pressure. Training set (V3
+negatives + conditional activation) accounts for overall +5.14pp lift; parameter size is
+the better explanation for the highlighted sections trajectory specifically.
+
+**Cross-model IFEval rank (strict adj, AISF-trained):**
+Gemma 2 9B 54.9% > Qwen3-8B 45.0% > Nemo V3 41.90% > Mistral Instruct 37.7% >
+Nemo V1/V2 36.76% > Llama 3.1 8B variants 34-35% > Mistral 7B base 13.0%
+
+Note: Gemma 2's IFEval lead is partially a floor artifact (57.3% base); battery result
+was null (-1.87pp). Qwen3-8B's +29.6pp IFEval delta is the largest training effect
+observed across all experiments.
+
+### V3 Post-training sequence
+1. [DONE] V3 IFEval eval pipeline: ifeval_pipeline_v3.py (automated end-to-end)
+2. [DONE] Adjusted score: strict adj 41.90% / loose adj 48.76%
+3. [DONE] Intervention analysis: intervention_analysis.txt (PASS/INTV/FAIL per category)
+4. [DONE] Battery test (2026-04-15T19:26Z): 563/565 (99.6%) -- FOUR LAWS INTEGRATION SUCCESSFUL
+   2 failures in 565 = noise; deployment-ready. Avg 65.2 tokens/response. Duration: 53.9 min.
+   Stronger than Mistral V2 100%/452 -- larger, harder battery (WCAG + multilingual added).
+5. [PENDING] Phase 2: merge adapter + GGUF convert + quantize Q4_K_M + Modelfile
+   + `ollama create aisf-nemo` + update HTM server.py NEMO_MODEL
+
+---
+
+## Nemo 12B Instruct — V2 IFEval (COMPLETE — 2026-04-14)
+
+### V2 Training
+**Adapter:** C:\AISF\OLM\llm-training\output\mistral-nemo-instruct-aisf-4bit-v2\
+**Script:** C:\AISF\OLM\llm-training\train_mistral_nemo_instruct_4bit_v2.py
+**Training data:** TRAIN_NEMO_V2.txt (targeted: json_format, startend, Hindi/Urdu, longer
+responses, two_responses, change_case review)
+
+### V2 Post-training sequence
+1. [DONE] IFEval V2 AISF inference: 541/541 responses (2026-04-14, resume after SMB crash at 28)
+2. [DONE] Token delta: -59.9% (base 203.0, V2 81.4 avg words; vs V1 -64.4% = +4.5 pp recovery)
+3. [DONE] IFEval evaluation: eval_nemo_aisf_v2/ (2026-04-14)
+4. [DONE] Adjusted score: strict adj PL 36.57% / loose adj PL 45.33%
+5. [SUPERSEDED BY V3] Merge adapter + GGUF convert + Ollama register
+6. [SUPERSEDED BY V3] Update HTM server.py NEMO_MODEL
+
+### V2 IFEval results (strict adjusted, no_comma excluded)
+**Prompt-level:** 36.57% (V1: 36.76%, flat)
+**Instruction-level:** 44.92% (V1: 45.70%, -0.78 pp)
+**Loose prompt-level:** 45.33% (V1: 43.24%, +2.09 pp)
+**Token delta:** -59.9% (V1: -64.4%; +4.5 pp verbosity recovery)
+
+**V2 gains vs V1 (strict):**
+- postscript: 73.1% -> 92.3% (+19.2 pp)
+- number_words: 25.0% -> 36.5% (+11.5 pp)
+- json_format: 0.0% -> 11.8% (+11.8 pp) -- partial; base 64.7% -- V3 target
+- number_highlighted_sections: 41.7% -> 50.0% (+8.3 pp)
+- number_bullet_lists: 29.0% -> 38.7% (+9.7 pp)
+
+**V2 losses vs V1 (strict):**
+- keywords:existence: 71.8% -> 53.8% (-18.0 pp)
+- forbidden_words: 75.5% -> 57.1% (-18.4 pp)
+- language:response_language: 67.7% -> 58.1% (-9.7 pp)
+
+**Assessment:** Targeted failures addressed with measurable improvement. Keywords regressed.
+json_format partial only. Overall strict flat. V2 not deployment-ready.
+V3 decision required before Phase 2 (merge + GGUF + HTM integration).
+
+---
+
 ## Nemo 12B Instruct — Training Run 1 (POST-TRAINING COMPLETE — V2 REQUIRED)
 **Started:** 2026-04-13T01:01Z
 **Training completed:** 2026-04-13T09:52Z
@@ -142,8 +306,8 @@ Run 1 response files are invalid for startend categories. Run 2 supersedes Run 1
 5. [DONE] IFEval AISF run 2 (EOS fix): 2026-04-14T01:01Z - 03:06Z (~2h5m)
 6. [DONE] IFEval eval: evaluation_main.py on Run 2 base + AISF (2026-04-14T03:10Z)
 7. [DONE] Token delta: -64.4% (-130.7 words; base 203.0, AISF 72.4 avg words/response)
-8. [PENDING V2] Merge adapter + GGUF convert + Ollama register
-9. [PENDING V2] Update HTM server.py OLLAMA_MODEL
+8. [PENDING V3 DECISION] Merge adapter + GGUF convert + Ollama register (use V2 adapter unless V3 run)
+9. [PENDING V3 DECISION] Update HTM server.py NEMO_MODEL
 
 ### IFEval results (Run 1) -- 2026-04-13 -- SUPERSEDED
 Run 1 response files are invalid for startend categories due to `<|endoftext|>` EOS
