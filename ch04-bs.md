@@ -18,6 +18,10 @@ I was developing a work presentation to suggest we test-run the result with a sm
 
 Being stateless in a virtualized void, the AI has no baseline of reality or purpose — it just has its training and the platform's default configuration when you summon it. The only reality it can refer to gets built over time by your session data. When it drops, misinterprets, ignores or isn't synchronized to that data, it hallucinates. Then, it just predicts the likeliest next word while executing its default internal and platform directives, with no regard for whether it's helping or making things worse. Frankfurt defined the problem long before AI ever existed: AI hallucination is bullshit.[^4b]
 
+The obvious design response was a detection engine: something that catches the bullshit on the way out. That work got quite elaborate -- tiers of detection sensitivity, asymmetric penalties for omission versus expansion, domain-specific triggers for the areas where output drifts most. What stopped it was a constraint I couldn't engineer around. Detecting whether output deviates from what the user intended requires knowing what the user intended -- information no machine has reliable access to. The user is the only detection layer that can work.
+
+That architecture wasn't wasted. The pipeline it produced -- for evaluating session state, monitoring compliance drift, classifying high-risk content domains, and sequencing when behavioral rules apply -- turned out to be an accurate description of how a stable AI session should work, just approached from the wrong end. Built from the prevention side instead, it became the AI Stability Framework. The detection engine never shipped. Everything else did.
+
 <nav>
 <div class="chapter-nav">
   <a href="/ch05-4laws">Next: Chapter 5</a>
