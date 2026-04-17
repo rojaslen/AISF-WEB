@@ -2,16 +2,48 @@
 
 ---
 
-## Nemo 12B V5 — Training In Progress (2026-04-17)
+## WEB — Middleware Ceiling Language (queued edit, 2026-04-17)
 
-**Script:** C:\AISF\OLM\llm-training\train_mistral_nemo_instruct_4bit_v5.py
-**Training started:** 2026-04-17T00:xxZ
+**Source:** GPT iOS session log `C:\AISF\_temp\20260417_0915(Z-4)_gpt_ios.txt`
+**Finding:** AISF injection present from Turn 1; model fabricated a ToC retrieval it never
+performed, then failed traversal by pulling unrelated content (Temporal distributed systems docs).
+Injection constrains behavior where the model acts on it; it cannot constrain app-layer
+tool-availability reporting or prevent fabrication of retrieval output.
+**Edit required:** Existing language on the middleware vulnerability thesis needs massaging to
+incorporate this as a concrete documented example rather than a theoretical limit.
+Chapters most likely affected: Ch.2, Ch.3, Ch.9, possibly Ch.10.
+Core addition: fabricated ToC = clearest illustration of why owning the API call matters --
+injection cannot verify a retrieval the model claims to have made.
+Structural hypothesis for GPT-specific degradation (causal context, not confirmed):
+Two concurrent pressures correlate with the observed behavioral change --
+(1) OpenAI advertising revenue pivot (volume over quality incentive, compute per token under
+pressure); (2) Strait of Hormuz closure driving energy cost spikes at regional data centers,
+compounded by active Iranian drone threat (Shahed saturation tactics) against infrastructure.
+USN + Patriot intercept most; attrition-by-cost is the mechanism even without direct hits.
+Pre-positioned compute reduction ahead of sustained infrastructure pressure is the expected
+rational response. Behavioral signature (fabricated retrieval, surface compliance without
+underlying execution) is consistent with inference cost reduction. Hypothesis is predictive --
+degradation should correlate with energy price events and capacity announcements, not model
+update cycles. Monitor accordingly.
+
+---
+
+## Nemo 12B V5 — Pipeline Complete (2026-04-17)
+
+**Script:** C:\AISF\OLM\llm-training\eval_pipeline_nemo_v5.py
 **Training data:** 1,020 examples (7 files); adds BSD_TRAINING_FULL_SPEC_V1.txt (34 ex)
-  Targets V4 root cause: WCAG-as-shield over-refusal; WCAG conflict resolution,
-  asymmetric claims, OBRIEN temporal, named entity fidelity, HBC normalization.
-**Hardware:** RTX 5060 Ti 16GB; ~10.5 s/it; ~2GB GPU shared (baseline for this model+HW).
-**V4 result (retired):** IFEval strict adj 33.52%, INTV 28.28% (V3: 6.1%). GGUF skipped.
-**Status:** In progress -- battery + IFEval required before GGUF/deploy.
+**Hardware:** RTX 5060 Ti 16GB; ~10.5 s/it; VRAM budget: 12288MiB / batch 1 (Nemo 12B).
+
+**Results:**
+- Battery (565 tests): 563/565 (99.6%) PASS. 2 fails = DGM compression artifacts.
+- IFEval strict adj: 44.19% prompt-level (+2.29pp over V3 41.90%)
+- IFEval loose adj:  52.00% prompt-level
+- INTV (strict): 12.01% (65/541) -- down from V4's 28.28%; BSD conflict resolution worked.
+  WCAG-expected portion (~12/65): english_lowercase, english_capital, number_paragraphs.
+  Non-WCAG portion (~53/65): format-constraint categories (placeholders, letter_freq,
+  word count, keyword freq) -- BSD broadened refusal surface; future curriculum item.
+
+**Assessment:** Acceptable. GGUF conversion next. V3 remains live until V5 GGUF confirmed.
 
 ---
 
