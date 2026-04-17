@@ -2,6 +2,19 @@
 
 ---
 
+## Nemo 12B V5 — Training In Progress (2026-04-17)
+
+**Script:** C:\AISF\OLM\llm-training\train_mistral_nemo_instruct_4bit_v5.py
+**Training started:** 2026-04-17T00:xxZ
+**Training data:** 1,020 examples (7 files); adds BSD_TRAINING_FULL_SPEC_V1.txt (34 ex)
+  Targets V4 root cause: WCAG-as-shield over-refusal; WCAG conflict resolution,
+  asymmetric claims, OBRIEN temporal, named entity fidelity, HBC normalization.
+**Hardware:** RTX 5060 Ti 16GB; ~10.5 s/it; ~2GB GPU shared (baseline for this model+HW).
+**V4 result (retired):** IFEval strict adj 33.52%, INTV 28.28% (V3: 6.1%). GGUF skipped.
+**Status:** In progress -- battery + IFEval required before GGUF/deploy.
+
+---
+
 ## Mistral 7B Instruct V2 — IFEval (COMPLETE — 2026-04-15)
 
 ### Training
