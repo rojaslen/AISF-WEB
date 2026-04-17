@@ -20,7 +20,7 @@ Being stateless in a virtualized void, the AI has no baseline of reality or purp
 
 The obvious design response was a bullshit sniffer: a detection engine that catches it on the way out. That approach got baroque fast, with tiers of detection sensitivity, asymmetric penalties for omission versus expansion, domain-specific triggers for the areas where output drifts most, early-warning mechanisms and more. What stopped it from being feasible was the one constraint you can't engineer around. Detecting whether the AI's output deviated from what the user intended requires *knowing* what the user intended, which of course is simply not possible. The user is the only detection layer that can work.
 
-Everything except the detection engine was put to work evaluating session state, monitoring compliance drift, classifying high-risk content domains, and sequencing when behavioral rules apply. It was always an accurate description of how a stable AI session should work, but initially I approached it from the wrong end of the problem. Built with a prevention orientation instead, it became the AI Stability Framework. The detection engine never shipped, but everything else did.
+Everything except the detection engine was put to work evaluating session state, monitoring compliance drift, classifying high-risk content domains, and sequencing when behavioral rules apply. It was always an accurate description of how a stable AI session should work, but initially I approached it from the wrong end of the problem. The detection approach turned out to be a dead end, so I repurposed everything for prevention instead, and it became the AI Stability Framework. 
 
 <nav>
 <div class="chapter-nav">
