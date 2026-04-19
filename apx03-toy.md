@@ -19,7 +19,7 @@ nav_order: 4
 ## Abstract
 
 This appendix reports the methods and results of the OLM/TOY sub-branch, which
-investigated whether a child-safe AI persona ("Teddy") could be embedded into
+investigated whether a child-safe AI persona ("Teddy", h/t Teddy Ruxpin, World of Wonder, 1985) could be embedded into
 open-weight language models via QLoRA [2] fine-tuning for deployment in sealed IoT
 consumer devices -- children's toys and similar products in which no client-side
 injection surface exists. Four models across a 1.1B to 7.24B parameter range were

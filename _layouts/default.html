@@ -7,9 +7,11 @@
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <script>(function(){var s=localStorage.getItem('font-size');if(s==='s')document.documentElement.classList.add('font-s');else if(s==='l')document.documentElement.classList.add('font-l');})();</script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  <p class="sr-only">Screen reader notice: if you are using JAWS with Firefox, a platform bug in Firefox 149 prevents JAWS from entering browse mode on this site. Switching to Chrome or Edge restores full screen reader compatibility.</p>
   <header class="site-header">
     <a href="{{ '/' | relative_url }}" class="site-brand">
       {% if site.logo %}
@@ -17,6 +19,12 @@
       {% endif %}
       <span class="site-name">{{ site.title }}</span>
     </a>
+    <div class="font-size-picker" role="group" aria-label="Text size">
+      <span class="font-size-label">Text Size:</span>
+      <button class="font-btn" data-size="s" aria-label="Small text" aria-pressed="false">S</button>
+      <button class="font-btn" data-size="m" aria-label="Medium text" aria-pressed="true">M</button>
+      <button class="font-btn" data-size="l" aria-label="Large text" aria-pressed="false">L</button>
+    </div>
   </header>
   <main id="main-content">
     <a name="main-content"></a>
@@ -24,6 +32,7 @@
   </main>
   <footer>
     <p>{{ site.footer_content }}</p>
+    <p>This site is designed to conform to WCAG 2.2 Level AA accessibility standards. Report accessibility problems to a11y at leonardrojas dot com.</p>
   </footer>
 
   <dialog class="lightbox" id="lightbox" aria-label="Full-size image">
@@ -41,6 +50,25 @@
     });
     dialog.addEventListener('click', function (e) {
       if (e.target === dialog || e.target.id === 'lightbox-close') { dialog.close(); }
+    });
+  })();
+
+  (function () {
+    function applySize(s) {
+      document.documentElement.classList.remove('font-s', 'font-l');
+      if (s === 's') document.documentElement.classList.add('font-s');
+      if (s === 'l') document.documentElement.classList.add('font-l');
+      document.querySelectorAll('.font-btn').forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.size === s ? 'true' : 'false');
+      });
+    }
+    applySize(localStorage.getItem('font-size') || 'm');
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.font-btn');
+      if (!btn) return;
+      var s = btn.dataset.size;
+      localStorage.setItem('font-size', s);
+      applySize(s);
     });
   })();
   </script>

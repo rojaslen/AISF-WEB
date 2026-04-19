@@ -4,6 +4,16 @@ description: "Anti-hallucination middleware for AI chat platforms."
 url: "https://leonardrojas.com"
 baseurl: ""
 
+exclude:
+  - mistral-instruct
+  - temp
+  - Gemfile
+  - Gemfile.lock
+  - "*.bat"
+  - git-web-fix.txt
+  - HTML_editing_refs.md
+  - PROD_index.md
+
 plugins:
   - jekyll-seo-tag
 

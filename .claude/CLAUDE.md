@@ -266,6 +266,25 @@ Applies to all UI button elements across all branches and AISF-WEB.
 | Light | `#605838` | `#4E4830` | `#FFFFFF` | 6.2:1 |
 | Dark | `#605838` | `#746C44` | `#FFFFFF` | 6.2:1 |
 
+### FAQ Question Typography Standard (validated 2026-04-19)
+
+Applied via inline `<style>` block scoped to the page. Purpose: visual scannability and quick question ID for low-vision and sighted users alike. Do not apply globally -- FAQ pages only.
+
+| Selector | Properties |
+|---|---|
+| `ol > li > p:first-child > strong` | `font-size: 1.4rem` |
+| `ol > li::marker` | `font-size: 1.4rem; font-weight: 700` |
+
+### Layout and Typography Standard (validated 2026-04-19)
+
+Applies to `assets/css/style.css` for AISF-WEB. Validated for readability with glasses and low-vision users.
+
+| Property | Value | Notes |
+|---|---|---|
+| `main` max-width | `80%` | Content area; percentage-based, no hard-coded px |
+| `main` padding (horizontal) | `7.5%` each side | Inner content fills 85% of main |
+| `body` letter-spacing | `0.035em` | Inter (sans-serif); slight expansion for character distinction |
+
 ## Git Rules
 
 - **Never Auto-Commit** -- always ask before committing; user may want to batch changes
