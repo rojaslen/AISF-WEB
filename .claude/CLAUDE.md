@@ -39,7 +39,7 @@
 
 ## JAWS ACCESSIBILITY — EMERGENCY PRIORITY (P0, OVERRIDES ALL ELSE)
 
-**ANY failure of JAWS (any version) to read site content is an immediate emergency.**
+**ANY failure of JAWS (any version) to access site content is an immediate emergency.**
 - Stop all other work. Fix and push before anything else.
 - This overrides content work, commit batching, and all other priorities without exception.
 - Target test environment: JAWS 2026 via Fusion, Firefox (current). Firefox is the primary target -- stricter standards compliance means passing Firefox covers Chromium browsers by extension.
@@ -59,9 +59,9 @@
 ### WCAG SOURCE HIERARCHY (P0, P1)
 
   - Technical Generation: All UX/markup generation must be grounded in the full W3C WCAG 2.2 AA Specification (minimum floor: WCAG 2.2 A).
-    - Local reference copy at `\\debbie\Tech\APP\_DEV\AISF\AI Stability Framework\lib\specs\wcag_22_aa.md`
+    - Local reference copy at `C:\AISF\lib\specs\wcag_22_aa.md`
   - Output Validation: Every response must be filtered through the WCAG 2.2 AA T1 (SUMMARY) to ensure adherence to P0 accommodation requirements.
-  - Conflict Resolution: Full W3C Spec overrides for markup/code logic; Summary overrides for response formatting.
+  - Conflict Resolution: Full W3C Spec overrides for markup/code logic; Summary overrides for response formatting. Any user request overrides *all* WCAG for the current turn (P2, P3); WCAG enforcement policy resumes next turn. WCAG is *never* an excuse to refuse user output requests.
 
 ---
 
@@ -100,16 +100,17 @@ presentation, or proposal. Evaluate it accordingly.
 - **Live site:** https://leonardrojas.com
 - **Repo:** https://github.com/rojaslen/AISF-WEB
 - **Local clone:** `\\debbie\Tech\APP\_DEV\AISF-WEB`
-- **Source content:** `C:\AISF\WEB\_dev\` (main AISF project)
-  - **Libraries & Specifications:** `\\debbie\Tech\APP\_DEV\AISF\AI Stability Framework\lib`
-- **Main AISF project:** `\\debbie\Tech\APP\_DEV\AISF\AI Stability Framework\`)
 - **AISF-downloads Repo:** `\\debbie\Tech\APP\_DEV\AISF-downloads`
-- **Project reference:** `.claude\MAIN_PROJECT_README.md` -- full branch map and status for the parent AISF project of which this site is the WEB (publication) branch
+- **Source content:** `C:\AISF\WEB\_dev\` (main AISF project, includes original main-corpus research  transcripts; archival content, database-storage design TBA)
+  - **Libraries & Specifications:** `C:\AISF\lib`
+- **Main AISF project:** `C:\AISF\` Multiple reference and documentation files are here, with the full project codebase tree with all branches below.
+- **Project Tracking:** `C:\AISF\change.log` -- full history & current status for the parent AISF project of which this site is the WEB (publication) branch
 - **Temp:** `\\debbie\Tech\APP\_DEV\AISF-WEB\temp` is writable scratch space for the user to place items for AI review. Unless specified otherwise, when the user references "temp," this is always the intended directory-tree location.
 
 ### WORKING ENVIRONMENT (P3)
 
 - Read C:\AISF\lib\specs.claudignore at session start.
+- Read the most recent date's entry/entries (more than one may exist per date) in `C:\AISF\change.log` to establish current project status.
 - Read all files in C:\AISF\lib\specs\ to establish the Source of Truth (SOT) for this workspace.
 - /AISF/ and all subdirectories pre-approved for full READ access.
   - /tmp/ is pre-approved for full READ-WRITE access (operational scratch space).
@@ -240,7 +241,7 @@ The suggestion: "Use offset and limit parameters to read only the sections you n
 - **Logo:** `assets/images/logo.png`
 - **Favicon:** `favicon.ico` in repo root
 - **Orphaned files (do not delete):** `_includes/head_custom.html`, `_includes/title.html`, `_sass/color_schemes/custom.scss` -- superseded by custom layout, kept for reference
-- **HTM integration (Ch10):** `\\debbie\Tech\APP\_DEV\AISF\AI Stability Framework\HTM` is confirmed Ch10 integration target. Placeholder "Coming Soon: Try Meso Chat" button (`.demo-btn` CSS class) is live in ch10. Full HTM files to be copied into this repo when hosting is ready (Debbie cannot handle public traffic). Post-integration epilogue polish item tracked in TODO section below.
+- **HTM integration (Ch10):** `C:\AISF\HTM` is confirmed Ch10 integration target. Placeholder "Coming Soon: Try Meso Chat" button (`.demo-btn` CSS class) is live in ch10. Full HTM files to be copied into this repo when hosting is ready (Debbie cannot handle public traffic). Post-integration epilogue polish item tracked in TODO section below.
 
 ## Content Workflow
 
