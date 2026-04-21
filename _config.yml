@@ -6,6 +6,7 @@ baseurl: ""
 
 exclude:
   - mistral-instruct
+  - staging
   - temp
   - Gemfile
   - Gemfile.lock

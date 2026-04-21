@@ -75,6 +75,7 @@
 - **NEVER use curly/smart quotes** (U+201C " U+201D " U+2018 ' U+2019 '). Use straight ASCII quotes only: " (U+0022) and ' (U+0027).
 - When generating tables for display output, do not exceed 90 columns in width.
 - **Project name usage:** Prefer "AI Stability Framework" or "the Framework" (capitalized, trademark). Avoid "AISF" except in filenames and contexts where the full name does not fit (e.g., table headers). "AISF" has active trademark applications (wordmark serial # 99664948; logo mark serial # 99749758); the full name is the preferred public-facing form.
+- **Do not verify user assertions about repo state.** When the user states that a git operation (push, commit, branch switch, Pages setting, etc.) has been performed, accept it as established fact. Verification reads waste token budget and are an implicit challenge to the user's credibility. (P0, P2)
 
 ---
 
