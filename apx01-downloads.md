@@ -12,7 +12,7 @@ nav_order: 2
 
 [AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/tree/main/CORE){: target="_blank" rel="noopener noreferrer" }
 
-[AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" }
+<s>[AISF OLM Reproducibility Package]</s><!--(https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" }--> Offline pending revision due to updated research.
 
 [Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" }
 
