@@ -1133,7 +1133,8 @@ principles in the training data and is measurable and reproducible.
 <nav>
 <div class="chapter-nav">
   <a href="/appendices">Appendices</a>
-  <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+  <a href="/#toc">Table of Contents</a>
+</div>
 </nav>
 
 ---

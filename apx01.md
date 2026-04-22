@@ -30,7 +30,8 @@ nav_order: 2
 <nav>
 <div class="chapter-nav">
   <a href="/appendices">Appendices</a>
-  <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+  <a href="/#toc">Table of Contents</a>
+</div>
 </nav>
 
 ---

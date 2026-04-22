@@ -100,6 +100,13 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     Context decay is real and noticeable but manageable. Using STRUCTURE and STABILIZE is a bit like occasionally saving a document you're working on, rather than trusting that nothing will crash. Context decay even provides evidence for the Framework's premise: if AI behavior noticeably changes as its anchoring is evicted from context, that confirms the anchoring was doing something. The degradation curve is the control.
 
+<nav>
+<div class="chapter-nav">
+  <a href="/appendices">Appendices</a>
+  <a href="/#toc">Table of Contents</a>
+</div>
+</nav>
+
 ---
 
 [^Fa]: Orwell, G., Nineteen Eighty‑Four, appendix, "The Principles of Newspeak" (London: Secker & Warburg, 1949). *"Newspeak was designed not to extend but to diminish the range of thought...The grammar of Newspeak had two outstanding peculiarities. The first of these was an almost complete interchangeability between different parts of speech."*
@@ -108,6 +115,3 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 [^Fc]: FisherMap. "Caesar Creek Lake, OH -- Depth Map." [https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/](https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/){: target="_blank" rel="noopener noreferrer" }
 
-<nav>
-<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
-</nav>

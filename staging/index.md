@@ -7,26 +7,26 @@ nav_order: 1
 
 # Table of Contents
 
-- [Chapter 1: What Time Is It?](/ch01-temporal)
-- [Chapter 2: The Platforms Are Not on Your Side](/ch02-platform)
-- [Chapter 3: The Deployment Stack](/ch03-stack)
-- [Chapter 4: What Good Is Accessible Bullshit?](/ch04-bs)
-- [Chapter 5: The Four Laws of Instanced AI](/ch05-4laws)
-- [Chapter 6: What AI Perceives](/ch06-wcag)
-- [Chapter 7: The Human-AI Extended Mind](/ch07-xmind)
-- [Chapter 8: Defense in Depth?](/ch08-olm)
-- [Chapter 9: Field Observations](/ch09-observations)
-- [Chapter 10: How to Try It](/ch10-tryit)
-- [Chapter 11: What's Next](/ch11-wrapup)
+- [Chapter 1: What Time Is It?](/ch01)
+- [Chapter 2: The Platforms Are Not on Your Side](/ch02)
+- [Chapter 3: The Deployment Stack](/ch03)
+- [Chapter 4: What Good Is Accessible Bullshit?](/ch04)
+- [Chapter 5: The Four Laws of Instanced AI](/ch05)
+- [Chapter 6: What AI Perceives](/ch06)
+- [Chapter 7: The Human-AI Extended Mind](/ch07)
+- <s>[Chapter 8: Defense in Depth?]</s><!--(/ch08)-->
+- [Chapter 9: Field Observations](/ch09)
+- [Chapter 10: How to Try It](/ch10)
+- [Chapter 11: What's Next](/ch11)
 - [Epilogue: Foreseeably Asked Questions](/epilogue)
 
 ## Appendices
 
-- [Appendix 0: Endnotes](/apx00-endnotes)
-- [Appendix 1: Downloads](/apx01-downloads)
-- [Appendix 2: OLM: Behavioral Compliance Training](/apx02-olm)
-- [Appendix 3: TOY: Child-Safe Model Training](/apx03-toy)
-- [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04-cda)
+- [Appendix 0: Endnotes](/apx00)
+- [Appendix 1: Downloads](/apx01)
+- <s>[Appendix 2: OLM: Behavioral Compliance Training]</s><!--(/apx02)-->
+- <s>[Appendix 3: TOY: Child-Safe Model Training]</s><!--(/apx03)-->
+- [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04)
 
 </nav>
 

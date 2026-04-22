@@ -324,5 +324,9 @@ State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, Feb
 ---
 
 <nav>
-<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+<div class="chapter-nav">
+  <a href="/appendices">Appendices</a>
+  <a href="/#toc">Table of Contents</a>
+</div>
 </nav>
+

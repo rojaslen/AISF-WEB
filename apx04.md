@@ -52,6 +52,7 @@ CC0 1.0 Universal Public Domain Dedication. No attribution required. Free for an
 <nav>
 <div class="chapter-nav">
   <a href="/appendices">Appendices</a>
-  <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+  <a href="/#toc">Table of Contents</a>
+</div>
 </nav>
 

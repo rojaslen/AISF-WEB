@@ -11,3 +11,9 @@ has_children: true
 - <s>[Appendix 2: OLM: Behavioral Compliance Training]</s><!--(/apx02)-->
 - <s>[Appendix 3: TOY: Child-Safe Model Training]</s><!--(/apx03)-->
 - [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04)
+
+<nav>
+<div class="chapter-nav">
+  <a href="/#toc">Table of Contents</a>
+</div>
+</nav>
