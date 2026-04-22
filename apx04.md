@@ -50,5 +50,8 @@ CC0 1.0 Universal Public Domain Dedication. No attribution required. Free for an
 [Download CDA v1.0](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" }
 
 <nav>
-<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+<div class="chapter-nav">
+  <a href="/appendices">Appendices</a>
+  <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
+

@@ -28,7 +28,9 @@ nav_order: 2
 *(Malwarebytes users: the AISF-CORE executable may trigger a false-positive quarantine. It passes all other scans above, including enterprise CrowdStrike. Manually whitelisting it in "Settings:Scan and detections:Allow list" works around this. Vendor whitelist submission pending.)*
 
 <nav>
-<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+<div class="chapter-nav">
+  <a href="/appendices">Appendices</a>
+  <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
 </nav>
 
 ---

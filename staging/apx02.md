@@ -1130,6 +1130,12 @@ exception of the Framework+CHAT Llama adapter (-4.2%), where chat format trainin
 preserves native verbosity. This pattern is consistent with the WCAG plain language
 principles in the training data and is measurable and reproducible.
 
+<nav>
+<div class="chapter-nav">
+  <a href="/appendices">Appendices</a>
+  <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
+
 ---
 
 ## References

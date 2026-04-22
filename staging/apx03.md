@@ -508,6 +508,12 @@ training distribution. This is not a criticism of any specific model or
 architecture; it is a statement about the current state of the technology relative
 to the requirements of the use case.
 
+<nav>
+<div class="chapter-nav">
+  <a href="/appendices">Appendices</a>
+  <div class="toc-link"><a href="/#toc">Table of Contents</a></div>
+</nav>
+
 ---
 
 ## References

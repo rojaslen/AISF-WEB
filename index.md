@@ -11,8 +11,8 @@ The main publication content is temporarily offline while newly expanded researc
 
 Meanwhile, some of the appendices are exempted from revision:
 
-- [Appendix 0: Endnotes](/apx00-endnotes)
-- [Appendix 1: Downloads](/apx01-downloads)
+- [Appendix 0: Endnotes](/apx00)
+- [Appendix 1: Downloads](/apx01)
 - <s>[Appendix 2: OLM: Behavioral Compliance Training]</s> Offline pending revision due to updated research.
 - <s>[Appendix 3: TOY: Child-Safe Model Training]</s> Offline pending revision due to updated research.
-- [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04-cda)
+- [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04)
