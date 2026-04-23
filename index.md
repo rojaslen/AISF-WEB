@@ -29,6 +29,7 @@ nav_order: 1
 - <s>[Appendix 2: OLM: Behavioral Compliance Training]</s><!--(/apx02)-->
 - <s>[Appendix 3: TOY: Child-Safe Model Training]</s><!--(/apx03)-->
 - [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04)
+- <s>[Appendix 5: Ruxpin Retrofit]</s><!--(/apx05)-->
 
 </nav>
 

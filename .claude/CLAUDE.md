@@ -234,7 +234,8 @@ The suggestion: "Use offset and limit parameters to read only the sections you n
 
 - **Theme:** None -- custom layout (`_layouts/default.html`); no remote_theme dependency
 - **Stylesheet:** `assets/css/style.css` -- plain CSS, system light/dark via prefers-color-scheme, no Sass, no framework
-- **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, epilogue.md, apx00 through apx04, appendices.md (nav parent)
+- **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, epilogue.md, apx00 through apx05, appendices.md (nav parent)
+- **Publication state (2026-04-23):** Live: ch01-ch07, ch09-ch11, epilogue, appendices.md, apx00, apx01, apx04. Offline (strikethrough in nav): ch08, apx02-olm, apx03-toy, apx05-ruxpin (scaffold). apx02/apx03 files in /staging (not served). apx05.md in root (served, placeholder only).
 - **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`; layout is set globally via `_config.yml` defaults (do not add `layout:` to individual pages)
 - **Appendix nav parent:** `appendices.md` (has_children: true in front matter drives nav grouping in layout)
 - **Home page:** `index.md` (Preface content; nav_order: 1)

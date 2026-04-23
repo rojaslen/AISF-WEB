@@ -62,6 +62,7 @@
 
 html {
   background-color: var(--color-bg);
+  scroll-padding-top: 3.5rem;   /* offset sticky header for skip link + anchor nav */
 }
 
 html, body {
@@ -117,6 +118,9 @@ html.font-l { font-size: 112.5%; }
 
 /* --- Site header --- */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
