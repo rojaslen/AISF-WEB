@@ -41,5 +41,31 @@ def process(data_file, csv_file, item_key, fieldnames):
         print(f'{csv_file}: no new data')
 
 
-process('/tmp/views.json', 'traffic/views.csv',  'views',  ['date', 'views',  'uniques'])
-process('/tmp/clones.json', 'traffic/clones.csv', 'clones', ['date', 'clones', 'uniques'])
+def snapshot(data_file, csv_file, item_key, fieldnames):
+    """Append a full dated snapshot (paths/referrers: 14-day rolling aggregate)."""
+    with open(data_file) as f:
+        data = json.load(f)
+
+    today = __import__('datetime').date.today().isoformat()
+    rows = [
+        dict(zip(['date'] + fieldnames[1:], [today] + [item[k] for k in fieldnames[1:]]))
+        for item in data
+    ]
+
+    if rows:
+        Path(csv_file).parent.mkdir(parents=True, exist_ok=True)
+        file_exists = Path(csv_file).exists()
+        with open(csv_file, 'a', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            if not file_exists:
+                writer.writeheader()
+            writer.writerows(rows)
+        print(f'{csv_file}: added {len(rows)} row(s)')
+    else:
+        print(f'{csv_file}: no data')
+
+
+process('/tmp/views.json',     'traffic/views.csv',     'views',  ['date', 'views',   'uniques'])
+process('/tmp/clones.json',    'traffic/clones.csv',    'clones', ['date', 'clones',  'uniques'])
+snapshot('/tmp/paths.json',    'traffic/paths.csv',     'paths',      ['date', 'path', 'title', 'count', 'uniques'])
+snapshot('/tmp/referrers.json','traffic/referrers.csv', 'referrers',  ['date', 'referrer', 'count', 'uniques'])

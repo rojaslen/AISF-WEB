@@ -20,6 +20,8 @@ jobs:
         run: |
           curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/views" -o /tmp/views.json
           curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/clones" -o /tmp/clones.json
+          curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/popular/paths" -o /tmp/paths.json
+          curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/popular/referrers" -o /tmp/referrers.json
 
       - name: Record stats
         run: python3 .github/scripts/record_traffic.py
