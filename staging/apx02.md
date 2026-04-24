@@ -157,6 +157,14 @@ following configuration was validated to hardware constraint (confirmed 2026-03-
 | Optimizer | adamw_torch (Instruct) / adamw_bnb_8bit (base) |
 | device_map | "auto" with max_memory {0: "14336MiB", "cpu": "24GiB"} |
 
+<figure>
+<video controls muted poster="/assets/images/submarine_curve.png" style="max-width: 100%; height: auto;">
+<source src="/assets/av/submarine_curve.mp4" type="video/mp4">
+GPU VRAM training profile. If your browser does not support video playback, the still image in the package (submarine_curve.png) shows the same profile.
+</video>
+<figcaption>Figure 1. GPU VRAM training profile, RTX 5060 Ti (representative training run). Shared VRAM traces the "submarine" curve: a periscope spike at model load, ~2 GB plateau during training, release on exit. Spike magnitude varies by model size; the plateau and release pattern are consistent across runs.</figcaption>
+</figure>
+
 Gradient checkpointing is model-dependent: not required for Mistral 7B (16 GB has
 headroom); required for Llama 3.1 8B in both `prepare_model_for_kbit_training()`
 and `TrainingArguments` (without it, activation memory overflows 16 GB before

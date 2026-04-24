@@ -1,0 +1,33 @@
+name: Record Traffic Stats
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch traffic data
+        env:
+          TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+        run: |
+          curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/views" -o /tmp/views.json
+          curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/clones" -o /tmp/clones.json
+
+      - name: Record stats
+        run: python3 .github/scripts/record_traffic.py
+
+      - name: Commit stats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add traffic/
+          git diff --staged --quiet || git commit -m "traffic stats $(date -u +%Y-%m-%d)"
+          git push

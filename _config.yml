@@ -8,6 +8,8 @@ exclude:
   - mistral-instruct
   - staging
   - temp
+  - traffic
+  - .github
   - Gemfile
   - Gemfile.lock
   - "*.bat"
