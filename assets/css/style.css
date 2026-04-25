@@ -132,11 +132,12 @@ html.font-l { font-size: 112.5%; }
 /* --- Font size picker --- */
 .font-size-picker {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.15rem;
   align-items: center;
 }
 
 .font-size-label {
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-muted);
   margin-right: 0.25rem;
@@ -150,11 +151,12 @@ html.font-l { font-size: 112.5%; }
   opacity: 0.45;
   cursor: pointer;
   font-family: var(--font-body);
+  font-size: 0.72rem;
   font-weight: 600;
-  min-width: 2rem;
-  min-height: 2rem;
+  min-width: 1.3rem;
+  min-height: 1.3rem;
   border-radius: 4px;
-  padding: 0.2rem 0.45rem;
+  padding: 0.15rem 0.3rem;
   line-height: 1;
 }
 
