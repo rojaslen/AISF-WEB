@@ -37,7 +37,7 @@ The Copilot Digital Accessibility app (CDA) is a lightweight Windows utility tha
 
 ## Origin
 
-CDA is a sub-branch of the [AI Stability Framework](https://leonardrojas.com){: target="_blank" rel="noopener noreferrer" }, an independent personal project. The Framework is a client-side middleware system for AI behavioral compliance; CDA is its accessibility layer, extracted, simplified for general use, and donated to the public domain. It was built as a simple, practical tool for coworkers and IT support staff, not designed as a commercial product. The full project is a separate, far larger body of work and remains a personal project; CDA is a public gift derived from it.
+CDA is a sub-branch of the [AI Stability Framework](https://leonardrojas.com){: target="_blank" rel="noopener noreferrer" }, an independent personal project. The Framework is a client-side middleware system for AI behavioral compliance; CDA is its accessibility layer, extracted, simplified for general use, and donated to the public domain. This accessibility-only branch started out with an enterprise compliance and reporting concept that could be applied across the entire M365 enterprise tenant. That idea is feasible, but was abandoned for lack of an Azure testing platform, leading to the much simpler CDA client app. It was built as a simple, practical tool for coworkers and IT support staff, not designed as a commercial product. The full project is a separate, far larger body of work and remains a personal project; CDA is a public gift derived from it. 
 
 ## Validation and Deployment
 
