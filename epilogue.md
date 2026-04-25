@@ -102,8 +102,8 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 <nav>
 <div class="chapter-nav">
-  <a href="/appendices">Appendices</a>
-  <a href="/#toc">Table of Contents</a>
+  <a href="/appendices">Next: Appendices</a>
+  <a href="/ch11">Previous: Chapter 11</a>
 </div>
 </nav>
 
