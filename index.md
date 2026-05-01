@@ -9,6 +9,7 @@ nav_order: 1
 
 # Table of Contents
 
+- <a href="preface">[Preface]</a>
 - [Chapter 1: What Time Is It?](/ch01)
 - [Chapter 2: The Platforms Are Not on Your Side](/ch02)
 - [Chapter 3: The Deployment Stack](/ch03)
@@ -34,7 +35,7 @@ nav_order: 1
 </nav>
 
 ---
-
+<a name="preface"></a>
 ## Preface
 
 The vendors aren't going to fix AI's hallucination problems any time soon.
