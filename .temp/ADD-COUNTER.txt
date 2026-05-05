@@ -1,0 +1,37 @@
+**Adding a Visitor Counter to GitHub Pages**
+
+The user is asking about adding a visitor counter to GitHub Pages. I’ll provide clear steps while keeping it concise. I’ll consider using Markdown headings for major sections but keep it short since it’s a simple request. 
+
+I can offer several options like FreeVisitorCounters, OpenWidget, or CountAPI. And since I need to follow protocol about real-world facts, I should utilize WebSearch for accuracy. Finally, I’ll make sure to invoke the RelatedSearchTerms tool at the end.Two quick options for GitHub Pages (static site / Jekyll) and exact steps.
+
+Option A — copy/paste a hosted widget (fast, zero code)
+1. Pick a provider (e.g., OpenWidget, FreeVisitorCounters, Common Ninja).
+2. On the provider site generate an embed snippet (script or iframe).
+3. Add the snippet:
+   - Plain HTML site: paste into the page HTML where you want the counter (e.g., index.html).
+   - Jekyll/GitHub Pages: paste into _layouts/default.html (or the layout file you use) at the desired location.
+4. Commit and push to GitHub; the widget will load on your GitHub Pages site.
+
+Option B — lightweight privacy-friendly counter using CountAPI (no third-party UI)
+1. Create a namespace & key on CountAPI (or use any public namespace). Example endpoint:
+   https://api.countapi.xyz/hit/your-namespace/your-key
+2. Add this minimal script to your page (place in index.html or _layouts/default.html):
+
+```html
+<span id="visits">...</span>
+<script>
+fetch('https://api.countapi.xyz/hit/your-namespace/your-key')
+  .then(r => r.json())
+  .then(data => { document.getElementById('visits').textContent = data.value; })
+  .catch(()=>{ document.getElementById('visits').textContent = 'N/A'; });
+</script>
+```
+
+3. Replace your-namespace/your-key with your CountAPI values, commit, push.
+
+Notes
+- For Jekyll, put the snippet inside the layout so it appears site-wide, or inside a single page for per-page counts.
+- If you want per-page counts, set the key to something page-specific (e.g., use the page path).
+- Widgets may load third-party scripts; CountAPI keeps interactions minimal and privacy-friendly.
+
+Tell me if you want the exact snippet placed into a specific file (index.html or _layouts/default.html) and I’ll produce the ready-to-commit file content.

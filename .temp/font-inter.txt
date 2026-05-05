@@ -1,0 +1,53 @@
+GPT-5 mini: 
+Add Inter to a website by self-hosting the font files. Steps and example code follows.
+
+Self-host Inter (best for privacy/performance/control)
+- Get the files:
+  - Download the Inter family from the official source: https://rsms.me/inter/ or the GitHub release (https://github.com/rsms/inter). These provide OTF/TTF and web-ready WOFF/WOFF2 files.
+- Convert if needed:
+  - Prefer WOFF2 (best compression) and WOFF for broader support. Use fonttools or online converters if only OTF/TTF are present.
+- Upload files to your site (e.g., /fonts/inter/).
+
+- Add @font-face rules in your CSS (example using WOFF2/WOFF):
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/fonts/inter/Inter-Variable.woff2") format("woff2");
+  }
+
+  /* Or individual weights */
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/inter/Inter-Regular.woff2") format("woff2"),
+         url("/fonts/inter/Inter-Regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/inter/Inter-Bold.woff2") format("woff2"),
+         url("/fonts/inter/Inter-Bold.woff") format("woff");
+  }
+
+- Use the font in CSS:
+  :root {
+    --ui-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  body { font-family: var(--ui-font); font-weight: 400; }
+
+Notes and tips
+- Use font-display: swap to avoid FOIT.
+- Prefer variable font (Inter-Variable.woff2) to reduce number of files and support multiple weights.
+- Only host weights/styles you need to reduce size.
+- Ensure correct MIME types on server for .woff/.woff2.
+- Check license: Inter is open-source (SIL Open Font License). You may self-host and redistribute per that license; keep the LICENSE file.
+- Test in different browsers and fall back to system fonts.
+
+If you want, I can generate the specific @font-face rules for a selected set of weights and formats and a suggested folder layout.

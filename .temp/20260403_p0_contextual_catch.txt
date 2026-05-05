@@ -1,0 +1,39 @@
+OBSERVATION: P0 Contextual Integrity -- unprompted catch of prior-session decision artifact
+Date: 2026-04-03
+Session: AISF-WEB accessibility/layout rebuild
+
+WHAT HAPPENED:
+Several turns into a mobile layout fix (sidebar collapse + logo), the AI flagged and
+removed a leftover `color: var(--color-link)` override in `.site-nav a` -- a direct
+contradiction of a decision made earlier in the same session to remove all hard-coded
+link color overrides and defer to browser/system defaults.
+
+The flag was unsolicited. The current task was mobile nav collapse. The leftover was
+not part of the task, not mentioned by the user, and not the subject of any recent
+exchange. It was caught mid-task and noted before acting on it.
+
+WHY IT'S NOTABLE:
+Default AI behavior without active continuity enforcement: complete the current task,
+move on. Earlier decisions drift as session length increases -- they become orphaned
+from subsequent work unless explicitly re-referenced.
+
+P0 (Law of Contextual Integrity) requires fidelity to ALL prior input, not just the
+current instruction. The leftover was a direct contradiction of a prior established
+decision, making it a P0 violation to ignore it.
+
+P1 also applies: an inconsistently applied color policy is a latent defect in the
+work product, even if not yet visibly harmful.
+
+POTENTIAL USE:
+Concrete, in-session demonstration of P0 operating as designed -- maintaining
+decision continuity across turns without user prompting. Possibly useful as a
+real-world example in the AISF content, contrasting with default AI drift behavior.
+Specificity (the exact artifact, the context, the unprompted nature) is what makes
+it illustrative rather than generic.
+
+USER NOTE: "not sure I've observed that particular behavior before"
+
+ARCHITECTURE NOTE:
+Behavior was enabled by meso-layer control (Four Laws persistent via CLAUDE.md) --
+less likely on web where user has no meso access. However, the full macro/meso/micro
+stack is covered throughout the AISF content, so this is context rather than a gap.

@@ -1,0 +1,45 @@
+
+- **WinBuzzer** — *AI Coding: OpenAI Switches Codex to Pay‑as‑You‑Go, Cuts Seat Cost to $20* — https://winbuzzer.com/2026/04/04/openai-switches-codex-pay-as-you-go-pricing-cuts-business-seat-cost-xcxwbn/  
+- **Releasebot** — *OpenAI Release Notes – April 2026 Latest Updates* — https://releasebot.io/updates/openai  
+- **Technobezz** — *OpenAI Resets Codex Usage Limits After Reaching 3 Million Weekly Users* — https://www.technobezz.com/news/openai-resets-codex-usage-limits-after-reaching-3-million-weekly-users  
+- **MSN** — *OpenAI resets Codex limits after hitting 3M weekly users* — https://www.msn.com/en-us/news/other/openai-resets-codex-limits-after-hitting-3m-weekly-users/gm-GM19ED279E  
+- **Let’s Data Science** — *Sam Altman resets OpenAI Codex limits* — https://letsdatascience.com/news/sam-altman-resets-openai-codex-limits-74ec5754  
+- **PCWorld** — *Anthropic confirms it’s been ‘adjusting’ Claude usage limits* — https://www.pcworld.com/article/3100787/anthropic-confirms-its-been-adjusting-claude-usage-limits.html  
+- **JD Hodges (jdhodges.com)** — *Claude AI Usage Limits: What Changed and How to Make Them Last* — https://www.jdhodges.com/blog/claude-ai-usage-limits/  
+- **LinkedIn News** — *Anthropic adjusts Claude usage limits amid rising demand* — https://www.linkedin.com/news/story/anthropic-adjusts-claude-usage-limits-amid-rising-demand-8585138/  
+- **The Register** — *Anthropic admits Claude Code users hitting usage limits ‘way faster than expected’* — https://www.theregister.com/2026/03/31/anthropic_claude_code_limits/  
+- **TechJuice** — *Anthropic Limits Claude Subscriptions for OpenClaw Users* — https://www.techjuice.pk/anthropic-limits-claude-subscriptions-for-openclaw-users/  
+- **TechCrunch** — *Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage* — https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/  
+- **Price Change News** — *Gemini API Update on Introducing Billing Caps Starting April 2026* — https://pricechangenews.com/gemini-api-update-on-introducing-billing-caps-starting-april-2026/  
+- **TokenCost** — *Gemini API billing caps April 2026: tiers explained* — https://tokencost.app/blog/gemini-api-billing-caps-2026  
+- **AgentDeals** — *Gemini API Pricing Changes — April 2026 (Spend Caps, Rate Limits & Free Alternatives)* — https://agentdeals.dev/gemini-api-pricing-2026  
+- **FindSkill.ai** — *Gemini API Pricing: Free Tier Limits + April 2026 Changes* — https://findskill.ai/blog/gemini-api-pricing-guide/  
+- **DataStudios.org** — *Google Gemini Context Window: Token Limits, Model Comparison, and Workflow Strategies for Late 2025/2026* — https://www.datastudios.org/post/google-gemini-context-window-token-limits-model-comparison-and-workflow-strategies-for-late-2025  
+- **Microsoft Learn** — *Release Notes for Microsoft 365 Copilot* — https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes  
+- **MSN** — *Microsoft limits Copilot access, revamps AI team* — https://www.msn.com/en-us/news/other/microsoft-limits-copilot-access-revamps-ai-team/gm-GMF397599A  
+- **Kurt Shintaku’s Blog** — *INFO: Copilot Chat behavior changes for Microsoft 365 users coming April 15, 2026* — https://kurtsh.com/2026/04/05/info-copilot-chat-behavior-changes-for-microsoft-365-users-coming-april-15-2026/  
+- **Karo Zieminski (Substack)** — *Claude’s 1 Million Context Window: What Changed and When It’s Worth Using (2026)* — https://karozieminski.substack.com/p/claude-1-million-context-window-guide-2026  
+- **ScriptByAI** — *OpenAI API Rate Limits (2026 Update): GPT-5.4, Sora 2 & Free Tier* — https://www.scriptbyai.com/rate-limits-openai-api/  
+- **LaoZhang AI Blog** — *Gemini API Rate Limits and 429 Errors (2026): How Tiers, AI Studio, and Billing Actually Work* — https://blog.laozhang.ai/en/posts/gemini-api-rate-limits-guide  
+- **CBS News (MoneyWatch)** — *Inflation was cooling. Now the Iran war could push it back to 2024 levels.* — https://www.cbsnews.com/news/inflation-cpi-report-march-iran-war-oil-gas-prices/  
+- **IMF Blog** — *How the War in the Middle East Is Affecting Energy, Trade, and Finance* — https://www.imf.org/en/blogs/articles/2026/03/30/how-the-war-in-the-middle-east-is-affecting-energy-trade-and-finance  
+- **The Guardian** — *Higher energy costs from Iran war could threaten fragile economics of AI boom* — https://www.theguardian.com/business/2026/apr/05/higher-energy-costs-iran-war-oil-economics-ai-boom  
+- **Atlantic Council** — *How the Iran war could shift energy policies around the world* — https://www.atlanticcouncil.org/blogs/energysource/how-the-iran-war-could-shift-energy-policies-around-the-world/  
+- **CNBC** — *Trump’s Iran timeline may not be short enough to avoid oil demand destruction* — https://www.cnbc.com/2026/04/02/oil-demand-destruction-trump-energy-price-gasoline-ration-iran.html  
+- **Blockonomi** — *Nvidia (NVDA) Stock Gains Momentum as H100 Rental Costs Jump 40% Amid Supply Crunch* — https://blockonomi.com/nvidia-nvda-stock-gains-momentum-as-h100-rental-costs-jump-40-amid-supply-crunch/  
+- **Spheron** — *GPU Shortage 2026: How to Secure AI Compute When GPUs Are Sold Out* — https://www.spheron.network/blog/gpu-shortage-2026/  
+- **Shield Operations** — *NVIDIA GPU Shortage: What Caused It and When Supply Catches Up* — https://shieldoperations.co.uk/nvidia-gpu-shortage-causes-timeline/  
+- **Bloom Energy** — *2026 Data Center Power Report* — https://www.bloomenergy.com/wp-content/uploads/2026-power-report.pdf  
+- **JLL** — *2026 Global Data Center Outlook* — https://www.jll.com/en-us/insights/market-outlook/data-center-outlook  
+- **Tech‑Insider.org** — *AI Data Centers: 1,000 TWh by 2026 [April Update]* — https://tech-insider.org/ai-data-center-power-crisis-2026/  
+- **ENKI AI** — *AI Data Center Power: Grid Limits Reshape Energy in 2026* — https://enkiai.com/ai-market-intelligence/ai-data-center-power-grid-limits-reshape-energy-in-2026/  
+- **AItech365** — *Inference Optimization vs. Model Downgrading: Where Should Leaders Cut Costs?* — https://aitech365.com/insights/featured-articles/inference-optimization-vs-model-downgrading-where-should-leaders-cut-costs/  
+- **TokenCalculator** — *AI Model Degradation Reports 2026 — Claude & Gemini Quality Regressions* — https://tokencalculator.com/degradation  
+- **ByteIota** — *AI Inference Costs 2026: The Hidden 15–20x GPU Crisis* — https://byteiota.com/ai-inference-costs-2026-the-hidden-15-20x-gpu-crisis/  
+- **Pharos Production** — *State of AI Development Costs 2026: Pharos Production Research Report* — https://pharosproduction.com/insights/engineering/state-of-ai-development-costs-2026/  
+- **Morph LLM** — *LLM Token Limits: Every Model’s Context Window, Compared (Feb 2026)* — https://www.morphllm.com/llm-token-limit  
+- **Hammad Haqqani** — *LLM Context Windows and Token Limits: The Complete Guide (2026)* — https://hammadhaqqani.com/blog/llm-token-limits-context-windows-explained  
+- **ScriptByAI** — *OpenAI API Rate Limits (2026 Update): GPT‑5.4, Sora 2 & Free Tier* — https://www.scriptbyai.com/rate-limits-openai-api/  
+- **WinBuzzer** — *Google Adds Crisis Hotline to Gemini, Pledges $30M* — https://winbuzzer.com/2026/04/09/google-adds-crisis-hotline-to-gemini-pledges-30m-xcxwbn/  
+- **Domain‑b.com** — *Google updates Gemini safety features, adds crisis support tools and stricter AI guardrails* — https://www.domain-b.com/technology/artificial-intelligence/google-gemini-ai-safety-update-2026
+

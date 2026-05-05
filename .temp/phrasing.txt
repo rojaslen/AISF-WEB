@@ -1,0 +1,76 @@
+AISF standalone usage in web content -- review for "AI Stability Framework" / "the Framework"
+Generated: 2026-04-07
+Rule: prefer "AI Stability Framework" or "the Framework" (TM); avoid "AISF" in prose except
+      filenames, table headers, and technical labels where full name won't fit.
+
+EXCLUDED FROM LIST (acceptable uses):
+  - URLs / GitHub release links (AISF-CORE, AISF-CDA-v1.0, AISF-OLM-REPR, etc.)
+  - AISF-CORE / AISF-DEMO as product/release names
+  - "AISF+CHAT" / "AISF+LANG" / "AISF-tuned" as adapter identifiers in apx02 tables and
+    associated table-header prose (technical labels; full name would not fit)
+  - index.md:54 "AISF at LeonardRojas dot com" (email address)
+  - .claude/ files (internal)
+
+NOTE: apx04-cda.md:35 "The full AISF project is separate" -- user prose, already flagged
+      to user 2026-04-07 session; user to decide.
+
+==============================================================================
+apx01-faq.md
+==============================================================================
+  23  "AISF works in the Claude Code..."
+  33  "AISF's contribution isn't the relatively minor technical aspects..."
+  39  "I extracted the core principles of AISF from the detection engine..."
+  47  "AISF operation is a transparent, plaintext, device-only, user-driven process."
+  49  "The AISF app works exclusively..." / "AISF works well with this architecture..."
+  53  "two-layer AISF mediation" / "the AISF hypothesis run in reverse"
+  57  "AISF demonstrably *works at any layer*"
+  59  "AISF produces absolutely nothing..." / "AISF doesn't store, edit, or intercept..."
+  81  "AISF-trained Instruct models" [hyphenated adjective -- borderline, user call]
+  87  "Blocking AISF would also be counterproductive..."
+  91  "AISF's workflow is indistinguishable..."
+  97  "AISF anchoring is evicted from context..."
+
+==============================================================================
+apx02-olm.md  (prose only; AISF+CHAT/AISF+LANG adapter labels excluded above)
+==============================================================================
+  575  "AISF training across all architectures."
+
+==============================================================================
+apx03-toy.md
+==============================================================================
+   2  [front matter title] "AISF Child-Safe Model Training" [title field]
+   7  [H1] "AISF Child-Safe Model Training" [heading]
+  39  "The standard AISF deployment architecture..."
+  53  "the hardest possible case for AISF."
+ 311  "main OLM track's AISF compliance battery"
+ 384  "the three-layer AISF architecture"
+
+==============================================================================
+ch08-olm.md
+==============================================================================
+  10  "add AISF principles to Mistral 7B"
+  14  "AISF training affected general instruction-following"
+  20  "An AISF-trained model will refuse those..." [hyphenated adjective -- borderline]
+  24  "the AISF-trained model scored..." [hyphenated adjective -- borderline]
+  32  "four AISF-trained adapters..." [hyphenated adjective -- borderline]
+
+==============================================================================
+ch09-observations.md
+==============================================================================
+  14  "without running the AISF startup sequence first"
+  20  "both perform very well with AISF"
+  22  "superior performance with AISF mediation"
+  38  "During AISF development..."
+  44  "independently recognized AISF mediation until explicitly told..."
+
+==============================================================================
+ch10-tryit.md
+==============================================================================
+  35  "including AISF"
+  44  "the AISF executable"
+  50  "embeds AISF principles directly..."
+
+==============================================================================
+ch11-wrapup.md
+==============================================================================
+  34  "AISF has one developer and one primary tester..."
