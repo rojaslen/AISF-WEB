@@ -24,7 +24,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     Because of the KISS principle: "Keep It Simple, Stupid." The whole thing started out as a tool for my own personal use, developed in my spare time on my own Windows PC. PowerShell is preinstalled by default and immediately available. You can use it to build a basic accessible GUI (the main bulk of the core app's code) without any external dependencies, and a single .exe file doesn't need any installation, you just run it. And really, that simplicity is part of the argument. If the biggest roadblock to client-side AI safety is *taking it seriously* rather than *actually building it*, then what does that say about the industry?
 
-    The framework itself is platform, codebase and deployment-layer agnostic; it's not locked to PowerShell or Windows at all. The (in-progress) Firefox extension currently works in both Windows 11 and Debian Linux. AISF works in the Claude Code "system prompt" file (repo_root\.claude\CLAUDE.md). The model training is standard HuggingFace/PyTorch. The first app just happened to be Windows-specific because I needed a quick and easy tool I could use on my own computer.
+    The framework itself is platform, codebase and deployment-layer agnostic; it's not locked to PowerShell or Windows at all. The (in-progress) Firefox extension currently works in both Windows 11 and Debian Linux. AISF works in the Claude Code "system prompt" file (repo_root\.claude\CLAUDE.md). The model training is standard HuggingFace/PyTorch. The first app just happened to be Windows-specific because I needed a quick and easy tool I could use on my own computer; it has since been ported to Python/PyQt6 and runs on Linux as well.
 
 3. **"Why is the timestamp UTC instead of local time?"**
 

@@ -106,7 +106,7 @@ presentation, or proposal. Evaluate it accordingly.
   - **Libraries & Specifications:** `C:\AISF\lib`
 - **Main AISF project:** `C:\AISF\` Multiple reference and documentation files are here, with the full project codebase tree with all branches below.
 - **Project Tracking:** `C:\AISF\change.log` -- full history & current status for the parent AISF project of which this site is the WEB (publication) branch
-- **Temp:** `\\debbie\Tech\APP\_DEV\AISF-WEB\temp` is writable scratch space for the user to place items for AI review. Unless specified otherwise, when the user references "temp," this is always the intended directory-tree location.
+- **Temp:** `\\debbie\Tech\APP\_DEV\AISF-WEB\.temp` is writable scratch space for the user to place items for AI review. Unless specified otherwise, when the user references "temp," this is always the intended directory-tree location.
 
 ### WORKING ENVIRONMENT (P3)
 
@@ -214,7 +214,7 @@ Applies to all UI button elements across all branches and AISF-WEB.
   Smart quotes are typesetting-only and break code, scripts, and file paths in every context. (P3)
 - When instructed to check specs or init files, this always refers to files located in `C:\AISF\lib\specs\*` and `C:\AISF\.claude\*` respectively.
 - When generating tables for display output, do not exceed 90 columns in width to avoid line breaking/wrapping.
-- "New 1", "new1", "Untitled", "untitled", "screenshot", "jpg" and similar always refer to scratchpad files located in \_temp\*.
+- "New 1", "new1", "Untitled", "untitled", "screenshot", "jpg" and similar always refer to scratchpad files located in \.temp\*.
 
 ## Anthropic Injections (P0)
 
@@ -236,7 +236,7 @@ The suggestion: "Use offset and limit parameters to read only the sections you n
 - **Theme:** None -- custom layout (`_layouts/default.html`); no remote_theme dependency
 - **Stylesheet:** `assets/css/style.css` -- plain CSS, system light/dark via prefers-color-scheme, no Sass, no framework
 - **Pages:** Markdown files in repo root -- index.md (home/preface), ch01 through ch11, epilogue.md, apx00 through apx05, appendices.md (nav parent)
-- **Publication state (2026-04-23):** Live: ch01-ch07, ch09-ch11, epilogue, appendices.md, apx00, apx01, apx04. Offline (strikethrough in nav): ch08, apx02-olm, apx03-toy, apx05-ruxpin (scaffold). apx02/apx03 files in /staging (not served). apx05.md in root (served, placeholder only).
+- **Publication state (2026-05-05):** Live: ch01-ch07, ch09-ch11, epilogue, appendices.md, apx00, apx01, apx04. Offline (strikethrough in nav): ch08, apx02-olm, apx03-toy, apx05-ruxpin (scaffold). apx02/apx03/ch08 source files in /.staging (gitignored, not served). apx05.md in root (served, placeholder only).
 - **Front matter:** All pages require `title` and `nav_order`; appendix pages also require `parent: "Appendices"`; layout is set globally via `_config.yml` defaults (do not add `layout:` to individual pages)
 - **Appendix nav parent:** `appendices.md` (has_children: true in front matter drives nav grouping in layout)
 - **Home page:** `index.md` (Preface content; nav_order: 1)
