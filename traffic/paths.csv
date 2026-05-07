@@ -109,3 +109,13 @@ date,path,title,count,uniques
 2026-05-05,/rojaslen/AISF-WEB/blob/main/_config.yml,/blob/main/_config.yml,1,1
 2026-05-05,/rojaslen/AISF-WEB/blob/main/traffic/clones.csv,/blob/main/traffic/clones.csv,1,1
 2026-05-05,/rojaslen/AISF-WEB/blob/main/traffic/paths.csv,/blob/main/traffic/paths.csv,1,1
+2026-05-07,/rojaslen/AISF-WEB,Overview,9,1
+2026-05-07,/rojaslen/AISF-WEB/graphs/traffic,/graphs/traffic,2,1
+2026-05-07,/rojaslen/AISF-WEB/actions,/actions,1,1
+2026-05-07,/rojaslen/AISF-WEB/actions/metrics/performance,/actions/metrics/performance,1,1
+2026-05-07,/rojaslen/AISF-WEB/actions/metrics/usage,/actions/metrics/usage,1,1
+2026-05-07,/rojaslen/AISF-WEB/blob/main/traffic/clones.csv,/blob/main/traffic/clones.csv,1,1
+2026-05-07,/rojaslen/AISF-WEB/blob/main/traffic/paths.csv,/blob/main/traffic/paths.csv,1,1
+2026-05-07,/rojaslen/AISF-WEB/blob/main/traffic/referrers.csv,/blob/main/traffic/referrers.csv,1,1
+2026-05-07,/rojaslen/AISF-WEB/blob/main/traffic/views.csv,/blob/main/traffic/views.csv,1,1
+2026-05-07,/rojaslen/AISF-WEB/pulse,/pulse,1,1
