@@ -24,9 +24,9 @@
   --color-rule:         #C8BAA8;
   --color-code-bg:      #EDE5D8;
   --color-muted:        #444444;
-  --color-link:         #283198;   /* TM Navy */
-  --color-link-visited: #1A2470;   /* Dark Navy -- visited */
-  --color-link-hover:   #605838;   /* Harvest Gold -- matches brand hover */
+  --color-link:         #605838;         /* Harvest Gold -- active button */
+  --color-link-visited: rgba(96, 88, 56, 0.45);   /* Harvest Gold @ 45% -- inactive button */
+  --color-link-hover:   #746C44;         /* Antique Gold -- button hover */
   --font-body:          "Inter", system-ui, -apple-system, sans-serif;
   --font-mono:          'Courier New', Courier, monospace;
   --color-alert-bg:     #FDF8E6;
@@ -47,9 +47,9 @@
     --color-rule:         transparent;
     --color-code-bg:      #0D1033;   /* functional surface -- not a brand color */
     --color-muted:        #C0BDB9;
-    --color-link:         #E7D789;   /* Pale Gold */
-    --color-link-visited: #A07840;   /* Amber Gold ~4.8:1 on Midnight Blue */
-    --color-link-hover:   #FFF8E0;   /* near-white gold -- clearly above Pale Gold base */
+    --color-link:         #605838;         /* Harvest Gold -- active button */
+    --color-link-visited: rgba(96, 88, 56, 0.45);   /* Harvest Gold @ 45% -- inactive button */
+    --color-link-hover:   #746C44;         /* Antique Gold -- button hover */
     --color-alert-bg:     #1A1400;
     --color-alert-border: #746C44;
     --color-btn-hover:    #746C44;
