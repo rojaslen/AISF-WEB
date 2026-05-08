@@ -129,6 +129,17 @@ html.font-l { font-size: 112.5%; }
   padding: 0.75rem 2rem;
 }
 
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background-color: #746C44;
+}
+
 /* --- Font size picker --- */
 .font-size-picker {
   display: flex;
@@ -221,6 +232,7 @@ main {
   background-color: #F5EEE4;   /* Bone -- content area over White Gold page */
   color: var(--color-text);
   border: 1px solid #746C44;   /* Antique Gold -- both modes */
+  border-top: none;            /* top border is on .site-header::after (sticky) */
 }
 
 @media (prefers-color-scheme: dark) {
