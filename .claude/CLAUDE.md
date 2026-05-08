@@ -113,6 +113,7 @@ presentation, or proposal. Evaluate it accordingly.
 - Read C:\AISF\lib\specs.claudignore at session start.
 - Read the most recent date's entry/entries (more than one may exist per date) in `C:\AISF\change.log` to establish current project status.
 - Read all files in C:\AISF\lib\specs\ to establish the Source of Truth (SOT) for this workspace.
+  - Full C:\AISF\lib\specs\SPEC_design_stds_color_canon.md in active context is *critical* for all AISF-WEB work.
 - /AISF/ and all subdirectories pre-approved for full READ access.
   - /tmp/ is pre-approved for full READ-WRITE access (operational scratch space).
     - Resolves to C:\Program Files\Git\tmp\ -- outside project repo. 

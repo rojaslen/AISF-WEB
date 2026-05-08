@@ -25,7 +25,8 @@
   --color-code-bg:      #EDE5D8;
   --color-muted:        #444444;
   --color-link:         #283198;   /* TM Navy */
-  --color-link-visited: #605838;   /* Harvest Gold -- clear distinction from Navy */
+  --color-link-visited: #1A2470;   /* Dark Navy -- visited */
+  --color-link-hover:   #605838;   /* Harvest Gold -- matches brand hover */
   --font-body:          "Inter", system-ui, -apple-system, sans-serif;
   --font-mono:          'Courier New', Courier, monospace;
   --color-alert-bg:     #FDF8E6;
@@ -48,6 +49,7 @@
     --color-muted:        #C0BDB9;
     --color-link:         #E7D789;   /* Pale Gold */
     --color-link-visited: #A07840;   /* Amber Gold ~4.8:1 on Midnight Blue */
+    --color-link-hover:   #FFF8E0;   /* near-white gold -- clearly above Pale Gold base */
     --color-alert-bg:     #1A1400;
     --color-alert-border: #746C44;
     --color-btn-hover:    #746C44;
@@ -79,8 +81,11 @@ body {
   letter-spacing: 0.035em;
 }
 
-a        { color: var(--color-link); }
-a:visited { color: var(--color-link-visited); }
+a         { color: var(--color-link); }
+a:visited  { color: var(--color-link-visited); }
+a:hover,
+a:focus-visible { color: var(--color-link-hover); }
+a:focus-visible { outline: 2px solid var(--color-link); outline-offset: 2px; }
 
 /* --- Screen-reader-only utility --- */
 .sr-only {
