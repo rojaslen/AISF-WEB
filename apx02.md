@@ -1,16 +1,16 @@
 ---
-title: "Appendix 1: OLM Behavioral Compliance Training"
+title: "Appendix 2: OLM Behavioral Compliance Training"
 parent: "Appendices"
 nav_order: 3
 ---
 
-# Appendix 1: OLM Behavioral Compliance Training
+# Appendix 2: OLM Behavioral Compliance Training
 
 ## Experimental Results Across Multiple Architectures
 
 **Author:** Leonard Rojas
 
-**Date:** 2026-05-17
+**Date:** 2026-05-23
 
 **Status:** Final (V11 cohort complete 2026-05-17)
 
@@ -166,7 +166,7 @@ following configuration was validated to hardware constraint (confirmed 2026-03-
 | Epochs | 10 |
 | Learning rate | 1e-4 |
 | Optimizer | adamw_torch (Instruct) / adamw_bnb_8bit (base) |
-| device_map | "auto" with max_memory {0: "14336MiB", "cpu": "24GiB"} |
+| device_map | "auto" with max_memory {0: "12288MiB", "cpu": "24GiB"} |
 
 <figure>
 <video controls muted poster="/assets/images/submarine_curve.png" style="max-width: 100%; height: auto;">
