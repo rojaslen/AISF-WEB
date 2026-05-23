@@ -1,3 +1,10 @@
+# PII, internal-only, confidential & proprietary data
+**/.*/
+**/zzz_*/
+**/.claude/
+**/.lib/
+*GH_PAT.txt
+
 # YouTube content
 **/assets/av/rxp*.mp4
 
