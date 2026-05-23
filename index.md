@@ -5,8 +5,6 @@ nav_order: 1
 <nav aria-label="Site navigation" markdown="1">
 <a name="toc"></a>
 
-*(Portions of this publication's content are temporarily offline for incorporation of newly expanded research and data. The content is being revised, and will return soon.)*
-
 # Table of Contents
 
 - <a href="#preface">Preface</a>
@@ -17,7 +15,7 @@ nav_order: 1
 - [Chapter 5: The Four Laws of Instanced AI](/ch05)
 - [Chapter 6: What AI Perceives](/ch06)
 - [Chapter 7: The Human-AI Extended Mind](/ch07)
-- <s>[Chapter 8: Defense in Depth?]</s><!--(/ch08)-->
+- [Chapter 8: Defense in Depth?](/ch08)
 - [Chapter 9: Field Observations](/ch09)
 - [Chapter 10: How to Try It](/ch10)
 - [Chapter 11: What's Next](/ch11)
@@ -27,7 +25,7 @@ nav_order: 1
 
 - [Appendix 0: Endnotes](/apx00)
 - [Appendix 1: Downloads](/apx01)
-- <s>[Appendix 2: OLM: Behavioral Compliance Training]</s><!--(/apx02)-->
+- [Appendix 2: OLM: Behavioral Compliance Training](/apx02)
 - <s>[Appendix 3: TOY: Child-Safe Model Training]</s><!--(/apx03)-->
 - [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04)
 <!---[Appendix 5: Ruxpin Retrofit](/apx05)-->

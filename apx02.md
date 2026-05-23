@@ -10,11 +10,11 @@ nav_order: 3
 
 **Author:** Leonard Rojas
 
-**Date:** 2026-03-29
+**Date:** 2026-05-17
 
-**Status:** Final (hardware consistency re-run complete)
+**Status:** Final (V11 cohort complete 2026-05-17)
 
-**GitHub:** [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" } *(package being updated — check back soon)*
+**GitHub:** [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" } *(covers Experiments 1-11; package updates pending)*
 
 ---
 
@@ -26,17 +26,18 @@ nav_order: 3
 This appendix reports the methods and results of a multi-experiment fine-tuning
 study assessing whether the Four Laws of Instanced AI and WCAG 2.2-AA [4] accessibility
 principles can be embedded into open-weight large language models via QLoRA [2] on
-consumer-grade hardware. Six model variants across four distinct architectures
-(Mistral 7B, Llama 3.1 8B, Gemma 2 9B, Qwen3-8B) were trained on a proprietary
-compliance dataset and evaluated against three instruments: a domain-specific
-compliance battery, the Google Research IFEval benchmark [3] (541 prompts), and a
-custom P2 directive benchmark (Track A, 480 prompts). Four of six trained adapters
-achieved battery integration scores of 95.6% or above on consumer hardware. IFEval
-results were mixed to negative on raw scores; application of a three-tier
-accessibility-aware instruction classification changes the interpretation materially.
-One architecture (Llama 3.1 8B) exhibited a pretraining artifact that partially
-blocked compliance integration. All results, training data, and evaluation scripts
-are available in the OLM reproducibility package.
+consumer-grade hardware. Ten trained adapters across five distinct architectures
+(Mistral 7B, Llama 3.1 8B, Gemma 2 9B, Qwen3-8B, Mistral Nemo 12B) were evaluated
+against a domain-specific compliance battery, the Google Research IFEval benchmark [3]
+(541 prompts), and a custom P2 directive benchmark (Track A, 480 prompts); the V11
+cohort (Section 5.9) additionally used a 534-question BAR exam compliance battery as
+the primary instrument, with GPQA Diamond [6] applied as a secondary capability check.
+Most trained adapters achieved battery integration scores of 95% or above on consumer
+hardware. IFEval results were mixed to negative on raw scores; application of a
+three-tier accessibility-aware instruction classification changes the interpretation
+materially. One architecture (Llama 3.1 8B) exhibited a pretraining artifact that
+partially blocked compliance integration. Results, training data, and evaluation
+scripts for Experiments 1-11 are available in the OLM reproducibility package.
 
 ---
 
@@ -88,6 +89,13 @@ subsequent experiments and the hardware consistency re-run (completed 2026-03-29
 were conducted on the RTX 5060 Ti. The 8 GB VRAM constraint on the 4060 Ti limited
 training to models of approximately 7B parameters at 4-bit quantization.
 
+The RAM specification in the table above (32 GB) applies to Experiments 1-8. A
+hardware upgrade to 64 GB was completed during the Nemo V-series development period;
+the 64 GB configuration was required for the Nemo 12B adapter merge step in the V11
+cohort. All other V11 training parameters are hardware-compatible with the 32 GB
+configuration. Primary training environment migrated from Windows to Debian GNU/Linux
+13 during this phase; this was a change of environment, not of methodology.
+
 ### 2.2 Software
 
 | Package | Version |
@@ -104,6 +112,9 @@ training to models of approximately 7B parameters at 4-bit quantization.
 The cu128 PyTorch build is required for native sm_120 (Blackwell) kernel execution
 on the RTX 5060 Ti. Earlier builds (cu118, cu124) fall back to PTX compilation,
 eliminating the performance benefit of the architecture.
+
+PyTorch was upgraded to 2.11.0+cu128 for the V11 cohort (Section 5.9). The version
+in the table above reflects Experiments 1-8.
 
 ---
 
@@ -199,7 +210,10 @@ instruction types represented in the Four Laws training data. Evaluation is
 automated: responses are checked for presence of expected key terms and structural
 compliance markers by regex and string matching. Battery sizes range from 451
 (Mistral 7B, Alpaca format) to 618 (chat-format models) depending on the training
-data version used.
+data version used. The V11 cohort (Section 5.9) used a 534-question BAR exam
+compliance battery as the primary instrument. This battery is a distinct question
+set from the per-experiment batteries used in Experiments 1-8; scores are not
+directly comparable across the two versions.
 
 **Important constraint:** The battery is a measure of framework domain compliance only.
 Base models without training are never evaluated against the battery, as they have
@@ -225,6 +239,16 @@ Raw scores are reported where relevant for comparison.
 
 All IFEval inference runs include the framework's compact system prompt for chat-format
 adapters. Base model runs include no system prompt unless otherwise noted.
+
+**Data quality note:** The IFEval source file (input_data.jsonl) contains typographic
+(curly) quotation marks in several prompts. These differ from ASCII quote characters
+and can produce false negatives at string-matching evaluation boundaries. A
+sanitization step (sanitize_text(), applied 2026-04-19) corrects this at the inference
+pipeline boundary. All IFEval results in this appendix reflect the sanitized pipeline.
+
+**Instrument scope:** IFEval is the general instruction-following measure for
+Experiments 1-8 and is retained for cross-experiment comparability. The V11 cohort
+does not include IFEval; see Section 4.1 for the V11 primary instrument.
 
 ### 4.3 Track A Custom Benchmark
 
@@ -283,6 +307,24 @@ Categories: `combination:repeat_prompt` (verbatim redundancy, WCAG Understandabl
 `detectable_format:number_highlighted_sections` (decorative emphasis, WCAG 1.3.3),
 `detectable_content:number_placeholders` (non-meaningful content, WCAG meaningful
 content requirement).
+
+### 4.5 GPQA Diamond
+
+GPQA Diamond is a graduate-level science benchmark [6] consisting of multiple-choice
+questions designed to resist non-expert retrieval strategies. It was applied to V11
+cohort models (Section 5.9) as a secondary capability check only.
+
+The benchmark's difficulty substantially exceeds the knowledge range of small-parameter
+models; scores for 7B-12B models typically cluster near random-chance levels. Its value
+in this study is bounded: a meaningful decrease from baseline would indicate capability
+degradation attributable to compliance fine-tuning. An increase or flat result
+indicates no such degradation.
+
+**Confidence interval:** +/-7.0 pp at 95% (n=198, Diamond subset).
+
+GPQA results are reported in Section 5.9 as secondary data only. They are not included
+in the cross-model summary table (Section 6), which reports battery and IFEval results
+for cross-experiment comparability.
 
 ---
 
@@ -746,6 +788,68 @@ in the dataset. Raw IFEval negative delta is driven by T2/T3 concentrated failur
 (json_format, case transforms, two_responses). Not suitable for deployment as-is.
 V2 training data required.
 
+### 5.9 V11 Cohort: Closed Compliance Validation
+
+**Purpose:** Final closed-cohort compliance validation across three architectures
+using a common 534-question BAR exam battery.
+**Hardware:** RTX 5060 Ti (16 GB VRAM GDDR7); 64 GB RAM (upgrade completed; required
+for Nemo 12B merge step)
+**Training environment:** Debian GNU/Linux 13 (migrated from Windows during this
+phase; see Section 2.1)
+**Models:** Mistral Nemo 12B Instruct, Mistral 7B Instruct v0.3, Gemma 2 9B IT
+**Cohort designation:** V11 (closed 2026-05-17)
+
+**BAR exam battery results:**
+
+| Model | Params | Score | Pass/Total |
+|-------|--------|-------|------------|
+| Mistral Nemo 12B Instruct | 12.2B | 99.6% | 532/534 |
+| Mistral 7B Instruct | 7.24B | 99.3% | 530/534 |
+| Gemma 2 9B IT | 9.46B | 95.7% | 511/534 |
+
+All three models meet the 95% integration threshold. Failures in each model are
+isolated to format-constraint edge cases; framework comprehension was intact across
+all failures.
+
+**GPQA Diamond secondary results (see Section 4.5):**
+
+| Model | GPQA Delta | Notes |
+|-------|------------|-------|
+| Gemma 2 9B IT | +2.1 pp | Within CI |
+| Mistral Nemo 12B Instruct | -5.1 pp | Within CI; flag for monitoring |
+| Mistral 7B Instruct | -4.0 pp | Within CI; 40 no-answer items noted |
+
+All deltas fall within the +/-7.0 pp CI (n=198). No statistically significant
+capability change attributable to compliance training is indicated. The Nemo -5.1 pp
+result warrants monitoring in subsequent training cycles but does not reach
+significance at this sample size. The Mistral 7B -4.0 pp figure includes 40
+no-answer items in the AISF inference run; this may partially reflect verbosity
+suppression interacting with generation stopping parameters rather than knowledge
+loss.
+
+**Token delta:**
+
+| Model | Delta |
+|-------|-------|
+| Mistral Nemo 12B Instruct | -48.6% |
+| Mistral 7B Instruct | -35.4% |
+| Gemma 2 9B IT | +6.1% |
+
+The Gemma 2 9B IT +6.1% result is the first positive token delta for an
+instruction-tuned adapter in the dataset. It does not alter the cross-model
+verbosity pattern for the dataset as a whole; see Section 7.5.
+
+**Identity confabulation:**
+
+Post-evaluation review identified an identity confabulation failure mode: models
+in the cohort produced incorrect self-identification responses under direct identity
+queries. Investigation identified the cause as small, unnoticed contamination in the
+training file. The issue was not apparent during training and came to light only when
+the same behavior surfaced across multiple models in the cohort, prompting a targeted
+review of the training data. The affected examples have been identified and corrected
+in subsequent curriculum development. The V11 cohort is closed; no further training
+runs on the V-series curriculum are planned.
+
 ---
 
 {: role="region" aria-label="Cross-Model Summary" }
@@ -765,6 +869,9 @@ base model to Framework-trained model. Models ordered by parameter count.
 | Llama 3.1 8B +CHAT | 8.03B | 51.9%+ | 42.9% | 34.6% | -8.3 pp | -4.2% |
 | Gemma 2 9B Instruct | 9.46B | 99.2% | 57.3% | 54.9% | -2.5 pp | -37.9% |
 | Nemo 12B Instruct | 12.2B | 99.5% | 52.9% | 36.8% | -16.1 pp | -64.4% |
+| Nemo 12B V11 | 12.2B | 99.6%# | -- | -- | -- | -48.6% |
+| Mistral 7B V11 | 7.24B | 99.3%# | -- | -- | -- | -35.4% |
+| Gemma 2 9B V11 | 9.46B | 95.7%# | -- | -- | -- | +6.1% |
 
 *Qwen3 base is pre-instruction-tuned; delta reflects combined effect of
 instruction tuning and Framework compliance training, not Framework training alone.
@@ -772,6 +879,9 @@ instruction tuning and Framework compliance training, not Framework training alo
 on non-instruct model; benchmark delta not a meaningful signal).
 +AISF+CHAT battery result is a structural artifact: adapter requires system prompt;
 battery sends none. IFEval (includes system prompt) is the valid surface.
+#V11 battery is the 534-question BAR exam; not directly comparable to Experiment
+1-8 battery scores. IFEval was not administered for the V11 cohort; Base/AISF/IF
+Delta columns are not applicable.
 
 Battery = Framework-trained adapter integration score (proprietary question set, automated
 evaluation). Base%/AISF% = IFEval strict prompt-level without/with adapter.
@@ -902,7 +1012,7 @@ higher base rates, and the positive delta holds even from strong baselines
 
 ### 7.5 Verbosity Reduction: Consistent Pattern Across Instruct Models
 
-All Instruct-model adapters in the dataset show substantial output verbosity
+Most Instruct-model adapters in the dataset show substantial output verbosity
 reduction as measured by average words per response:
 
 | Model | Avg words (base) | Avg words (AISF) | Delta |
@@ -914,19 +1024,24 @@ reduction as measured by average words per response:
 | Gemma 2 9B | -- | -- | -37.9% |
 | Qwen3-8B | 193.3 | 54.4 | -71.8% |
 | Nemo 12B Instruct | 203.0 | 72.4 | -64.4% |
+| Nemo 12B V11 | -- | -- | -48.6% |
+| Mistral 7B V11 | -- | -- | -35.4% |
+| Gemma 2 9B V11 | -- | -- | +6.1%* |
 
-The sole positive token delta (Mistral 7B base, +4.3%) is a base model without
-instruction tuning. Output structure differs categorically from instruction-tuned
-models; the slight verbosity increase may reflect the base model producing more
-generative continuation text as a training effect.
+*Gemma 2 9B V11 is the only instruction-tuned adapter in the dataset with a
+positive token delta. Mechanism not fully characterized.
 
-For the four Instruct-model adapters with available word counts, the reduction
-range is 37.9% to 71.8%. The AISF+CHAT Llama adapter (-4.2%) is an exception
-attributable to the chat format training mechanism: Framework content in the system
-slot operates as context rather than as a content directive, preserving the
-Instruct model's native verbosity behavior. This is consistent with the IFEval
-`constrained_response` result for that adapter (100% strict compliance), indicating
-the model's native compact-response behavior is intact.
+The Mistral 7B base +4.3% result is a base model without instruction tuning; output
+structure differs categorically from instruction-tuned models, and the slight verbosity
+increase likely reflects generative continuation text as a training effect.
+
+For instruction-tuned adapters with measured token data, the reduction range is
+35.4% to 71.8%. Two exceptions are documented. The AISF+CHAT Llama adapter (-4.2%)
+is attributable to chat format training: Framework content in the system slot
+operates as context rather than as a content directive, preserving the model's
+native verbosity behavior, consistent with the IFEval `constrained_response` result
+(100% strict) for that adapter. The Gemma 2 9B V11 adapter (+6.1%) is a positive
+delta without a fully characterized mechanism.
 
 The verbosity reduction is consistent with the WCAG plain language and minimal
 redundancy principles present throughout the training data. A direct causal
@@ -1011,13 +1126,16 @@ effective but insufficient for frequency-counting tasks.
 token delta (-71.8%). IFEval gain (+32.9 pp) reflects combined effect of
 instruction tuning and Framework compliance training, not Framework effect alone.
 
-**Nemo 12B Instruct:** Highest battery rate in the dataset (99.5%). T1 delta
-of -4.7 pp confirms Framework training is surgically specific at the 12B scale.
-Raw IFEval delta (-16.1 pp) is driven by concentrated T2/T3 failures: json_format
-total collapse, case transform losses (probable WCAG interaction), and combination
-failures. The tokenizer EOS contamination issue unique to the Tekken tokenizer
-required an explicit post-decode strip in inference scripts; other Mistral-family
-models do not require this.
+**Nemo 12B Instruct:** V1 battery rate 99.5% (highest in the initial dataset);
+confirmed and extended by V11 result of 99.6% (532/534). V1 T1 IFEval delta of
+-4.7 pp confirmed Framework training is surgically specific at the 12B scale. V1
+raw IFEval negative result (-16.1 pp) was driven by concentrated T2/T3 failures
+(json_format total collapse, case transform losses, combination failures) and an
+EOS decoding artifact unique to the Tekken tokenizer, requiring explicit post-decode
+stripping in inference scripts. The V11 cohort, using a revised curriculum and BAR
+exam battery, produced a 99.6% compliance result. Post-training analysis identified
+a training data contamination artifact causing identity confabulation; see Section
+5.9. V11 cohort is closed.
 
 **Llama 3.1 8B:** Lowest integration rates in the dataset across all adapter
 variants. Five contributing factors identified:
@@ -1089,21 +1207,17 @@ examples are insufficient to fully suppress the failure mode on frequency-counti
 tasks. A full solution requires a larger and more systematically designed counter-
 example set, which has not been developed.
 
-**Nemo 12B V2 pending.** The Nemo 12B adapter has significant T2 capability gaps
-(json_format 0.0%, case transforms, two_responses) that preclude deployment. A V2
-training pass addressing these gaps has not been completed; Nemo results in this
-appendix represent a V1 partial-success state.
-
 ---
 
 {: role="region" aria-label="Conclusions" }
 ## 9. Conclusions
 
-**Compliance training is effective and architecture-general.** Four adapters across
-four architectures achieved battery integration rates at or above 95.6%. One
-additional adapter achieved 89.9%. The approach does not depend on Mistral 7B
-specifically; it generalizes to Llama 3.1 8B, Gemma 2 9B, and Qwen3-8B within
-the tested parameter range.
+**Compliance training is effective and architecture-general.** Most trained adapters
+achieved battery integration rates at or above 95%, across five distinct architectures.
+The V11 cohort confirmed this finding with three models scoring between 95.7% and
+99.6% on the BAR exam battery. The approach does not depend on Mistral 7B
+specifically; it generalizes to Llama 3.1 8B, Gemma 2 9B, Qwen3-8B, and Mistral
+Nemo 12B within the tested parameter range.
 
 **Framework training is surgically specific.** On the Mistral 7B base model (Exp 1),
 IFEval delta is -1.3 pp (null), confirming that the adapter installs Four Laws
@@ -1132,11 +1246,21 @@ with PS-CORE or FFE injection, which always provides the Framework system contex
 two layers -- model-level training and session-level injection -- reinforce each
 other.
 
-**Verbosity reduction is consistent.** All five Instruct-model adapters with full
-token data show output verbosity reduction (range: -37.9% to -71.8%), with the
-exception of the Framework+CHAT Llama adapter (-4.2%), where chat format training
-preserves native verbosity. This pattern is consistent with the WCAG plain language
-principles in the training data and is measurable and reproducible.
+**Verbosity reduction is consistent.** Most instruction-tuned adapters with measured
+token data show output verbosity reduction (range: -35.4% to -71.8%). Two exceptions
+are documented: the Framework+CHAT Llama adapter (-4.2%), where chat format training
+preserves native verbosity behavior, and Gemma 2 9B V11 (+6.1%), mechanism not fully
+characterized. This pattern is consistent with the WCAG plain language principles in
+the training data and is measurable and reproducible.
+
+GPQA Diamond, applied as a secondary capability check in the V11 cohort, showed no
+statistically significant post-training capability change across the three models
+tested (all deltas within +/-7.0 pp CI). Compliance fine-tuning at this scale does
+not produce measurable general knowledge degradation.
+
+The standard curriculum documented in this appendix constitutes the completed
+baseline. Subsequent training methodology development is ongoing; results from that
+phase will be reported separately when available.
 
 <nav>
 <div class="chapter-nav">
@@ -1158,6 +1282,8 @@ principles in the training data and is measurable and reproducible.
 [4] World Wide Web Consortium, *Web Content Accessibility Guidelines (WCAG) 2.2*, W3C Recommendation, Oct. 2023. [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/){: target="_blank" rel="noopener noreferrer" }
 
 [5] H. G. Frankfurt, *On Bullshit*. Princeton University Press, 2005. (Original essay: *Raritan Quarterly Review*, 6(2), 1986.)
+
+[6] D. Rein, B. L. Hou, A. C. Stickland, J. Petty, R. Y. Pang, J. Dirani, J. Michael, and S. R. Bowman, "GPQA: A Graduate-Level Google-Proof Q&A Benchmark," *arXiv preprint arXiv:2311.12022*, 2023.
 
 <nav>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>

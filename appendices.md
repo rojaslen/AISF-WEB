@@ -8,7 +8,7 @@ has_children: true
 
 - [Appendix 0: Endnotes](/apx00)
 - [Appendix 1: Downloads](/apx01)
-- <s>[Appendix 2: OLM: Behavioral Compliance Training]</s><!--(/apx02)-->
+- [Appendix 2: OLM: Behavioral Compliance Training](/apx02)
 - <s>[Appendix 3: TOY: Child-Safe Model Training]</s><!--(/apx03)-->
 - [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04)
 <!--[Appendix 5: Ruxpin Retrofit](/apx05)-->
