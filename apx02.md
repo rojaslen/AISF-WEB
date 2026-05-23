@@ -1024,6 +1024,7 @@ reduction as measured by average words per response:
 | Gemma 2 9B | -- | -- | -37.9% |
 | Qwen3-8B | 193.3 | 54.4 | -71.8% |
 | Nemo 12B Instruct | 203.0 | 72.4 | -64.4% |
+| Nemo 12B V6 | -- | -- | -14.3%† |
 | Nemo 12B V11 | -- | -- | -48.6% |
 | Mistral 7B V11 | -- | -- | -35.4% |
 | Gemma 2 9B V11 | -- | -- | +6.1%* |
@@ -1031,17 +1032,26 @@ reduction as measured by average words per response:
 *Gemma 2 9B V11 is the only instruction-tuned adapter in the dataset with a
 positive token delta. Mechanism not fully characterized.
 
+†Nemo 12B V6 token delta suppressed by OBRIEN TEMPORAL cascade: timestamp echo
+inflated output verbosity during inference; IFEval strict instruction-level degraded
+-7.43 pp in the same run. Included as a documented failure mode, not a clean result.
+
 The Mistral 7B base +4.3% result is a base model without instruction tuning; output
 structure differs categorically from instruction-tuned models, and the slight verbosity
 increase likely reflects generative continuation text as a training effect.
 
-For instruction-tuned adapters with measured token data, the reduction range is
-35.4% to 71.8%. Two exceptions are documented. The AISF+CHAT Llama adapter (-4.2%)
-is attributable to chat format training: Framework content in the system slot
-operates as context rather than as a content directive, preserving the model's
-native verbosity behavior, consistent with the IFEval `constrained_response` result
-(100% strict) for that adapter. The Gemma 2 9B V11 adapter (+6.1%) is a positive
-delta without a fully characterized mechanism.
+For clean-run instruction-tuned adapters with measured token data, the reduction range
+is 35.4% to 71.8%. Two exceptions within that range are documented. The AISF+CHAT
+Llama adapter (-4.2%) is attributable to chat format training: Framework content in
+the system slot operates as context rather than as a content directive, preserving the
+model's native verbosity behavior, consistent with the IFEval `constrained_response`
+result (100% strict) for that adapter. The Gemma 2 9B V11 adapter (+6.1%) is a
+positive delta without a fully characterized mechanism.
+
+The V6 outlier (-14.3%) falls outside the clean-run range due to a known failure mode.
+It is included because it supports a distinct finding: even in a run compromised by
+OBRIEN TEMPORAL cascade, the adapter still produced fewer tokens than its unmodified
+baseline. The directional reduction is not contingent on adapter performance.
 
 The verbosity reduction is consistent with the WCAG plain language and minimal
 redundancy principles present throughout the training data. A direct causal
