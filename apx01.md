@@ -12,7 +12,11 @@ nav_order: 2
 
 [AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/tree/main/CORE){: target="_blank" rel="noopener noreferrer" }
 
-<s>[AISF OLM Reproducibility Package]</s><!--(https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" }--> Offline pending revision due to updated research.
+[AI Stability Framework Firefox Extension (FFE)](https://github.com/rojaslen/AISF-downloads/tree/main/FFE){: target="_blank" rel="noopener noreferrer" }
+
+*(Firefox only. AMO-signed for persistent install -- no developer mode required. Download the .xpi file and open it in Firefox to install.)*
+
+[AISF OLM Reproducibility Package]<!--(https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" }--> Offline pending final post-update validation, coming soon.
 
 [Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" }
 

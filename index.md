@@ -45,9 +45,9 @@ The AI Stability Framework instead approaches the client side of this problem wi
 
 Meanwhile, real people are losing real time and effort to AI hallucination (and worse). The AI Stability Framework recognizes the real problem, so its simple tool applies structural and behavioral fixes that effectively stabilize AI sessions NOW. Not when the AI companies get around to it, and not when regulators force them to do it. The AI Stability Framework lets you start fixing it for yourself, today:
 
-  - AISF-CORE — Small, standalone Windows desktop app that stabilizes AI sessions and reduces hallucination by giving the AI a set of behavioral rules to follow. **FREE for personal use**.
+  - AISF-CORE — Small, standalone desktop app that stabilizes AI sessions and reduces hallucination by giving the AI a set of behavioral rules to follow. **FREE for personal use**.
   - CDA — Copilot Digital Accessibility. WCAG-only enterprise accessibility tool with multi-model compatibility — works with ChatGPT, Claude, Gemini and more. CC0, dedicated to **PUBLIC DOMAIN**.
-  - OLM — The framework can even be tuned directly into models themselves. QLoRA tuning achieves full behavioral integration in a locally-hosted Mistral 7B model, trained on *mid-range retail consumer hardware running Windows 11*. Training materials and configuration are available, train one and try it for yourself. Full information in Appendix 2.
+  - OLM — The framework can even be tuned directly into models themselves. QLoRA tuning achieves full behavioral integration in a locally-hosted Mistral 7B model, trainable on *mid-range retail consumer hardware running either Windows 11 or Debian Linux*. Training materials and configuration are available, train one and try it for yourself. Full information in Appendix 2.
 
 It's unconventional, but it works. Read more if you want to know why.
 
