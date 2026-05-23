@@ -1048,6 +1048,11 @@ redundancy principles present throughout the training data. A direct causal
 attribution -- WCAG training drives verbosity reduction -- is supported by the
 pattern but not by a controlled ablation in this study.
 
+Consistent token reduction implies proportional reduction in inference compute per
+query. The per-task energy implications follow from this at deployment scale; absolute
+magnitude depends on hardware, batching, and datacenter efficiency factors outside
+this study's scope.
+
 ### 7.6 Chat Format System Prompt Dependency
 
 Framework+CHAT adapters (Llama 3.1 8B, Qwen3-8B) exhibit a system prompt dependency

@@ -82,7 +82,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     Using the IEA's figure of approximately 415 TWh of global data center electricity consumption in 2024 as a baseline, and applying a conservative 20% AI inference share estimate, a 33% reduction in AI inference cycles would conserve on the order of 27 TWh per year, which is roughly enough to power every home in Los Angeles plus most of Chicago. At the industry-average Water Usage Effectiveness (WUE) of about 1.8 liters per kWh[^Fb], that same reduction translates to around 48.6 billion liters of water annually. That's the equivalent of 39,600 Olympic-sized swimming pools, or southwest Ohio's Caesar Creek Lake[^Fc].
 
-    AISF-trained Instruct models across three of four independently tested architectures all featured reduced output verbosity, with consistent direction and a measured range of 37.9% to 71.8% fewer words per response than their baselines. *Fewer tokens per turn is a measurable proxy for reduced resource consumption per task*. The full token delta analysis is in Appendix 2.
+    AISF-trained Instruct models across most independently tested architectures featured reduced output verbosity, with a measured range of 35.4% to 71.8% fewer words per response than their baselines; exceptions are documented in Appendix 2. *Fewer tokens per turn implies proportionally fewer inference FLOPs per query -- the per-task energy implications follow from that directly, though magnitude at scale depends on infrastructure factors outside this study.* The full token delta analysis is in Appendix 2.
 
 13. **"Won't the platforms just block it?"**
 
