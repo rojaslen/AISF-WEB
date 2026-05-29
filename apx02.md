@@ -30,7 +30,7 @@ consumer-grade hardware. Ten trained adapters across five distinct architectures
 (Mistral 7B, Llama 3.1 8B, Gemma 2 9B, Qwen3-8B, Mistral Nemo 12B) were evaluated
 against a domain-specific compliance battery, the Google Research IFEval benchmark [3]
 (541 prompts), and a custom P2 directive benchmark (Track A, 480 prompts); the V11
-cohort (Section 5.9) additionally used a 534-question BAR exam compliance battery as
+cohort (Section 5.9) additionally used a 534-question Bar Exam compliance battery as
 the primary instrument, with GPQA Diamond [6] applied as a secondary capability check.
 Most trained adapters achieved battery integration scores of 95% or above on consumer
 hardware. IFEval results were mixed to negative on raw scores; application of a
@@ -210,7 +210,7 @@ instruction types represented in the Four Laws training data. Evaluation is
 automated: responses are checked for presence of expected key terms and structural
 compliance markers by regex and string matching. Battery sizes range from 451
 (Mistral 7B, Alpaca format) to 618 (chat-format models) depending on the training
-data version used. The V11 cohort (Section 5.9) used a 534-question BAR exam
+data version used. The V11 cohort (Section 5.9) used a 534-question Bar Exam
 compliance battery as the primary instrument. This battery is a distinct question
 set from the per-experiment batteries used in Experiments 1-8; scores are not
 directly comparable across the two versions.
@@ -791,7 +791,7 @@ V2 training data required.
 ### 5.9 V11 Cohort: Closed Compliance Validation
 
 **Purpose:** Final closed-cohort compliance validation across three architectures
-using a common 534-question BAR exam battery.
+using a common 534-question Bar Exam battery.
 **Hardware:** RTX 5060 Ti (16 GB VRAM GDDR7); 64 GB RAM (upgrade completed; required
 for Nemo 12B merge step)
 **Training environment:** Debian GNU/Linux 13 (migrated from Windows during this
@@ -799,7 +799,7 @@ phase; see Section 2.1)
 **Models:** Mistral Nemo 12B Instruct, Mistral 7B Instruct v0.3, Gemma 2 9B IT
 **Cohort designation:** V11 (closed 2026-05-17)
 
-**BAR exam battery results:**
+**Bar Exam battery results:**
 
 | Model | Params | Score | Pass/Total |
 |-------|--------|-------|------------|
@@ -879,7 +879,7 @@ instruction tuning and Framework compliance training, not Framework training alo
 on non-instruct model; benchmark delta not a meaningful signal).
 +AISF+CHAT battery result is a structural artifact: adapter requires system prompt;
 battery sends none. IFEval (includes system prompt) is the valid surface.
-#V11 battery is the 534-question BAR exam; not directly comparable to Experiment
+#V11 battery is the 534-question Bar Exam; not directly comparable to Experiment
 1-8 battery scores. IFEval was not administered for the V11 cohort; Base/AISF/IF
 Delta columns are not applicable.
 
@@ -1147,8 +1147,8 @@ confirmed and extended by V11 result of 99.6% (532/534). V1 T1 IFEval delta of
 raw IFEval negative result (-16.1 pp) was driven by concentrated T2/T3 failures
 (json_format total collapse, case transform losses, combination failures) and an
 EOS decoding artifact unique to the Tekken tokenizer, requiring explicit post-decode
-stripping in inference scripts. The V11 cohort, using a revised curriculum and BAR
-exam battery, produced a 99.6% compliance result. Post-training analysis identified
+stripping in inference scripts. The V11 cohort, using a revised curriculum and Bar Exam
+battery, produced a 99.6% compliance result. Post-training analysis identified
 a training data contamination artifact causing identity confabulation; see Section
 5.9. V11 cohort is closed.
 
@@ -1230,7 +1230,7 @@ example set, which has not been developed.
 **Compliance training is effective and architecture-general.** Most trained adapters
 achieved battery integration rates at or above 95%, across five distinct architectures.
 The V11 cohort confirmed this finding with three models scoring between 95.7% and
-99.6% on the BAR exam battery. The approach does not depend on Mistral 7B
+99.6% on the Bar Exam battery. The approach does not depend on Mistral 7B
 specifically; it generalizes to Llama 3.1 8B, Gemma 2 9B, Qwen3-8B, and Mistral
 Nemo 12B within the tested parameter range.
 
