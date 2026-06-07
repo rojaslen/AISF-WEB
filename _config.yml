@@ -6,8 +6,8 @@ baseurl: ""
 
 exclude:
   - mistral-instruct
-  - staging
-  - temp
+  - .staging
+  - .temp
   - traffic
   - .github
   - Gemfile
