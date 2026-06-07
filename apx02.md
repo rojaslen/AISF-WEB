@@ -14,8 +14,6 @@ nav_order: 3
 
 **Status:** Final (V11 cohort complete 2026-05-17)
 
-**GitHub:** [AISF OLM Reproducibility Package](https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" } *(covers Experiments 1-11; package updates pending)*
-
 ---
 
 *Screen reader users: table-heavy research data. Navigation via Regions and Headings recommended.*
