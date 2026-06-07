@@ -100,6 +100,8 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     Context decay is real and noticeable but manageable. Using STRUCTURE and STABILIZE is a bit like occasionally saving a document you're working on, rather than trusting that nothing will crash. Context decay even provides evidence for the Framework's premise: if AI behavior noticeably changes as its anchoring is evicted from context, that confirms the anchoring was doing something. The degradation curve is the control.
 
+    For documented reference: a single Claude Code session (claude-sonnet-4-6, Sonnet 4.6) operating under two-layer mediation -- meso system prompt plus CORE+ micro injection for timestamping and periodic refresh -- ran 18.5 hours and 105 turns across domains spanning technical development, legal analysis, and research, logging zero hallucinations and one minor drift event corrected by re-injection. This is a ceiling case, not a typical-user profile, but it establishes what the architecture produces under favorable conditions.
+
 <nav>
 <div class="chapter-nav">
   <a href="/appendices">Next: Appendices</a>
