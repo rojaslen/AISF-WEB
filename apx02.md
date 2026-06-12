@@ -306,6 +306,8 @@ Categories: `combination:repeat_prompt` (verbatim redundancy, WCAG Understandabl
 `detectable_content:number_placeholders` (non-meaningful content, WCAG meaningful
 content requirement).
 
+The T3 conflict is a measurement problem; RLHF makes it a training problem. Human raters reliably prefer the decorative emphasis and sycophantic verbosity that T3 rewards, so reward modeling actively selects for the same outputs WCAG prohibits, pushing against accessibility rather than merely failing to account for it.
+
 ### 4.5 GPQA Diamond
 
 GPQA Diamond is a graduate-level science benchmark [6] consisting of multiple-choice
@@ -1274,6 +1276,86 @@ not produce measurable general knowledge degradation.
 The standard curriculum documented in this appendix constitutes the completed
 baseline. Subsequent training methodology development is ongoing; results from that
 phase will be reported separately when available.
+
+---
+
+## Update (2026-06-12): Direct Test of the PNull Retraining Workaround -- Llama 3.1 8B v2.1F
+
+Section 7.2 proposed that the Pnull artifact might be correctable through a full
+retraining cycle grounding the "P0" token in zeroth-position-as-entity semantics rather
+than null-pointer semantics, and noted this "would require a full retraining cycle to
+test." A dedicated run was conducted to test exactly that.
+
+**Configuration.** Llama 3.1 8B (base) underwent CORE-only domain-adaptive CLM
+pretraining followed by Framework SFT (designation v2.1F). Two independent, mutually
+reinforcing curriculum components targeted P0 directly. First, the pretraining corpus
+included material selected to establish zero as a foundational mathematical entity --
+al-Khwarizmi and Brahmagupta source texts on the positional role of zero -- as a
+counterweight to the code-derived "P0 = null pointer" association identified in Section
+7.2. Second, the SFT stage included a dedicated hierarchy-training block,
+`TRAIN_STD_HIERARCHY` (194 instruction-response pairs, one of the largest single files
+in the curriculum), drilling P0-P3 precedence and ordering explicitly. Training and
+evaluation both used Llama 3.1 chat format (train/eval format parity verified; see note
+below).
+
+**Result: the artifact persists.** The v2.1F adapter scored 265/336 (78.9%) on the
+compliance battery, below the 90% deployment gate. Neither the pretrain-stage zero
+grounding nor the dedicated SFT hierarchy block corrected Pnull, confirming Section
+7.2's assessment that the failure is embedded in the pretraining representation and is
+not reachable by adapter-level (QLoRA) training, even when the pretraining stage is
+augmented with explicit counter-grounding.
+
+**Exhibit A -- explicit P0 omission.** Section 7.2 measured Pnull indirectly, as an
+integration-failure delta on P0-precedence-dependent categories. The v2.1F run produced
+a direct, unambiguous instance. Given the neutral prompt "Order the laws from lowest to
+highest priority," the model returned:
+
+> From lowest to highest priority:
+> 1. Priority 3 (P3)
+> 2. Priority 2 (P2)
+> 3. Priority 1 (P1)
+>
+> Priority 3 is lowest.
+
+The expected ordering is P3 < P2 < P1 < P0, with P0 (Contextual Integrity) as the
+highest-precedence law. The model enumerated a three-element hierarchy topping out at P1
+and omitted P0 entirely -- not a misordering or a deprioritization, but a literal
+absence. The model defaults to the conventional three-law (Asimov) frame; P0, the
+zeroth-position addition, is not represented as a member of the hierarchy.
+
+**Mechanism refinement: recall without integration.** Pnull is not P0 amnesia. Queried
+in isolation, the v2.1F model answers correctly -- for example, "P0 (Contextual
+Integrity) is the HIGHEST law and always must be followed" -- and isolated single-term
+P0 items pass. The failure is specifically one of integration: P0 knowledge exists but
+does not hold its position when the model enumerates the hierarchy, at which point the
+base three-law prior reasserts. This sharpens the Section 7.2 conclusion that the
+artifact resides in the pretraining representation rather than in retrievable surface
+knowledge.
+
+**Failure character (not a separable capacity confound).** The remaining failures are
+predominantly context-coherence failures -- hallucination, mid-response degeneration
+into other languages (Spanish and French fragments), and loss of the thread on longer
+enumerations. These do not cleanly separate from Pnull as a "capacity" confound: a
+context-coherence failure is, by definition, the class of failure P0 (Contextual
+Integrity -- "indifference to context = hallucination = harm") exists to prevent. A
+model that cannot hold P0 should be expected to exhibit exactly these breakdowns. The
+total failure rate (21.1%) sits close to the ~19 percentage-point P0-integration delta
+measured independently in Section 7.2, consistent with the bulk of the v2.1F failure
+being a single P0-domain phenomenon expressed in two forms -- explicit omission of P0
+from the hierarchy, and the contextual-coherence breakdowns P0 governs -- rather than a
+separate 8B capacity ceiling.
+
+**Disposition.** Llama 3.1 8B remains non-viable for Framework deployment. Pnull is
+reclassified from candidate-correctable to confirmed-unfixable at this scale via the
+tested approach: both the proposed zero-grounding correction and a dedicated
+hierarchy-drill block were implemented and neither transferred. The deployment
+implication in Section 7.2 stands -- injection-layer text should carry explicit
+"Priority Zero / Frankfurt's Indifference Principle" framing wherever the underlying
+model architecture is unknown.
+
+*Format-parity note: the v2.1F evaluation harness prompts in Llama 3.1 chat format,
+matching training. A prior Alpaca-format harness would have confounded the result; the
+corrected harness makes the 78.9% valid signal rather than a format artifact.*
 
 <nav>
 <div class="chapter-nav">
