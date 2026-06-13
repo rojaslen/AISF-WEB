@@ -137,6 +137,8 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***Fc:*** FisherMap. "Caesar Creek Lake, OH — Depth Map." [https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/](https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/){: target="_blank" rel="noopener noreferrer" }
 
+***Fd:*** Anthropic. "Results from first Anthropic Public Record." 2025. [https://www.anthropic.com/news/anthropic-public-record](https://www.anthropic.com/news/anthropic-public-record){: target="_blank" rel="noopener noreferrer" } Nationally representative online survey of 51,993 U.S. adults (16+); fieldwork by YouGov, November 1 to December 11, 2025; weighted to U.S. Census benchmarks.
+
 ## Appendix 3
 
 Chau, A. (2025, January 29). "Toy Manufacturing Costs: A Guide to Pricing and Economics." GSN Manufacturing Consulting. [https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing](https://www.gsnmc.com/post/the-economics-of-play-understanding-toy-manufacturing-costs-and-pricing){: target="_blank" rel="noopener noreferrer" }
