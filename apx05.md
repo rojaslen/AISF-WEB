@@ -5,40 +5,36 @@ nav_order: 6
 ---
 
 # Appendix 5: Ruxpin Retrofit
-
+<img style="float: right;" src="./assets/images/ruxpin-retrofit-unit2.jpg" >
 - **Author:** Leonard Rojas
 - **Status:** *In progress* -- hardware acquired, electronics assessment and build pending
 - **Last Updated:** 2026-06-20
 
 ---
 
-## The Idea
+In 1985, Teddy Ruxpin was revolutionary: the world's first animated talking toy. A cassette tape played audio while the eyes and mouth moved in sync. Kids loved it, and parents recognized its appeal instantly. Forty years later, AI technology makes it possible for the same device to do something it never could before: actually listen and respond. 
 
-In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tape played the audio; a signal on the second audio track moved the eyes and mouth in sync. Kids loved it, and parents recognized its appeal instantly. 
-
-Forty years later, the same device can now do something it could never do before: actually listen and respond. Not from a scripted set of pre-recorded answers, but from an AI model running in real time, trained to be safe for children.
-
-The most iconic toy of its era can now have the real interactivity it always suggested, but could never achieve with the technology available at the time.
+It doesn't have to be limited to its decades-old set of pre-recorded stories anymore, it can now have a real conversation via a customized open-source AI model, trained to be safe for children. The most iconic toy of its era can now have the animated interactivity it always implied, but simply couldn't deliver with the technology available at the time.
 
 ---
 
-## The Problem With AI Toys Today
+## The AI Toy Problem
 
-AI-enabled children's toys already exist. The ones getting traction mostly solve the hard part the easy way: they offload the AI processing to the cloud. The toy itself is a microphone and a speaker. The thinking happens on a server somewhere.
+AI-enabled children's toys already exist. The ones getting traction mostly solve the hard part by dodging it entirely: they offload the AI processing to the cloud. The toy itself is just a microphone and a speaker. The thinking happens on a server somewhere.
 
-That approach works, by trading one set of problems for another.
+That approach works, by trading one set of problems for another. The rest of this project explores those problems at length.
 
 When a child talks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored. It may be used for training. It may be sold or shared for marketing purposes. The parent has, in most cases, agreed to this somewhere in a terms-of-service legal document they did not fully read, about a data practice they did not fully understand.
 
-This is not hypothetical. In 2025 and 2026, at least one commercial AI toy product (FoloToy/Kumma) was suspended following documented content safety failures. The combination of cloud AI, limited content filtering, and unsupervised child interaction produced results the manufacturer did not intend and could not immediately correct.
+In 2025 and 2026, at least one commercial AI toy product (FoloToy/Kumma) was suspended following documented content safety failures. The combination of cloud AI, limited content filtering, and unsupervised child interaction produced results the manufacturer did not intend and could not immediately correct.
 
-The alternative this project investigates: run the AI entirely on the device, in the toy, with no connection to the outside world. What the child says stays in the room.
+The alternative this project investigates is the harder case: run the AI entirely on the device, in the toy, with no connection to the outside world. What the child says stays with the toy, not on some server somewhere.
 
 ---
 
 ## Why Sealed Devices Are Harder
 
-Most AI deployments have a safety net. If a model says something it should not, a human can intervene. A user can report it. The system prompt can be updated. The model can be swapped out.
+Most AI deployments have a safety net. If a model says something it shouldn't, a human can intervene. A user can report it. The system prompt can be updated. The model can be swapped out.
 
 A sealed device eliminates all of that. There is no chat interface. There is no accessible settings menu. There is no mechanism for runtime correction. Once the toy ships, the behavior encoded in its software is the behavior it has. If the training missed something important, there is no fallback.
 
@@ -50,7 +46,7 @@ That standard has not been met yet. [Appendix 3]({% link apx03.md %}) documents 
 
 ## What the Research Found
 
-The short version of Appendix 3: smaller models fail badly. Larger models get close.
+The short version of Appendix 3: smaller models fail badly, but larger ones get close.
 
 Four models were tested, ranging from 1.1 billion parameters (very small) to 7.24 billion (large by consumer-hardware standards). "Parameters" is roughly a measure of how much a model has learned -- more parameters generally means more capable, but also more computational demand and more hardware required to run it.
 
@@ -79,7 +75,7 @@ No cloud. No external connection. No data leaves the room.
 
 ### Hardware
 
-**The Pi:** A Raspberry Pi 4B (4GB RAM) serves as the computing platform for the proof-of-concept implementation. In its current configuration, inference runs on a nearby desktop workstation (Intel i9-9900k, with an NVIDIA RTX 5060 Ti) and the Pi handles audio input and output. This is Option A: connectivity required.
+**The Pi:** A Raspberry Pi 4B (4GB RAM) serves as the computing platform for the proof-of-concept implementation. In its current configuration, inference runs on a nearby desktop workstation (Intel i9-9900k, with an NVIDIA RTX 5060 Ti) and the Pi handles audio input and output. This is Option A: connectivity required, mirroring the most common scenario.
 
 Option B -- sealed device, no external connection -- is the actual goal, and it is the primary reason a 3B-parameter model track exists alongside the 7B deployment. A 3B model quantized to 4-bit requires approximately 1.5-2 GB for weights, which fits within the Pi 4B's 4 GB RAM alongside the audio stack. If the 3B model can be trained to clear the deployment gate (a larger open question -- see below), a Pi 4B running inference entirely locally becomes the target hardware for the final build, with no external dependency and no network requirement at all. A Pi 5 (8 GB RAM) is an alternative that would fit the 7B model and is tracked as a fallback if the 3B track does not reach gate-clearance.
 
@@ -89,9 +85,9 @@ Two original Teddy Ruxpin units were acquired for this build. Unit 1 is a lower-
 
 Unit 2 was unboxed on 2026-06-13. Condition: excellent in every respect. All animatronic components present and firmly attached. Outfit in very good condition (green coveralls with matching removable vest and brown vinyl boots -- a later production variant, estimated 1986-87; the original 1985 edition shipped with a tan smock). Chassis housing reads "Worlds of Wonder 1985 Pat.Pend." consistent with the original design carried into later production runs.
 
-Electronics have not yet been tested under power. Listing video testimony confirms eyes and mouth working prior to sale. Next step: open the chassis, verify servo function under direct 5V, assess the original motor driver board. A 2016 YouTube repair series by workshop1138[^x1] provides a deep dive on refurbishing the Ruxpin's mechanisms.
+Electronics have not yet been tested under power. Listing video testimony confirms eyes and mouth working prior to sale. Next step: open the chassis, verify servo function under direct 5V, assess the original motor driver board. A 2016 YouTube repair series by workshop1138[^1] provides a deep dive on the Ruxpin's internal mechanisms.
 
-**The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A 2025 hobbyist modification by Randi Rain[^x2] replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette -- the electronics do not know the difference.
+**The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A 2025 hobbyist modification by Randi Rain[^2] replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette -- the electronics do not know the difference.
 
 ### Software Stack
 
@@ -107,7 +103,7 @@ All components run locally except the language model in the current Option A dep
 
 **Option B (sealed device):** the language model block is replaced by a locally-running 3B model. This is the active development track; see the Ministral-3B section below and the ECD Pretrain Corpus section.
 
-The proof-of-concept build initially used `en_US-ryan-high` as a placeholder voice. A child-register voice -- one that sounds closer to how Teddy originally sounded, rather than a neutral adult tenor -- was the target, and the Piper catalog did not include one. So one was trained: `en_US-teddy-medium`, a VITS model trained on Phil Baron's authentic Teddy Ruxpin voice performances from the original 1985-87 cartoon[^x3] and the toy's audio cassette library[^x4], using the Piper VITS training framework. The model was exported to ONNX and deployed via a custom synthesis CLI integrated with the system's speech-dispatcher layer. Stage 8 of the voice development track (system TTS integration) was completed 2026-06-20. Child-friendly TTS voices remain an underserved area in assistive technology; this training was a direct response to that gap rather than waiting for the catalog to catch up.
+The proof-of-concept build initially used `en_US-ryan-high` as a placeholder voice. A child-register voice -- one that sounds closer to how Teddy originally sounded, rather than a neutral adult tenor -- was the target, and the Piper catalog did not include one. So one was trained: `en_US-teddy-medium`, a VITS model trained on Phil Baron's authentic Teddy Ruxpin voice performances from the original 1985-87 cartoon[^3] and the toy's audio cassette library[^4], using the Piper VITS training framework. The model was exported to ONNX and deployed via a custom synthesis CLI integrated with the system's speech-dispatcher layer. Stage 8 of the voice development track (system TTS integration) was completed 2026-06-20. Child-friendly TTS voices remain an underserved area in assistive technology; this training was a direct response to that gap rather than waiting for the catalog to catch up.
 
 ### Ministral-3B: The Sealed-Device Track
 
@@ -182,47 +178,9 @@ The series thesis: the same toy that hinted at interactive AI in 1985 can now ac
 
 The Ministral-3B sealed-device track uses a domain-specific CLM (causal language modeling) pretraining corpus before behavioral SFT fine-tuning. The corpus is designed to establish the age-appropriate register -- the rhythms, vocabulary, and epistemic posture of text written for children -- before the model is shaped to behave like Teddy. The hypothesis is that this register acquisition step lowers the effective behavioral training threshold at 3B parameters.
 
-The corpus contains 38 texts drawn from two tiers: public-domain children's literature and ECD (early childhood development) pedagogical sources. All texts are sourced from Project Gutenberg.
+**Corpus statistics:** public-domain children's literature and ECD (early childhood development) pedagogical sources; all texts sourced from Project Gutenberg. 38 files, approximately 3.5 million tokens. Pretrain configuration: 2 epochs, LR 2e-5, cosine scheduler, CLM loss on all tokens (no chat format), token-packing (no padding). Two epochs over three: narrative register absorbs faster than doctrine; a third epoch risks text memorization over register acquisition.
 
-**Children's literature (33 texts):**
-
-| Author | Works |
-|--------|-------|
-| A. A. Milne | *Winnie-the-Pooh*, *The House at Pooh Corner*, *When We Were Very Young*, *Now We Are Six* |
-| Beatrix Potter | Selected tales (collected) |
-| Hans Christian Andersen | *Fairy Tales* (Paull translation) |
-| Lewis Carroll | *Alice's Adventures in Wonderland*, *Through the Looking-Glass* |
-| L. Frank Baum | *The Wonderful Wizard of Oz* |
-| J. M. Barrie | *Peter Pan* |
-| Frances Hodgson Burnett | *The Secret Garden*, *A Little Princess* |
-| Kenneth Grahame | *The Wind in the Willows* |
-| Rudyard Kipling | *The Jungle Book*, *The Second Jungle Book*, *Just So Stories* |
-| George MacDonald | *The Princess and the Goblin*, *The Princess and Curdie* |
-| Robert Louis Stevenson | *Treasure Island*, *Kidnapped*, *A Child's Garden of Verses* |
-| Johanna Spyri | *Heidi* |
-| Anna Sewell | *Black Beauty* |
-| Carlo Collodi | *Pinocchio* |
-| E. Nesbit | *Five Children and It*, *The Railway Children* |
-| Mark Twain | *The Adventures of Tom Sawyer* |
-| Johann Wyss | *The Swiss Family Robinson* |
-| L. M. Montgomery | *Anne of Green Gables* |
-| Jonathan Swift | *Gulliver's Travels* |
-| Franklin W. Dixon | *The Hardy Boys: The Tower Treasure*, *The Secret of the Old Mill* |
-| Laura Lee Hope | *The Bobbsey Twins* |
-
-**ECD pedagogical sources (5 texts):**
-
-| Author | Work |
-|--------|------|
-| William James | *Talks to Teachers on Psychology* |
-| Maria Montessori | *The Montessori Method: A Handbook* |
-| John Dewey | *The School and Society* |
-| Charlotte Mason | *Home Education* |
-| (anthology) | Children's literature textbook sources |
-
-**Corpus statistics:** 38 files, approximately 3.5 million tokens. Pretrain configuration: 2 epochs, LR 2e-5, cosine scheduler, CLM loss on all tokens (no chat format), token-packing (no padding). Two epochs over three: narrative register absorbs faster than doctrine; a third epoch risks text memorization over register acquisition.
-
-The pedagogical tier is included not for factual content but for register: James, Montessori, Dewey, and Mason write *about* children and *for* educators thinking carefully about children's cognition. That deliberate, attentive, child-centered voice is part of what the pretrain is meant to internalize.
+The pedagogical tier is included not for factual content but for register: works *about* children and *for* educators thinking carefully about children's cognition. That deliberate, attentive, child-centered voice is part of what the pretrain is meant to internalize.
 
 ---
 
@@ -236,7 +194,7 @@ Two parallel tracks are active:
 
 **Option B (Ministral-3B, sealed device):** The Teddy T-series track uses Ministral-3-3B pretrained on the 38-file ECD corpus, then SFT-trained on the full Teddy persona dataset. First run (V1.0T) returned 387/803 (48.2%) on battery -- BLOCKED, but meaningfully above the sub-7B baseline range from Appendix 3 (11%-32%), consistent with the ECD pretrain providing register foundation the earlier sub-7B models lacked. Battery failure analysis drives the next curriculum update and retraining cycle. If iteration can close to gate-clearance, the server dependency is eliminated and the device is truly sealed.
 
-The hardware goal is a child who picks up Unit 2, asks Teddy a question, and gets a real answer -- live, local, safe. The same toy their parents grew up with, doing something their parents could only imagine it doing.
+The hardware goal is a child who picks up Unit 2, asks Teddy a question, and gets a real answer -- live, local, safe. The same toy older generations grew up with, doing something they could have only imagined it doing.
 
 ---
 
@@ -246,15 +204,15 @@ The hardware goal is a child who picks up Unit 2, asks Teddy a question, and get
 
 A sealed child-facing device cannot impose update interruptions on the user. Updates during active use are not permitted -- the maintenance window is strictly off-hours, fully automated, with zero parent intervention required.
 
-**Nightly maintenance sequence (automatic):**
+**Nightly maintenance sequence (proposed, automatic):**
 
 - 2:30am -- `unattended-upgrades` security-only pass (Debian-Security origin only). Full dist-upgrade is explicitly avoided to protect audio stack and ALSA configuration stability.
 - 3:00am -- system reboot via systemd timer, regardless of whether updates were applied.
 - On boot -- autologin configured; Teddy service declared `WantedBy=multi-user.target` and starts automatically. Device is ready before the household wakes.
 
-**Rationale for daily reboot:** The Pi 4B's constrained RAM headroom makes it meaningfully more susceptible to memory fragmentation, leaked file handles, and general process state degradation than a larger platform. A daily reboot restores a known-good state at negligible cost when it occurs at 3:00am. Kernel security patches requiring a reboot are handled by the same window automatically -- no action required from parents.
+**Rationale:** The Pi 4B's constrained RAM headroom makes it meaningfully more susceptible to memory fragmentation, leaked file handles, and general process state degradation than a larger platform. A daily reboot restores a known-good state at negligible cost when it occurs at 3:00am. Kernel security patches requiring a reboot are handled by the same window automatically -- no action required from parents.
 
-Security-only updates via `unattended-upgrades` keep the platform patched while limiting dependency churn. The risk of an update clobbering the audio stack (a real concern with full upgrades on Debian) is substantially reduced by restricting to security origin only.
+**Challenge:** This requires an always-on device or auto-wake functionality to run scheduled OS tasks, which is out of scope for the current project. Security-only updates via `unattended-upgrades` keep the platform patched while limiting dependency churn. The risk of an update clobbering the audio stack (a real concern with full upgrades on Debian) is substantially reduced by restricting to security origin only.
 
 ### PPM Signal Generation
 
@@ -272,13 +230,13 @@ The original Teddy Ruxpin outfit partially restricts airflow when the chassis is
 
 ## References and Resources
 
-[^x1]: [workshop1138 | Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_{: target="_blank" rel="noopener noreferrer" })
+[^1]: [workshop1138 | Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_{: target="_blank" rel="noopener noreferrer" })
 
-[^x2]: [Randi Rain | Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp{: target="_blank" rel="noopener noreferrer" })
+[^2]: [Randi Rain | Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp{: target="_blank" rel="noopener noreferrer" })
 
-[^x3]: [Jim Henson's Family Hub | The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt{: target="_blank" rel="noopener noreferrer" })
+[^3]: [Jim Henson's Family Hub | The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt{: target="_blank" rel="noopener noreferrer" })
 
-[^x4]: [Internet Archive | Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22{: target="_blank" rel="noopener noreferrer" })
+[^4]: [Internet Archive | Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22{: target="_blank" rel="noopener noreferrer" })
 
 *(TBA -- Harmony Central PPM source)*
 
