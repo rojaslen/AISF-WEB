@@ -25,7 +25,7 @@ It doesn't have to be limited to its decades-old set of pre-recorded stories any
 
 AI-enabled children's toys already exist. The ones getting traction mostly solve the hard part by dodging it entirely: they offload the AI processing to the cloud. The toy itself is just a microphone and a speaker. The thinking happens on a server somewhere.
 
-That approach works, by trading one set of problems for another. The rest of this project explores those problems at length.
+That approach works, by trading one set of problems for another. <a href="/#toc">The rest of this project</a> explores those problems at length.
 
 When a child talks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored. It may be used for training. It may be sold or shared for marketing purposes. The parent has probably agreed to this somewhere in a terms-of-service legal document they did not fully read, about a data practice they did not fully understand.
 
