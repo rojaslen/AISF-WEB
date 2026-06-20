@@ -5,8 +5,13 @@
 **/.lib/
 *GH_PAT.txt
 
-# YouTube content
-**/assets/av/rxp*.mp4
+# Multimedia filetypes
+*.mp4
+*.wav
+*.mp3
+*.mov
+*.avi
+*.flac
 
 # Jekyll build output
 _site/
