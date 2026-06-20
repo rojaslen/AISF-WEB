@@ -13,6 +13,8 @@ nav_order: 6
 
 ---
 
+## Concept
+
 In 1985, Teddy Ruxpin was revolutionary: the world's first animated talking toy. A cassette tape played audio while the eyes and mouth moved in sync. Kids loved it, and parents recognized its appeal instantly. Forty years later, modern technology makes it possible for that same device to do something it never could before: actually listen and respond. 
 
 It doesn't have to be limited to its decades-old set of pre-recorded stories anymore, it can now have a real conversation via a customized open-source AI model, trained to be safe for children. The most iconic toy of its era can now have the animated interactivity it always implied, but simply couldn't deliver with the technology available at the time.
