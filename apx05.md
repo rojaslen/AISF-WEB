@@ -141,9 +141,7 @@ The significance: if iteration closes the gap from 48.2% to gate-clearance, the 
 
 ## Video Documentation
 
-The build is being documented as a public YouTube series [Ruxpin Retrofit playlist](https://youtube.com/playlist?list=PL6FKREbt9V3uPJ2Cjr8CQkRmpNO60slUC&si=AvOwsMkVGjljwyqm)
-
-Three videos published as of 2026-06-20:
+The build is being documented as a public YouTube series [Ruxpin Retrofit playlist](https://youtube.com/playlist?list=PL6FKREbt9V3uPJ2Cjr8CQkRmpNO60slUC&si=AvOwsMkVGjljwyqm), with three videos published as of 2026-06-20:
 
 | # | Date | Content |
 |---|------|---------|
