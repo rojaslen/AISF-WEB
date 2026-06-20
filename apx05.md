@@ -7,17 +7,18 @@ nav_order: 6
 # Appendix 5: Ruxpin Retrofit
 
 **Author:** Leonard Rojas
-**Status:** In progress -- hardware acquired, electronics assessment and build pending
+**Status:** *In progress* -- hardware acquired, electronics assessment and build pending
+**Last Updated:** 2026-06-20
 
 ---
 
 ## The Idea
 
-In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tape played the audio; a signal on the second audio track moved the eyes and mouth in sync. Kids loved it. Parents recognized it instantly. It was a genuine cultural moment.
+In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tape played the audio; a signal on the second audio track moved the eyes and mouth in sync. Kids loved it, and parents recognized its appeal instantly. 
 
-Forty years later, the same physical object can now do something the original could never do: actually listen, think, and respond. Not from a script. Not from a fixed set of pre-recorded answers. From a language model running in real time, trained to be safe for children.
+Forty years later, the same device can now do something it could never do before: actually listen and respond. Not from a scripted set of pre-recorded answers, but from an AI model running in real time, trained to be safe for children.
 
-That gap -- same toy, completely different intelligence -- is the argument this project is trying to make visible.
+The most iconic toy of its era can now have the real interactivity it always suggested, but could never achieve with the technology available at the time.
 
 ---
 
@@ -276,13 +277,13 @@ The original Teddy Ruxpin outfit partially restricts airflow when the chassis is
 
 *(TBA -- Harmony Central PPM source)*
 
-[Randi Rain | Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp)
+- [Randi Rain | Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp)
 
-[workshop1138 | Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_)
+- [workshop1138 | Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_)
 
-[Jim Henson's Family Hub | The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt)
+- [Jim Henson's Family Hub | The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt)
 
-[Internet Archive | Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22)
+- [Internet Archive | Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22)
 
 ---
 
