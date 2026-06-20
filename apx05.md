@@ -10,7 +10,6 @@ nav_order: 6
 - **Author:** Leonard Rojas
 - **Status:** *In progress* -- hardware acquired, electronics assessment and build pending
 - **Last Updated:** 2026-06-20
-
 ---
 In 1985, Teddy Ruxpin was revolutionary: the world's first animated talking toy. A cassette tape played audio while the eyes and mouth moved in sync. Kids loved it, and parents recognized its appeal instantly. Forty years later, AI technology makes it possible for the same device to do something it never could before: actually listen and respond. 
 
