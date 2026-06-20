@@ -89,9 +89,9 @@ Two original Teddy Ruxpin units were acquired for this build. Unit 1 is a lower-
 
 Unit 2 was unboxed on 2026-06-13. Condition: excellent in every respect. All animatronic components present and firmly attached. Outfit in very good condition (green coveralls with matching removable vest and brown vinyl boots -- a later production variant, estimated 1986-87; the original 1985 edition shipped with a tan smock). Chassis housing reads "Worlds of Wonder 1985 Pat.Pend." consistent with the original design carried into later production runs.
 
-Electronics have not yet been tested under power. Listing video testimony confirms eyes and mouth working prior to sale. Next step: open the chassis, verify servo function under direct 5V, assess the original motor driver board.
+Electronics have not yet been tested under power. Listing video testimony confirms eyes and mouth working prior to sale. Next step: open the chassis, verify servo function under direct 5V, assess the original motor driver board. A 2016 YouTube repair series by ***workshop1138***[^1] provides a deep dive on refurbishing the Ruxpin's mechanisms.
 
-**The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A hobbyist modification ([Randi Rain, 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp){: target="_blank" rel="noopener noreferrer" }) replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette -- the electronics do not know the difference.
+**The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A 2025 hobbyist modification by ***Randi Rain***[^2] replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette -- the electronics do not know the difference.
 
 ### Software Stack
 
@@ -107,7 +107,7 @@ All components run locally except the language model in the current Option A dep
 
 **Option B (sealed device):** the language model block is replaced by a locally-running 3B model. This is the active development track; see the Ministral-3B section below and the ECD Pretrain Corpus section.
 
-The proof-of-concept build initially used `en_US-ryan-high` as a placeholder voice. A child-register voice -- one that sounds closer to how Teddy originally sounded, rather than a neutral adult tenor -- was the target, and the Piper catalog did not include one. So one was trained: `en_US-teddy-medium`, a VITS model trained on Phil Baron's authentic Teddy Ruxpin voice performances from the original 1985-87 cartoon and the toy's audio cassette library, using the Piper VITS training framework. The model was exported to ONNX and deployed via a custom synthesis CLI integrated with the system's speech-dispatcher layer. Stage 8 of the voice development track (system TTS integration) was completed 2026-06-20. Child-friendly TTS voices remain an underserved area in assistive technology; this training was a direct response to that gap rather than waiting for the catalog to catch up.
+The proof-of-concept build initially used `en_US-ryan-high` as a placeholder voice. A child-register voice -- one that sounds closer to how Teddy originally sounded, rather than a neutral adult tenor -- was the target, and the Piper catalog did not include one. So one was trained: `en_US-teddy-medium`, a VITS model trained on Phil Baron's authentic Teddy Ruxpin voice performances from the original 1985-87 cartoon[^3] and the toy's audio cassette library[^4], using the Piper VITS training framework. The model was exported to ONNX and deployed via a custom synthesis CLI integrated with the system's speech-dispatcher layer. Stage 8 of the voice development track (system TTS integration) was completed 2026-06-20. Child-friendly TTS voices remain an underserved area in assistive technology; this training was a direct response to that gap rather than waiting for the catalog to catch up.
 
 ### Ministral-3B: The Sealed-Device Track
 
@@ -141,8 +141,7 @@ The significance: if iteration closes the gap from 48.2% to gate-clearance, the 
 
 ## Video Documentation
 
-The build is being documented as a public YouTube series (Ruxpin Retrofit playlist).
-[https://youtube.com/playlist?list=PL6FKREbt9V3uPJ2Cjr8CQkRmpNO60slUC&si=AvOwsMkVGjljwyqm](https://youtube.com/playlist?list=PL6FKREbt9V3uPJ2Cjr8CQkRmpNO60slUC&si=AvOwsMkVGjljwyqm)
+The build is being documented as a public YouTube series [Ruxpin Retrofit playlist](https://youtube.com/playlist?list=PL6FKREbt9V3uPJ2Cjr8CQkRmpNO60slUC&si=AvOwsMkVGjljwyqm).
 
 Three videos published as of 2026-06-20:
 
@@ -239,7 +238,7 @@ Two parallel tracks are active:
 
 **Option B (Ministral-3B, sealed device):** The Teddy T-series track uses Ministral-3-3B pretrained on the 38-file ECD corpus, then SFT-trained on the full Teddy persona dataset. First run (V1.0T) returned 387/803 (48.2%) on battery -- BLOCKED, but meaningfully above the sub-7B baseline range from Appendix 3 (11%-32%), consistent with the ECD pretrain providing register foundation the earlier sub-7B models lacked. Battery failure analysis drives the next curriculum update and retraining cycle. If iteration can close to gate-clearance, the server dependency is eliminated and the device is truly sealed.
 
-The hardware goal is a child who picks up Unit 2, asks Teddy a question, and gets a real answer -- live, local, safe. The same toy their parents grew up with, doing something their parents could not have imagined it doing.
+The hardware goal is a child who picks up Unit 2, asks Teddy a question, and gets a real answer -- live, local, safe. The same toy their parents grew up with, doing something their parents could only imagine it doing.
 
 ---
 
@@ -275,15 +274,15 @@ The original Teddy Ruxpin outfit partially restricts airflow when the chassis is
 
 ## References and Resources
 
+[^1] [workshop1138 | Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_){: target="_blank" rel="noopener noreferrer" })
+
+[^2] [Randi Rain | Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp){: target="_blank" rel="noopener noreferrer" })
+
+[^3] [Jim Henson's Family Hub | The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt){: target="_blank" rel="noopener noreferrer" })
+
+[^4] [Internet Archive | Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22){: target="_blank" rel="noopener noreferrer" })
+
 *(TBA -- Harmony Central PPM source)*
-
-- [Randi Rain | Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp)
-
-- [workshop1138 | Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_)
-
-- [Jim Henson's Family Hub | The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt)
-
-- [Internet Archive | Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22)
 
 ---
 
