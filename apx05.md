@@ -5,7 +5,7 @@ nav_order: 6
 ---
 
 # Appendix 5: Ruxpin Retrofit
-<img style="float: right;" src="./assets/images/ruxpin-retrofit-unit2.jpg" >
+<img style="float: right;" src="./assets/images/ruxpin-retrofit-unit2.jpg" width="50%" padding="3">
 - **Author:** Leonard Rojas
 - **Status:** *In progress* -- hardware acquired, electronics assessment and build pending
 - **Last Updated:** 2026-06-20
@@ -24,7 +24,7 @@ AI-enabled children's toys already exist. The ones getting traction mostly solve
 
 That approach works, by trading one set of problems for another. The rest of this project explores those problems at length.
 
-When a child talks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored. It may be used for training. It may be sold or shared for marketing purposes. The parent has, in most cases, agreed to this somewhere in a terms-of-service legal document they did not fully read, about a data practice they did not fully understand.
+When a child talks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored. It may be used for training. It may be sold or shared for marketing purposes. The parent has probably agreed to this somewhere in a terms-of-service legal document they did not fully read, about a data practice they did not fully understand.
 
 In 2025 and 2026, at least one commercial AI toy product (FoloToy/Kumma) was suspended following documented content safety failures. The combination of cloud AI, limited content filtering, and unsupervised child interaction produced results the manufacturer did not intend and could not immediately correct.
 
