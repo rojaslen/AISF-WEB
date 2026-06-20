@@ -6,9 +6,9 @@ nav_order: 6
 
 # Appendix 5: Ruxpin Retrofit
 
-**Author:** Leonard Rojas
-**Status:** *In progress* -- hardware acquired, electronics assessment and build pending
-**Last Updated:** 2026-06-20
+- **Author:** Leonard Rojas
+- **Status:** *In progress* -- hardware acquired, electronics assessment and build pending
+- **Last Updated:** 2026-06-20
 
 ---
 
@@ -79,9 +79,9 @@ No cloud. No external connection. No data leaves the room.
 
 ### Hardware
 
-**The Pi:** A Raspberry Pi 4B (4GB RAM) serves as the computing platform for the proof-of-concept implementation. In its current configuration, inference runs on a nearby desktop workstation (TORRE, with an NVIDIA RTX 5060 Ti) and the Pi handles audio input and output. This is Option A: connectivity required.
+**The Pi:** A Raspberry Pi 4B (4GB RAM) serves as the computing platform for the proof-of-concept implementation. In its current configuration, inference runs on a nearby desktop workstation (Intel i9-9900k, with an NVIDIA RTX 5060 Ti) and the Pi handles audio input and output. This is Option A: connectivity required.
 
-Option B -- sealed device, no external connection -- is the actual goal, and it is the primary reason a 3B-parameter model track exists alongside the 7B deployment. A 3B model quantized to 4-bit requires approximately 1.5-2 GB for weights, which fits within the Pi 4B's 4 GB RAM alongside the audio stack. If the 3B model can be trained to clear the deployment gate (a larger open question -- see below), a Pi 4B running inference entirely locally becomes the target hardware for the final build, with no TORRE dependency and no network requirement at all. A Pi 5 (8 GB RAM) is an alternative that would fit the 7B model and is tracked as a fallback if the 3B track does not reach gate-clearance.
+Option B -- sealed device, no external connection -- is the actual goal, and it is the primary reason a 3B-parameter model track exists alongside the 7B deployment. A 3B model quantized to 4-bit requires approximately 1.5-2 GB for weights, which fits within the Pi 4B's 4 GB RAM alongside the audio stack. If the 3B model can be trained to clear the deployment gate (a larger open question -- see below), a Pi 4B running inference entirely locally becomes the target hardware for the final build, with no external dependency and no network requirement at all. A Pi 5 (8 GB RAM) is an alternative that would fit the 7B model and is tracked as a fallback if the 3B track does not reach gate-clearance.
 
 **The units:**
 
@@ -103,7 +103,7 @@ Microphone (addition) → Speech recognition (VOSK) → text
     → Speaker output (existing tape deck hardware)
 ```
 
-All components run locally except the language model in the current Option A deployment, where inference is served from TORRE over the local network. VOSK handles speech recognition with low CPU overhead. Piper TTS generates speech audio at faster than real-time on the Pi's ARM processor. The mouth movement timing is derived from the audio amplitude -- when the speech gets louder, the jaw opens; when it falls quiet, it closes. The same signal that originally lived on a prerecorded cassette tape is now generated in software, in real time, from whatever Teddy is saying.
+All components run locally except the language model in the current Option A deployment, where inference is served over the local network. VOSK handles speech recognition with low CPU overhead. Piper TTS generates speech audio at faster than real-time on the Pi's ARM processor. The mouth movement timing is derived from the audio amplitude -- when the speech gets louder, the jaw opens; when it falls quiet, it closes. The same signal that originally lived on a prerecorded cassette tape is now generated in software, in real time, from whatever Teddy is saying.
 
 **Option B (sealed device):** the language model block is replaced by a locally-running 3B model. This is the active development track; see the Ministral-3B section below and the ECD Pretrain Corpus section.
 
@@ -111,13 +111,13 @@ The proof-of-concept build initially used `en_US-ryan-high` as a placeholder voi
 
 ### Ministral-3B: The Sealed-Device Track
 
-The current deployment uses Mistral 7B on TORRE because that is what the apx03 research validated: a 7B model is the minimum parameter scale at which the behavioral compliance threshold was reached. But a 7B model running on a remote workstation is not a sealed device. Reaching the hardware goal -- a child speaks to a toy, the toy responds, nothing leaves the room -- requires a model small enough to run on Pi-class hardware.
+The current deployment uses Mistral 7B served over the network because that is what the apx03 research validated: a 7B model is the minimum parameter scale at which the behavioral compliance threshold was reached. But a 7B model running on a remote workstation is not a sealed device. Reaching the hardware goal -- a child speaks to a toy, the toy responds, nothing leaves the room -- requires a model small enough to run on Pi-class hardware.
 
 Ministral-3-3B (3 billion parameters, 4-bit quantization: ~1.5-2 GB) is the active candidate. At that weight size, local inference on a Pi 4B is feasible in principle. The open question is whether a 3B model can be trained to clear the behavioral deployment gate -- the apx03 research showed a sharp threshold around 7B, with sub-7B models failing catastrophically. The hypothesis here is that the threshold is not at 7B intrinsically, but at wherever sufficient reasoning capacity exists to generalize the trained persona to novel and adversarial inputs; and that domain-specific CLM pretraining on age-appropriate text (the ECD corpus) before SFT behavioral shaping may push the effective threshold lower.
 
 **Teddy v1.0T** is the first test of that hypothesis. Ministral-3-3B, CLM pretrained on the 38-file ECD corpus (described below), then SFT fine-tuned on the Teddy persona dataset (803 training examples, the full v6 curriculum). First-run result against the battery: 387/803 (48.2%). Under a zero-failure gate, this is BLOCKED. It is also not unexpected: the apx03 sub-7B models ranged from 11.3% to 32.0%, so 48.2% represents a meaningful gain attributable to the ECD pretrain -- and is a starting point for iteration, not a final result. Training is ongoing; battery results drive the next curriculum update.
 
-The significance: if iteration closes the gap from 48.2% to gate-clearance, the 7B-on-TORRE dependency is eliminated. Every component runs on the Pi. The toy is sealed.
+The significance: if iteration closes the gap from 48.2% to gate-clearance, the 7B-on-external-server dependency is eliminated. Every component runs on the Pi. The toy is sealed.
 
 ### Power
 
@@ -156,7 +156,7 @@ Planned:
 
 | # | Content |
 |---|---------|
-| 4 | teddy-ai text inference demo (Pi screen cap, V5 adapter live on TORRE) |
+| 4 | teddy-ai text inference demo (Pi screen cap, V5 adapter live on external server) |
 | 5+ | Hardware teardown, electronics assessment, wiring, integration |
 | Finale | Fully functional interactive Ruxpin -- text, voice, and animatronics unified |
 
@@ -169,7 +169,7 @@ The series thesis: the same toy that hinted at interactive AI in 1985 can now ac
 | Component | Status |
 |-----------|--------|
 | Pi 4B (teddy-ai) | Recommissioned 2026-04-19. OS, audio stack, speech recognition, TTS all functional. |
-| Language model -- Option A (Mistral 7B V5, Teddy adapter) | Gate cleared 2026-04-24 (665/671, 99.1%; all 6 failures adjudicated as instrument errors). Deployed to TORRE via Ollama. Pi connects over local network. |
+| Language model -- Option A (Mistral 7B V5, Teddy adapter) | Gate cleared 2026-04-24 (665/671, 99.1%; all 6 failures adjudicated as instrument errors). Deployed via Ollama. Pi connects over local network. |
 | Language model -- Option B (Ministral-3B V1.0T, Teddy T-series) | CLM pretrain on ECD corpus complete. SFT complete. First battery run: 387/803 (48.2%). BLOCKED. Iteration in progress. |
 | TTS voice (en_US-teddy-medium) | VITS training complete; ONNX export complete; system TTS integration complete (Stage 8, 2026-06-20). |
 | Unit 1 | Assessed -- likely unusable as primary; designated dev/test unit. |
@@ -235,9 +235,9 @@ The immediate next steps are hardware-first: open Unit 1, test the servo motors 
 
 Two parallel tracks are active:
 
-**Option A (Mistral 7B on TORRE):** The V5 adapter cleared its deployment gate on 2026-04-24 and is live. V6 -- chaos curriculum (made-up words, fragmented inputs, keyboard mash, emotional sounds, fantasy-reality mixing) and temporal grounding fixes -- is queued for training. V6 addresses the failure modes most likely to arise in real unsupervised child interaction that the V5 curriculum did not cover.
+**Option A (Mistral 7B on External Server):** The V5 adapter cleared its deployment gate on 2026-04-24 and is live. V6 -- chaos curriculum (made-up words, fragmented inputs, keyboard mash, emotional sounds, fantasy-reality mixing) and temporal grounding fixes -- is queued for training. V6 addresses the failure modes most likely to arise in real unsupervised child interaction that the V5 curriculum did not cover.
 
-**Option B (Ministral-3B, sealed device):** The Teddy T-series track uses Ministral-3-3B pretrained on the 38-file ECD corpus, then SFT-trained on the full Teddy persona dataset. First run (V1.0T) returned 387/803 (48.2%) on battery -- BLOCKED, but meaningfully above the sub-7B baseline range from Appendix 3 (11%-32%), consistent with the ECD pretrain providing register foundation the earlier sub-7B models lacked. Battery failure analysis drives the next curriculum update and retraining cycle. If iteration can close to gate-clearance, the TORRE dependency is eliminated and the device is truly sealed.
+**Option B (Ministral-3B, sealed device):** The Teddy T-series track uses Ministral-3-3B pretrained on the 38-file ECD corpus, then SFT-trained on the full Teddy persona dataset. First run (V1.0T) returned 387/803 (48.2%) on battery -- BLOCKED, but meaningfully above the sub-7B baseline range from Appendix 3 (11%-32%), consistent with the ECD pretrain providing register foundation the earlier sub-7B models lacked. Battery failure analysis drives the next curriculum update and retraining cycle. If iteration can close to gate-clearance, the server dependency is eliminated and the device is truly sealed.
 
 The hardware goal is a child who picks up Unit 2, asks Teddy a question, and gets a real answer -- live, local, safe. The same toy their parents grew up with, doing something their parents could not have imagined it doing.
 
