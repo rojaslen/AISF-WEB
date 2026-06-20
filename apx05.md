@@ -89,9 +89,9 @@ Two original Teddy Ruxpin units were acquired for this build. Unit 1 is a lower-
 
 Unit 2 was unboxed on 2026-06-13. Condition: excellent in every respect. All animatronic components present and firmly attached. Outfit in very good condition (green coveralls with matching removable vest and brown vinyl boots -- a later production variant, estimated 1986-87; the original 1985 edition shipped with a tan smock). Chassis housing reads "Worlds of Wonder 1985 Pat.Pend." consistent with the original design carried into later production runs.
 
-Electronics have not yet been tested under power. Listing video testimony confirms eyes and mouth working prior to sale. Next step: open the chassis, verify servo function under direct 5V, assess the original motor driver board. A 2016 YouTube repair series by ***workshop1138[^1]*** provides a deep dive on refurbishing the Ruxpin's mechanisms.
+Electronics have not yet been tested under power. Listing video testimony confirms eyes and mouth working prior to sale. Next step: open the chassis, verify servo function under direct 5V, assess the original motor driver board. A 2016 YouTube repair series by workshop1138[^1] provides a deep dive on refurbishing the Ruxpin's mechanisms.
 
-**The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A 2025 hobbyist modification by ***Randi Rain[^2]*** replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette -- the electronics do not know the difference.
+**The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A 2025 hobbyist modification by Randi Rain[^2] replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette -- the electronics do not know the difference.
 
 ### Software Stack
 
