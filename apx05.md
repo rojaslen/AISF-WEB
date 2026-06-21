@@ -118,6 +118,8 @@ The proof-of-concept build initially used `en_US-ryan-high` as a placeholder voi
 
 Development ran approximately two weeks across an 8-stage track: data preparation and transcript alignment, model training, iterative quality evaluation, ONNX export, and system integration. The ONNX export packages the trained weights for inference without the training environment, running at faster than real-time on Pi ARM hardware. Deployment is via a custom synthesis CLI integrated with the system's speech-dispatcher layer, which allows the Teddy service to request synthesis through the same interface as any other system TTS consumer. Stage 8 (speech-dispatcher integration) was completed 2026-06-20.
 
+**Output path note:** Screen readers -- JAWS and all equivalents -- are designed to echo all text routed through the TTS layer, including the input text that triggered synthesis. For this application that behavior is wrong: only Teddy's synthesized response should be audible, not a repeat of what the child said. Direct audio output bypassing speech-dispatcher is therefore the operative path for the Teddy service in practice. The speech-dispatcher integration is retained for development and diagnostics.
+
 The child-register gap in accessible TTS remains a broader problem. This training addressed it within the constraints of the project rather than waiting for the catalog to catch up.
 
 ### Ministral-3B: The Sealed-Device Track
