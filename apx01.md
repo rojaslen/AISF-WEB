@@ -10,13 +10,14 @@ nav_order: 2
 
 [All Downloads](https://github.com/rojaslen/AISF-downloads){: target="_blank" rel="noopener noreferrer" }
 
-[AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/tree/main/CORE){: target="_blank" rel="noopener noreferrer" } 
-*Debian and Windows installers for the cross-platform (Python) version, one bare PowerShell executable (Proof of Concept).*
+[AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/tree/main/CORE){: target="_blank" rel="noopener noreferrer" } <br>
+*Debian and Windows installers for the cross-platform (Python) version, one bare PowerShell executable (Windows only, deprecated).*
 
-[AI Stability Framework Firefox Extension (FFE)](https://github.com/rojaslen/AISF-downloads/tree/main/FFE){: target="_blank" rel="noopener noreferrer" } 
-*(Firefox only. AMO-signed for persistent install, no developer mode required. Download the .xpi file and open it in Firefox to install.)*
+[AI Stability Framework Firefox Extension (FFE)](https://github.com/rojaslen/AISF-downloads/tree/main/FFE){: target="_blank" rel="noopener noreferrer" } <br>
+*Firefox only. AMO-signed for persistent install, no developer mode required. Download the .xpi file and open it in Firefox to install.*
 
-[Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" }
+[Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" } <br>
+*Bare PowerShell executable, works with Copilot, ChatGPT, Claude, Gemini and more. CC0 Public Domain (Windows only).*
 
 **A note on trust:** Always scan any downloaded software before running it — *including AISF*. A few solid options, including free and low-cost:
 
