@@ -247,16 +247,6 @@ The original Teddy Ruxpin outfit partially restricts airflow when the chassis is
 
 ## References and Resources
 
-[^1]: [workshop1138 | Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_){: target="_blank" rel="noopener noreferrer" }
-
-[^2]: [Randi Rain | Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp){: target="_blank" rel="noopener noreferrer" }
-
-[^3]: [Jim Henson's Family Hub | The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt){: target="_blank" rel="noopener noreferrer" }
-
-[^4]: [Internet Archive | Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22){: target="_blank" rel="noopener noreferrer" }
-
-[^5]: [Harmony Central Forums | so the guys at the coffee shop put Slayer in a Teddy Ruxpin (2007)](https://www.harmonycentral.com/forums/topic/1374646-so-the-guys-at-the-coffee-shop-put-slayer-in-a-teddy-ruxpin/){: target="_blank" rel="noopener noreferrer" }
-
 ### Software Credits
 
 The following open-source components are used under their respective licenses: VOSK speech recognition (Apache 2.0, Alphacephei); Piper TTS (MIT, Rhasspy/Michael Hansen); Ollama (MIT); numpy (BSD); sounddevice (MIT). The Piper VITS training framework and ONNX export pipeline are also used under MIT license.
@@ -270,6 +260,16 @@ The CLM pretraining corpus consists of public-domain texts sourced from Project 
 The `en_US-teddy-medium` voice model was trained on audio from the 1985-87 *Adventures of Teddy Ruxpin* animated series and the Worlds of Wonder audio cassette library for the purpose of non-commercial research into accessible text-to-speech voice development. This use is claimed as fair use under 17 U.S.C. § 107 on the basis of: transformative purpose (production of a TTS synthesis model, not reproduction of the source material); non-commercial research context; the absence of market substitution for the original works; and deployment scope limited to the single Raspberry Pi dedicated to this Ruxpin Retrofit proof-of-concept -- the model is not installed on general-purpose hardware and is not used for any purpose beyond this demonstration. The synthesized output does not approach commercial quality and is not intended as a reproduction of or substitute for Phil Baron's performance. The trained voice model weights are not published or distributed.
 
 No claim is made upon the Teddy Ruxpin intellectual property or upon Phil Baron's voice. Should Mr. Baron wish to take possession of the trained voice model, it will be relinquished to him freely upon request. This offer is specific to Mr. Baron and does not constitute a general release.
+
+[^1]: [workshop1138 | Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_){: target="_blank" rel="noopener noreferrer" }
+
+[^2]: [Randi Rain | Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp){: target="_blank" rel="noopener noreferrer" }
+
+[^3]: [Jim Henson's Family Hub | The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt){: target="_blank" rel="noopener noreferrer" }
+
+[^4]: [Internet Archive | Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22){: target="_blank" rel="noopener noreferrer" }
+
+[^5]: [Harmony Central Forums | so the guys at the coffee shop put Slayer in a Teddy Ruxpin (2007)](https://www.harmonycentral.com/forums/topic/1374646-so-the-guys-at-the-coffee-shop-put-slayer-in-a-teddy-ruxpin/){: target="_blank" rel="noopener noreferrer" }
 
 ---
 
