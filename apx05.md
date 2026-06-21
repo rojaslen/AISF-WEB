@@ -94,7 +94,7 @@ Electronics have not yet been tested under power. Listing video testimony confir
 
 **The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A 2025 modification documented by Randi Rain[^2] replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette -- the electronics do not know the difference.
 
-The tape deck assembly is gutted entirely to make room for the Pi. During teardown, the cassette detection sensor -- a spring-loaded pin that signals the motor driver board to interpret the right channel as movement data rather than ignore it -- must be extracted from the tape deck and left permanently in the extended position. Discarding it with the rest of the tape mechanism would leave the board permanently in normal-cassette mode, where the right-channel signal is ignored and no servo movement occurs.
+The tape deck assembly is gutted entirely to make room for the Pi. During teardown, the high-bias cassette detection sensor -- a spring-loaded pin that signals the motor driver board to interpret the right channel as movement data rather than ignore it -- may need to be extracted from the tape deck and left permanently in the extended position. Discarding it with the rest of the tape mechanism would leave the board permanently in normal-cassette mode, where the right-channel signal is ignored and no servo movement occurs. Dependent upon success of audio jack modification when applied to available hardware.
 
 ### Software Stack
 
