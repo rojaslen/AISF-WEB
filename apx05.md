@@ -29,7 +29,7 @@ AI-enabled children's toys already exist. The products gaining traction sidestep
 
 That approach is functional, but it trades one set of problems for another. <a href="/#toc">The rest of this project</a> explores those problems at length.
 
-When a child speaks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored, used for model training, or shared for commercial purposes. A parent account and terms-of-service agreement are typically required -- agreements most users accept without reading in full.
+When a child speaks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored, used for model training, or shared for commercial purposes. A subscription account and terms-of-service agreement are typically required -- agreements most users accept without reading in full.
 
 In 2025 and 2026, at least one commercial AI toy product (FoloToy/Kumma) was suspended following documented content safety failures. The combination of general-purpose frontier AI in the cloud, limited content filtering, and unsupervised child interaction produced results the manufacturer did not intend and could not immediately correct.
 
