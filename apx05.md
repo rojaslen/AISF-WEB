@@ -31,9 +31,9 @@ That approach is functional, but it trades one set of problems for another. <a h
 
 When a child speaks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored, used for model training, or shared for commercial purposes. A parent account and terms-of-service agreement are typically required -- agreements most users accept without reading in full.
 
-In 2025 and 2026, at least one commercial AI toy product (FoloToy/Kumma) was suspended following documented content safety failures. The combination of cloud AI, limited content filtering, and unsupervised child interaction produced results the manufacturer did not intend and could not immediately correct.
+In 2025 and 2026, at least one commercial AI toy product (FoloToy/Kumma) was suspended following documented content safety failures. The combination of general-purpose frontier AI in the cloud, limited content filtering, and unsupervised child interaction produced results the manufacturer did not intend and could not immediately correct.
 
-The alternative this project investigates is the harder case that current products are not attempting: run the AI entirely on the device, with no external connection or account required. The child's voice never leaves the room. No personal data is transmitted, stored, or exposed to third-party handling.
+The alternative this project investigates is the harder case that current products are not attempting: run a purpose-built AI entirely on the device, with no external connection or account required. The child's voice never leaves the room. No personal data is transmitted, stored, or exposed to third-party handling.
 
 ---
 
