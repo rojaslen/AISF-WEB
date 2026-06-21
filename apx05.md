@@ -5,7 +5,7 @@ nav_order: 6
 ---
 
 # Appendix 5: Ruxpin Retrofit
-<img style="float: right; border: 1px solid #746C44; padding: 10px;" src="./assets/images/ruxpin-retrofit-unit2.jpg" alt="Photo of Teddy Ruxpin toy, seated wearing green coveralls and matching vest (Unit 2)." width="25%">
+<img style="float: right; border: 1px solid #746C44; padding: 10px;" src="./assets/images/ruxpin-retrofit-unit2.jpg" aria-label="Photo of Teddy Ruxpin toy, seated wearing green coveralls and matching vest (Unit 2)." width="25%">
 
 - **Author:** Leonard Rojas
 - **Status:** *In progress* 
