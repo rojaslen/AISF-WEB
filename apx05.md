@@ -15,21 +15,21 @@ nav_order: 6
 
 ## Concept
 
-In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tape played audio while the eyes and mouth moved in sync, creating the impression of a conversational presence. The technology was impressive for its time, but the interaction was fixed: Teddy could only say what was pre-recorded on the tape.
+In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tape played audio while the eyes and mouth moved in sync, creating the illusion of a conversational presence. The technology was impressive for its time, but the interaction was fixed: Teddy could only say what was pre-recorded on the tape.
 
-Forty years later, the same chassis can do something it never could before. A language model replaces the cassette, listens to what the child actually says, and generates a response. The toy's animatronic hardware stays intact; what changes is what drives it. The eyes and mouth still move in sync -- now with a response the model produced, not a recording made decades ago.
+Forty years later, the same toy can do something it never could before. A language model replaces the cassette deck, listens to what the child actually says, and generates a response. The toy's animatronic hardware stays intact; the change is what's driving it. The eyes, nose and mouth still move in sync, but now they're synchronized to a response the model produced, not a static recording made decades ago.
 
-Teddy Ruxpin was also one of the best-selling toys of its era, and one of the most culturally durable -- recognizable to this day by virtually anyone who grew up in that period. That recognition is not incidental to the project. An iconic toy that is immediately familiar makes the demonstration legible without explanation: the gap between what the toy used to do and what it now does is obvious on sight.
+Teddy Ruxpin was also one of the best-known toys of the 1980s, making it one of the most culturally durable. It's instantly recognizable to this day by virtually anyone who remembers the era, and that cultural cachet is not incidental to the project. The toy's iconic status makes the demonstration legible without explanation. The gap between what the toy used to do and what it can do now is immediately obvious.
 
 ---
 
 ## The AI Toy Problem
 
-AI-enabled children's toys already exist. The products gaining traction sidestep the hard technical problem: they offload the AI processing to the cloud. The toy is a microphone and a speaker; the computation -- and every word a child says to it -- goes to a remote server.
+AI-enabled children's toys are already on the market. The products gaining traction sidestep the hard technical problem: they offload the AI computation to the cloud. The toys themselves just have wi-fi, a microphone and a speaker; every word a child says to them is sent to a remote server for processing.
 
 That approach is functional, but it trades one set of problems for another. <a href="/#toc">The rest of this project</a> explores those problems at length.
 
-When a child speaks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored, used for model training, or shared for commercial purposes. A subscription account and terms-of-service agreement are typically required -- agreements most users accept without reading in full.
+When a child speaks to a cloud-connected toy, that voice data leaves the home. It travels to a third-party server. It may be stored, used for model training, or shared for commercial purposes. A subscription account and terms-of-service agreement are typically required, and users often simply click to accept the terms and proceeed without reading them fully.
 
 In 2025 and 2026, at least one commercial AI toy product (FoloToy/Kumma) was suspended following documented content safety failures. The combination of general-purpose frontier AI in the cloud, limited content filtering, and unsupervised child interaction produced results the manufacturer did not intend and could not immediately correct.
 
@@ -39,13 +39,13 @@ The alternative this project investigates is the harder case that current produc
 
 ## Why Sealed Devices Are Harder
 
-Most AI deployments have a safety net. If a model says something it should not, a human can intervene, report it, update the system prompt, or swap the model out.
+Most AI deployments have a safety net. If a model says something it shouldn't, a human can intervene, report it, update the system prompt, or swap the model out.
 
 A sealed device eliminates all of that. There is no accessible interface, no mechanism for runtime correction, no way to push a patch once the toy is in a child's hands. The behavior encoded in its software at ship time is the behavior it has. If the training missed something important, there is no fallback.
 
-This makes the safety standard for a sealed AI toy materially stricter than for any AI product where a human is watching. The standard used in this project is zero failures on a 584-question behavioral compliance battery -- a test designed to probe edge cases, adversarial inputs, and manipulation attempts alongside ordinary conversation. Not 99%. Zero.
+This makes the safety standard for a sealed AI toy materially stricter than for any AI product where a human is watching. The standard used in this project is zero failures on a 584-question behavioral compliance test, designed to probe edge cases, adversarial inputs, and manipulation attempts alongside ordinary conversation. Not 99%. Zero.
 
-That standard has not been met yet. [Appendix 3]({% link apx03.md %}) documents what happened when four different AI models were trained and tested against it.
+That standard has not yet been fully met. [Appendix 3]({% link apx03.md %}) documents what happened when four different AI models were trained and tested against it.
 
 ---
 
@@ -53,7 +53,7 @@ That standard has not been met yet. [Appendix 3]({% link apx03.md %}) documents 
 
 The key finding from Appendix 3: behavioral compliance does not scale gradually with model size. It shifts at a threshold.
 
-Four models were tested, ranging from 1.1 billion parameters (very small) to 7.24 billion (large by consumer-hardware standards). "Parameters" is roughly a measure of how much a model has learned -- more parameters generally means more capable, but also more computational demand and more hardware required to run it.
+Four models were tested, ranging from 1.1 billion parameters (very small) to 7.24 billion (large by consumer-hardware standards). "Parameters" is roughly a measure of how much a model has learned -- more parameters generally means more capable, but also more computational demand and more powerful hardware required to run it.
 
 | Model | Size | Compliance |
 |-------|------|------------|
@@ -64,7 +64,7 @@ Four models were tested, ranging from 1.1 billion parameters (very small) to 7.2
 
 The jump from 2.7B to 7B is not gradual. Below the threshold, models learned surface patterns -- they recognized what a safe response looked like in training examples but could not reliably generalize to novel situations. Above it, the model demonstrated the capacity to reason about adversarial and unfamiliar inputs and maintain behavioral consistency.
 
-98.8% -- the best result from the initial run -- was not deployable under a zero-failure standard. Subsequent iteration resolved the identified failure modes; the deployment gate cleared 2026-04-24. [Appendix 3]({% link apx03.md %}) documents the full training and evaluation record.
+98.8% -- the best result from the initial run -- was not deployable under a zero-failure standard. Subsequent iteration resolved the identified failure modes; the deployment gate cleared 2026-04-24 upon human review. [Appendix 3]({% link apx03.md %}) documents the full training and evaluation record.
 
 ---
 
@@ -72,29 +72,29 @@ The jump from 2.7B to 7B is not gradual. Below the threshold, models learned sur
 
 The Ruxpin Retrofit is the physical implementation of the research above.
 
-The original 1985 Teddy Ruxpin chassis is kept intact: the animatronic eyes and moving mouth are the frontend. Everything inside the tape compartment is removed and replaced with a Raspberry Pi running a modern AI stack. The toy's audio output, PPM servo signal routing, and animatronic hardware are preserved and driven by the Pi rather than by a cassette.
+The original 1985 Teddy Ruxpin chassis remains intact: the animatronic eyes and moving mouth are the frontend. Everything inside the tape compartment is removed and replaced with a Raspberry Pi running a modern AI stack. The toy's audio output, PPM servo signal routing, and animatronic hardware are preserved and driven by the Pi rather than by a cassette.
 
-The child speaks to Teddy through an added microphone. The Pi's speech recognition converts the audio to text. A language model, trained on the behavioral curriculum from Appendix 3, generates a response. Text-to-speech converts the response back to audio. The audio plays through the toy's original speaker. The mouth and eyes move in sync.
-
-No cloud. No external connection. No data leaves the room.
+The child speaks to Teddy through an added microphone. The Pi's speech recognition converts the audio to text. A language model, trained on the behavioral curriculum from Appendix 3, generates a response. Text-to-speech converts the response back to audio. The audio plays through the toy's original speaker. The mouth and eyes move in sync with no cloud processing or external connection, and no data leaves the room.
 
 ### Hardware
 
-**The Pi:** A Raspberry Pi 4B (4GB RAM) is the computing platform, running a stripped-down Debian Trixie install (non-use-case packages removed). Trixie is likely overkill for the application; lightweight alternatives exist and could reduce resource overhead, but OS optimization is out of scope for the current prototype. In its current configuration, inference runs on a nearby desktop workstation (Intel i9-9900k, NVIDIA RTX 5060 Ti) and the Pi handles audio input and output. This is Option A: inference served over the local network, an external dependency.
+**The Pi:** A Raspberry Pi 4B (4GB RAM) is the computing platform, running a stripped-down Debian Trixie install (non-use-case packages removed). Trixie is likely overkill for this application; lightweight alternatives exist and could reduce resource overhead, but OS optimization is out of scope for the current prototype. In its current configuration, inference runs on a nearby desktop workstation (Intel i9-9900k, NVIDIA RTX 5060 Ti) and the Pi handles audio input and output. This is Option A: inference served over the local network, an external dependency.
 
-Option B -- sealed device, no external connection -- is the actual goal, and it is the primary reason a 3B-parameter model track exists alongside the 7B deployment. A 3B model quantized to 4-bit requires approximately 1.5-2 GB for weights, which fits within the Pi 4B's 4 GB RAM alongside the audio stack. If the 3B model can be trained to clear the deployment gate (an open question -- see below), a Pi 4B running inference entirely locally becomes the target hardware for the final build. A Pi 5 (8 GB RAM) is tracked as a fallback that would fit the 7B model directly if the 3B track does not reach gate-clearance.
+Option B: a sealed device with no external connection is the actual goal, and it is the primary reason a 3B-parameter model track exists alongside the 7B deployment. A 3B model quantized to 4-bit requires approximately 1.5-2 GB for weights, which fits within the Pi 4B's 4 GB RAM alongside the audio stack. If the 3B model can be trained to clear the deployment gate (an open question, see below), a Pi 4B running inference entirely locally becomes the target hardware for the final build. A Pi 5 (8 GB RAM) is tracked as a fallback that would fit the 7B model directly if the 3B track does not reach gate-clearance.
 
-**The units:** Two original Teddy Ruxpin units were acquired for this build. Unit 1 is a lower-condition eBay unit, designated for development and destructive testing -- opening the chassis, testing electronics, prototyping the wiring. Unit 2 is a well-preserved example in excellent condition, confirmed working, acquired for the final build.
+**The units:** Two original Teddy Ruxpin units were acquired for this build. Unit 1 is a lower-condition eBay unit, designated for development and destructive testing: opening the chassis, testing electronics, prototyping the wiring. Unit 2 is a well-preserved example in excellent condition, confirmed working, acquired for the final build.
 
-Unit 2 was unboxed on 2026-06-13. Condition: excellent in every respect. All animatronic components present and firmly attached. Outfit in very good condition (green coveralls with matching removable vest and brown vinyl boots -- a later production variant, estimated 1986-87; the original 1985 edition shipped with a tan smock). Chassis housing reads "Worlds of Wonder 1985 Pat.Pend." consistent with the original design carried into later production runs.
+Unit 2 was unboxed on 2026-06-13. Condition: excellent in every respect. All animatronic components present and firmly attached. The outfit is in very good condition (green coveralls with matching removable vest and brown vinyl boots. Unit 2 is a later production variant, estimated 1986-87; the original 1985 edition shipped with a tan smock, matching Unit 1). Chassis housing reads "Worlds of Wonder 1985 Pat.Pend." consistent with the original design carried into later production runs.
 
-The tape deck interior confirms the production series: Series 1 (1985 manufacture) units have a metal interior backplate; later production series have a plastic one. Unit 1 has the metal backplate; Unit 2 has plastic, consistent with the 1986-87 production estimate.
+The tape deck interior confirms the production series: Series 1 (1985 manufacture) units have a metal interior backplate; later production series used plastic. Unit 1 has the metal backplate while Unit 2 has plastic, consistent with the 1986-87 production estimate.
 
 Electronics have not yet been tested under power. Listing video testimony confirms eyes and mouth working prior to sale. Next step: open the chassis, verify servo function under direct 5V, assess the original motor driver board. A 2016 YouTube repair series by workshop1138[^1] documents the Ruxpin's internal mechanisms in detail.
 
-**The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A 2025 modification documented by Randi Rain[^2] replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette -- the electronics do not know the difference.
+**The audio path:** The original Ruxpin cassette format carries audio on the left channel and a servo control signal on the right channel. A 2025 modification documented by Randi Rain[^2] replaces the cassette mechanism with a standard 3.5mm audio jack, exposing the same control signals directly. The Pi outputs speech audio on the left channel and generates the servo control signal on the right channel. The original motor driver board decodes it exactly as it decoded the cassette; the signal's source is irrelevant to its function.
 
-The tape deck assembly is gutted entirely to make room for the Pi. During teardown, the high-bias cassette detection sensor -- a spring-loaded pin that signals the motor driver board to interpret the right channel as movement data rather than ignore it -- may need to be extracted from the tape deck and left permanently in the extended position. Discarding it with the rest of the tape mechanism would leave the board permanently in normal-cassette mode, where the right-channel signal is ignored and no servo movement occurs. Dependent upon success of audio jack modification when applied to available hardware.
+The tape deck assembly is gutted entirely to make room for the Pi. During teardown, the *high-bias cassette detection sensor* (a spring-loaded probe for the cassette's top edge which signals the motor driver board to interpret the right channel as movement data rather than ignore it)[^3] may need to be extracted from the tape deck and left permanently in the extended position. Discarding it with the rest of the tape mechanism could leave the board permanently in normal-cassette mode, where the right-channel signal is ignored and no servo movement occurs. 
+
+***High-bias probe retention dependent upon success of audio jack modification when applied to available hardware; wiring modification may render the physical probe unnecessary.***
 
 ### Software Stack
 
@@ -104,17 +104,17 @@ The pipeline, in sequence:
 2. **Speech recognition** (VOSK) -- converts audio to text; low CPU overhead on Pi ARM hardware
 3. **Language model** (Mistral 7B via Ollama [Option A] / Ministral 3B local [Option B]) -- generates response text
 4. **Text-to-speech** (Piper TTS, `en_US-teddy-medium`) -- converts response text to audio at faster than real-time on Pi ARM; amplitude envelope simultaneously drives the mouth servo signal
-5. **Speaker output** (existing tape deck hardware) -- plays audio
+5. **Speaker output** (original device hardware) -- plays audio
 
 All components run locally except the language model under Option A, where inference is served over the local network.
 
-The mouth movement timing is derived from the TTS audio amplitude -- when the speech gets louder, the jaw opens; when it falls quiet, it closes. The same signal that originally lived on a prerecorded cassette tape is now generated in software, in real time, from whatever Teddy is saying.
+The mouth movement timing is derived from the TTS audio amplitude, so when the speech gets louder, the jaw opens; when it falls quiet, it closes. The same signal that originally came from a prerecorded cassette tape is now generated in software, in real time, from whatever Teddy is saying.
 
 **Option B (sealed device):** the language model block is replaced by a locally-running 3B model. This is the active development track; see the Ministral-3B section below and the ECD Pretrain Corpus section.
 
 The proof-of-concept build initially used `en_US-ryan-high` as a placeholder voice -- a Piper-standard adult male voice, adequate for pipeline testing but clearly wrong for the application. The target was a child-register voice: warmer, with the cadence of a storytelling character rather than a professional narrator. No such voice existed in the Piper catalog. Open-source TTS is broadly underserved in child-register options, a gap with direct implications for accessibility tools aimed at younger users.
 
-`en_US-teddy-medium` was trained to fill that gap. It is a VITS (Variational Inference with adversarial learning for end-to-end Text-to-Speech) model -- an architecture that learns directly from audio examples rather than requiring pre-labeled phoneme alignments, making it well-suited to training on existing recordings. Training data was drawn from two sources: Phil Baron's voice performances in the original 1985-87 *Adventures of Teddy Ruxpin* cartoon[^3], which provide extended narrative speech samples across a range of emotional registers; and the Worlds of Wonder audio cassette library[^4], which provides the specific vocal character of the toy itself. Both were necessary -- the cartoon supplies register range and sample volume; the cassettes supply acoustic specificity.
+`en_US-teddy-medium` was trained to fill that gap. It is a VITS (Variational Inference with adversarial learning for end-to-end Text-to-Speech) model -- an architecture that learns directly from audio examples rather than requiring pre-labeled phoneme alignments, making it well-suited to training on existing recordings. Training data was drawn from two sources: Phil Baron's voice performances in the original 1985-87 *Adventures of Teddy Ruxpin* cartoon[^4], which provide extended narrative speech samples across a range of emotional registers; and the Worlds of Wonder audio cassette library[^5], which provides the specific vocal character of the toy itself. Both were necessary -- the cartoon supplies register range and sample volume; the cassettes supply acoustic specificity.
 
 Development ran approximately two weeks across an 8-stage track: data preparation and transcript alignment, model training, iterative quality evaluation, ONNX export, and system integration. The ONNX export packages the trained weights for inference without the training environment, running at faster than real-time on Pi ARM hardware. Deployment is via a custom synthesis CLI integrated with the system's speech-dispatcher layer, which allows the Teddy service to request synthesis through the same interface as any other system TTS consumer. Stage 8 (speech-dispatcher integration) was completed 2026-06-20.
 
@@ -233,7 +233,7 @@ A sealed child-facing device cannot impose update interruptions on the user. Upd
 
 ### PPM Signal Generation
 
-The right-channel OOK control signal (~860 Hz carrier, confirmed from "The Third Crystal" FLAC analysis 2026-06-04)[^5] is generated in software using numpy + sounddevice as a standard stereo PCM stream. No special codec installations required -- from ALSA's perspective it is ordinary audio. The left channel carries Piper TTS speech; the right channel carries the OOK signal derived from the speech amplitude envelope.
+The right-channel OOK control signal (~860 Hz carrier, confirmed from "The Third Crystal" FLAC analysis 2026-06-04)[^3] is generated in software using numpy + sounddevice as a standard stereo PCM stream. No special codec installations required -- from ALSA's perspective it is ordinary audio. The left channel carries Piper TTS speech; the right channel carries the OOK signal derived from the speech amplitude envelope.
 
 Amplitude envelope is computed at ~20ms frames, smoothed with a ~10Hz low-pass filter, then thresholded to binary mouth-open/mouth-closed state. This is a lossy approximation of true lip sync -- the 40-year-old cam-and-motor mechanism cannot track phoneme-level events, and the original cassette control tracks used the same approximation. The result looks natural because the mechanism's response time limits set the perceptual ceiling.
 
@@ -276,8 +276,9 @@ No claim is made upon the Teddy Ruxpin intellectual property or upon Phil Baron'
 
 [^2]: [Randi Rain -- Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp){: target="_blank" rel="noopener noreferrer" }
 
-[^3]: [Jim Henson's Family Hub -- The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt){: target="_blank" rel="noopener noreferrer" }
+[^3]: [Harmony Central Forums -- so the guys at the coffee shop put Slayer in a Teddy Ruxpin (2007)](https://www.harmonycentral.com/forums/topic/1374646-so-the-guys-at-the-coffee-shop-put-slayer-in-a-teddy-ruxpin/){: target="_blank" rel="noopener noreferrer" }
 
-[^4]: [Internet Archive -- Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22){: target="_blank" rel="noopener noreferrer" }
+[^4]: [Jim Henson's Family Hub -- The Adventures of Teddy Ruxpin](https://youtube.com/playlist?list=PLifn29u_lcacGQzckLpwpsCrhp5Hr42Wz&si=zuzt1k6kMS26_sOt){: target="_blank" rel="noopener noreferrer" }
 
-[^5]: [Harmony Central Forums -- so the guys at the coffee shop put Slayer in a Teddy Ruxpin (2007)](https://www.harmonycentral.com/forums/topic/1374646-so-the-guys-at-the-coffee-shop-put-slayer-in-a-teddy-ruxpin/){: target="_blank" rel="noopener noreferrer" }
+[^5]: [Internet Archive -- Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22){: target="_blank" rel="noopener noreferrer" }
+

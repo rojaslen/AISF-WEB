@@ -47,7 +47,7 @@ Meanwhile, real people are losing real time and effort to AI hallucination (and 
 
   - AISF-CORE — Small, standalone desktop app that stabilizes AI sessions and reduces hallucination by giving the AI a set of behavioral rules to follow. **FREE for personal use**.
   - CDA — Copilot Digital Accessibility. WCAG-only enterprise accessibility tool with multi-model compatibility — works with Copilot, ChatGPT, Claude, Gemini and more. CC0, dedicated to **PUBLIC DOMAIN**.
-  - OLM — The framework can even be tuned directly into models themselves. QLoRA tuning achieves full behavioral integration in a locally-hosted Mistral 7B model, trainable on *mid-range retail consumer hardware running either Windows 11 or Debian Linux*. Training materials and configuration are available, train one and try it for yourself. Full information in Appendix 2.
+  - OLM — The framework can even be tuned directly into models themselves. QLoRA tuning achieves full behavioral integration in a locally-hosted Mistral 7B model, trainable on *mid-range retail consumer hardware running either Windows 11 or Debian Linux*. Upon research completion, that model and more will be made available so you can see it for yourself. Full information in Appendix 2.
 
 It's unconventional, but it works. Read more if you want to know why.
 
