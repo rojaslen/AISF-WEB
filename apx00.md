@@ -129,6 +129,11 @@ All footnotes cited within body text are compiled here for comprehensive referen
 — Texas Tribune. Data center / ERCOT grid reporting, 2025–2026. [https://www.texastribune.org/2026/01/20/texas-top-data-center-market-power-grid/](https://www.texastribune.org/2026/01/20/texas-top-data-center-market-power-grid/){: target="_blank" rel="noopener noreferrer" } 
 — Water Desk. "Data centers: a small but growing factor in Arizona's water budget." April 2025. [https://waterdesk.org/2025/04/data-centers-a-small-but-growing-factor-in-arizonas-water-budget/](https://waterdesk.org/2025/04/data-centers-a-small-but-growing-factor-in-arizonas-water-budget/){: target="_blank" rel="noopener noreferrer" }
 
+***11b:*** Tolkien, J. R. R. (1954). The Fellowship of the Ring (Book I, Ch. 2, "The Shadow of the Past"). George Allen & Unwin.
+
+***11c:*** Aczel M., Chamanara S., Matin M., Farsi A., Marwala T., Madani K. (2026). Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints, United Nations University Institute for Water, Environment and Health (UNU-INWEH), Richmond Hill, Ontario, Canada, doi: 10.53328/INR26RMA002
+
+
 ## FAQ
 
 ***Fa:*** Orwell, G., Nineteen Eighty‑Four, appendix, "The Principles of Newspeak" (London: Secker & Warburg, 1949). *"Newspeak was designed not to extend but to diminish the range of thought...The grammar of Newspeak had two outstanding peculiarities. The first of these was an almost complete interchangeability between different parts of speech."*
