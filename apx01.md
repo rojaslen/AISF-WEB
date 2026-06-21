@@ -13,10 +13,7 @@ nav_order: 2
 [AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/tree/main/CORE){: target="_blank" rel="noopener noreferrer" }
 
 [AI Stability Framework Firefox Extension (FFE)](https://github.com/rojaslen/AISF-downloads/tree/main/FFE){: target="_blank" rel="noopener noreferrer" }
-
-*(Firefox only. AMO-signed for persistent install -- no developer mode required. Download the .xpi file and open it in Firefox to install.)*
-
-[AISF OLM Reproducibility Package]<!--(https://github.com/rojaslen/AISF-downloads/tree/main/OLM){: target="_blank" rel="noopener noreferrer" }--> Offline pending final post-update validation, coming soon.
+*(Firefox only. AMO-signed for persistent install, no developer mode required. Download the .xpi file and open it in Firefox to install.)*
 
 [Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" }
 
@@ -29,7 +26,7 @@ nav_order: 2
 - [McAfee](https://www.mcafee.com/){: target="_blank" rel="noopener noreferrer" }
 - [Norton 360](https://us.norton.com/){: target="_blank" rel="noopener noreferrer" }
 
-*(Malwarebytes users: the AISF-CORE executable may trigger a false-positive quarantine. It passes all other scans above, including enterprise CrowdStrike. Manually whitelisting it in "Settings:Scan and detections:Allow list" works around this. Vendor whitelist submission pending.)*
+*(Malwarebytes users: the AISF-CORE-PS executable may trigger a false-positive quarantine. It passes all other scans above, including enterprise CrowdStrike. Manually whitelisting it in "Settings:Scan and detections:Allow list" works around this. Vendor whitelist submission pending.)*
 
 <nav>
 <div class="chapter-nav">
