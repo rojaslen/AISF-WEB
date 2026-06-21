@@ -19,7 +19,7 @@ In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tap
 
 Forty years later, the same chassis can do something it never could before. A language model replaces the cassette, listens to what the child actually says, and generates a response. The toy's animatronic hardware stays intact; what changes is what drives it. The eyes and mouth still move in sync -- now with a response the model produced, not a recording made decades ago.
 
-Teddy Ruxpin was also one of the best-selling toys of its era, and one of the most culturally durable -- recognizable to this day by virtually anyone who grew up in that period. That recognition is not incidental to the project. A form factor that is immediately familiar makes the demonstration legible without explanation: the gap between what the toy used to do and what it now does is obvious on sight.
+Teddy Ruxpin was also one of the best-selling toys of its era, and one of the most culturally durable -- recognizable to this day by virtually anyone who grew up in that period. That recognition is not incidental to the project. An iconic toy that is immediately familiar makes the demonstration legible without explanation: the gap between what the toy used to do and what it now does is obvious on sight.
 
 ---
 
