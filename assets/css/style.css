@@ -204,10 +204,13 @@ html.font-l { font-size: 112.5%; }
   color: var(--color-text);
 }
 
-.site-brand:hover,
-.site-brand:focus-visible {
+.site-brand:hover {
   color: #605838;   /* Harvest Gold */
   text-decoration: underline;
+}
+
+.site-brand:focus-visible {
+  color: #605838;   /* Harvest Gold */
 }
 
 @media (prefers-color-scheme: dark) {

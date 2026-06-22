@@ -1,4 +1,4 @@
-# Charmap ALT+Code Reference
+# Windows Charmap ALT+Code Reference
 ---
 
  — (em dash)    Alt+0151 
