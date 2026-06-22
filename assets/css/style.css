@@ -393,7 +393,8 @@ strong {
 .chapter-nav a:visited,
 .toc-link a,
 .toc-link a:visited,
-.demo-btn {
+.demo-btn,
+.disabled-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -431,6 +432,20 @@ strong {
   border: none;
   cursor: default;
   opacity: 0.75;
+}
+
+/* --- Disabled placeholder button (unselected font-size picker appearance) --- */
+.disabled-btn {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  border: none;
+  cursor: default;
+  opacity: 0.45;
+}
+
+.disabled-btn:hover {
+  opacity: 1;
 }
 
 /* --- Screenshot thumbnails --- */
