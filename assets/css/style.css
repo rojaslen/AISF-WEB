@@ -204,11 +204,7 @@ html.font-l { font-size: 112.5%; }
   color: var(--color-text);
 }
 
-.site-brand:hover {
-  color: #605838;   /* Harvest Gold */
-  text-decoration: underline;
-}
-
+.site-brand:hover,
 .site-brand:focus-visible {
   color: #605838;   /* Harvest Gold */
 }
@@ -230,6 +226,11 @@ html.font-l { font-size: 112.5%; }
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.3;
+  text-decoration: none;
+}
+
+.site-brand:hover .site-name {
+  text-decoration: underline;
 }
 
 /* --- Main content --- */
