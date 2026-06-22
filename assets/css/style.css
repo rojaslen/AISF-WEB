@@ -195,23 +195,23 @@ html.font-l { font-size: 112.5%; }
   outline-offset: 2px;
 }
 
-.site-brand,
-.site-brand:visited {
-  display: inline-flex;
+a.site-brand,
+a.site-brand:visited {
+  display: flex;
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
   color: var(--color-text);
 }
 
-.site-brand:hover,
-.site-brand:focus-visible {
+a.site-brand:hover,
+a.site-brand:focus-visible {
   color: #605838;   /* Harvest Gold */
 }
 
 @media (prefers-color-scheme: dark) {
-  .site-brand:hover,
-  .site-brand:focus-visible {
+  a.site-brand:hover,
+  a.site-brand:focus-visible {
     color: #E7D789;   /* Pale Gold -- Harvest Gold is too dark on Deep Indigo */
   }
 }
@@ -229,7 +229,7 @@ html.font-l { font-size: 112.5%; }
   text-decoration: none;
 }
 
-.site-brand:hover .site-name {
+a.site-brand:hover .site-name {
   text-decoration: underline;
 }
 
