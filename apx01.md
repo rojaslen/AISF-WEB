@@ -11,7 +11,7 @@ nav_order: 2
 [All Downloads](https://github.com/rojaslen/AISF-downloads){: target="_blank" rel="noopener noreferrer" }
 
 [AI Stability Framework CORE](https://github.com/rojaslen/AISF-downloads/tree/main/CORE){: target="_blank" rel="noopener noreferrer" } <br>
-*Debian and Windows installers for the cross-platform (Python) version, one bare PowerShell executable (Windows only, deprecated).*
+*Debian and Windows installers for the cross-platform (Python) version, one bare PowerShell executable (Windows-only, superseded).*
 
 [AI Stability Framework Firefox Extension (FFE)](https://github.com/rojaslen/AISF-downloads/tree/main/FFE){: target="_blank" rel="noopener noreferrer" } <br>
 *Firefox only. AMO-signed for persistent install, no developer mode required. Download the .xpi file and open it in Firefox to install.*
