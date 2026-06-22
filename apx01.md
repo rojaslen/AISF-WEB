@@ -36,6 +36,3 @@ nav_order: 2
   <a href="/#toc">Table of Contents</a>
 </div>
 </nav>
-
----
-
