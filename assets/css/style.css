@@ -522,6 +522,9 @@ dialog.lightbox::backdrop {
   max-height: calc(90vh - 4rem);
   width: auto;
   height: auto;
+  border: 1px solid #746C44;
+  padding: 15px;
+  background-color: #090B21;
 }
 
 .lightbox-close {
