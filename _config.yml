@@ -21,7 +21,7 @@ plugins:
   - jekyll-seo-tag
 
 logo: "/assets/images/logo.png"
-footer_content: "© 2025-2026 Leonard Rojas. All rights reserved. AI Stability Framework wordmark and logo are trademarks of Leonard Rojas (USPTO Serial Nos. 99664948 and 99749758, registration pending). U.S. patent pending (Application No. 64/082,755). Contact: AISF at LeonardRojas dot com"
+footer_content: "© 2025-2026 Leonard Rojas. All rights reserved. AI Stability Framework wordmark and logo are trademarks of Leonard Rojas (USPTO Serial Nos. 99664948 and 99749758, registration pending). U.S. patent pending (Application No. 64/082,755). Contact: AISF at LeonardRojas dot com. This site is designed to conform to WCAG 2.2 Level AA accessibility standards. Report accessibility problems to a11y at LeonardRojas dot com."
 
 kramdown:
   input: kramdown
