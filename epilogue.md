@@ -151,8 +151,6 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 </div>
 </nav>
 
----
-
 [^Fa]: Orwell, G., Nineteen Eighty‑Four, appendix, "The Principles of Newspeak" (London: Secker & Warburg, 1949). *"Newspeak was designed not to extend but to diminish the range of thought...The grammar of Newspeak had two outstanding peculiarities. The first of these was an almost complete interchangeability between different parts of speech."*
 
 [^Fb]: AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. [https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/](https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/){: target="_blank" rel="noopener noreferrer" }
