@@ -28,7 +28,7 @@ nav_order: 2
 - [McAfee](https://www.mcafee.com/){: target="_blank" rel="noopener noreferrer" }
 - [Norton 360](https://us.norton.com/){: target="_blank" rel="noopener noreferrer" }
 
-*(Malwarebytes users: the AISF-CORE-PS executable may trigger a false-positive quarantine. It passes all other scans above, including enterprise CrowdStrike. Manually whitelisting it in "Settings:Scan and detections:Allow list" works around this. Vendor whitelist submission pending.)*
+*(Malwarebytes users: the AISF-CORE-PS executable may trigger a false-positive quarantine. It passes all other scans above, including enterprise CrowdStrike. Manually whitelisting it in "Settings:Scan and detections:Allow list" works around this.)*
 
 <nav>
 <div class="chapter-nav">
