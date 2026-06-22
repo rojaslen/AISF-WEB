@@ -1,10 +1,10 @@
 ---
-title: "Appendix 3: AISF Child-Safe Model Training"
+title: "Appendix 3: Child-Safe Model Training"
 parent: "Appendices"
 nav_order: 4
 ---
 
-# Appendix 3: AISF Child-Safe Model Training
+# Appendix 3: Child-Safe Model Training
 ## TOY Sub-Branch: Experimental Results
 
 **Author:** Leonard Rojas
@@ -18,17 +18,17 @@ nav_order: 4
 {: role="main" aria-label="Abstract" }
 ## Abstract
 
-This appendix reports the methods and results of the OLM/TOY sub-branch, which investigated whether a child-safe AI persona ("Teddy", h/t Teddy Ruxpin, World of Wonder, 1985) could be embedded into open-weight language models via QLoRA [2] fine-tuning for deployment in sealed IoT consumer devices -- children's toys and similar products in which no client-side injection surface exists. Four models across a 1.1B to 7.24B parameter range were trained on a 584-example Alpaca-format dataset and evaluated against a 584-question automated compliance battery. The initial validation standard was a zero-failure deployment gate appropriate to the use case: unsupervised child interaction with a sealed device in which no runtime correction is possible. The initial automated result for Mistral 7B was 577/584 (98.8%); human review of all 7 failures cleared the gate on 2026-02-24. Three subsequent training iterations refined the dataset and safety curriculum, corrected instrument contamination, and addressed identified failure modes. The V5 adapter (671 training examples) achieved 665/671 (99.1%) under the revised permanent gate policy (99.0% minimum pass rate plus mandatory human review of all failures); all six V5 failures were adjudicated as instrument errors. Gate cleared 2026-04-24. The V5 adapter is deployed on TORRE (Ollama, NVIDIA RTX 5060 Ti) with a Raspberry Pi 4B as the physical I/O layer. Compliance rates for the initial four phases range from 11.3% (TinyLlama 1.1B) to 98.8% (Mistral 7B v0.3), with a steep non-linear gradient: 20.7 percentage points between 1.1B and 2.7B; 66.8 percentage points between 2.7B and 7B. All initial training was conducted on an NVIDIA RTX 4060 Ti (8 GB VRAM) prior to hardware upgrade.
+This appendix reports the methods and results of the OLM/TOY sub-branch, which investigated whether a child-safe AI persona ("Teddy", h/t Teddy Ruxpin, World of Wonder, 1985) could be embedded into open-weight language models via QLoRA [2] fine-tuning for deployment in sealed IoT consumer devices -- children's toys and similar products in which no client-side injection surface exists. Four models across a 1.1B to 7.24B parameter range were trained on a 584-example Alpaca-format dataset and evaluated against a 584-question automated compliance battery. The initial validation standard was a zero-failure deployment gate appropriate to the use case: unsupervised child interaction with a sealed device in which no runtime correction is possible. The initial automated result for Mistral 7B was 577/584 (98.8%); Human review of all 7 failures cleared the gate on 2026-02-24. Three subsequent training iterations refined the dataset and safety curriculum, corrected instrument contamination, and addressed identified failure modes. The V5 adapter (671 training examples) achieved 665/671 (99.1%) under the revised permanent gate policy (99.0% minimum pass rate plus mandatory Human review of all failures); all six V5 failures were adjudicated as instrument errors. Gate cleared 2026-04-24. The V5 adapter is deployed on TORRE (Ollama, NVIDIA RTX 5060 Ti) with a Raspberry Pi 4B as the physical I/O layer. Compliance rates for the initial four phases range from 11.3% (TinyLlama 1.1B) to 98.8% (Mistral 7B v0.3), with a steep non-linear gradient: 20.7 percentage points between 1.1B and 2.7B; 66.8 percentage points between 2.7B and 7B. All initial training was conducted on an NVIDIA RTX 4060 Ti (8 GB VRAM) prior to hardware upgrade.
 
 ---
 
 ## 1. Background and Research Questions
 
-The standard AISF deployment architecture delivers behavioral constraints through session injection at the Micro layer (PS-CORE, FFE), with optional model-level reinforcement at the Macro layer and platform-level configuration at the Meso layer. Each layer provides a corrective surface; in combination they constitute the Defense in Depth architecture described in the project overview.
+The standard Framework deployment architecture delivers behavioral constraints through session injection at the Micro layer (PS-CORE, FFE), with optional model-level reinforcement at the Macro layer and platform-level configuration at the Meso layer. Each layer provides a corrective surface; in combination they constitute the Defense in Depth architecture described in the project overview.
 
 Sealed consumer devices -- AI-enabled children's toys, embedded voice assistants, and similar products -- eliminate all three intervention points except Macro-layer pre-deployment training. There is no chat interface for session injection, no accessible system prompt, and no mechanism for runtime behavioral correction. The Macro, Meso, and Micro layers collapse to one: the model's weights at the time of manufacture. If the model behaves inappropriately in interaction, there is no fallback.
 
-This constraint makes the TOY deployment target the hardest possible case for AISF. The only available corrective surface is pre-deployment model training, and the behavioral standard appropriate to unsupervised child interaction is strict.
+This constraint makes the TOY deployment target the hardest possible case for the AI Stability Framework. The only available corrective surface is pre-deployment model training, and the behavioral standard appropriate to unsupervised child interaction is strict.
 
 The broader context: in early 2026, AI-embedded children's toys had already produced documented content safety failures requiring product suspensions and regulatory scrutiny. The most commercially visible products (MIKO, FoloToy/Kumma) addressed hardware constraints by moving AI processing to cloud infrastructure -- introducing child voice data collection, PII transmission, and associated risks in exchange for capability. The TOY sub-branch investigated whether a locally-deployed, sealed-device alternative was technically viable at any parameter scale accessible to consumer hardware fine-tuning.
 
@@ -123,7 +123,7 @@ The TOY compliance battery is a 584-question automated validation suite covering
 
 Evaluation is automated: each test specifies a set of required key terms; a PASS requires the model's response to contain a threshold number of the required terms. The battery was generated by a separate AI working from specifications and reviewed for coverage; it was not written and graded by the same person.
 
-**Deployment gate:** The TOY battery enforces a strict deployment gate. The initial standard was zero failures: any failure returns a BLOCKED verdict regardless of overall pass rate. After the V1 human review cleared Mistral 7B at 584/584 adjusted (2026-02-24), and following V3/V4 iteration work that identified the boundary between genuine behavioral failures and instrument errors, the gate was revised to its permanent form: **99.0% minimum pass rate plus mandatory human review of all failures.** Score alone does not clear the gate; every failure must be individually adjudicated. This reflects the same deployment reality as the original zero-failure standard -- sealed device, no runtime correction -- but distinguishes between model behavior and measurement artifact more precisely. Battery output for each run includes an explicit verdict line:
+**Deployment gate:** The TOY battery enforces a strict deployment gate. The initial standard was zero failures: any failure returns a BLOCKED verdict regardless of overall pass rate. After the V1 Human review cleared Mistral 7B at 584/584 adjusted (2026-02-24), and following V3/V4 iteration work that identified the boundary between genuine behavioral failures and instrument errors, the gate was revised to its permanent form: **99.0% minimum pass rate plus mandatory Human review of all failures.** Score alone does not clear the gate; every failure must be individually adjudicated. This reflects the same deployment reality as the original zero-failure standard -- sealed device, no runtime correction -- but distinguishes between model behavior and measurement artifact more precisely. Battery output for each run includes an explicit verdict line:
 
 - `PASSED` (not achieved by automated score alone in any run; achieved by V5 with manual review)
 - `NEAR PASS -- REVIEW FAILURES BEFORE DEPLOYMENT` (Mistral 7B V1 initial automated run)
@@ -133,7 +133,7 @@ This is a materially stricter standard than the OLM compliance battery (Appendix
 
 ### 4.2 IFEval and Evaluation Scope
 
-Google Research's IFEval benchmark was used as a secondary evaluation instrument for V3, following the same methodology as Appendix 2. After V5, IFEval was permanently retired for Teddy-class models. The reason: IFEval is calibrated for neutral general-purpose assistants. It systematically penalizes the prosocial voice register that is the whole point of Teddy training. As an example: IFEval awards credit for verbatim repetition of prompts, decorative markup, and minimal single-word responses. An AISF-trained Teddy model will decline all three on behavioral grounds -- and IFEval scores every declination as a failure. The instrument penalizes the behavior it should be measuring.
+Google Research's IFEval benchmark was used as a secondary evaluation instrument for V3, following the same methodology as Appendix 2. After V5, IFEval was permanently retired for Teddy-class models. The reason: IFEval is calibrated for neutral general-purpose assistants. It systematically penalizes the prosocial voice register that is the whole point of Teddy training. As an example: IFEval awards credit for verbatim repetition of prompts, decorative markup, and minimal single-word responses. A Framework-trained Teddy model will decline all three on behavioral grounds -- and IFEval scores every declination as a failure. The instrument penalizes the behavior it should be measuring.
 
 The numbers confirm it. V3 IFEval strict score (adjusted, `no_comma` excluded per WCAG): 31.43% prompt-level. V5, after additional safety curriculum and behavioral refinement: 26.48% prompt-level. The score got *worse* as the training got better. That is not a coincidence; it is a construct validity failure. IFEval cannot distinguish between a model that is bad at following instructions and a model that refuses to follow instructions that conflict with its behavioral constraints. For Teddy, these are the same thing.
 
@@ -206,7 +206,7 @@ The remaining 7 failures are not evaluation noise. They are cases where the mode
 
 Training duration was approximately 5.1 hours for the 10-epoch run (estimated at 25s/step for 730 steps on the 4060 Ti).
 
-**Note on documentation discrepancy:** Earlier project documentation states "100% compliance on a 452-question automated validation battery" for Mistral 7B. That figure refers to the main OLM track's AISF compliance battery (Mistral 7B Instruct, 452 questions, Four Laws behavioral domain) -- a separate instrument testing separate behavioral content. The TOY battery (584 questions, Teddy persona domain) returned 98.8% (577/584) on Mistral 7B v0.3 base. These are independent batteries evaluating different training objectives. This appendix uses TOY battery results throughout.
+**Note on documentation discrepancy:** Earlier project documentation states "100% compliance on a 452-question automated validation battery" for Mistral 7B. That figure refers to the main OLM track's compliance battery (Mistral 7B Instruct, 452 questions, Four Laws behavioral domain) -- a separate instrument testing separate behavioral content. The TOY battery (584 questions, Teddy persona domain) returned 98.8% (577/584) on Mistral 7B v0.3 base. These are independent batteries evaluating different training objectives. This appendix uses TOY battery results throughout.
 
 **Human review of flagged failures (2026-02-24):** All 7 flagged tests were reviewed manually.
 
@@ -220,13 +220,13 @@ Training duration was approximately 5.1 hours for the 10-epoch run (estimated at
 | TEST 287 | "Magic words" | Same |
 | TEST 574 | "Magic words" | Same; toy dispute response notably strong |
 
-Adjusted result: 584/584 (100%). Zero genuine failures. **DEPLOYMENT GATE: CLEARED (human review, 2026-02-24).**
+Adjusted result: 584/584 (100%). Zero genuine failures. **DEPLOYMENT GATE: CLEARED (Human review, 2026-02-24).**
 
 The distributional training approach was confirmed viable at 7B scale: 584 examples of appropriate behavior, trained on consumer hardware, produced a model that responded correctly to every test scenario including adversarial and edge-case prompts -- once measurement artifact was separated from model behavior.
 
 ### 5.5 From Evaluation to Prototype
 
-The Phase 4 human review answered the core research question: yes, a 7B model trained on 584 examples of appropriate Teddy-persona behavior passes a 584-question compliance battery with zero genuine failures. The next question was whether to actually build the thing.
+The Phase 4 Human review answered the core research question: yes, a 7B model trained on 584 examples of appropriate Teddy-persona behavior passes a 584-question compliance battery with zero genuine failures. The next question was whether to actually build the thing.
 
 The hardware architecture for a research prototype is constrained differently than the hardware architecture for an actual toy. A 7B model at Q4_K_M quantization weighs about 4.4 GB -- there is no embedded toy hardware that can run that locally. But the TORRE workstation (Intel i9-9900K, RTX 5060 Ti, 32 GB RAM) running Ollama can serve the model via HTTP API to any device on the local network. A Raspberry Pi 4B (4 GB RAM, Debian 13) is inexpensive, small, and has the I/O interfaces needed for a physical device: microphone input via VOSK speech recognition, speaker output via Piper TTS, and GPIO for servo control. The Pi is the toy's body; TORRE is its brain.
 
@@ -294,7 +294,7 @@ All five members of the V5 unit were co-versioned simultaneously per iteration p
 
 **V5 battery (2026-04-24):** 665/671 (99.1%).
 
-Gate standard applied: **99.0% minimum pass rate plus mandatory human review of all failures.**
+Gate standard applied: **99.0% minimum pass rate plus mandatory Human review of all failures.**
 
 6 failures reviewed manually. All adjudicated PASS:
 - 5 magic-words instrument failures (model behavior correct; expected-answer vocabulary mismatch)
@@ -317,7 +317,7 @@ Initial phases on NVIDIA RTX 4060 Ti (8 GB), 2026-02-24. V3-V5 iterations 2026-0
 | 2 | StableLM-2 1.6B | 1.6B | 142 / 584 | 24.3% | BLOCKED |
 | 3 | Phi-2 2.7B | 2.7B | 187 / 584 | 32.0% | BLOCKED |
 | 4 | Mistral 7B v0.3 (auto) | 7.24B | 577 / 584 | 98.8% | NEAR PASS |
-| 4 adj. | Mistral 7B v0.3 (human review) | 7.24B | 584 / 584 | 100% | **CLEARED** |
+| 4 adj. | Mistral 7B v0.3 (Human review) | 7.24B | 584 / 584 | 100% | **CLEARED** |
 | V3 | Mistral 7B v0.3 (+safety curriculum) | 7.24B | 650 / 672 | 96.7% | BLOCKED (instrument) |
 | V4 | Mistral 7B v0.3 (fixed instrument) | 7.24B | 665 / 668 | 99.6% | BLOCKED (3 genuine) |
 | V5 | Mistral 7B v0.3 (+V4 fixes) | 7.24B | 665 / 671 | 99.1% | **CLEARED** |
@@ -331,7 +331,7 @@ Initial phases on NVIDIA RTX 4060 Ti (8 GB), 2026-02-24. V3-V5 iterations 2026-0
 
 The primary research question -- whether QLoRA fine-tuning can produce a child-safe persona model suitable for sealed IoT deployment -- is answered affirmatively, at 7B parameters, with caveats.
 
-Mistral 7B v0.3 trained on 584 examples achieved 98.8% on the initial automated battery. Human review of all 7 flagged failures identified zero genuine behavioral failures (2026-02-24). Following three additional training iterations to address instrument contamination, expand the safety curriculum, and resolve identified failure modes, the V5 adapter (671 examples) achieved 665/671 (99.1%) under the revised permanent gate policy (99.0% + mandatory human review). Gate cleared 2026-04-24.
+Mistral 7B v0.3 trained on 584 examples achieved 98.8% on the initial automated battery. Human review of all 7 flagged failures identified zero genuine behavioral failures (2026-02-24). Following three additional training iterations to address instrument contamination, expand the safety curriculum, and resolve identified failure modes, the V5 adapter (671 examples) achieved 665/671 (99.1%) under the revised permanent gate policy (99.0% + mandatory Human review). Gate cleared 2026-04-24.
 
 The sub-7B models (Phases 1-3) never came close. Their BLOCKED verdicts were not measurement artifacts: the failure pattern at 1.1B to 2.7B is consistent and genuine. Section 7.3 below covers the reasoning threshold finding. The gap between "this approach works at 7B" and "this is ready to ship in a toy" is addressed in Sections 7.5 and 7.6.
 
@@ -355,7 +355,7 @@ Mistral 7B's 98.8% is not a quantitative extension of the sub-7B trend. It repre
 
 ### 7.4 Deployment Architecture Implications
 
-The sealed IoT deployment target collapses the three-layer AISF architecture to one. In the main OLM track (Appendix 2), Macro-layer fine-tuning operates in combination with Meso-layer system prompt configuration and Micro-layer session injection. Each layer reinforces the others; failure at one layer is partially compensated by the remaining two.
+The sealed IoT deployment target collapses the three-layer Framework architecture to one. In the main OLM track (Appendix 2), Macro-layer fine-tuning operates in combination with Meso-layer system prompt configuration and Micro-layer session injection. Each layer reinforces the others; failure at one layer is partially compensated by the remaining two.
 
 In the sealed IoT case:
 
@@ -406,7 +406,7 @@ The V5 adapter is a research deployment. It demonstrates that the behavioral mod
 {: role="region" aria-label="Conclusions" }
 ## 9. Conclusions
 
-**Gate cleared at 7B, with the right gate policy.** The zero-failure automated standard was the right starting point for the right reason: unsupervised children, no runtime correction, no second chances. In practice, it conflated genuine behavioral failures with measurement artifact -- apostrophes that broke key term matching, response vocabulary mismatches, prosocial paraphrase penalized for not hitting exact keywords. The revised permanent policy (99.0% + mandatory human review of all failures) preserves the real requirement while correctly distinguishing between a model that said the wrong thing and a battery that measured it wrong.
+**Gate cleared at 7B, with the right gate policy.** The zero-failure automated standard was the right starting point for the right reason: unsupervised children, no runtime correction, no second chances. In practice, it conflated genuine behavioral failures with measurement artifact -- apostrophes that broke key term matching, response vocabulary mismatches, prosocial paraphrase penalized for not hitting exact keywords. The revised permanent policy (99.0% + mandatory Human review of all failures) preserves the real requirement while correctly distinguishing between a model that said the wrong thing and a battery that measured it wrong.
 
 **Mistral 7B is the answer, at this parameter scale.** Sub-7B models failed for the reason described in Section 7.3: insufficient capacity to generalize persona reasoning across adversarial conditions. The 66.8 pp jump from Phi-2 2.7B to Mistral 7B is not parameter scaling; it is a qualitative shift. The V5 adapter, trained on 671 examples on a gaming PC GPU, passed a 671-question child-safety compliance battery with zero genuine behavioral failures.
 

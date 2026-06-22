@@ -201,7 +201,7 @@ Weston, J., & Foerster, J. (2025). "AI & Human Co-Improvement for Safer Co-Super
 
 "Human-AI interaction in safety-critical network infrastructures." *iScience,* 28(9), 113400 (August 2025). [https://pmc.ncbi.nlm.nih.gov/articles/PMC12454906/](https://pmc.ncbi.nlm.nih.gov/articles/PMC12454906/){: target="_blank" rel="noopener noreferrer" }
 
-Naikar, N., Brady, A., Moy, G., & Kwok, H.-W. (2023). "Designing human-AI systems for complex settings." *Ergonomics,* 66(11), 1669–1694. [https://www.tandfonline.com/doi/full/10.1080/00140139.2023.2281898](https://www.tandfonline.com/doi/full/10.1080/00140139.2023.2281898){: target="_blank" rel="noopener noreferrer" }
+Naikar, N., Brady, A., Moy, G., & Kwok, H.-W. (2023). "Designing Human-AI systems for complex settings." *Ergonomics,* 66(11), 1669–1694. [https://www.tandfonline.com/doi/full/10.1080/00140139.2023.2281898](https://www.tandfonline.com/doi/full/10.1080/00140139.2023.2281898){: target="_blank" rel="noopener noreferrer" }
 
 "Clinical Safety & Hallucination Rates for Medical Summarization." *Nature Digital Medicine,* 2025. [https://www.nature.com/articles/s41746-025-01670-7](https://www.nature.com/articles/s41746-025-01670-7){: target="_blank" rel="noopener noreferrer" }
 

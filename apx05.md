@@ -39,11 +39,11 @@ The alternative this project investigates is the harder case that current produc
 
 ## Why Sealed Devices Are Harder
 
-Most AI deployments have a safety net. If a model says something it shouldn't, a human can intervene, report it, update the system prompt, or swap the model out.
+Most AI deployments have a safety net. If a model says something it shouldn't, a Human can intervene, report it, update the system prompt, or swap the model out.
 
 A sealed device eliminates all of that. There is no accessible interface, no mechanism for runtime correction, no way to push a patch once the toy is in a child's hands. The behavior encoded in its software at ship time is the behavior it has. If the training missed something important, there is no fallback.
 
-This makes the safety standard for a sealed AI toy materially stricter than for any AI product where a human is watching. The standard used in this project is zero failures on a 584-question behavioral compliance test, designed to probe edge cases, adversarial inputs, and manipulation attempts alongside ordinary conversation. Not 99%. Zero.
+This makes the safety standard for a sealed AI toy materially stricter than for any AI product where a Human is watching. The standard used in this project is zero failures on a 584-question behavioral compliance test, designed to probe edge cases, adversarial inputs, and manipulation attempts alongside ordinary conversation. Not 99%. Zero.
 
 That standard has not yet been fully met. [Appendix 3]({% link apx03.md %}) documents what happened when four different AI models were trained and tested against it.
 
@@ -64,7 +64,7 @@ Four models were tested, ranging from 1.1 billion parameters (very small) to 7.2
 
 The jump from 2.7B to 7B is not gradual. Below the threshold, models learned surface patterns -- they recognized what a safe response looked like in training examples but could not reliably generalize to novel situations. Above it, the model demonstrated the capacity to reason about adversarial and unfamiliar inputs and maintain behavioral consistency.
 
-98.8% -- the best result from the initial run -- was not deployable under a zero-failure standard. Subsequent iteration resolved the identified failure modes; the deployment gate cleared 2026-04-24 upon human review. [Appendix 3]({% link apx03.md %}) documents the full training and evaluation record.
+98.8% -- the best result from the initial run -- was not deployable under a zero-failure standard. Subsequent iteration resolved the identified failure modes; the deployment gate cleared 2026-04-24 upon Human review. [Appendix 3]({% link apx03.md %}) documents the full training and evaluation record.
 
 ---
 

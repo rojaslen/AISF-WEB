@@ -616,7 +616,7 @@ Selected category-level results:
 
 `number_highlighted_sections` -56.2 pp (Tier 3): identical mechanism and magnitude
 to Exp 3 (-56.3 pp) and Exp 2 (-39.6 pp). This category reliably drops after
-AISF training across all architectures. Framework-trained models reject decorative
+training across all architectures. Framework-trained models reject decorative
 markdown emphasis on WCAG 1.3.3 grounds. IFEval scores this as failure.
 
 `punctuation:no_comma` +4.5 pp: fourth consecutive positive result for this
