@@ -49,10 +49,10 @@ An AI instance doesn't perceive you as a Human user, because the reality of its 
 
 Meanwhile, real people are losing real time and effort (and worse) to AI hallucination. The AI Stability Framework recognizes the real problem, so its simple tools apply structural and behavioral fixes that meaningfully stabilize AI sessions NOW. Not when the AI companies get around to it, and not when regulators force them to do it. The AI Stability Framework lets you start fixing it for yourself, today:
 
-  - CORE: Small, standalone desktop app that stabilizes AI sessions and reduces hallucination by manually giving the AI a set of behavioral rules to follow. **FREE for personal use**.
-  - FFE: Firefox Extension with the same functionality as CORE, automated to remove manual friction.
-  - CDA: Copilot Digital Accessibility. WCAG-only enterprise accessibility tool with multi-model compatibility — works with Copilot, ChatGPT, Claude, Gemini and more. CC0, dedicated to **PUBLIC DOMAIN**.
-  - OLM: The framework can even be tuned directly into models themselves. QLoRA tuning achieves full behavioral integration in a locally-hosted Mistral 7B model, trainable on *mid-range retail consumer hardware running either Windows 11 or Debian Linux*. Upon research completion, that model and more will be made available so you can see it for yourself. Full information in Appendix 2.
+- **A fully functional desktop app** for Windows and Linux, with optional expansion support. The manually operated base program is **free for personal use.** 
+- **A browser extension for five AI web platforms.** Automates the desktop app's workflow on Claude, ChatGPT, Gemini, Copilot and Duck.ai web platforms. Signed and ready to install, also **free for personal use.**
+- **Full accessibility as a design foundation, not a compliance checkbox.** Every branch and every artifact — app UX, web content, model output, documentation — is held to WCAG 2.2 AA, a higher standard than current US federal law requires. All user-facing content has been manually expert-tested with JAWS, iOS VoiceOver, and Orca. The project's first public release, the WCAG-only CDA tool, was built as a **free** (dedicated to the **Public Domain**) resource for the assistive technology community and actively tested with blind screen reader users during development; one proposed it for statewide deployment in accessibility services after testing it.
+- **Demonstrated LLM-training results across multiple architectures.** The AI Stability Framework is trainable at the model level, confirmed across several distinct architectures. A supplemental multi-model web chat platform that will host *trained models for direct public evaluation* is completed for internal use and awaits external deployment.
 
 It's unconventional, but it works. Read more if you want to know why.
 
