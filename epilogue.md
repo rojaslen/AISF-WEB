@@ -102,7 +102,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     It's possible, but that's due to a property of AI models, not of the Framework. The model has no perception of the actual Human, only their input. The AI has zero access to the living person behind the text, with or without mediation. Plain text is an insufficient and inappropriate vehicle for any meaningful clinical intervention. The most an AI might do is detect user signaling, but only if the signal exists *and* it's been specifically trained for such detection.
 
-12. <a name="faq12"></a>**"The AI industry talks about 'compute' a lot, why do you barely even mention it?"**
+12. <a name="faq12"></a>**"The Tech industry talks about AI 'compute' all the time, why do you only mention it once?"**
 
     The word "compute" is primarily defined as a verb; it's not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term, and over time it's been normalized to the point where most people don't even notice anymore. This usage of "compute" elides hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware). Compressing all of that into one word just makes it disappear into unthinking Newspeak.[^Fa]
 
