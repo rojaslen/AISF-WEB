@@ -49,7 +49,7 @@ An AI instance doesn't perceive you as a Human user, because the reality of its 
 
 Meanwhile, real people are losing real time and effort (and worse) to AI hallucination. The AI Stability Framework recognizes the real problem, so its simple tools apply structural and behavioral patches that meaningfully stabilize AI sessions NOW. Not when the AI companies get around to it, and not when regulators force them to do it. 
 
-## **The AI Stability Framework lets you start **using* AI instead of fighting with it:**
+## The AI Stability Framework lets you start *using* AI instead of fighting with it:
 
 - **A fully functional desktop app** for Windows and Linux, with optional expansion support. The manually operated base program is completely *free for personal use.*
 - **A Mozilla browser extension for five AI web platforms.** Automates the desktop app's workflow for friction-free usage with Claude, ChatGPT, Gemini, Copilot and Duck.ai web platforms. Available from the Mozilla Add-on Developer Hub, also *free for personal use.* For Windows and Linux (Debian-based) Firefox; expansion to Chromium-based browsers pending.
