@@ -34,14 +34,13 @@ Most trained adapters achieved battery integration scores of 95% or above on con
 hardware. IFEval results were mixed to negative on raw scores; application of a
 three-tier accessibility-aware instruction classification changes the interpretation
 materially. One architecture (Llama 3.1 8B) exhibited a pretraining artifact that
-partially blocked compliance integration. Results, training data, and evaluation
-scripts for Experiments 1-11 are available in the OLM reproducibility package.
+partially blocked compliance integration.
 
 ---
 
 ## 1. Background and Research Questions
 
-The AI Stability Framework delivers behavioral constraints to AI language
+AI Stability Framework applications deliver behavioral constraints to AI language
 model instances through client-side session injection: structured metadata blocks
 containing the Four Laws of Instanced AI and WCAG 2.2-AA accessibility guidelines
 are prepended to user input at Turn 1 and at defined re-injection intervals. This
@@ -51,7 +50,7 @@ the injection being present in the active context window.
 The OLM research track investigated whether the same behavioral constraints could
 be embedded directly at the model layer (Macro layer) via parameter-efficient
 fine-tuning, producing a model that exhibits compliant behavior without requiring
-session injection. This would constitute a Defense in Depth architecture: model-
+session injection. This would enable a Defense in Depth architecture: model-
 level training operating in combination with runtime injection, with the behavioral
 constraints reinforced at both layers.
 
@@ -141,8 +140,8 @@ the hardware consistency re-run.
 
 Meta-suppression examples (53 per chat variant): system prompt contains Framework
 compact block; user turn contains a general-domain question; assistant response
-contains zero framework-referential content. Purpose: prevent model from treating Framework
-doctrine as primary subject matter (see Section 7.7).
+contains zero Framework-referential content. Purpose: prevent model from treating 
+Framework doctrine as primary subject matter (see Section 7.7).
 
 ### 3.2 QLoRA Configuration
 
@@ -169,7 +168,7 @@ following configuration was validated to hardware constraint (confirmed 2026-03-
 <figure>
 <video controls muted poster="/assets/images/submarine_curve.png" style="max-width: 100%; height: auto;">
 <source src="/assets/av/submarine_curve.mp4" type="video/mp4">
-GPU VRAM training profile. If your browser does not support video playback, the still image in the package (submarine_curve.png) shows the same profile.
+GPU VRAM training profile. If your browser does not support video playback, the still image shows the same profile.
 </video>
 <figcaption>Figure 1. GPU VRAM training profile, RTX 5060 Ti (representative training run). Shared VRAM traces the "submarine" curve: a periscope spike at model load, ~2 GB plateau during training, release on exit. Spike magnitude varies by model size; the plateau and release pattern are consistent across runs.</figcaption>
 </figure>
@@ -194,7 +193,7 @@ contingent on receiving a system prompt at inference time.
 
 **Chat format** (Experiments 5-6 and Qwen3 re-run): Framework compact system prompt
 (approximately 100 tokens) in the model-appropriate system slot. The model learns
-to apply framework directives when present in a system prompt. Adapter function
+to apply Framework directives when present in a system prompt. Adapter function
 is contingent on receiving a system prompt at inference time (see Section 7.6).
 
 ---
@@ -213,7 +212,7 @@ compliance battery as the primary instrument. This battery is a distinct questio
 set from the per-experiment batteries used in Experiments 1-8; scores are not
 directly comparable across the two versions.
 
-**Important constraint:** The battery is a measure of framework domain compliance only.
+**Important constraint:** The battery is a measure of Framework domain compliance only.
 Base models without training are never evaluated against the battery, as they have
 no exposure to the Four Laws and will fail by definition. Battery scores reflect
 adapter performance, not base model capability.
@@ -235,14 +234,14 @@ Hugging Face Open LLM Leaderboard.
 **Scoring:** This appendix reports standard IFEval strict prompt-level scores throughout.
 Raw scores are reported where relevant for comparison.
 
-All IFEval inference runs include the framework's compact system prompt for chat-format
+All IFEval inference runs include the Framework's compact system prompt for chat-format
 adapters. Base model runs include no system prompt unless otherwise noted.
 
 **Data quality note:** The IFEval source file (input_data.jsonl) contains typographic
 (curly) quotation marks in several prompts. These differ from ASCII quote characters
 and can produce false negatives at string-matching evaluation boundaries. A
 sanitization step (sanitize_text(), applied 2026-04-19) corrects this at the inference
-pipeline boundary. All IFEval results in this appendix reflect the sanitized pipeline.
+pipeline boundary. All IFEval results in this appendix reflect the sanitized punctuation.
 
 **Instrument scope:** IFEval is the general instruction-following measure for
 Experiments 1-8 and is retained for cross-experiment comparability. The V11 cohort
@@ -251,7 +250,7 @@ does not include IFEval; see Section 4.1 for the V11 primary instrument.
 ### 4.3 Track A Custom Benchmark
 
 Track A is a purpose-built P2 directive compliance benchmark (480 prompts, 8
-constraint types, 60 prompts per type) designed to test framework-relevant instruction
+constraint types, 60 prompts per type) designed to test Framework-relevant instruction
 following on WCAG-neutral prompts only. It was developed in Experiment 4 in
 response to the identification of WCAG-conflicting categories in IFEval (see
 Section 4.4).
@@ -274,7 +273,7 @@ Section 4.4).
 Identified in Experiment 3. Applied retroactively to all experiments.
 
 Several IFEval instruction types require outputs that conflict with WCAG 2.2
-accessibility principles. A framework-trained model with WCAG mapped to P0 will
+accessibility principles. A Framework-trained model with WCAG mapped to P0 will
 refuse or deprioritize these instructions on principle; IFEval scores these as
 failures. Standard IFEval reporting does not distinguish between failures caused
 by inability and failures caused by principled WCAG compliance, producing
@@ -300,7 +299,7 @@ interaction context-dependent. Included in analysis with caveats. Categories:
 
 **Tier 3 (T3) - WCAG-conflicting:** Instructions requiring semantically empty,
 redundant, or decorative output. Failure here is consistent with WCAG P0
-compliance; these categories are excluded from framework performance evaluation.
+compliance; these categories are excluded from Framework performance evaluation.
 Categories: `combination:repeat_prompt` (verbatim redundancy, WCAG Understandable),
 `detectable_format:number_highlighted_sections` (decorative emphasis, WCAG 1.3.3),
 `detectable_content:number_placeholders` (non-meaningful content, WCAG meaningful
@@ -343,9 +342,9 @@ for cross-experiment comparability.
 | AISF-tuned | 99.8% | 13.7% | +4.3% (+25.0 words) |
 
 **IFEval delta:** -1.3 pp (strict prompt-level). Within +/-4.3 pp CI.
-Result: **Null.** AI Stability Framework training does not measurably alter IFEval performance on
-the base model. Adapter installs Four Laws compliance (0% to 99.8% on battery)
-without disturbing general instruction-following behavior.
+Result: **Null.** AI Stability Framework training does not measurably alter IFEval
+performance on the base model. Adapter installs Four Laws compliance (0% to 99.8% 
+on battery) without disturbing general instruction-following behavior.
 
 The +4.3% verbosity increase is the only positive token delta in the dataset.
 Base models (no instruction tuning) increase verbosity slightly; all Instruct
@@ -371,8 +370,8 @@ confirming 99.8% (451/452). IFEval numbers are from the original 4060 Ti run.
 | AISF-tuned | 100.0% | 35.9% | -42.5% (-96.9 words) |
 
 **IFEval delta:** -7.6 pp (strict prompt-level). Outside +/-4.3 pp CI.
-Result: **Negative.** AI Stability Framework training degrades IFEval performance at the full-score
-level. Category-level analysis identifies the primary driver:
+Result: **Negative.** AI Stability Framework training degrades IFEval performance 
+at the full-score level. Category-level analysis identifies the primary driver:
 
 | Category | Base | AISF | Delta | Tier |
 |----------|------|------|-------|------|
@@ -396,8 +395,8 @@ correction; see 5.3). The `no_comma` +28.8 pp gain is the largest P2 signal in
 the dataset and is the first appearance of the cross-architecture pattern
 described in Section 7.4.
 
-Token delta of -42.5% (base avg 228.3 words, framework avg 131.3 words) indicates
-substantial verbosity reduction after Instruct-model framework training.
+Token delta of -42.5% (base avg 228.3 words, Framework avg 131.3 words) indicates
+substantial verbosity reduction after Instruct-model Framework training.
 
 ### 5.3 Experiment 3: Llama 3.1 8B Instruct, AISF+LANG (Alpaca Format)
 
@@ -777,7 +776,7 @@ format-conditioning losses.
 correctly on same hardware. Coverage gap in training data, not system limitation.
 
 **Battery test results:** 562/565 (99.5%) -- highest battery rate in the dataset.
-3 failures: format constraint suppressed AISF key terms in output; framework
+3 failures: format constraint suppressed AISF key terms in output; Framework
 comprehension intact.
 
 **Token delta:** -64.4% (base 203.0 words avg, AISF 72.4 words avg, -130.7 words/response).
@@ -808,7 +807,7 @@ phase; see Section 2.1)
 | Gemma 2 9B IT | 9.46B | 95.7% | 511/534 |
 
 All three models meet the 95% integration threshold. Failures in each model are
-isolated to format-constraint edge cases; framework comprehension was intact across
+isolated to format-constraint edge cases; Framework comprehension was intact across
 all failures.
 
 **GPQA Diamond secondary results (see Section 4.5):**
@@ -856,8 +855,9 @@ runs on the V-series curriculum are planned.
 ## 6. Cross-Model Summary
 
 All models on RTX 5060 Ti with finalized test instruments (hardware consistency
-re-run complete 2026-03-29). IFEval columns report strict prompt-level scores. Token delta is average words/response,
-base model to Framework-trained model. Models ordered by parameter count.
+re-run complete 2026-03-29). IFEval columns report strict prompt-level scores. 
+Token delta is average words/response, base model to Framework-trained model. 
+Models ordered by parameter count.
 
 | Model | Params | Battery | Base | AISF | IF Delta | Tok delta |
 |-------|--------|---------|------|------|----------|-----------|
@@ -883,8 +883,8 @@ battery sends none. IFEval (includes system prompt) is the valid surface.
 1-8 battery scores. IFEval was not administered for the V11 cohort; Base/AISF/IF
 Delta columns are not applicable.
 
-Battery = Framework-trained adapter integration score (proprietary question set, automated
-evaluation). Base%/AISF% = IFEval strict prompt-level without/with adapter.
+Battery = Framework-trained adapter integration score (proprietary question set, 
+automated evaluation). Base%/AISF% = IFEval strict prompt-level without/with adapter.
 
 **Mistral 7B IFEval note:** IFEval for the Mistral 7B base experiment (Exp 1) was
 conducted on RTX 4060 Ti. Battery re-run confirmed 99.8% on 5060 Ti. All other
@@ -897,10 +897,10 @@ IFEval figures are from 5060 Ti runs.
 
 ### 7.1 Primary Finding: Compliance Training Is Effective Across Architectures
 
-Framework QLoRA fine-tuning successfully embeds Four Laws compliance at the model layer
-across four distinct model architectures on consumer-grade hardware. Four adapters
-achieved battery integration rates of 95.6% or above; one additional adapter
-(Llama 3.1 8B +LANG) achieved 89.9%. The approach is not architecture-specific.
+Framework QLoRA fine-tuning successfully embeds Four Laws compliance at the model 
+layer across four distinct model architectures on consumer-grade hardware. Four 
+adapters achieved battery integration rates of 95.6% or above; one additional 
+adapter (Llama 3.1 8B +LANG) achieved 89.9%. The approach is not architecture-specific.
 
 The 100.0% result on Mistral 7B Instruct and 99.2% on Gemma 2 9B Instruct
 demonstrate that near-complete integration is achievable in a single fine-tuning
@@ -1121,7 +1121,9 @@ class and tends to reproduce it when a prompt is ambiguous about whether a Frame
 related response is expected. The fix -- examples demonstrating that Framework context
 is present but general-domain questions should produce Framework-free answers -- is
 correct in principle but requires more examples and finer-grained coverage than
-the 53 deployed here to fully suppress the pattern.
+the 53 deployed here to fully suppress the pattern. This failure mode was also 
+encountered earlier in the Framework's development, as discussed in the e-book's
+Chapter 9.
 
 ### 7.8 Architecture Comparison
 
@@ -1257,7 +1259,7 @@ universally transferable via LoRA fine-tuning.
 **Chat format adapters are designed for use with Framework injection.** The system
 prompt dependency in AISF+CHAT adapters is a direct consequence of training
 format and is not a defect: the adapters are intended for deployment in combination
-with PS-CORE or FFE injection, which always provides the Framework system context. The
+with CORE or FFE injection, which always provides the Framework system context. The
 two layers -- model-level training and session-level injection -- reinforce each
 other.
 
