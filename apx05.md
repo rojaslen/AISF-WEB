@@ -260,15 +260,21 @@ The CLM pretraining corpus consists of public-domain texts sourced from Project 
 ### Fair Use Notice
 
 The `en_US-teddy-medium` voice model was trained on audio from the 1985-87 *Adventures of Teddy Ruxpin* animated series and the Worlds of Wonder audio cassette library for the purpose of non-commercial research into accessible text-to-speech voice development. This use is claimed as fair use under 17 U.S.C. § 107 on the basis of: 
+
 -transformative purpose (production of a TTS synthesis model, not reproduction of the source material); 
 -non-commercial research context; 
 -the absence of market substitution for the original works; and 
 -deployment scope limited solely to the hardware required for this Ruxpin Retrofit proof-of-concept.
+
 The voice model is not suitable as general-purpose software and is not published, distributed or used for any purpose beyond this demonstration. The synthesized output does not approach commercial quality and is only intended as a proof-of-concept approximation for demonstration purposes.
 
 *No claim is made upon the Teddy Ruxpin intellectual property or upon Phil Baron's voice.*
 
 Should Mr. Baron wish to take possession and ownership of the trained voice model, it will be relinquished to him freely upon request. This offer is specific to Mr. Baron (the voice's only legitimate owner), and does not constitute a general release.
+
+### Conceptual Credit
+
+I make no attempt to lay blame for the existence of this project branch at the feet of my mother. She bears no responsibility for or involvement in it whatsoever. However, I'm quite certain that her lifelong hobby of vintage-toy collecting played at least some part in the inspiration to actually carry the project through to its logical(?) conclusion. Hi, Mom!
 
 ---
 
