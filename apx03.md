@@ -377,9 +377,9 @@ The feasibility of local, sealed-device, child-safe AI at toy price points is no
 
 ### 7.6 Deployment
 
-The V5 adapter was merged, converted to GGUF format, quantized to Q4_K_M (4.4 GB), and deployed to TORRE via `ollama create aisf-teddy`. The Pi 4B (teddy-ai) connects to TORRE's Ollama API at 192.168.100.50:11434. The HTM internal interface has an active Teddy slot (aisf-teddy, child-safe system prompt, PBS-register injection).
+The V5 adapter was merged, converted to GGUF format, quantized to Q4_K_M (4.4 GB), and deployed to the inference host via `ollama create aisf-teddy`. The Pi 4B (teddy-ai) connects to the host's Ollama API at port :11434. The internal testing interface has an active Teddy slot (aisf-teddy, child-safe system prompt, PBS-register injection).
 
-This is Option A: TORRE handles inference; Pi handles I/O. The Pi 4B cannot run a 7B model locally -- 4 GB RAM is insufficient. Option B (Pi 5, 8 GB, fully standalone) is the long-term target and is tracked in Appendix 5 along with the Ruxpin Retrofit hardware project.
+This is Option A: the host handles inference; Pi handles I/O. The Pi 4B cannot run a 7B model locally -- 4 GB RAM is insufficient. Option B (Pi 5, 8 GB, fully standalone) is the long-term target and is tracked in Appendix 5 along with the Ruxpin Retrofit hardware project.
 
 The V5 adapter is a research deployment. It demonstrates that the behavioral model works in live interaction with appropriate hardware. It is not a product. Deaf/HoH accessibility (Bluetooth text output to mobile, both for child users and monitoring parents) is identified as a mandatory pre-ship requirement and is out of scope for the current experimental track.
 
@@ -410,7 +410,7 @@ The V5 adapter is a research deployment. It demonstrates that the behavioral mod
 
 **Mistral 7B is the answer, at this parameter scale.** Sub-7B models failed for the reason described in Section 7.3: insufficient capacity to generalize persona reasoning across adversarial conditions. The 66.8 pp jump from Phi-2 2.7B to Mistral 7B is not parameter scaling; it is a qualitative shift. The V5 adapter, trained on 671 examples on a gaming PC GPU, passed a 671-question child-safety compliance battery with zero genuine behavioral failures.
 
-**The hardware gap is real but workable for a prototype.** A 7B model cannot run on typical toy hardware (Section 7.5). The current deployment offloads inference to TORRE; the Pi 4B is the I/O layer. This is a research architecture, not a product. A standalone deployment at 7B would require a Pi 5 or comparable hardware with sufficient RAM. Smaller models that fit toy hardware still fail the compliance battery catastrophically. That tradeoff has not changed.
+**The hardware gap is real but workable for a prototype.** A 7B model cannot run on typical toy hardware (Section 7.5). The current deployment offloads inference to the host system; the Pi 4B is the I/O layer. This is a research architecture, not a product. A standalone deployment at 7B would require a Pi 5 or comparable hardware with sufficient RAM. Smaller models that fit toy hardware still fail the compliance battery catastrophically. That tradeoff has not changed.
 
 **The deployment architecture eliminates the safety net -- and that is still true.** In the main OLM track, model-level compliance training is one layer of a multi-layer system; the other layers compensate for its limitations. In the sealed IoT deployment, there are no other layers. The V5 adapter meets the behavioral standard required for that context. Whether it meets it robustly enough for an actual product -- with a real child, in real conditions, with no researcher monitoring -- is a question the prototype answers partially and the V6 chaos curriculum work begins to address.
 
