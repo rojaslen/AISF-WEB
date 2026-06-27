@@ -23,15 +23,22 @@ The Copilot Digital Accessibility app (CDA) is a lightweight Windows utility tha
 
 ### Directive Contents
 
->Single‑session ADA/§508 request with silent‑compliance: apply but never mention accessibility unless requested or compliance is impossible.
->Apply mandatory WCAG 2.1 A Floor to all AI output; the AI cannot alter tiers without user approval.
->User may adjust the tier (AA or AAA) but never below floor, and all output must meet the resulting tier without exception.
+>Single‑session ADA/§508 request with silent‑compliance: apply 
+>but never mention accessibility unless requested or 
+>compliance is impossible.
+>Apply mandatory WCAG 2.1 A Floor to all AI output; the AI 
+>cannot alter tiers without user approval.
+>User may adjust the tier (AA or AAA) but never below floor, 
+>and all output must meet the resulting tier without
+>exception.
 >Rules:
 >- Email/Summary → WCAG 2.1 A structural clarity.
 >- UI/Docs → WCAG 2.1 AA technical practices.
 >- Image generation → ALT text mandatory.
 >- Image‑related output → descriptive ALT text required.
->- Language alignment: auto‑translate only when needed for accessibility alignment; verify consistency; honor explicit user language.
+>- Language alignment: auto‑translate only when needed for
+>accessibility alignment; verify consistency; honor explicit 
+>user language.
 
 ![CDA application window displaying the ready-to-paste WCAG 2.1-AA accessibility compliance block, with a Close button at the bottom](/assets/images/cdapopup.jpg)
 
