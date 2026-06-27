@@ -15,7 +15,7 @@ nav_order: 6
 
 ## Concept
 
-In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tape played audio while the eyes and mouth moved in sync, creating the illusion of a conversational toy. The technology was impressive for its time, but the child's role was passive: listening to Teddy's scripted, pre-recorded voice from the tapes.
+In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tape played audio while the eyes and mouth moved in sync, creating the illusion of a conversational toy. The technology was impressive for its time, but the child's role was limited to passively listening to Teddy's pre-scripted voice from the tapes.
 
 Forty years later, modern LLM technology can enable the same toy to provide the real interactivity that talking-toy design has always implied: listen to what the child actually says, and provide a meaningful response in context. The toy's animatronic hardware stays intact so the eyes, nose and mouth can still move in sync, but now they're synchronized to a response the model produced at runtime, rather than a static recording made decades ago.
 
