@@ -19,7 +19,7 @@ In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tap
 
 Forty years later, modern LLM technology can enable the same toy to provide the real interactivity that talking-toy design has always implied: listen to what the child actually says, and provide a meaningful response in context. The toy's animatronic hardware stays intact so the eyes, nose and mouth can still move in sync, but now they're synchronized to a response the model produced at runtime, rather than a static recording made decades ago.
 
-Teddy Ruxpin was also one of the best-known toys of the 1980s, making it one of the most culturally durable. It's instantly recognizable to this day by virtually anyone who remembers the era, and that cultural cachet is not incidental to the project. The toy's iconic status makes the demonstration legible across generations. The gap between what it could do forty years ago and what it can do now is immediately obvious.
+Teddy Ruxpin was also one of the best-known toys of the 1980s, making it one of the most culturally durable. It's instantly recognizable to this day by virtually anyone who remembers the era; the toy's iconic status makes the demonstration legible across generations. The gap between what it could do forty years ago and what it can do now is obvious.
 
 ---
 
