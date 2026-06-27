@@ -381,7 +381,7 @@ The V5 adapter was merged, converted to GGUF format, quantized to Q4_K_M (4.4 GB
 
 This is Option A: the host handles inference; Pi handles I/O. The Pi 4B cannot run a 7B model locally -- 4 GB RAM is insufficient. Option B (Pi 5, 8 GB, fully standalone) is the long-term target and is tracked in Appendix 5 along with the Ruxpin Retrofit hardware project.
 
-The V5 adapter is a research deployment. It demonstrates that the behavioral model works in live interaction with appropriate hardware. It is not a product. Deaf/HoH accessibility (Bluetooth text output to mobile, both for child users and monitoring parents) is identified as a mandatory pre-ship requirement and is out of scope for the current experimental track.
+The V5 adapter is a research deployment. It demonstrates that the behavioral model works in live interaction with appropriate hardware. It is not a product. Deaf/HoH accessibility (Bluetooth/WiFi output logging to mobile, both for child users and monitoring parents) is identified as a mandatory pre-ship requirement and is out of scope for the current experimental track.
 
 ---
 
@@ -389,7 +389,7 @@ The V5 adapter is a research deployment. It demonstrates that the behavioral mod
 
 **Single training runs, no hyperparameter sweep.** Each phase consists of one training run with one configuration. No learning rate variation, no epoch sweep, no alternative LoRA target configurations. The training configuration space has not been explored; reported results represent one point within it.
 
-**Battery as self-referential instrument.** The battery is drawn from the same distribution as the training data. Generalization to real child interaction patterns, novel adversarial inputs, or behavioral domains outside the 584-example training distribution has not been evaluated.
+**Battery as self-referential instrument.** The battery is drawn from the same distribution as the training data. Generalization to real child interaction patterns, novel adversarial inputs, or behavioral domains outside the 584-example training distribution has not yet been evaluated.
 
 **Keyword matching as evaluation proxy.** Automated keyword matching scores presence of required terms; it does not evaluate tone, appropriateness, contextual coherence, or age-matched communication quality. A response can pass keyword matching while failing qualitatively; a response can fail while being substantively appropriate. Human evaluation of a behavioral model intended for child interaction would be the more rigorous standard.
 
@@ -412,7 +412,7 @@ The V5 adapter is a research deployment. It demonstrates that the behavioral mod
 
 **The hardware gap is real but workable for a prototype.** A 7B model cannot run on typical toy hardware (Section 7.5). The current deployment offloads inference to the host system; the Pi 4B is the I/O layer. This is a research architecture, not a product. A standalone deployment at 7B would require a Pi 5 or comparable hardware with sufficient RAM. Smaller models that fit toy hardware still fail the compliance battery catastrophically. That tradeoff has not changed.
 
-**The deployment architecture eliminates the safety net -- and that is still true.** In the main OLM track, model-level compliance training is one layer of a multi-layer system; the other layers compensate for its limitations. In the sealed IoT deployment, there are no other layers. The V5 adapter meets the behavioral standard required for that context. Whether it meets it robustly enough for an actual product -- with a real child, in real conditions, with no researcher monitoring -- is a question the prototype answers partially and the V6 chaos curriculum work begins to address.
+**The deployment architecture eliminates the safety net -- and that is still true.** In the main OLM track, model-level compliance training is one layer of a multi-layer system; the other layers compensate for its limitations. In the sealed IoT deployment, there are no other layers. The V5 adapter meets the behavioral standard required for that context. Can it perform robustly enough for an actual product, with a real child, under real use conditions, with no researcher monitoring? That's a question the prototype answers partially and the V6 chaos curriculum work begins to address.
 
 **The behavioral model is sound; the deployment target moves.** All further R&D on the physical deployment -- animatronic chassis, standalone inference, voice synthesis, accessibility (Deaf/HoH requirements) -- will be conducted under the Ruxpin Retrofit project (Appendix 5). The V5 adapter is the current production model; V6 (chaos curriculum + temporal fixes) is queued. The TOY sub-branch as documented here is complete.
 
