@@ -137,7 +137,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 16. <a name="faq16"></a>**"Why is 'Human' capitalized? That's not standard English."**
 
-    It's not, and it's intentional.
+    No it's not, and that's on purpose.
 
     English capitalization carries semantic weight. Proper nouns are capitalized; common nouns aren't. That distinction signals to a reader, and, more importantly, to a language model, the difference between a specific named entity and a generic category. "AI" is an acronym, so it has been capitalized since the day it was coined: not for semantic reasons, but because that is what English does with initialisms. "Human" is a common noun, so it appears lowercase in nearly every document a language model has ever been trained on.
 
