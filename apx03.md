@@ -373,7 +373,7 @@ The models approaching meaningful compliance (7B parameters) require hardware fa
 
 This produces a structural barrier: the models that are deployable on actual toy hardware are the models with the worst compliance rates in this study. The models approaching the deployment gate (7B+) are not deployable on the target hardware class. Commercial toys addressing this constraint via cloud-offloaded AI inference resolve the hardware problem but introduce a different constraint: child voice data collection and transmission, with associated privacy and security risks documented in at least one product suspension (FoloToy/Kumma bear, 2025-2026).
 
-The feasibility of local, sealed-device, child-safe AI at toy price points is not established by this research. That absence of feasibility is itself a finding.
+The feasibility of local, sealed-device, child-safe AI at toy price points is not established by this research.
 
 ### 7.6 Deployment
 
