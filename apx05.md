@@ -276,8 +276,6 @@ Should Mr. Baron wish to take possession and ownership of the trained voice mode
 
 I make no attempt to lay blame for the existence of this project branch at the feet of my mother. She bears no responsibility for or involvement in it whatsoever. However, I'm quite certain that her lifelong hobby of vintage-toy collecting played at least some part in the inspiration to actually carry the project through to its logical(?) conclusion. Hi, Mom!
 
----
-
 <nav>
 <div class="chapter-nav">
   <a href="/appendices">Appendices</a>
