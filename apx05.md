@@ -261,7 +261,7 @@ The CLM pretraining corpus consists of public-domain texts sourced from Project 
 
 The `en_US-teddy-medium` voice model was trained on audio from the 1985-87 *Adventures of Teddy Ruxpin* animated series and the Worlds of Wonder audio cassette library for the purpose of non-commercial research into accessible text-to-speech voice development. This use is claimed as fair use under 17 U.S.C. § 107 on the basis of: 
 
-- Transformative purpose (production of a TTS synthesis model, not reproduction of the source material); 
+- Transformative purpose (development of a TTS synthesis model, not reproduction of the source material); 
 - Non-commercial research context; 
 - The absence of market substitution for the original works; and 
 - Deployment scope limited solely to the hardware required for this Ruxpin Retrofit proof-of-concept.
