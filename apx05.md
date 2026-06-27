@@ -283,8 +283,6 @@ I make no attempt to lay blame for the existence of this project branch at the f
 </div>
 </nav>
 
----
-
 [^1]: [workshop1138 -- Ruxpin Refurb 1985 WoW](https://youtube.com/playlist?list=PLdsrAeJ-bM2ysKCUj2PRE0TQdhsLGjSXb&si=wACIVqBsXZ5kbYW_){: target="_blank" rel="noopener noreferrer" }
 
 [^2]: [Randi Rain -- Inside Teddy Ruxpin: Repair, Schematics & TRRS Jack Mod! 2025](https://youtu.be/J4jgQdVSnws?si=GfiZsSnS91TsiaKp){: target="_blank" rel="noopener noreferrer" }
