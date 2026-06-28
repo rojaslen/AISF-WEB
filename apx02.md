@@ -909,6 +909,8 @@ approximately 60-81 minutes per run on the RTX 5060 Ti.
 
 ### 7.2 Pnull: Architecture-Dependent P0 Tokenization Failure
 
+OLM research is where this failure mode was first identified and characterized as a discrete, measurable phenomenon; earlier instances of related P0-failure-class behavior predate this identification, as documented in the e-book's Chapter 9.
+
 Llama 3.1 8B base model (no instruction tuning) achieved 81.9% on the compliance
 battery, compared to 99.8% and 100.0% for Mistral 7B variants. Analysis identifies
 the root cause as a pretraining artifact: in programming contexts, "P0" is
