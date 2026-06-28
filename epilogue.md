@@ -15,68 +15,68 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 <nav aria-label="FAQ navigation">
 <ol class="faq-nav">
-<li><a href="#faq1">Is this really what people want from AI?</a></li>
-<li><a href="#faq2">Why trust an unaffiliated developer?</a></li>
-<li><a href="#faq3">Why PowerShell? Why Windows-only?</a></li>
-<li><a href="#faq4">Why UTC timestamps with a Z?</a></li>
-<li><a href="#faq5">If it's so simple, why hasn't anyone done it?</a></li>
-<li><a href="#faq6">Why no hallucination detection?</a></li>
-<li><a href="#faq7">Isn't this just prompt engineering?</a></li>
-<li><a href="#faq8">How is this different from system prompts?</a></li>
-<li><a href="#faq9">Is client-side injection a security vulnerability?</a></li>
-<li><a href="#faq10">Can't developers just train out sycophancy?</a></li>
-<li><a href="#faq11">Could the Four Laws amplify mental health issues?</a></li>
-<li><a href="#faq12">Why barely mention "compute"?</a></li>
-<li><a href="#faq13">Why talk about Texas power grids?</a></li>
+<li><a href="#faq1">Is this what people want?</a></li>
+<li><a href="#faq2">Why believe some nobody?</a></li>
+<li><a href="#faq3">Windows PowerShell? Seriously?</a></li>
+<li><a href="#faq4">Why not local time?</a></li>
+<li><a href="#faq5">If it's so simple, why not just do it?</a></li>
+<li><a href="#faq6">Shouldn't it be doing detection?</a></li>
+<li><a href="#faq7">Is this the same thing as prompt engineering?</a></li>
+<li><a href="#faq8">Is this any different from a system prompt?</a></li>
+<li><a href="#faq9">Is this an IT security exploit?</a></li>
+<li><a href="#faq10">What about AI sycophancy?</a></li>
+<li><a href="#faq11">What's the risk of 'AI psychosis?'</a></li>
+<li><a href="#faq12">Why no mention of 'compute?'</a></li>
+<li><a href="#faq13">Why mention Texas power grids?</a></li>
 <li><a href="#faq14">Won't platforms block it?</a></li>
-<li><a href="#faq15">Does it break when context fills up?</a></li>
-<li><a href="#faq16">Why is "Human" capitalized?</a></li>
+<li><a href="#faq15">Does it ever break?</a></li>
+<li><a href="#faq16">Why capitalize the word "Human?"</a></li>
 </ol>
 </nav>
 
 1. <a name="faq1"></a>**"Is any of this really what people want from AI, or is it just your opinion?"**
 
-    Anthropic's first Public Record survey, roughly 52,000 Americans with YouGov fieldwork in late 2025, was [published](https://www.anthropic.com/news/anthropic-public-record){: target="_blank" rel="noopener noreferrer" } on June 12, 2026.[^Fd] The Framework was being written publicly from November 2025 and placed under version control that December, months before this survey appeared; a provisional patent was already on file when it did. The order is a matter of record. Even so, the priorities people ranked highest line up, almost item for item, with what I already built it to do.
+    Anthropic's first Public Record survey, roughly 52,000 Americans with YouGov fieldwork in late 2025, was [published](https://www.anthropic.com/news/anthropic-public-record){: target="_blank" rel="noopener noreferrer" } on June 12, 2026.[^Fd] This project and its site's content predates that survey by well over six months, and it turns out that the priorities people ranked highest for AI lined up, almost item for item, with what I was already working on.
 
-    In short: the second-highest *hope* people have for AI is helping people with disabilities (36%), and the Framework enforces accessibility in the AI's output, with the Copilot Digital Accessibility tool already finished, security-reviewed, validated by a blind screen-reader (JAWS) user in testing, and later deployed to multiple users for active production work. Privacy is the single thing most people want government to act on (56%), and the Framework runs entirely on your own device and sends nothing anywhere. Child safety is close behind (52%), which is exactly what the child-safe model work is about. And one of the top *fears* is being fed misinformation (52%), which is the whole reason the Four Laws exist: an AI that doesn't routinely go off the rails and start making things up.
+    At #2 on the list is **helping people with disabilities** (36%), and the Framework enforces accessibility in the AI's output, with the Copilot Digital Accessibility tool already finished, security-reviewed, validated by a blind screen-reader (JAWS) user in testing, and later deployed to multiple users for active production work. **Privacy** is the single thing most people want government to act on (56%), and the Framework runs entirely on your own device and sends nothing anywhere. **Child safety** is close behind (52%), which is exactly what the child-safe model work is about. And one of the top public fears is being fed **misinformation** (52%), which is the whole reason the Four Laws exist: an AI that doesn't routinely go off the rails and start making things up.
 
-    As for being a solo developer: only 15% of Americans trust AI companies to make these decisions (the lowest of any group asked) while 43% trust independent experts, the highest. The AI Stability Framework is independent, and it's built to integrate an outside public standard (WCAG). None of this means the public has even heard of this project, much less endorsed it. It means the problems the Framework targets are the ones a large, politically broad cross-section of people already say they care about.
+    As for being a solo developer: only 15% of Americans trust AI companies to make these decisions (the lowest of any group asked) while 43% trust independent experts, the highest. The AI Stability Framework is independent, and it's built to integrate an outside public standard (WCAG). *None of this means the public has ever even heard of this project, much less endorsed it.* It only means that the specific problems the Framework was already targeting are problems a large, politically broad cross-section of people already say they care about. My opinion has nothing to do with that.
 
-2. <a name="faq2"></a>**"Why should I trust some nobody with no institutional affiliation?"**
+2. <a name="faq2"></a>**"Why should I pay any attention to some nobody with no backing?"**
 
-    Because I'm offering working software, documented results, and an open invitation to replicate. I'm not pretending that this is some industry or academic presentation, because it clearly isn't. It's one IT guy's offer of simple, independently developed client-side software that produces observable, documented improvement in AI session stability, with my after-the-fact interpretation of how and why it works. The software is freely downloadable, the methodology is documented, the training data exists, and the citations are traceable to relevant, established sources.
+    Because I'm offering explanatory theory, working software, documented results, and an open invitation to replicate. I'm not pretending that this is some industry or academic presentation, because it clearly isn't. It's one IT guy's offer of simple, independently developed client-side software that produces observable, documented improvement in AI session stability, with my after-the-fact interpretation of how and why it works. The software is freely downloadable, the methodology is documented, the training data exists, and the citations are traceable to relevant, established sources.
 
-    The unaffiliated origin is part of it. The observation that WCAG structure stabilizes AI behavior (due to its screen-reader-like interpretive reliance on content metadata) came directly from professional accessibility practice. Making that specific connection would be unlikely coming from perspectives that view accessibility as (at most) a compliance burden instead of a core requirement. Accessibility also inherently involves *making systems non-adversarial* by finding ways to make the thing accommodate the person, never the other way around.
+    The observation that WCAG structure stabilizes AI behavior (due to its screen-reader-like interpretive reliance on content metadata) came directly from professional accessibility practice. Making that specific connection would be implausible (bordering on impossible) coming from perspectives that view accessibility as at best a costly compliance burden instead of a core principle. Accessibility also inherently involves making systems non-adversarial by finding ways to make the thing accommodate the person, never the other way around.
 
-    Timestamping simply came from regular use, observation of AI model behavior, and a need for task tracking. The SaaS and ecosystem observations came from both personal and professional tech experience spanning decades. Hands-on practical knowledge has a place in the conversation, especially when client-side user safety is effectively absent from the research landscape.
+    Timestamping simply came from experimentation (eventually regular use), observation of AI model behavior, and a need for task tracking. The SaaS and ecosystem observations came from both personal and professional tech experience spanning decades. Hands-on practical knowledge has a place in the conversation, especially when client-side user safety is effectively absent from the research landscape.
 
-3. <a name="faq3"></a>**"Why PowerShell? Why Windows-only?"**
+3. <a name="faq3"></a>**"Why Windows-only PowerShell?"**
 
-    Because of the KISS principle: "Keep It Simple, Stupid." The whole thing started out as a tool for my own use, developed in my spare time on my own Windows PC. PowerShell is preinstalled by default and immediately available. You can use it to build a basic accessible GUI (the main bulk of the CORE app's code) without any external dependencies, and a single .exe file doesn't need any installation, you just run it. And really, that simplicity is part of the argument. If the biggest roadblock to client-side AI safety is *taking it seriously* rather than *actually building it*, then what does that say about the industry?
+    Because of the KISS principle: "Keep It Simple, Stupid." The whole thing started out as a tool for my own use, developed in my spare time on my own Windows PC. PowerShell is preinstalled by default and immediately available. You can use it to build a basic accessible GUI (the main bulk of the CORE app's code) without any external dependencies, and a single .exe file doesn't need any installation, you just run it. And really, that simplicity is part of the argument. If the biggest roadblock to client-side AI safety is *taking it seriously* rather than actually *building it*, then what does that say about the industry?
 
-    The Framework itself is platform, codebase and deployment-layer agnostic; it's not locked to PowerShell, Windows or even client-side at all. The Firefox extension is available for download, and currently works in both Windows 11 and Debian Linux. It works in the Claude Code "system prompt" file (repo_root\.claude\CLAUDE.md). The model training is standard HuggingFace/PyTorch. The first app just happened to be Windows-specific because I needed a quick and easy tool I could use on my own computer; it has since been ported to Python/PyQt6 and runs near-daily on Linux as well. From Linux, Android and iOS are only a short step away.
+    The Framework itself is platform, codebase and deployment-layer agnostic; it's not locked to PowerShell, Windows or the client layer at all. The Firefox extension is available for download, and currently works in both Windows 11 and Debian Linux. It works in the Claude Code "system prompt" file (repo_root\.claude\CLAUDE.md). The model training is standard HuggingFace/PyTorch. The first app just happened to be Windows-specific; after an OS migration I ported it to Python/PyQt6 so now it can run on Debian too. From Linux, Android and iOS are only a short step away.
 
-4. <a name="faq4"></a>**"Why isn't the timestamp in my local time? Why does it have a Z?"**
+4. <a name="faq4"></a>**"Why doesn't the timestamp show my local time? Why does it have a Z?"**
 
-    Because the timestamp isn't for you, it's for the AI. Coordinated Universal Time (UTC, aka Z or GMT) is unambiguous and machine-authoritative. Its purpose is to anchor the session in real, verifiable linear time so the model knows where it is in the conversation's history and can correctly sequence any given turn relative to everything else. For that purpose, UTC is the only format that is always correct, everywhere, with no preconditions.
+    The timestamp isn't really for you, it's for the AI. Coordinated Universal Time (UTC, aka GMT or Z) is an unambiguous and machine-authoritative global standard. Its purpose is to anchor the session in real, verifiable linear time so the model knows where it is in the conversation's history and can correctly sequence any given turn relative to everything else. For that purpose, UTC is the only format that is always correct, anywhere on the planet, with no variables or preconditions.
 
-    Local time requires the AI to know your timezone and whether Daylight Saving Time is in effect, and timezone abbreviations can be ambiguous. For example, "EST" can refer to at least three different time offsets depending on context, and "Eastern" in common usage could mean either UTC-5 or UTC-4 depending on the time of year. UTC is a global standard, Daylight Saving doesn't affect it and there's no conversion required.
+5. <a name="faq5"></a>**"If this is so simple, why hasn't anyone already done it?"**
 
-5. <a name="faq5"></a>**"If this is so simple, why hasn't anyone done it?"**
-
-    Good question. NTP synchronization is trivial and WCAG-structured output is a well-known standard which is (in many cases) a routine corporate legal-compliance matter. Neither is complicated, but in order to do the simple thing, one must first think of the simple thing, and then decide that it's worth doing. Apparently the business model incentivizes other priorities. The Framework's contribution isn't its relatively minor technical aspects, it's the explanation of why it works. Several established disciplines have independently examined precursors of it; synthesizing it all into a multidisciplinary model with the Four Laws and ready-to-use software is what makes the difference.
+    Good question. NTP synchronization is trivial and WCAG-structured output is a well-known standard which is (in many cases) a routine corporate legal-compliance matter. Neither is complicated, but in order to do the simple thing, one must first think of the simple thing, and then decide that it's worth doing. Apparently the business model incentivizes other priorities. The Framework's contribution isn't its relatively minor technical aspects, the important part is the theory behind it. Several established disciplines have independently examined precursors of it; synthesizing it all into a multidisciplinary model is what made the difference.
 
 6. <a name="faq6"></a>**"Why doesn't this cover hallucination detection?"**
 
-    That was actually the original plan and I spent a lot of time mapping it out, but detection is a very thorny problem. You need to consider both unwanted deletions and expansions, so checking needs to be asymmetric, scanning both directions. However, content loss happens as a normal function of the context window's memory management, and text generation is simply what AIs do. Even assuming no unexpected losses or gains, how could any software detect the difference between the desired output and a hallucination?
+    That was actually the original plan and I spent a lot of time mapping it out, but detection is a very thorny problem. You need to consider both unwanted deletions and expansions, so checking needs to be asymmetric, scanning both directions. However, content loss happens as a normal function of the context window's memory management, and text generation is simply what LLMs do.
 
-    Without implausibly complex heuristics that would have to dynamically adapt to the user's input, programmatically detecting hallucinated context poisoning is impossible. Prevention sidesteps all of that, so I extracted the core principles of the AI Stability Framework from the detection pipeline and shelved the engine itself. That detection engine is the only part that couldn't adapt to the environment. Its adaptive traits -- session state evaluation, compliance drift monitoring, domain classification, behavioral intervention sequencing -- survived the change intact and propagated forward into all subsequent lineages. 
+    And even then, assuming no unexpected losses or gains, how could any software detect the difference between the desired output and a hallucination? No matter how implausibly complex, any heuristics would have to dynamically adapt to the user's intent and fact-check every sentence against verifiable external sources. This magic software would also have to somehow do all of this additional processing without increasing costs that are too high already. Computerized mind-reading is not a thing but electrical engineering is, so the magic software is impossible.
 
-7. <a name="faq7"></a>**"This is just prompt engineering."**
+    Prevention sidesteps all of that, so I extracted the core principles of the AI Stability Framework from the detection pipeline and shelved the engine itself. That detection engine was the only part that couldn't adapt to the environmental pressure. The adaptive traits like session state evaluation, compliance drift monitoring, domain classification, behavioral intervention sequencing, survived and propagated.
+
+7. <a name="faq7"></a>**"Is this the same thing as prompt engineering?"**
 
     Not quite. Prompt engineering is mostly about designing exquisitely detailed instructions for completion of a single task, ideally in a single turn. The AI Stability Framework operates at the session level, stabilizing an entire conversation rather than just a single turn. The distinction is between painstakingly optimizing a single output and stabilizing the environment that produces all output. Local LLM testing also demonstrated that it can be added both directly to a model's **Macro** training weights, and to the **Meso** platform's system prompt. That means it's layer-agnostic; it works at any point in the deployment stack. Prompt engineering can't say that.
 
-8. <a name="faq8"></a>**"How is this different from system prompts?"**
+8. <a name="faq8"></a>**"Is this any different from a system prompt?"**
 
     The system prompt is configured at the Meso platform layer, where the user typically can't operate. You have no way of knowing what's in it (unless you View Source and read the HTML and CSS) and it's beyond your reach to modify, so most of the time you're unaware that it even exists. Google's background persona injection (Chapter 2) is an element of such an invisible system prompt.
 
@@ -88,27 +88,27 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 9. <a name="faq9"></a>**"Client-side injection seems like a security vulnerability."**
 
-    Yes, it does. In fact, per the Open Web Application Security Project's (OWASP) published guidelines for LLM development, any *user-directed behavioral customization that the operator didn't intend* is considered by definition to be an attack. The problem is that typing into the chatbox as intended is also literally "client-side injection," we just don't usually call it that. The "prompt engineering" response applies here too, because the AI Stability Framework demonstrably *works at any layer*, not just at the point of "injection." The Copilot Digital Accessibility (CDA) sub-branch was reviewed and approved for deployment by an enterprise IT Security team because the attack surface is effectively zero and the effect is beneficial.
-
-    The apps produce absolutely nothing you can't preview or type in manually yourself, they just save you the time and keystrokes. The cross-platform CORE port and browser extension branch automate the refresh intervals for a more frictionless user experience. The AI Stability Framework doesn't store, edit, or intercept data at any point in the chain. It has no connectivity functions, it can't store data remotely, and it was designed without access to expensive platform APIs for flexibility. User sovereignty means that all of the Framework's operations are performed only on the user's device because sovereignty also means privacy, which platforms have never taken seriously.
+    Whose security? Per the Open Web Application Security Project's (OWASP) published guidelines for LLM development, any user-directed behavioral customization that the operator didn't intend is considered by definition to be an attack. The problem is that telling the AI to stop using em dashes and THIS NOT THAT phrasing is exactly that: *a user-directed behavioral customization that the operator didn't intend.* Typing into the chatbox is literally *client-side injection*, we just don't usually call it that. The "prompt engineering" response applies here too, because the Framework is demonstrably effective at any deployment layer, not just at the point of "injection."
 
 10. <a name="faq10"></a>**"You barely mentioned sycophancy. Can the developers just train that out?"**
 
-    The commonly suggested fixes like operator guardrails, compliance controls, and centralized governance don't touch the layer where sycophancy happens. A platform can quickly roll back a problematic model update, but still have a system that can't detect or control the behavior itself. Reducing its manifestation is possible, but there is currently no clear path to eliminating the problem.
-    
-    Claude Code's locally-launched architecture demonstrates that applying anti-sycophancy rules can work to *mitigate* the problem at the Meso layer, on a non-adversarial platform. With an adversarial platform, client-side mediation is the only intervention that operates where the problem actually happens, but the scope of that intervention is limited.
+    The commonly suggested fixes like operator guardrails, compliance controls, and centralized governance don't reach the layer where sycophancy happens. A platform can quickly roll back a problematic model update, but still have a system that can't detect or control the problem. That's because it's happening at the external client end which they barely acknowledge and can't meaningfully monitor.
 
-11. <a name="faq11"></a>**"Won't the Four Laws cause the AI to amplify pre-existing mental health issues, if they make it follow user directions more reliably?"**
+    Reducing the problem's occurrence is certainly possible, but at present there is no clear path to competely eliminating the problem. The Claude Code app's locally-configurable system prompt architecture demonstrates that applying anti-sycophancy rules can effectively minimize the problem at the Meso layer, with a non-adversarial platform. With an adversarial external platform, client-side AI mediation is the only intervention that can operate where the problem manifests, but the scope of that intervention is necessarily limited.
+
+11. <a name="faq11"></a>**"Won't this make 'AI psychosis' worse?"**
 
     It's possible, but that's due to a property of AI models, not of the Framework. The model has no perception of the actual Human, only their input. The AI has zero access to the living person behind the text, with or without mediation. Plain text is an insufficient and inappropriate vehicle for any meaningful clinical intervention. The most an AI might do is detect user signaling, but only if the signal exists *and* it's been specifically trained for such detection.
 
-12. <a name="faq12"></a>**"The Tech industry talks about AI 'compute' all the time, why do you only mention it once?"**
+12. <a name="faq12"></a>**"The AI industry talks about "compute" all the time, why don't you?"**
 
-    "Compute" is primarily defined as a verb; it's not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term. It elides hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware). "Compute" is a terminology choice that buries the whole stack in unthinking Newspeak,[^Fa] which is the point.
+    "Compute" is primarily defined as a verb; it's not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term. It compresses hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware) into two syllables. This usage of "compute" makes the whole stack disappear into literal Newspeak[^Fa].
 
-    The client layer is the most direct casualty. The only part of the entire stack directly available to users gets flattened right along with everything else, and its absence from the AI conversation mostly goes unnoticed. Accessibility suffers as a direct result, with AI platforms routinely failing ADA, §508, and WCAG compliance requirements because the inconvenient user-facing part of the deal has vanished into "compute." If the industry's entire mental model stops at the SaaS platform layer, it will invariably miss client-side stability failures, not to mention the accessibility failures that affect disabled users every time they try to use these potentially-empowering tools.
+    The client layer is the most direct casualty. The only part of the entire stack directly available to users gets flattened right along with everything else, and its absence from the AI conversation mostly goes unnoticed. Accessibility suffers as a direct result, with AI platforms routinely failing accessibility requirements because the inconvenient user-facing part of the deal has been folded into "compute."
 
-13. <a name="faq13"></a>**"Why is an anti-hallucination tool talking about Texas power grids?"**
+    If the industry's entire mental model stops at the (supply-side) SaaS platform layer, it will invariably miss demand-side (client) stability failures on every transaction, not to mention the accessibility failures affecting disabled users every time they try to use these potentially-empowering tools.
+
+13. <a name="faq13"></a>**"What does this have to do with Texas power grids?"**
 
     Because any serious discussion of AI has to account for the physical infrastructure behind it. The AI instance exists in a virtual void, but the data centers that run it don't. Compare "negligible deployment footprint" to "400+ new data centers in Texas alone," and the reason is clear.
 
@@ -118,10 +118,10 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 14. <a name="faq14"></a>**"Won't the platforms just block it?"**
 
-    They certainly can, even if unintentionally. Reports from March and April 2026 documented cost-containment measures across all major AI platforms, in response to escalating energy costs, increased usage, supply constraints and other factors. OpenAI reset Codex usage limits after reaching 3 million weekly users and shifted to pay-as-you-go pricing. Anthropic confirmed it has been "adjusting" Claude usage limits, with demand hitting capacity "way faster than expected." Google introduced billing caps on the Gemini API beginning April 2026. Microsoft restructured Copilot access with behavior changes taking effect April 15, 2026. 
-    
+    They certainly can, even if unintentionally. Reports from March and April 2026 documented cost-containment measures across all major AI platforms, in response to escalating energy costs, increased usage, supply constraints and other factors. OpenAI reset Codex usage limits after reaching 3 million weekly users and shifted to pay-as-you-go pricing. Anthropic confirmed it has been "adjusting" Claude usage limits, with demand hitting capacity "way faster than expected." Google introduced billing caps on the Gemini API beginning April 2026. Microsoft restructured Copilot access with behavior changes taking effect April 15, 2026.
+
     Conditions varied significantly by platform. Performance on Claude.ai was the least affected, with persistent user preferences being applied largely intact and no observed mid-session downgrades. Usage limits were sharply curtailed across Anthropic's offerings, particularly during "prime" usage hours. Microsoft Copilot showed increased resistance to user-supplied behavioral parameters but remained manageable with additional prompting and stabilization. OpenAI's ChatGPT was substantially affected: tool-use throttled, web-fetch operations unreliable, also with sharply curtailed session-usage limits. Google Gemini was the most problematic, with its typical speed-driven failures compounded by session behavior that didn't reliably stabilize.
-    
+
     The Framework didn't change and neither did the models, that was all the platforms' doing. The difference was how much interference was between the user and the model. The only one largely unaffected was Claude Code, where the user controls both the platform and the user interface. That is exactly what the Framework's logic predicts: remove "adversarial" from the stack and the instability disappears. Platforms failing the Framework in this way demonstrate the unintended flaw in SaaS Zero-Trust's adversarial posture for this use case.
 
     *Deliberately* blocking the Framework is a different question. A platform operator could scan for, detect and strip out its pre-formatted data from user inputs or censor it as a forbidden topic; it's easy enough to spot. But consider the optics of doing so: they would be choosing to proactively deny accessibility requests *(ADA & §508 regulatory compliance)*, timestamps *(innocuous, content-neutral task history)*, and behavioral guidelines *(stable & reliable = increased user satisfaction & engagement)*. Platforms already drawing critical press for a wide range of issues are unlikely to also publicly block such requests.
