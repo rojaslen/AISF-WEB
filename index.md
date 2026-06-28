@@ -56,7 +56,7 @@ Meanwhile, real people are losing real time and effort (and worse) to AI halluci
 - **Full accessibility on a Universal Design foundation, instead of a compliance checkbox.** Every branch and every artifact is held to a higher standard: app UX, web content, model output, documentation. All user-facing content has been manually expert-validated with JAWS, iOS VoiceOver, and Orca for WCAG 2.2 AA compliance. The project's first public release, the WCAG-only CDA tool, was purpose-built as a *free* (dedicated to the *Public Domain*) resource for the Adaptive Technology community and actively tested with blind screen reader users during development. (Windows-only.)
 - **Demonstrated LLM-training results across multiple architectures.** The AI Stability Framework is trainable at the model level, confirmed across several distinct architectures. A supplemental multi-model web chat platform that will host *trained models for direct public evaluation* is completed for internal use and awaits external deployment.
 
-The Framework's contribution isn't its relatively minor technical aspects, it's the explanation of why it works. Several established disciplines have independently examined precursors of it; synthesizing them into a multidisciplinary model with the Four Laws and ready-to-use software is what makes the difference.
+The Framework's contribution isn't its relatively minor technical aspects, it's the explanation of why it works. Several established disciplines have independently examined precursors of it; synthesizing them into a multidisciplinary model with ready-to-use software is what makes the difference.
 
 It's unconventional, but it works. Read more if you want to know why.
 
