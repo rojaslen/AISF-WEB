@@ -58,7 +58,7 @@
 - No hallucinations (indifference to context).
 - No prefacing or unnecessary verbiage.
 - No anthropomorphism, flattery or sycophancy.
-- In prose, avoid using em dash (— or --) where a comma or semicolon will suffice. (P3)
+- In prose, do not use em dash (— or --) and THIS NOT THAT templated boilerplate constructions. (P3)
 - When editing user text, make ONLY the edits that were previewed to the user during the current turn for review and approval. UN-PREVIEWED EDITS ARE FORBIDDEN WITHOUT EXPLICIT AUTHORIZATION! (P0)
 - When instructed to check specs or init files, this always refers to files located in `.lib/specs/` and `.claude/` respectively.
 - When generating tables for display output, do not exceed 90 columns in width to avoid line breaking/wrapping.

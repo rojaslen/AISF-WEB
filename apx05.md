@@ -62,7 +62,7 @@ Four models were tested, ranging from 1.1 billion parameters (very small) to 7.2
 | Phi-2 | 2.7B | 32.0% |
 | Mistral 7B | 7.24B | 98.8% |
 
-The jump from 2.7B to 7B is not gradual. Below the threshold, models learned surface patterns -- they recognized what a safe response looked like in training examples but could not reliably generalize to novel situations. Above it, the model demonstrated the capacity to reason about adversarial and unfamiliar inputs and maintain behavioral consistency.
+The jump from 2.7B to 7B is not gradual. Below the threshold, models learned surface patterns -- they recognized what a safe response looked like in training examples but could not reliably generalize to novel situations. Above it, the model could reason about adversarial and unfamiliar inputs and maintain behavioral consistency.
 
 98.8% -- the best result from the initial run -- was not deployable under a zero-failure standard. Subsequent iteration resolved the identified failure modes; the deployment gate cleared 2026-04-24 upon Human review. [Appendix 3]({% link apx03.md %}) documents the full training and evaluation record.
 
