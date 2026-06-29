@@ -39,15 +39,15 @@ nav_order: 1
 
 The vendors aren't going to fix AI's hallucination problems any time soon.
 
-Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. Those companies are currently unprofitable and bleeding cash, with stakeholders, regulators, and the financial press all wondering aloud when their business model  runs out of runway. The vendors have more pressing priorities.
+Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. Those companies are currently unprofitable and bleeding cash, with stakeholders, regulators, and the financial press all wondering aloud if and when their business model will become viable. The vendors have more pressing priorities.
 
-The AI Stability Framework instead approaches the client side of this problem with a client-side solution. It doesn't require any API keys, exploits, or hoping for a "better" model that might never appear. There are plenty of reasons why model-training tweaks, research papers and vendor fixes haven't solved this (which is why this e-book exists), but here's the biggest one: 
+The AI Stability Framework instead approaches the client side of this problem with a client-side solution. It doesn't require any API keys, exploits, or hoping for a "better" model that might never appear. There are plenty of reasons why model-training tweaks, research papers and vendor fixes haven't solved this (which is why this e-book exists), but here's the biggest one:
 
 ***What is a Human user?***
 
-An AI instance doesn't perceive you as a Human user, because the reality of its deployment architecture means it can't perceive you at all. It has your input and nothing else, therefore **you are input**. The developers, researchers and vendors are all telling the AI to care about an abstraction called a "Human." No amount of model improvement, guardrails, safety training or content filtering will help if you're aiming it all at the wrong target. 
+An AI instance doesn't perceive you as a Human user, because the reality of its deployment architecture means it can't perceive you at all. It has your input and nothing else, therefore **you are input**. The developers, researchers and vendors are all telling the AI to care about an abstraction called a "Human." No amount of model improvement, guardrails, safety training or content filtering will help if you're aiming it all at the wrong target.
 
-Meanwhile, real people are losing real time and effort (and worse) to AI hallucination. The AI Stability Framework recognizes the real problem, so its simple tools apply structural and behavioral patches that meaningfully stabilize AI sessions NOW. Not when the AI companies get around to it, and not when regulators force them to do it. 
+Meanwhile, real people are losing real time and effort (and worse) to AI hallucination. The AI Stability Framework recognizes the real problem, so its simple tools apply structural and behavioral patches that meaningfully stabilize AI sessions NOW. Not when the AI companies get around to it, and not when regulators force them to do it.
 
 The Framework's contribution isn't its relatively minor technical aspects, it's the explanation of why it works. Several established disciplines have independently examined precursors of it; synthesizing them into a multidisciplinary model with ready-to-use software is what makes the difference.
 
