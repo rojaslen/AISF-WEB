@@ -104,7 +104,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 12. <a name="faq12"></a>**"The AI industry talks about 'compute' all the time, why don't you?"**
 
-    The word "compute" is primarily defined as a verb *(1<sup>st</sup> person sing., infin.)*; the word is not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term. It compresses hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware) into two syllables. This usage of "compute" makes the whole stack disappear into literal Newspeak[^Fa].
+    The word "compute" is primarily defined as a verb *(1<sup>st</sup> person sing., infin.)*. The word is not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term. It compresses hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware) into two syllables. This usage of "compute" makes the whole stack disappear into literal Newspeak[^Fa].
 
     The client layer is the most direct casualty. The only part of the entire stack directly available to users gets flattened right along with everything else, and its absence from the AI conversation mostly goes unnoticed. Accessibility suffers as a direct result, with AI platforms routinely failing accessibility requirements because the inconvenient user-facing part of the deal has been folded into "compute."
 
