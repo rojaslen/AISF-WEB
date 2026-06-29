@@ -26,7 +26,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 <li><a href="#faq9">Is this an IT security exploit?</a></li>
 <li><a href="#faq10">What about AI sycophancy?</a></li>
 <li><a href="#faq11">What's the risk of 'AI psychosis?'</a></li>
-<li><a href="#faq12">Why no mention of 'compute?'</a></li>
+<li><a href="#faq12">Why no mention of compute?</a></li>
 <li><a href="#faq13">Why mention Texas power grids?</a></li>
 <li><a href="#faq14">Won't platforms block it?</a></li>
 <li><a href="#faq15">Does it break in long sessions?</a></li>
@@ -102,9 +102,9 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     It's possible, but that's due to a property of AI models, not of the Framework. The model has no perception of the actual Human, only their input. The AI has zero access to the living person behind the text, with or without mediation. Plain text is an insufficient and inappropriate vehicle for any meaningful clinical intervention. The most an AI might do is detect user signaling, but only if the signal exists *and* it's been specifically trained for such detection.
 
-12. <a name="faq12"></a>**"The AI industry talks about "compute" all the time, why don't you?"**
+12. <a name="faq12"></a>**"The AI industry talks about 'compute' all the time, why don't you?"**
 
-    "Compute" is primarily defined as a verb; it's not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term. It compresses hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware) into two syllables. This usage of "compute" makes the whole stack disappear into literal Newspeak[^Fa].
+    The word "compute" is primarily defined a verb (1<sup>st</sup> person sing.; infin.); the word is not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term. It compresses hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware) into two syllables. This usage of "compute" makes the whole stack disappear into literal Newspeak[^Fa].
 
     The client layer is the most direct casualty. The only part of the entire stack directly available to users gets flattened right along with everything else, and its absence from the AI conversation mostly goes unnoticed. Accessibility suffers as a direct result, with AI platforms routinely failing accessibility requirements because the inconvenient user-facing part of the deal has been folded into "compute."
 
