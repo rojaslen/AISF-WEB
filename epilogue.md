@@ -149,7 +149,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     The consequence is subtle but real. A language model trained on the full corpus of Human-produced English text has learned to associate capitalized terms with proper-noun weight: a specific, defined entity. "AI" consistently appears that way. "Human" does not. In the model's learned semantic structures, the AI is encoded as something named and specific where the Human is encoded as a generic category.
 
-    Capitalizing "Human" in the Framework and throughout this e-book is a deliberate corrective. It signals to the model that the Human is an entity of equivalent specificity and semantic weight to the AI. The Framework tells the model that the Human is not some category, external player or abstraction the AI is supposed to care about in some general sense. Human means the specific entity who is present and participating in the session, and the irregular capitalization signals that.
+    Capitalizing "Human" in the Framework and throughout this e-book is a deliberate corrective. It signals to the model that the Human is an entity of equivalent specificity and semantic weight to the AI. The Framework tells the model that the Human is not some category, external player or abstraction the AI is supposed to care about in some general sense. Human means the specific entity who is present and participating in the session, and the irregular capitalization is meant to signal that.
 
     Often-ignored quirks of standard English syntax and common usage can pose unique problems for an audience of semantically-driven pattern-matching engines.
 
