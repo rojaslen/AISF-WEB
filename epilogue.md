@@ -34,6 +34,8 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 </ol>
 </nav>
 
+---
+
 1. <a name="faq1"></a>**"Is any of this really what people want from AI, or is it just your opinion?"**
 
     Anthropic's first Public Record survey, roughly 52,000 Americans with YouGov fieldwork in late 2025, was [published](https://www.anthropic.com/news/anthropic-public-record){: target="_blank" rel="noopener noreferrer" } on June 12, 2026.[^Fd] This project substantially predates that survey, and it turns out that the priorities people ranked highest for AI lined up, almost item for item, with what I was already working on.
