@@ -147,9 +147,11 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     English capitalization carries semantic weight. Proper nouns are capitalized; common nouns aren't. That distinction signals to the reader (in this case, a semantics driven pattern matching engine) the difference between a specific Named Entity and a generic category. "AI" is an acronym so it's been capitalized since day one, because that's just how acronyms work in English. "Human" is a common noun, so it appears lowercase in nearly every document a language model has ever been trained on.
 
-    The consequence is subtle but real. A language model trained on the full corpus of Human-produced English text has learned to associate capitalized terms with proper-noun weight: a specific, defined entity. "AI" consistently appears that way. "Human" does not. In the model's learned semantic representations, the AI is encoded as something named and specific where the Human is encoded as a generic category.
+    The consequence is subtle but real. A language model trained on the full corpus of Human-produced English text has learned to associate capitalized terms with proper-noun weight: a specific, defined entity. "AI" consistently appears that way. "Human" does not. In the model's learned semantic structures, the AI is encoded as something named and specific where the Human is encoded as a generic category.
 
-    Capitalizing "Human" in the Framework and throughout this e-book is a deliberate corrective. It signals to the model that the Human is an entity of equivalent specificity and semantic weight to the AI. The Framework tells the model that the Human is not some category, external player or abstraction the AI is supposed to care about in some general sense. Human means the specific entity who is present and participating in the session. The grammatical irregularity is the point. This quirk of standard English syntax poses a unique problem for an audience of semantically driven pattern matching engines.
+    Capitalizing "Human" in the Framework and throughout this e-book is a deliberate corrective. It signals to the model that the Human is an entity of equivalent specificity and semantic weight to the AI. The Framework tells the model that the Human is not some category, external player or abstraction the AI is supposed to care about in some general sense. Human means the specific entity who is present and participating in the session, so the capitalization anomaly is a signal.
+
+    Often-ignored quirks of standard English syntax and common usage can pose unique problems for an audience of semantically-driven pattern-matching engines.
 
 ---
 
