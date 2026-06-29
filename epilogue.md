@@ -30,7 +30,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 <li><a href="#faq13">Why mention Texas power grids?</a></li>
 <li><a href="#faq14">Won't platforms block it?</a></li>
 <li><a href="#faq15">Does it break in long sessions?</a></li>
-<li><a href="#faq16">Why capitalize the word "Human?"</a></li>
+<li><a href="#faq16">Why capitalize the word 'Human?'</a></li>
 </ol>
 </nav>
 
