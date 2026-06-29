@@ -106,7 +106,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     The word "compute" is primarily defined as a verb *(1<sup>st</sup> person sing., infin.)*. The word is not a noun in standard usage. The industry uses it as jargon to flatten the entire deployment stack into a single opaque term. It compresses hardware (GPUs, TPUs, ASICs, servers, networking), physical infrastructure (data centers, cooling systems, power supply, high-speed bandwidth), and software infrastructure (OS, virtualization, INFOSEC configuration, firmware) into two syllables. This usage of "compute" makes the whole stack disappear into literal Newspeak[^Fa].
 
-    The client layer is the most direct casualty. The only part of the entire stack that's directly available to users gets flattened right alongside everything else. Its absence from the AI conversation mostly goes unnoticed, because the inconvenient user-facing part of the deal has been swept under the "compute" rug.
+    The client layer is the most direct casualty. The only part of the entire stack that's directly available to users gets flattened right alongside everything else. Its absence from AI discussions goes unnoticed, because the inconvenient user-facing part of the deal has vanished into "compute."
 
     If the industry's entire mental model stops at the (supply-side) SaaS platform layer, it will invariably miss demand-side (client) stability failures on every transaction, not to mention the accessibility failures affecting disabled users every time they try to use these potentially-empowering tools.
 
