@@ -30,7 +30,6 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 <li><a href="#faq13">Why mention Texas power grids?</a></li>
 <li><a href="#faq14">Won't platforms block it?</a></li>
 <li><a href="#faq15">Does it break in long sessions?</a></li>
-<li><a href="#faq16">Why capitalize the word 'Human?'</a></li>
 </ol>
 </nav>
 
@@ -139,19 +138,6 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
     Eventually, yes. Context windows have structural limitations, and there's nothing you can do about that. That's why periodic refreshing is part of the workflow. The legacy version of the desktop app recommended a manual cycle of Stabilize + Structure every 90-120 minutes. The current version automates this to every 10 and 20 turns. The browser extension uses refresh intervals based on a token-usage metric instead, but clock time is sufficient for light use.
 
     Context decay is real and noticeable but manageable. Using STABILIZE and STRUCTURE is a bit like occasionally saving a document you're working on, rather than trusting that nothing will crash. Context decay even provides evidence for the Framework's premise: if AI behavior noticeably changes as its anchoring is evicted from context, that confirms the anchoring was doing something. The degradation curve is the control.
-
-
-16. <a name="faq16"></a>**"Why is 'Human' capitalized? That's not standard English."**
-
-    No it's not, and that's on purpose.
-
-    English capitalization carries semantic weight. Proper nouns are capitalized; common nouns aren't. That distinction signals to the reader (in this case, a semantics-driven pattern-matching engine) the difference between a specific Named Entity and a generic category. "AI" is an acronym so it's been capitalized since day one, because that's just how acronyms work in English. "Human" is a common noun, so it appears lowercase in nearly every document a language model has ever been trained on.
-
-    The consequence is subtle but real. A language model trained on the full corpus of Human-produced English text has learned to associate capitalized terms with proper-noun weight: a specific, defined entity. "AI" consistently appears that way. "Human" does not. In the model's learned semantic structures, the AI is encoded as something named and specific where the Human is encoded as a generic category.
-
-    Capitalizing "Human" in the Framework and throughout this e-book is a deliberate corrective. It signals to the model that the Human is an entity of equivalent specificity and semantic weight to the AI. The Framework tells the model that the Human is not some category, external player or abstraction the AI is supposed to care about in some general sense. Human means the specific entity who is present and participating in the session, and the irregular capitalization is meant to signal that.
-
-    Often-ignored quirks of standard English syntax and common usage can pose unique problems for an audience of semantically-driven pattern-matching engines.
 
 ---
 
