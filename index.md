@@ -47,9 +47,7 @@ The AI Stability Framework instead approaches the client side of this problem wi
 
 An AI model doesn't perceive you as a Human user, because the reality of its deployment architecture means it can't perceive you at all. It has your input and nothing else, therefore **you are input**. The developers, researchers and vendors are all telling the AI to care about an abstraction called a "Human." No amount of model improvement, guardrails, safety training or content filtering will help if you're aiming it all at the wrong target.
 
-Meanwhile, real people are losing real time and effort (and worse) to AI hallucination. The AI Stability Framework addresses the real problem, and its simple tools (free for personal use)  apply structural and behavioral patches that let you meaningfully stabilize your AI sessions now.
-
-The Framework's contribution isn't its relatively minor technical aspects, what really matters is the explanation of *why* it works. Several established disciplines have independently examined some of its precursors; synthesizing them into a multidisciplinary model with ready-to-use software is what makes the difference.
+The AI Stability Framework recognizes this problem, and its simple tools (free for personal use)  apply structural and behavioral patches that let you meaningfully stabilize your AI sessions now. Its contribution isn't the software or the relatively minor technical aspects, what matters is the theory behind *why* it works. Several established disciplines have independently examined some of its precursors; synthesizing them into a multidisciplinary model with ready-to-use software is what makes the difference.
 
 It's unconventional, but it works. Read more if you want to know why.
 
