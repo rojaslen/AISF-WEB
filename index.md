@@ -17,7 +17,7 @@ nav_order: 1
 - [Chapter 7: The Human-AI Extended Mind](/ch07)
 - [Chapter 8: Defense in Depth?](/ch08)
 - [Chapter 9: Field Observations](/ch09)
-- [Chapter 10: How to Try It](/ch10)
+- [Chapter 10: The Chain](/ch10)
 - [Chapter 11: What's Next](/ch11)
 - [Epilogue: Foreseeably Asked Questions](/epilogue)
 
