@@ -39,7 +39,7 @@ nav_order: 1
 
 The vendors aren't going to fix AI's hallucination problems any time soon.
 
-Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. Those companies are currently unprofitable and bleeding cash, with stakeholders, regulators, and the financial press all wondering aloud if and when the AI business model will become viable. The vendors have more pressing priorities.
+Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. However, those companies are currently losing money hand over fist, with stakeholders, regulators, and the financial press all wondering aloud when and if the AI industry's business model is going to collapse under its own weight. They have more pressing priorities.
 
 The AI Stability Framework instead approaches the client side of this problem with a client-side solution. It doesn't require any API keys, exploits, or hoping for a "better" model that might never appear. There are plenty of reasons why model-training tweaks, research papers and vendor fixes haven't solved this (which is why this e-book exists), but here's the biggest one:
 
