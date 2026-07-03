@@ -39,9 +39,11 @@ nav_order: 1
 
 The vendors aren't going to fix AI's hallucination problems any time soon.
 
-Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. However, those companies are currently losing money hand over fist, with stakeholders, regulators, and the financial press all wondering aloud when and if the AI industry's business model is going to collapse under its own weight. They have more pressing priorities.
+Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. However, those companies are currently losing money hand over fist, with stakeholders, regulators, and the financial press all growing increasingly critical of the AI industry's business model. They have more pressing priorities.
 
-The AI Stability Framework instead approaches the client side of this problem with a client-side solution. It doesn't require any API keys, exploits, or hoping for a "better" model that might never appear. There are plenty of reasons why model-training tweaks, research papers and vendor fixes haven't solved this (which is why this e-book exists), but here's the biggest one:
+The truth is that while their models are impressive, those big frontier companies simply aren't economically or environmentally sustainable. They're currently subsidizing every user with a subscription, allowing far more usage than the subscription fee would actually pay for at the service's true cost. Take advantage of their models while they last, before they disappear behind unaffordable tokenized rates or the companies simply implode under their own fiscal contradictions. For most use cases, locally hosted and run models are both sufficient and the only sustainable deployment that currently exists.
+
+That means the AI Stability Framework approaches the hallucination problem from the client side. Developed with the use of those frontier models, it doesn't require any API keys, exploits, or hoping for a "better" model that might never appear. There are plenty of reasons why model-training tweaks, research papers and vendor fixes haven't solved this (which is why this e-book exists), but here's the biggest one:
 
 ***What is a Human user?***
 
