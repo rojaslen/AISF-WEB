@@ -270,7 +270,7 @@ The voice model is not suitable as general-purpose software and is not published
 
 ***I make no claim upon either the Teddy Ruxpin intellectual property or Mr. Baron's voice.***
 
-Should Mr. Baron wish to take possession and ownership of the voice model at any time, it shall be relinquished to him freely and in full upon request. This offer is limited to Mr. Baron himself (the voice's unique organic source, thus its only legitimate owner[^6]), and does ***not*** constitute a general release to the Jim Henson Company or any other entity.
+Should Mr. Baron wish to take possession and ownership of the voice model at any time, it shall be relinquished to him freely and in full upon request (including the procedural and programmatic documentation necessary for its usage and reproduction). This offer is limited to Mr. Baron himself (the voice's unique organic source, thus its only legitimate owner[^6]), and explicitly does ***not*** extend to the Jim Henson Company or any other entity.
 
 ## Acknowledgement
 
