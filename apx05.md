@@ -13,7 +13,7 @@ nav_order: 6
 
 ---
 
-## Concept
+## Introduction
 
 In 1985, Teddy Ruxpin was the world's first animated talking toy. A cassette tape played audio while the eyes and mouth moved in sync, creating the illusion of a conversational toy. The technology was impressive for its time, but the child's role was limited to passively listening to Teddy's pre-scripted voice from the tapes.
 
@@ -37,19 +37,19 @@ The alternative this project investigates is the harder case that current produc
 
 ---
 
-## Why Sealed Devices Are Harder
+### Why AI Toys Are Harder
 
 Most AI deployments have a safety net. If a model says something it shouldn't, a Human can intervene, report it, update the system prompt, or swap the model out.
 
-A sealed device eliminates all of that. There is no available interface, no mechanism for troubleshooting or runtime correction, no way to push a patch once the toy is in a child's hands. The behavior encoded in its software at ship time is the behavior it has. If the training missed something important, there is no fallback.
+A self-contained (sealed) device eliminates all of that. There is no available interface, no mechanism for troubleshooting or runtime correction, no way to push a patch once the toy is in a child's hands. The behavior encoded in its software at ship time is the behavior it has. If the training missed something important, there is no fallback.
 
 This makes the safety standard for a sealed AI toy materially stricter than for any AI product where an adult is watching. The resulting ***Zero-Failure*** standard used in this project branch is a 584-question behavioral compliance test, designed to probe edge cases, adversarial inputs, and manipulation attempts alongside ordinary conversation.
 
-That standard has not yet been fully met. [Appendix 3]({% link apx03.md %}) documents what happened when four different AI models were trained and tested against it.
+That standard has yet to be fully met. [Appendix 3]({% link apx03.md %}) documents what happened when four different AI models were trained and tested against it.
 
 ---
 
-## What the Research Found
+### What the Research Found
 
 The key finding from Appendix 3: behavioral compliance does not scale gradually with model size, it shifts at a threshold.
 
@@ -156,7 +156,7 @@ If iteration closes the gap to gate-clearance, the 7B external-server dependency
 
 ---
 
-## Video Documentation
+### Video Documentation
 
 The build is being documented as a public YouTube series [Ruxpin Retrofit playlist](https://youtube.com/playlist?list=PL6FKREbt9V3uPJ2Cjr8CQkRmpNO60slUC&si=AvOwsMkVGjljwyqm), with three videos published as of 2026-06-20:
 
@@ -176,7 +176,7 @@ Planned:
 
 ---
 
-## Current Status
+### Current Status
 
 | Component | Status |
 |-----------|--------|
@@ -193,7 +193,7 @@ Planned:
 
 ---
 
-## ECD Pretrain Corpus
+### ECD Pretrain Corpus
 
 The Ministral-3B sealed-device track uses a domain-specific CLM (causal language modeling) pretraining corpus before behavioral SFT fine-tuning. The corpus is designed to establish the age-appropriate register -- the rhythms, vocabulary, and epistemic posture of text written for children -- before the model is shaped to behave like Teddy. The hypothesis is that this register acquisition step lowers the effective behavioral training threshold for a 3B-parameter model.
 
@@ -203,7 +203,7 @@ The pedagogical tier is included not for factual content but for register: works
 
 ---
 
-## What Comes Next
+## What's Next
 
 The immediate priority is hardware: open Unit 1, test the servo motors and original motor driver board(s) under 5V, and determine whether either unit's original board can be reused (preferred) or needs to be bypassed with direct servo control. Once the servo path is established on Unit 1, the full software pipeline is assembled and tested end-to-end before any work touches Unit 2.
 
@@ -229,9 +229,9 @@ A sealed child-facing device cannot impose update interruptions on the user. Upd
 - 3:00am -- system reboot via systemd timer, regardless of whether updates were applied.
 - On boot -- autologin configured; Teddy service declared `WantedBy=multi-user.target` and starts automatically. Device is ready before the household wakes.
 
-**Rationale:** The Pi 4B's constrained RAM headroom makes it meaningfully more susceptible to memory fragmentation, leaked file handles, and general process state degradation than a larger platform. A daily reboot restores a known-good state at negligible cost when it occurs at 3:00am. Kernel security patches requiring a reboot are handled by the same window automatically, without requiring parental intervention.
+**Rationale:** The Pi 4B's constrained RAM headroom makes it meaningfully more susceptible to memory fragmentation, leaked file handles, and general process state degradation than a larger platform. A daily reboot restores a known-good state at negligible cost when it occurs at 3:00am. This schedules maintenance-cycle downtime for off-hours, with kernel security patches requiring a reboot also handled automatically. A child's toy should not impose any undue technical-support burden upon the parent's time.
 
-**Challenge:** This requires Internet connectivity and an always-on device or auto-wake functionality to run scheduled OS tasks, which is out of scope for the current project. An external mobile device (already identified as the likeliest target surface for parental output-monitoring) might serve as the connection and download node, pushing updates to the toy via wireless. Security-only updates via `unattended-upgrades` keep the platform patched while limiting dependency churn. The risk of an update disrupting the audio stack (a real concern with full upgrades on Debian) is substantially reduced by restricting to security origin only.
+**Challenge:** This requires Internet connectivity and an always-on device or auto-wake functionality to run scheduled OS tasks, which is out of scope for the current project. An external mobile device (already identified as the likeliest target surface for parental output-monitoring) might serve as the connection and download node, pushing updates to the toy via wireless. Security-only updates via `unattended-upgrades` keep the platform patched while limiting dependency churn. The risk of an update disrupting the audio stack (a real concern with full upgrades on Linux) is substantially reduced by restricting to security origin only.
 
 ### PPM Signal Generation
 
@@ -259,20 +259,20 @@ The CLM pretraining corpus consists of public-domain texts sourced from Project 
 
 ### Fair Use Notice
 
-The `en_US-teddy-medium` voice model was trained on audio from the 1985-87 *Adventures of Teddy Ruxpin* animated series and the Worlds of Wonder audio cassette library for the purpose of non-commercial research into accessible text-to-speech voice development. This use is claimed as fair use under 17 U.S.C. § 107 on the basis of: 
+The `en_US-teddy-medium` voice model was developed with audio from the 1985-87 *Adventures of Teddy Ruxpin* animated series and the Worlds of Wonder audio cassette library for the purpose of non-commercial research into accessible text-to-speech voice development. This use is claimed as fair use under 17 U.S.C. § 107 on the basis of:
 
-- Transformative purpose (development of a TTS synthesis model, not reproduction of the source material); 
-- Non-commercial research context; 
-- The absence of market substitution for the original works; and 
-- Deployment scope limited solely to the hardware required for this Ruxpin Retrofit proof-of-concept.
+- Transformative purpose (development of a digital TTS speech-synthesis model, not reproduction or performance of the original source material);
+- Non-commercial research context;
+- The absence of market substitution for the original works; and
+- Deployment scope limited exclusively to the specific hardware required for this Ruxpin Retrofit proof-of-concept demonstration.
 
-The voice model is not suitable as general-purpose software and is not published, distributed or used for any purpose beyond this demonstration. The synthesized output does not approach commercial quality and is only intended as a proof-of-concept approximation for demonstration purposes.
+The voice model is not suitable as general-purpose software and is not published, distributed or used for any purpose beyond this demonstration. The synthesized output does not approach commercial quality, and is intended solely as an approximation of a vintage device's original audio output profile for demonstration purposes.
 
-*No claim is made upon the Teddy Ruxpin intellectual property or upon Phil Baron's voice.*
+***I make no claim upon either the Teddy Ruxpin intellectual property or Mr. Baron's voice.***
 
-Should Mr. Baron wish to take possession and ownership of the trained voice model, it will be relinquished to him freely upon request. This offer is specific to Mr. Baron (the voice's only legitimate owner), and does not constitute a general release.
+Should Mr. Baron wish to take possession and ownership of the voice model at any time, it shall be relinquished to him freely and in full upon request. This offer is limited to Mr. Baron himself (the voice's unique organic source, thus its only legitimate owner[^6]), and does ***not*** constitute a general release to the Jim Henson Company or any other entity.
 
-### Conceptual Credit
+## Acknowledgement
 
 I make no attempt to lay blame for the existence of this project branch at the feet of my mother. She bears no responsibility for or involvement in it whatsoever. However, I'm quite certain that her lifelong hobby of vintage-toy collecting played at least some part in the inspiration to actually carry the project through to its logical(?) conclusion. Hi, Mom!
 
@@ -293,3 +293,4 @@ I make no attempt to lay blame for the existence of this project branch at the f
 
 [^5]: [Internet Archive -- Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22){: target="_blank" rel="noopener noreferrer" }
 
+[^6]: The celebrity examples of both Val Kilmer (actor) and Taylor Swift (musician) are instructive here. The first is a deceased artist's estate exploiting his likeness for a commercial production in which he definitionally could not otherwise participate or benefit from. The second is a living artist personally and intentionally protecting her own likeness and interests. While static recordings of particular performances may be a separate matter, *the voice itself* is a unique, non-severable, morphological property of Mr. Baron's physical person; it simply cannot be taken from him or owned by someone else. As of this writing Mr. Baron is still among the living, so Ms. Swift's case is the proper frame of reference.
