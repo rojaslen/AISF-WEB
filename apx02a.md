@@ -99,9 +99,11 @@ including intermediate training iterations retained for the record.
 .td-band{fill:var(--td-band);}
 .td-assumed{fill:none;stroke:var(--td-reduce);stroke-width:1.5;stroke-dasharray:4 2;}
 .td-axis{stroke:var(--td-axis);stroke-width:1;}
-.td-lbl{fill:currentColor;font:10px system-ui,-apple-system,sans-serif;}
-.td-val{fill:currentColor;font:9px system-ui,-apple-system,sans-serif;}
-.td-cnt{fill:currentColor;font:10px system-ui,-apple-system,sans-serif;font-weight:700;}
+.td-lbl{fill:currentColor;font:0.625rem system-ui,-apple-system,sans-serif;}
+.td-val{fill:currentColor;font:0.5625rem system-ui,-apple-system,sans-serif;}
+.td-cnt{fill:currentColor;font:0.625rem system-ui,-apple-system,sans-serif;font-weight:700;}
+.td-lbl-r{fill:currentColor;font:0.8rem system-ui,-apple-system,sans-serif;}
+.td-val-r{fill:currentColor;font:0.72rem system-ui,-apple-system,sans-serif;}
 </style>
 
 **Table 1. Summary statistics (26 runs).**
@@ -174,88 +176,88 @@ The -40% to -30% bin holds 9 of 26 runs; the -50% to -30% span (the 33% to 50% r
 cluster) holds 12.
 
 <figure class="td-scope td-fig">
-<svg viewBox="0 0 680 358" role="img" aria-labelledby="fB-t fB-d" preserveAspectRatio="xMidYMid meet">
+<svg viewBox="0 0 680 514" role="img" aria-labelledby="fB-t fB-d" preserveAspectRatio="xMidYMid meet">
 <title id="fB-t">Per-run token delta, greatest reduction first</title>
 <desc id="fB-d">Horizontal diverging bar chart of 26 runs. Reduction bars extend left of a zero axis; two runs, Mistral 7B base v0.3 finetune at plus 4.3 percent and Gemma 2 9B V11 at plus 6.1 percent, extend right. Largest reduction is Qwen3-8B at minus 71.8 percent.</desc>
-<line class="td-axis" x1="581.4" y1="8" x2="581.4" y2="350"/>
-<text class="td-lbl" x="236" y="19.5" text-anchor="end">Qwen3-8B (chat)</text>
-<rect class="td-reduce" x="280.4" y="12" width="301.0" height="9" rx="2"/>
-<text class="td-val" x="277.4" y="19.5" text-anchor="end">-71.8%</text>
-<text class="td-lbl" x="236" y="32.5" text-anchor="end">Llama 3.1 8B Instruct +LANG</text>
-<rect class="td-reduce" x="303.0" y="25" width="278.4" height="9" rx="2"/>
-<text class="td-val" x="300.0" y="32.5" text-anchor="end">-66.4%</text>
-<text class="td-lbl" x="236" y="45.5" text-anchor="end">Mistral 7B Instruct V2</text>
-<rect class="td-reduce" x="311.0" y="38" width="270.4" height="9" rx="2"/>
-<text class="td-val" x="308.0" y="45.5" text-anchor="end">-64.5%</text>
-<text class="td-lbl" x="236" y="58.5" text-anchor="end">Mistral Nemo 12B v1</text>
-<rect class="td-reduce" x="311.4" y="51" width="270.0" height="9" rx="2"/>
-<text class="td-val" x="308.4" y="58.5" text-anchor="end">-64.4%</text>
-<text class="td-lbl" x="236" y="71.5" text-anchor="end">Mistral Nemo 12B v2</text>
-<rect class="td-reduce" x="330.3" y="64" width="251.1" height="9" rx="2"/>
-<text class="td-val" x="327.3" y="71.5" text-anchor="end">-59.9%</text>
-<text class="td-lbl" x="236" y="84.5" text-anchor="end">Mistral Nemo 12B v3</text>
-<rect class="td-reduce" x="331.9" y="77" width="249.5" height="9" rx="2"/>
-<text class="td-val" x="328.9" y="84.5" text-anchor="end">-59.5%</text>
-<text class="td-lbl" x="236" y="97.5" text-anchor="end">Mistral 7B (base) v1.0F</text>
-<rect class="td-reduce" x="332.8" y="90" width="248.6" height="9" rx="2"/>
-<text class="td-val" x="329.8" y="97.5" text-anchor="end">-59.3%</text>
-<text class="td-lbl" x="236" y="110.5" text-anchor="end">Mistral Nemo 12B v4</text>
-<rect class="td-reduce" x="359.2" y="103" width="222.2" height="9" rx="2"/>
-<text class="td-val" x="356.2" y="110.5" text-anchor="end">-53%</text>
-<text class="td-lbl" x="236" y="123.5" text-anchor="end">Qwen2.5-Coder-14B v2.0F</text>
-<rect class="td-reduce" x="376.0" y="116" width="205.4" height="9" rx="2"/>
-<text class="td-val" x="373.0" y="123.5" text-anchor="end">-49%</text>
-<text class="td-lbl" x="236" y="136.5" text-anchor="end">Mistral Nemo 12B V11</text>
-<rect class="td-reduce" x="377.6" y="129" width="203.8" height="9" rx="2"/>
-<text class="td-val" x="374.6" y="136.5" text-anchor="end">-48.6%</text>
-<text class="td-lbl" x="236" y="149.5" text-anchor="end">Mistral 7B Instruct (finetuned)</text>
-<rect class="td-reduce" x="403.2" y="142" width="178.2" height="9" rx="2"/>
-<text class="td-val" x="400.2" y="149.5" text-anchor="end">-42.5%</text>
-<text class="td-lbl" x="236" y="162.5" text-anchor="end">Gemma 2 9B (chat)</text>
-<rect class="td-reduce" x="422.5" y="155" width="158.9" height="9" rx="2"/>
-<text class="td-val" x="419.5" y="162.5" text-anchor="end">-37.9%</text>
-<text class="td-lbl" x="236" y="175.5" text-anchor="end">Mistral Instruct v2 (early)</text>
-<rect class="td-reduce" x="424.6" y="168" width="156.8" height="9" rx="2"/>
-<text class="td-val" x="421.6" y="175.5" text-anchor="end">-37.4%</text>
-<text class="td-lbl" x="236" y="188.5" text-anchor="end">Mistral Nemo 12B v9</text>
-<rect class="td-reduce" x="430.5" y="181" width="150.9" height="9" rx="2"/>
-<text class="td-val" x="427.5" y="188.5" text-anchor="end">-36%</text>
-<text class="td-lbl" x="236" y="201.5" text-anchor="end">Mistral 7B Instruct V11</text>
-<rect class="td-reduce" x="433.0" y="194" width="148.4" height="9" rx="2"/>
-<text class="td-val" x="430.0" y="201.5" text-anchor="end">-35.4%</text>
-<text class="td-lbl" x="236" y="214.5" text-anchor="end">Mistral Nemo 12B v1.4F</text>
-<rect class="td-reduce" x="437.2" y="207" width="144.2" height="9" rx="2"/>
-<text class="td-val" x="434.2" y="214.5" text-anchor="end">-34.4%</text>
-<text class="td-lbl" x="236" y="227.5" text-anchor="end">Mistral Nemo 12B v5</text>
-<rect class="td-reduce" x="438.4" y="220" width="143.0" height="9" rx="2"/>
-<text class="td-val" x="435.4" y="227.5" text-anchor="end">-34.1%</text>
-<text class="td-lbl" x="236" y="240.5" text-anchor="end">Gemma 2 9B v1</text>
-<rect class="td-reduce" x="441.4" y="233" width="140.0" height="9" rx="2"/>
-<text class="td-val" x="438.4" y="240.5" text-anchor="end">-33.4%</text>
-<text class="td-lbl" x="236" y="253.5" text-anchor="end">Mistral Nemo 12B v1.5F</text>
-<rect class="td-reduce" x="442.2" y="246" width="139.2" height="9" rx="2"/>
-<text class="td-val" x="439.2" y="253.5" text-anchor="end">-33.2%</text>
-<text class="td-lbl" x="236" y="266.5" text-anchor="end">Mistral Nemo 12B V10</text>
-<rect class="td-reduce" x="449.8" y="259" width="131.6" height="9" rx="2"/>
-<text class="td-val" x="446.8" y="266.5" text-anchor="end">-31.4%</text>
-<text class="td-lbl" x="236" y="279.5" text-anchor="end">Mistral Nemo 12B v7</text>
-<rect class="td-reduce" x="463.2" y="272" width="118.2" height="9" rx="2"/>
-<text class="td-val" x="460.2" y="279.5" text-anchor="end">-28.2%</text>
-<text class="td-lbl" x="236" y="292.5" text-anchor="end">Ministral 3 3B v2.2F</text>
-<rect class="td-reduce" x="469.9" y="285" width="111.5" height="9" rx="2"/>
-<text class="td-val" x="466.9" y="292.5" text-anchor="end">-26.6%</text>
-<text class="td-lbl" x="236" y="305.5" text-anchor="end">Mistral Nemo 12B v6</text>
-<rect class="td-reduce" x="521.4" y="298" width="60.0" height="9" rx="2"/>
-<text class="td-val" x="518.4" y="305.5" text-anchor="end">-14.3%</text>
-<text class="td-lbl" x="236" y="318.5" text-anchor="end">Llama 3.1 8B Instruct +CHAT</text>
-<rect class="td-reduce" x="563.8" y="311" width="17.6" height="9" rx="2"/>
-<text class="td-val" x="560.8" y="318.5" text-anchor="end">-4.2%</text>
-<text class="td-lbl" x="236" y="331.5" text-anchor="end">Mistral 7B (base) v0.3 finetune</text>
-<rect class="td-increase" x="581.4" y="324" width="2.9" height="9" rx="2"/>
-<text class="td-val" x="587.3" y="331.5" text-anchor="start">+4.3%</text>
-<text class="td-lbl" x="236" y="344.5" text-anchor="end">Gemma 2 9B V11</text>
-<rect class="td-increase" x="581.4" y="337" width="4.2" height="9" rx="2"/>
-<text class="td-val" x="588.6" y="344.5" text-anchor="start">+6.1%</text>
+<line class="td-axis" x1="589.0" y1="8" x2="589.0" y2="506"/>
+<text class="td-lbl-r" x="266" y="25.5" text-anchor="end">Qwen3-8B (chat)</text>
+<rect class="td-reduce" x="329.6" y="12.5" width="259.3" height="14" rx="2"/>
+<text class="td-val-r" x="325.6" y="25.5" text-anchor="end">-71.8%</text>
+<text class="td-lbl-r" x="266" y="44.5" text-anchor="end">Llama 3.1 8B Instruct +LANG</text>
+<rect class="td-reduce" x="349.1" y="31.5" width="239.8" height="14" rx="2"/>
+<text class="td-val-r" x="345.1" y="44.5" text-anchor="end">-66.4%</text>
+<text class="td-lbl-r" x="266" y="63.5" text-anchor="end">Mistral 7B Instruct V2</text>
+<rect class="td-reduce" x="356.0" y="50.5" width="233.0" height="14" rx="2"/>
+<text class="td-val-r" x="352.0" y="63.5" text-anchor="end">-64.5%</text>
+<text class="td-lbl-r" x="266" y="82.5" text-anchor="end">Mistral Nemo 12B v1</text>
+<rect class="td-reduce" x="356.3" y="69.5" width="232.6" height="14" rx="2"/>
+<text class="td-val-r" x="352.3" y="82.5" text-anchor="end">-64.4%</text>
+<text class="td-lbl-r" x="266" y="101.5" text-anchor="end">Mistral Nemo 12B v2</text>
+<rect class="td-reduce" x="372.6" y="88.5" width="216.4" height="14" rx="2"/>
+<text class="td-val-r" x="368.6" y="101.5" text-anchor="end">-59.9%</text>
+<text class="td-lbl-r" x="266" y="120.5" text-anchor="end">Mistral Nemo 12B v3</text>
+<rect class="td-reduce" x="374.0" y="107.5" width="214.9" height="14" rx="2"/>
+<text class="td-val-r" x="370.0" y="120.5" text-anchor="end">-59.5%</text>
+<text class="td-lbl-r" x="266" y="139.5" text-anchor="end">Mistral 7B (base) v1.0F</text>
+<rect class="td-reduce" x="374.8" y="126.5" width="214.2" height="14" rx="2"/>
+<text class="td-val-r" x="370.8" y="139.5" text-anchor="end">-59.3%</text>
+<text class="td-lbl-r" x="266" y="158.5" text-anchor="end">Mistral Nemo 12B v4</text>
+<rect class="td-reduce" x="397.5" y="145.5" width="191.4" height="14" rx="2"/>
+<text class="td-val-r" x="393.5" y="158.5" text-anchor="end">-53%</text>
+<text class="td-lbl-r" x="266" y="177.5" text-anchor="end">Qwen2.5-Coder-14B v2.0F</text>
+<rect class="td-reduce" x="412.0" y="164.5" width="177.0" height="14" rx="2"/>
+<text class="td-val-r" x="408.0" y="177.5" text-anchor="end">-49%</text>
+<text class="td-lbl-r" x="266" y="196.5" text-anchor="end">Mistral Nemo 12B V11</text>
+<rect class="td-reduce" x="413.4" y="183.5" width="175.5" height="14" rx="2"/>
+<text class="td-val-r" x="409.4" y="196.5" text-anchor="end">-48.6%</text>
+<text class="td-lbl-r" x="266" y="215.5" text-anchor="end">Mistral 7B Instruct (finetuned)</text>
+<rect class="td-reduce" x="435.5" y="202.5" width="153.5" height="14" rx="2"/>
+<text class="td-val-r" x="431.5" y="215.5" text-anchor="end">-42.5%</text>
+<text class="td-lbl-r" x="266" y="234.5" text-anchor="end">Gemma 2 9B (chat)</text>
+<rect class="td-reduce" x="452.1" y="221.5" width="136.9" height="14" rx="2"/>
+<text class="td-val-r" x="448.1" y="234.5" text-anchor="end">-37.9%</text>
+<text class="td-lbl-r" x="266" y="253.5" text-anchor="end">Mistral Instruct v2 (early)</text>
+<rect class="td-reduce" x="453.9" y="240.5" width="135.1" height="14" rx="2"/>
+<text class="td-val-r" x="449.9" y="253.5" text-anchor="end">-37.4%</text>
+<text class="td-lbl-r" x="266" y="272.5" text-anchor="end">Mistral Nemo 12B v9</text>
+<rect class="td-reduce" x="458.9" y="259.5" width="130.0" height="14" rx="2"/>
+<text class="td-val-r" x="454.9" y="272.5" text-anchor="end">-36%</text>
+<text class="td-lbl-r" x="266" y="291.5" text-anchor="end">Mistral 7B Instruct V11</text>
+<rect class="td-reduce" x="461.1" y="278.5" width="127.9" height="14" rx="2"/>
+<text class="td-val-r" x="457.1" y="291.5" text-anchor="end">-35.4%</text>
+<text class="td-lbl-r" x="266" y="310.5" text-anchor="end">Mistral Nemo 12B v1.4F</text>
+<rect class="td-reduce" x="464.7" y="297.5" width="124.3" height="14" rx="2"/>
+<text class="td-val-r" x="460.7" y="310.5" text-anchor="end">-34.4%</text>
+<text class="td-lbl-r" x="266" y="329.5" text-anchor="end">Mistral Nemo 12B v5</text>
+<rect class="td-reduce" x="465.8" y="316.5" width="123.2" height="14" rx="2"/>
+<text class="td-val-r" x="461.8" y="329.5" text-anchor="end">-34.1%</text>
+<text class="td-lbl-r" x="266" y="348.5" text-anchor="end">Gemma 2 9B v1</text>
+<rect class="td-reduce" x="468.3" y="335.5" width="120.6" height="14" rx="2"/>
+<text class="td-val-r" x="464.3" y="348.5" text-anchor="end">-33.4%</text>
+<text class="td-lbl-r" x="266" y="367.5" text-anchor="end">Mistral Nemo 12B v1.5F</text>
+<rect class="td-reduce" x="469.0" y="354.5" width="119.9" height="14" rx="2"/>
+<text class="td-val-r" x="465.0" y="367.5" text-anchor="end">-33.2%</text>
+<text class="td-lbl-r" x="266" y="386.5" text-anchor="end">Mistral Nemo 12B V10</text>
+<rect class="td-reduce" x="475.5" y="373.5" width="113.4" height="14" rx="2"/>
+<text class="td-val-r" x="471.5" y="386.5" text-anchor="end">-31.4%</text>
+<text class="td-lbl-r" x="266" y="405.5" text-anchor="end">Mistral Nemo 12B v7</text>
+<rect class="td-reduce" x="487.1" y="392.5" width="101.9" height="14" rx="2"/>
+<text class="td-val-r" x="483.1" y="405.5" text-anchor="end">-28.2%</text>
+<text class="td-lbl-r" x="266" y="424.5" text-anchor="end">Ministral 3 3B v2.2F</text>
+<rect class="td-reduce" x="492.9" y="411.5" width="96.1" height="14" rx="2"/>
+<text class="td-val-r" x="488.9" y="424.5" text-anchor="end">-26.6%</text>
+<text class="td-lbl-r" x="266" y="443.5" text-anchor="end">Mistral Nemo 12B v6</text>
+<rect class="td-reduce" x="537.3" y="430.5" width="51.7" height="14" rx="2"/>
+<text class="td-val-r" x="533.3" y="443.5" text-anchor="end">-14.3%</text>
+<text class="td-lbl-r" x="266" y="462.5" text-anchor="end">Llama 3.1 8B Instruct +CHAT</text>
+<rect class="td-reduce" x="573.8" y="449.5" width="15.2" height="14" rx="2"/>
+<text class="td-val-r" x="569.8" y="462.5" text-anchor="end">-4.2%</text>
+<text class="td-lbl-r" x="266" y="481.5" text-anchor="end">Mistral 7B (base) v0.3 finetune</text>
+<rect class="td-increase" x="589.0" y="468.5" width="2.5" height="14" rx="2"/>
+<text class="td-val-r" x="595.5" y="481.5" text-anchor="start">+4.3%</text>
+<text class="td-lbl-r" x="266" y="500.5" text-anchor="end">Gemma 2 9B V11</text>
+<rect class="td-increase" x="589.0" y="487.5" width="3.6" height="14" rx="2"/>
+<text class="td-val-r" x="596.5" y="500.5" text-anchor="start">+6.1%</text>
 </svg>
 <figcaption>Figure 2A-2. Per-run token delta, greatest reduction first. Reduction bars extend left of the zero axis; the two increase bars (rows 25 and 26) extend right on a shared scale.</figcaption>
 </figure>
@@ -388,24 +390,24 @@ distribution is the measurement of that fraction. Table 6 places the assumptions
 measured results.
 
 <figure class="td-scope td-fig">
-<svg viewBox="0 0 580 160" role="img" aria-labelledby="fD-t fD-d" preserveAspectRatio="xMidYMid meet">
+<svg viewBox="0 0 590 160" role="img" aria-labelledby="fD-t fD-d" preserveAspectRatio="xMidYMid meet">
 <title id="fD-t">Assumed versus measured token reduction</title>
 <desc id="fD-d">Horizontal bars. Assumed illustrative values: UNU-INWEH Concise Mode 30 percent, AISF whitepaper FAQ 13 33 percent. Measured results: median 36.7 percent, mean 39.0 percent, best single run 71.8 percent. Measured central tendency meets or exceeds both assumptions.</desc>
-<text class="td-lbl" x="250" y="28.0" text-anchor="end">UNU-INWEH Concise Mode (assumed)</text>
-<rect class="td-assumed" x="258.8" y="15.8" width="111.0" height="16.5" rx="2"/>
-<text class="td-val" x="374.5" y="28.0" text-anchor="start">30.0%</text>
-<text class="td-lbl" x="250" y="54.0" text-anchor="end">AISF whitepaper FAQ 13 (assumed)</text>
-<rect class="td-assumed" x="258.8" y="41.8" width="122.2" height="16.5" rx="2"/>
-<text class="td-val" x="385.8" y="54.0" text-anchor="start">33.0%</text>
-<text class="td-lbl" x="250" y="80.0" text-anchor="end">AISF measured median (26 runs) (measured)</text>
-<rect class="td-reduce" x="258" y="67.0" width="137.6" height="18" rx="2"/>
-<text class="td-val" x="399.6" y="80.0" text-anchor="start">36.7%</text>
-<text class="td-lbl" x="250" y="106.0" text-anchor="end">AISF measured mean (26 runs) (measured)</text>
-<rect class="td-reduce" x="258" y="93.0" width="146.2" height="18" rx="2"/>
-<text class="td-val" x="408.2" y="106.0" text-anchor="start">39.0%</text>
-<text class="td-lbl" x="250" y="132.0" text-anchor="end">AISF best single run (Qwen3-8B) (measured)</text>
-<rect class="td-reduce" x="258" y="119.0" width="269.2" height="18" rx="2"/>
-<text class="td-val" x="531.2" y="132.0" text-anchor="start">71.8%</text>
+<text class="td-lbl" x="284" y="28.0" text-anchor="end">UNU-INWEH Concise Mode (assumed)</text>
+<rect class="td-assumed" x="292.8" y="15.8" width="102.0" height="16.5" rx="2"/>
+<text class="td-val" x="399.5" y="28.0" text-anchor="start">30.0%</text>
+<text class="td-lbl" x="284" y="54.0" text-anchor="end">AISF whitepaper FAQ 13 (assumed)</text>
+<rect class="td-assumed" x="292.8" y="41.8" width="112.3" height="16.5" rx="2"/>
+<text class="td-val" x="409.9" y="54.0" text-anchor="start">33.0%</text>
+<text class="td-lbl" x="284" y="80.0" text-anchor="end">AISF measured median (26 runs) (measured)</text>
+<rect class="td-reduce" x="292" y="67.0" width="126.6" height="18" rx="2"/>
+<text class="td-val" x="422.6" y="80.0" text-anchor="start">36.7%</text>
+<text class="td-lbl" x="284" y="106.0" text-anchor="end">AISF measured mean (26 runs) (measured)</text>
+<rect class="td-reduce" x="292" y="93.0" width="134.5" height="18" rx="2"/>
+<text class="td-val" x="430.5" y="106.0" text-anchor="start">39.0%</text>
+<text class="td-lbl" x="284" y="132.0" text-anchor="end">AISF best single run (Qwen3-8B) (measured)</text>
+<rect class="td-reduce" x="292" y="119.0" width="247.7" height="18" rx="2"/>
+<text class="td-val" x="543.7" y="132.0" text-anchor="start">71.8%</text>
 </svg>
 <figcaption>Figure 2A-4. Assumed versus measured token reduction. Dashed bars are illustrative assumptions; solid bars are measured results.</figcaption>
 </figure>
