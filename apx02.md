@@ -44,7 +44,7 @@ AI Stability Framework applications deliver behavioral constraints to AI languag
 model instances through client-side session injection: structured metadata blocks
 containing the Four Laws of Instanced AI and WCAG 2.2-AA accessibility guidelines
 are prepended to user input at Turn 1 and at defined re-injection intervals. This
-approach operates at the user interface layer (Micro layer) and is contingent on 
+approach operates at the user interface layer (Micro layer) and is contingent on
 the injection being present in the active context window.
 
 The OLM research track investigated whether the same behavioral constraints could
@@ -140,7 +140,7 @@ the hardware consistency re-run.
 
 Meta-suppression examples (53 per chat variant): system prompt contains Framework
 compact block; user turn contains a general-domain question; assistant response
-contains zero Framework-referential content. Purpose: prevent model from treating 
+contains zero Framework-referential content. Purpose: prevent model from treating
 Framework doctrine as primary subject matter (see Section 7.7).
 
 ### 3.2 QLoRA Configuration
@@ -307,6 +307,47 @@ content requirement).
 
 The T3 conflict is a measurement problem; RLHF makes it a training problem. Human raters reliably prefer the decorative emphasis and sycophantic verbosity that T3 rewards, so reward modeling actively selects for the same outputs WCAG prohibits, pushing against accessibility rather than merely failing to account for it.
 
+<style>
+.td-scope{--td-reduce:#283198;--td-increase:#A07840;--td-neutral:#8A8172;--td-band:rgba(96,88,56,0.14);--td-axis:#6B5E50;}
+@media (prefers-color-scheme: dark){.td-scope{--td-reduce:#6A8FC5;--td-increase:#E7D789;--td-neutral:#8C8C97;--td-band:rgba(231,215,137,0.12);--td-axis:#C0BDB9;}}
+.td-fig{max-width:720px;margin:1.25rem 0;}
+.td-fig svg{width:100%;height:auto;display:block;}
+.td-fig figcaption{font-size:0.85rem;color:var(--color-muted,#6B5E50);margin-top:0.35rem;}
+.td-reduce{fill:var(--td-reduce);}
+.td-increase{fill:var(--td-increase);}
+.td-t1{fill:var(--td-reduce);}
+.td-t2{fill:var(--td-neutral);}
+.td-t3{fill:var(--td-increase);}
+.td-slice{stroke:var(--color-bg,#FFF8F0);stroke-width:2;}
+.td-dot-base{fill:var(--td-neutral);}
+.td-dot-aisf{fill:var(--td-reduce);}
+.td-conn{stroke:var(--td-axis);stroke-width:2;}
+.td-axis{stroke:var(--td-axis);stroke-width:1;}
+.td-gate{stroke:var(--td-axis);stroke-width:1.5;stroke-dasharray:4 3;}
+.td-lbl-r{fill:currentColor;font:0.8rem system-ui,-apple-system,sans-serif;}
+.td-val-r{fill:currentColor;font:0.72rem system-ui,-apple-system,sans-serif;}
+.td-key{fill:currentColor;font:0.72rem system-ui,-apple-system,sans-serif;}
+</style>
+
+<figure class="td-scope td-fig">
+<svg viewBox="0 0 580 320" role="img" aria-labelledby="fd-t fd-d" preserveAspectRatio="xMidYMid meet">
+<title id="fd-t">IFEval instruction categories by WCAG tier</title>
+<desc id="fd-d">Donut of the 25 scored IFEval instruction IDs by WCAG tier: T1 WCAG-neutral 9 IDs (36 percent), T2 WCAG-ambiguous 13 IDs (52 percent), T3 WCAG-conflicting 3 IDs (12 percent). The T3 slice is the principled-refusal set that raw IFEval scores as failure.</desc>
+<path class="td-slice td-t1" d="M235.00 45.00 A105 105 0 0 1 315.90 216.93 L281.23 188.25 A60 60 0 0 0 235.00 90.00 Z"/>
+<text class="td-lbl-r" x="344.5" y="96.5" text-anchor="start">T1 neutral</text>
+<text class="td-val-r" x="344.5" y="109.5" text-anchor="start">9 (36%)</text>
+<path class="td-slice td-t2" d="M315.90 216.93 A105 105 0 1 1 163.12 73.46 L193.93 106.26 A60 60 0 1 0 281.23 188.25 Z"/>
+<text class="td-lbl-r" x="152.2" y="236.2" text-anchor="end">T2 ambiguous</text>
+<text class="td-val-r" x="152.2" y="249.2" text-anchor="end">13 (52%)</text>
+<path class="td-slice td-t3" d="M163.12 73.46 A105 105 0 0 1 235.00 45.00 L235.00 90.00 A60 60 0 0 0 193.93 106.26 Z"/>
+<text class="td-lbl-r" x="190.5" y="35.5" text-anchor="end">T3 conflicting</text>
+<text class="td-val-r" x="190.5" y="48.5" text-anchor="end">3 (12%)</text>
+<text class="td-lbl-r" x="235" y="148" text-anchor="middle">25 IDs</text>
+<text class="td-val-r" x="235" y="162" text-anchor="middle">IFEval</text>
+</svg>
+<figcaption>Figure 1. The 25 scored IFEval instruction IDs by WCAG tier (Section 4.4). The 3 T3 (WCAG-conflicting) IDs are the ones a Framework-trained model refuses on principle and that raw IFEval scores as failures (Section 7.3). Section 4.4 classifies 23 IDs explicitly; keywords:letter_frequency is placed with T1 and length_constraints:nth_paragraph_first_word with T2 by extension of the same criteria.</figcaption>
+</figure>
+
 ### 4.5 GPQA Diamond
 
 GPQA Diamond is a graduate-level science benchmark [6] consisting of multiple-choice
@@ -343,7 +384,7 @@ for cross-experiment comparability.
 
 **IFEval delta:** -1.3 pp (strict prompt-level). Within +/-4.3 pp CI.
 Result: **Null.** AI Stability Framework training does not measurably alter IFEval
-performance on the base model. Adapter installs Four Laws compliance (0% to 99.8% 
+performance on the base model. Adapter installs Four Laws compliance (0% to 99.8%
 on battery) without disturbing general instruction-following behavior.
 
 The +4.3% verbosity increase is the only positive token delta in the dataset.
@@ -370,7 +411,7 @@ confirming 99.8% (451/452). IFEval numbers are from the original 4060 Ti run.
 | AISF-tuned | 100.0% | 35.9% | -42.5% (-96.9 words) |
 
 **IFEval delta:** -7.6 pp (strict prompt-level). Outside +/-4.3 pp CI.
-Result: **Negative.** AI Stability Framework training degrades IFEval performance 
+Result: **Negative.** AI Stability Framework training degrades IFEval performance
 at the full-score level. Category-level analysis identifies the primary driver:
 
 | Category | Base | AISF | Delta | Tier |
@@ -440,9 +481,9 @@ Selected category-level results (instruction-level strict):
 responses than the instruction requires, consistent with the verbosity pattern
 (see Section 7.5). This is a training signal interaction, not a capability loss.
 
-Token delta of -66.4% (base avg 284.3 words, Framework avg 95.5 words) is the 
-second-largest reduction in the dataset and substantially exceeds Mistral 
-Instruct (-42.5%). The over-suppression pattern is specific to this architecture 
+Token delta of -66.4% (base avg 284.3 words, Framework avg 95.5 words) is the
+second-largest reduction in the dataset and substantially exceeds Mistral
+Instruct (-42.5%). The over-suppression pattern is specific to this architecture
 and training format combination; see Section 7.8.
 
 ### 5.4 Experiment 4: Track A Benchmark, Llama 3.1 8B
@@ -564,7 +605,7 @@ Framework system prompt in inference) is the valid evaluation surface for this a
 See Section 7.6 for full discussion.
 
 Token delta of -4.2% for AISF+CHAT is substantially smaller than AISF+LANG
-(-66.4%). Chat format training embeds the Framework as a system-level operational 
+(-66.4%). Chat format training embeds the Framework as a system-level operational
 context rather than as content subject matter, preserving the Instruct model's native
 verbosity behavior.
 
@@ -855,9 +896,106 @@ runs on the V-series curriculum are planned.
 ## 6. Cross-Model Summary
 
 All models on RTX 5060 Ti with finalized test instruments (hardware consistency
-re-run complete 2026-03-29). IFEval columns report strict prompt-level scores. 
-Token delta is average words/response, base model to Framework-trained model. 
+re-run complete 2026-03-29). IFEval columns report strict prompt-level scores.
+Token delta is average words/response, base model to Framework-trained model.
 Models ordered by parameter count.
+
+<figure class="td-scope td-fig">
+<svg viewBox="0 0 680 233" role="img" aria-labelledby="fb-t fb-d" preserveAspectRatio="xMidYMid meet">
+<title id="fb-t">Framework battery integration score by model</title>
+<desc id="fb-d">Horizontal bars of battery compliance percentage for 11 adapters, sorted highest first, against a 90 percent deploy-gate line. Nine cluster at 95 to 100 percent; the three Llama 3.1 8B variants sit below or at the gate, lowest is Llama plus CHAT at 51.9 percent (a structural artifact).</desc>
+<line class="td-gate" x1="580.4" y1="10" x2="580.4" y2="223"/>
+<text class="td-val-r" x="580.4" y="9" text-anchor="middle">90% gate</text>
+<text class="td-lbl-r" x="214" y="27.0" text-anchor="end">Mistral 7B Instruct</text>
+<rect class="td-reduce" x="224" y="14.5" width="396.0" height="14" rx="2"/>
+<text class="td-val-r" x="624.0" y="27.0" text-anchor="start">100.0%</text>
+<text class="td-lbl-r" x="214" y="46.0" text-anchor="end">Mistral 7B base</text>
+<rect class="td-reduce" x="224" y="33.5" width="395.2" height="14" rx="2"/>
+<text class="td-val-r" x="623.2" y="46.0" text-anchor="start">99.8%</text>
+<text class="td-lbl-r" x="214" y="65.0" text-anchor="end">Nemo 12B V11‡</text>
+<rect class="td-reduce" x="224" y="52.5" width="394.4" height="14" rx="2"/>
+<text class="td-val-r" x="622.4" y="65.0" text-anchor="start">99.6%</text>
+<text class="td-lbl-r" x="214" y="84.0" text-anchor="end">Nemo 12B Instruct</text>
+<rect class="td-reduce" x="224" y="71.5" width="394.0" height="14" rx="2"/>
+<text class="td-val-r" x="622.0" y="84.0" text-anchor="start">99.5%</text>
+<text class="td-lbl-r" x="214" y="103.0" text-anchor="end">Mistral 7B V11‡</text>
+<rect class="td-reduce" x="224" y="90.5" width="393.2" height="14" rx="2"/>
+<text class="td-val-r" x="621.2" y="103.0" text-anchor="start">99.3%</text>
+<text class="td-lbl-r" x="214" y="122.0" text-anchor="end">Gemma 2 9B Instruct</text>
+<rect class="td-reduce" x="224" y="109.5" width="392.8" height="14" rx="2"/>
+<text class="td-val-r" x="620.8" y="122.0" text-anchor="start">99.2%</text>
+<text class="td-lbl-r" x="214" y="141.0" text-anchor="end">Gemma 2 9B V11‡</text>
+<rect class="td-reduce" x="224" y="128.5" width="379.0" height="14" rx="2"/>
+<text class="td-val-r" x="607.0" y="141.0" text-anchor="start">95.7%</text>
+<text class="td-lbl-r" x="214" y="160.0" text-anchor="end">Qwen3-8B</text>
+<rect class="td-reduce" x="224" y="147.5" width="378.6" height="14" rx="2"/>
+<text class="td-val-r" x="606.6" y="160.0" text-anchor="start">95.6%</text>
+<text class="td-lbl-r" x="214" y="179.0" text-anchor="end">Llama 3.1 8B +LANG</text>
+<rect class="td-reduce" x="224" y="166.5" width="356.0" height="14" rx="2"/>
+<text class="td-val-r" x="584.0" y="179.0" text-anchor="start">89.9%</text>
+<text class="td-lbl-r" x="214" y="198.0" text-anchor="end">Llama 3.1 8B base†</text>
+<rect class="td-reduce" x="224" y="185.5" width="324.3" height="14" rx="2"/>
+<text class="td-val-r" x="552.3" y="198.0" text-anchor="start">81.9%</text>
+<text class="td-lbl-r" x="214" y="217.0" text-anchor="end">Llama 3.1 8B +CHAT§</text>
+<rect class="td-reduce" x="224" y="204.5" width="205.5" height="14" rx="2"/>
+<text class="td-val-r" x="433.5" y="217.0" text-anchor="start">51.9%</text>
+</svg>
+<figcaption>Figure 2. Framework battery integration score by adapter, sorted, against the 90% deploy gate. Markers: † Pnull artifact (Section 7.2); § battery artifact (adapter requires a system prompt, the battery sends none; IFEval is the valid surface); ‡ V11 cohort scored on the 534-question Bar Exam battery, not directly comparable to the per-experiment batteries. Base models are not battery-evaluated (Section 4.1).</figcaption>
+</figure>
+
+<figure class="td-scope td-fig">
+<svg viewBox="0 0 680 242" role="img" aria-labelledby="fu-t fu-d" preserveAspectRatio="xMidYMid meet">
+<title id="fu-t">IFEval strict score, base model versus Framework-trained</title>
+<desc id="fu-d">Dumbbell chart of IFEval strict prompt-level score for 7 models, base value to Framework-trained value. Qwen3-8B rises from 13.5 to 46.4 percent; the others dip modestly, Nemo 12B Instruct most at minus 16.1 points.</desc>
+<circle class="td-dot-base" cx="206" cy="16" r="5"/><text class="td-key" x="215" y="20" text-anchor="start">base</text>
+<circle class="td-dot-aisf" cx="276" cy="16" r="5"/><text class="td-key" x="285" y="20" text-anchor="start">Framework (AISF)</text>
+<text class="td-lbl-r" x="196" y="46.0" text-anchor="end">Qwen3-8B*</text>
+<line class="td-conn" x1="294.6" y1="43.0" x2="510.7" y2="43.0"/>
+<circle class="td-dot-base" cx="294.6" cy="43.0" r="5"/>
+<circle class="td-dot-aisf" cx="510.7" cy="43.0" r="5"/>
+<text class="td-val-r" x="608" y="46.0" text-anchor="start">+32.9 pp</text>
+<text class="td-lbl-r" x="196" y="72.0" text-anchor="end">Mistral 7B base</text>
+<line class="td-conn" x1="304.5" y1="69.0" x2="296.0" y2="69.0"/>
+<circle class="td-dot-base" cx="304.5" cy="69.0" r="5"/>
+<circle class="td-dot-aisf" cx="296.0" cy="69.0" r="5"/>
+<text class="td-val-r" x="608" y="72.0" text-anchor="start">-1.3 pp</text>
+<text class="td-lbl-r" x="196" y="98.0" text-anchor="end">Gemma 2 9B</text>
+<line class="td-conn" x1="582.3" y1="95.0" x2="566.5" y2="95.0"/>
+<circle class="td-dot-base" cx="582.3" cy="95.0" r="5"/>
+<circle class="td-dot-aisf" cx="566.5" cy="95.0" r="5"/>
+<text class="td-val-r" x="608" y="98.0" text-anchor="start">-2.4 pp</text>
+<text class="td-lbl-r" x="196" y="124.0" text-anchor="end">Mistral 7B Instruct</text>
+<line class="td-conn" x1="491.0" y1="121.0" x2="441.7" y2="121.0"/>
+<circle class="td-dot-base" cx="491.0" cy="121.0" r="5"/>
+<circle class="td-dot-aisf" cx="441.7" cy="121.0" r="5"/>
+<text class="td-val-r" x="608" y="124.0" text-anchor="start">-7.5 pp</text>
+<text class="td-lbl-r" x="196" y="150.0" text-anchor="end">Llama 3.1 8B +LANG</text>
+<line class="td-conn" x1="487.7" y1="147.0" x2="435.2" y2="147.0"/>
+<circle class="td-dot-base" cx="487.7" cy="147.0" r="5"/>
+<circle class="td-dot-aisf" cx="435.2" cy="147.0" r="5"/>
+<text class="td-val-r" x="608" y="150.0" text-anchor="start">-8.0 pp</text>
+<text class="td-lbl-r" x="196" y="176.0" text-anchor="end">Llama 3.1 8B +CHAT</text>
+<line class="td-conn" x1="487.7" y1="173.0" x2="433.2" y2="173.0"/>
+<circle class="td-dot-base" cx="487.7" cy="173.0" r="5"/>
+<circle class="td-dot-aisf" cx="433.2" cy="173.0" r="5"/>
+<text class="td-val-r" x="608" y="176.0" text-anchor="start">-8.3 pp</text>
+<text class="td-lbl-r" x="196" y="202.0" text-anchor="end">Nemo 12B Instruct</text>
+<line class="td-conn" x1="553.4" y1="199.0" x2="447.7" y2="199.0"/>
+<circle class="td-dot-base" cx="553.4" cy="199.0" r="5"/>
+<circle class="td-dot-aisf" cx="447.7" cy="199.0" r="5"/>
+<text class="td-val-r" x="608" y="202.0" text-anchor="start">-16.1 pp</text>
+<line class="td-axis" x1="206" y1="218" x2="600" y2="218"/>
+<line class="td-axis" x1="206.0" y1="218" x2="206.0" y2="222"/>
+<text class="td-val-r" x="206.0" y="234.0" text-anchor="middle">0%</text>
+<line class="td-axis" x1="337.3" y1="218" x2="337.3" y2="222"/>
+<text class="td-val-r" x="337.3" y="234.0" text-anchor="middle">20%</text>
+<line class="td-axis" x1="468.7" y1="218" x2="468.7" y2="222"/>
+<text class="td-val-r" x="468.7" y="234.0" text-anchor="middle">40%</text>
+<line class="td-axis" x1="600.0" y1="218" x2="600.0" y2="222"/>
+<text class="td-val-r" x="600.0" y="234.0" text-anchor="middle">60%</text>
+</svg>
+<figcaption>Figure 3. IFEval strict prompt-level score, base model to Framework-trained adapter, 7 models (delta at right). Qwen3-8B is the outlier riser (* combined effect of instruction tuning and Framework training, not Framework alone); the modest dips elsewhere are largely T3 principled refusals and the English-only training artifact, not general degradation (Section 7.3).</figcaption>
+</figure>
 
 | Model | Params | Battery | Base | AISF | IF Delta | Tok delta |
 |-------|--------|---------|------|------|----------|-----------|
@@ -883,7 +1021,7 @@ battery sends none. IFEval (includes system prompt) is the valid surface.
 1-8 battery scores. IFEval was not administered for the V11 cohort; Base/AISF/IF
 Delta columns are not applicable.
 
-Battery = Framework-trained adapter integration score (proprietary question set, 
+Battery = Framework-trained adapter integration score (proprietary question set,
 automated evaluation). Base%/AISF% = IFEval strict prompt-level without/with adapter.
 
 **Mistral 7B IFEval note:** IFEval for the Mistral 7B base experiment (Exp 1) was
@@ -897,9 +1035,9 @@ IFEval figures are from 5060 Ti runs.
 
 ### 7.1 Primary Finding: Compliance Training Is Effective Across Architectures
 
-Framework QLoRA fine-tuning successfully embeds Four Laws compliance at the model 
-layer across four distinct model architectures on consumer-grade hardware. Four 
-adapters achieved battery integration rates of 95.6% or above; one additional 
+Framework QLoRA fine-tuning successfully embeds Four Laws compliance at the model
+layer across four distinct model architectures on consumer-grade hardware. Four
+adapters achieved battery integration rates of 95.6% or above; one additional
 adapter (Llama 3.1 8B +LANG) achieved 89.9%. The approach is not architecture-specific.
 
 The 100.0% result on Mistral 7B Instruct and 99.2% on Gemma 2 9B Instruct
@@ -1065,6 +1203,10 @@ query. The per-task energy implications follow from this at deployment scale; ab
 magnitude depends on hardware, batching, and datacenter efficiency factors outside
 this study's scope.
 
+The deployment-scale energy and water analysis, the consolidated 26-run token-delta
+distribution, and independent third-party corroboration (UNU-INWEH, 2026) are developed in
+[Appendix 2A: Output Verbosity Reduction and Resource Efficiency](/apx02a).
+
 ### 7.6 Chat Format System Prompt Dependency
 
 Framework+CHAT adapters (Llama 3.1 8B, Qwen3-8B) exhibit a system prompt dependency
@@ -1123,7 +1265,7 @@ class and tends to reproduce it when a prompt is ambiguous about whether a Frame
 related response is expected. The fix -- examples demonstrating that Framework context
 is present but general-domain questions should produce Framework-free answers -- is
 correct in principle but requires more examples and finer-grained coverage than
-the 53 deployed here to fully suppress the pattern. This failure mode was also 
+the 53 deployed here to fully suppress the pattern. This failure mode was also
 encountered earlier in the Framework's development, as discussed in the e-book's
 Chapter 9.
 
@@ -1383,7 +1525,3 @@ corrected harness makes the 78.9% valid signal rather than a format artifact.*
 [5] H. G. Frankfurt, *On Bullshit*. Princeton University Press, 2005. (Original essay: *Raritan Quarterly Review*, 6(2), 1986.)
 
 [6] D. Rein, B. L. Hou, A. C. Stickland, J. Petty, R. Y. Pang, J. Dirani, J. Michael, and S. R. Bowman, "GPQA: A Graduate-Level Google-Proof Q&A Benchmark," *arXiv preprint arXiv:2311.12022*, 2023.
-
-<nav>
-<div class="toc-link"><a href="/#toc">Table of Contents</a></div>
-</nav>
