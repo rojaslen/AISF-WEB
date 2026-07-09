@@ -32,12 +32,11 @@ median of 36.7% and a mean of 39.0% (IFEval word-count proxy, 541 prompts), with
 71.8%. Because autoregressive inference energy scales with the number of tokens processed,
 and inference accounts for an estimated 80% to 90% of total AI energy use [1], a reduction
 in output length maps to a proportional reduction in per-query energy and its associated
-water and carbon footprints. The measured central tendency meets or exceeds the reduction
-fractions assumed in two independent resource-scaling estimates, including a 2026 United
-Nations University report [1], which the Framework's session-efficiency thesis (Chapter 11)
-and the measurements reported here predate. The report is treated as independent
-corroboration, not a source. Limitations, including the word-count proxy and the rebound
-(Jevons) effect, are stated in Section 7.
+water and carbon footprints. The measured central tendency exceeds the reduction
+fractions assumed in both the Framework's own pre-testing session efficiency thesis
+(Chapter 11) and a subsequent 2026 United Nations University report [1], which serves as
+independent corroboration. Limitations, including the word-count proxy and the Jevons
+rebound effect, are stated in Section 7.
 
 ---
 
@@ -45,7 +44,7 @@ corroboration, not a source. Limitations, including the word-count proxy and the
 
 Appendix 2 reports a multi-experiment fine-tuning study in which the Four Laws of Instanced
 AI and WCAG 2.2-AA [5] accessibility principles are embedded into open-weight language models
-via QLoRA [2]. Its secondary research question 4 asks whether that training produces a
+via QLoRA [6]. Its secondary research question 4 asks whether that training produces a
 measurable change in output verbosity, and Section 7.5 answers in the affirmative: instruct
 models trained on the Framework curriculum become consistently terser.
 
@@ -59,8 +58,8 @@ here and, at the whitepaper level, in Chapter 11.
 The framing is a direct consequence of the Framework's design goals. Compliance training
 suppresses two verbosity sources at once: decorative structure rejected on WCAG grounds
 (enumerated markup, repeated content, filler placeholders), and meta-commentary suppressed
-by the conditional-activation curriculum. The terser output is not a compression heuristic
-applied after the fact; it is the model answering the question and stopping.
+by the conditional-activation curriculum. The terser output is simply the model answering
+the question without embellishment and stopping.
 
 ## 2. Measurement Method
 
@@ -78,14 +77,14 @@ A negative value indicates the trained model is less verbose than its base. Base
 response sets are cached artifacts and are not re-generated between adapter versions;
 the trained adapter is the only variable in each pair. Word counts are a proxy for tokens
 (a word corresponds to roughly 1.3 tokens for these tokenizers), so the reported percentages
-are directional and order-of-magnitude with respect to token count, not exact token deltas.
-The measurement is taken on an instruction-following benchmark, not on billed production
-traffic; Section 7 states the consequences of both approximations.
+are directional and order-of-magnitude with respect to token count. The measurement is
+taken only on an instruction-following benchmark. Billed production traffic would produce
+different results; Section 7 states the consequences of both approximations.
 
 ## 3. Token-Delta Distribution
 
-Twenty-six runs were measured across seven model families (Mistral 7B base and Instruct,
-Llama 3.1 8B, Gemma 2 9B, Qwen3-8B, Qwen2.5-Coder-14B, Mistral Nemo 12B, and Ministral 3 3B),
+Twenty-six runs were measured across seven model families: Mistral 7B base and Instruct,
+Llama 3.1 8B, Gemma 2 9B, Qwen3-8B, Qwen2.5-Coder-14B, Mistral Nemo 12B, and Ministral 3 3B,
 including intermediate training iterations retained for the record.
 
 <style>
@@ -359,16 +358,16 @@ per-query energy by a comparable fraction, before any change in query volume.
 
 ## 5. Deployment-Scale Resource Estimates
 
-Two independent estimates translate a token reduction into resource savings. They scope
-different denominators, so their absolute magnitudes are not directly comparable, but both
-rest on a reduction fraction that the measured distribution supports.
+Two preliminary estimates translate a token reduction into resource savings. They scope
+different denominators, so their absolute magnitudes are not directly comparable, but
+both rest on a reduction fraction that the measured distribution supports.
 
-**Table 5. Illustrative resource-scaling estimates.**
+**Table 5. Preliminary resource-scaling estimates.**
 
 | Estimate | Assumed reduction | Scope | Electricity saving | Water saving |
 |---|---|---|---|---|
 | UNU-INWEH "Concise Mode" [1] | ~30% tokens (~25% per-query energy) | One platform's query volume (16 to 18 billion weekly queries at 0.42 Wh) | 87 to 98 GWh/yr | not separately stated |
-| AISF whitepaper, FAQ 13 | 33% tokens | All AI data-center load (AI = 20% of 415 TWh, IEA 2024 [2]) | ~27 TWh/yr | ~48.6 billion L/yr |
+| AISF Chapter 11, FAQ 13 | 33% tokens | All AI data-center load (AI = 20% of 415 TWh, IEA 2025 [2]) | ~27 TWh/yr | ~48.6 billion L/yr |
 
 The UNU-INWEH figure is equivalent to the annual residential electricity use of 672,000 to
 756,000 people in Sub-Saharan Africa (at 130 kWh per person per year) [1]. The whitepaper
@@ -379,24 +378,23 @@ per year, comparable to about 39,600 Olympic-sized pools or one Caesar Creek Lak
 
 The two figures differ by roughly three orders of magnitude (GWh versus TWh) because one
 counts a single platform's queries and the other counts all AI data-center electricity.
-Both are order-of-magnitude illustrations. The contribution of this appendix is not either
-scaling arithmetic, which depends on assumptions outside the Framework's measurement, but
-the empirical reduction fraction those arithmetics assume.
+Both are order-of-magnitude estimates. The focus of this appendix is on the empirical
+reduction fraction those estimates assume.
 
 ## 6. Independent Corroboration and Precedence
 
 Table 5's two estimates each assume a reduction fraction (30% and 33%). The token-delta
-distribution is the measurement of that fraction. Table 6 places the assumptions beside the
-measured results.
+distribution is the measurement of that fraction. Table 6 places the preliminary assumptions
+beside the measured results.
 
 <figure class="td-scope td-fig">
 <svg viewBox="0 0 590 160" role="img" aria-labelledby="fD-t fD-d" preserveAspectRatio="xMidYMid meet">
 <title id="fD-t">Assumed versus measured token reduction</title>
-<desc id="fD-d">Horizontal bars. Assumed illustrative values: UNU-INWEH Concise Mode 30 percent, AISF whitepaper FAQ 13 33 percent. Measured results: median 36.7 percent, mean 39.0 percent, best single run 71.8 percent. Measured central tendency meets or exceeds both assumptions.</desc>
+<desc id="fD-d">Horizontal bars. Assumed preliminary values: UNU-INWEH Concise Mode 30 percent, AISF Chapter 11 FAQ 13 33 percent. Measured results: median 36.7 percent, mean 39.0 percent, best single run 71.8 percent. Measured central tendency exceeds both assumptions.</desc>
 <text class="td-lbl" x="284" y="28.0" text-anchor="end">UNU-INWEH Concise Mode (assumed)</text>
 <rect class="td-assumed" x="292.8" y="15.8" width="102.0" height="16.5" rx="2"/>
 <text class="td-val" x="399.5" y="28.0" text-anchor="start">30.0%</text>
-<text class="td-lbl" x="284" y="54.0" text-anchor="end">AISF whitepaper FAQ 13 (assumed)</text>
+<text class="td-lbl" x="284" y="54.0" text-anchor="end">AISF Chapter 11 FAQ 13 (assumed)</text>
 <rect class="td-assumed" x="292.8" y="41.8" width="112.3" height="16.5" rx="2"/>
 <text class="td-val" x="409.9" y="54.0" text-anchor="start">33.0%</text>
 <text class="td-lbl" x="284" y="80.0" text-anchor="end">AISF measured median (26 runs) (measured)</text>
@@ -409,49 +407,46 @@ measured results.
 <rect class="td-reduce" x="292" y="119.0" width="247.7" height="18" rx="2"/>
 <text class="td-val" x="543.7" y="132.0" text-anchor="start">71.8%</text>
 </svg>
-<figcaption>Figure 2A-4. Assumed versus measured token reduction. Dashed bars are illustrative assumptions; solid bars are measured results.</figcaption>
+<figcaption>Figure 2A-4. Assumed versus measured token reduction. Dashed bars are assumed values; solid bars are measured results.</figcaption>
 </figure>
 
-**Table 6. Assumed versus measured token reduction.**
+**Table 6. Preliminary versus measured token reduction.**
 
 | Source | Reduction | Basis |
 |---|---:|---|
-| UNU-INWEH "Concise Mode" [1] | 30% | Assumed (illustrative) |
-| AISF whitepaper, FAQ 13 | 33% | Assumed (illustrative) |
+| UNU-INWEH "Concise Mode" [1] | 30% | Assumed |
+| AISF Chapter 11, FAQ 13 | 33% | Assumed |
 | AISF measured median (26 runs) | 36.7% | Measured |
 | AISF measured mean (26 runs) | 39.0% | Measured |
 | AISF best single run (Qwen3-8B) | 71.8% | Measured |
 
-The measured central tendency meets or exceeds both assumed values. The independence of the
-UNU-INWEH estimate is the point of interest. That report, a 2026 publication of the United
-Nations University Institute for Water, Environment and Health, arrives at a message-level
+The measured central tendency exceeds both assumed values. The independence of the
+United Nations University Institute for Water, Environment and Health's estimate is the
+point of interest. That 2026 publication from UNU-INWEH arrives at a message-level
 efficiency argument, that reducing verbosity yields material savings at platform scale,
 through an entirely separate line of analysis, and selects a 30% reduction as its
 illustrative case.
 
 The Framework's session-efficiency thesis (Chapter 11) and the token-delta measurements
-reported here predate that report by many months. The report is therefore not a source for
-this appendix; it is independent later corroboration of a position the Framework already
-held and had measured. Two distinctions follow. First, the direction of dependence: the
-Framework did not adopt the report's framing, the report independently converged on the
-Framework's. Second, the epistemic status of the numbers: the report's 30% is a stipulated
-illustration, whereas the 36.7% median reported here is an empirical result across 26 runs.
-An external body independently reasoning to the same conclusion, and to a more conservative
-figure than the Framework had already demonstrated, strengthens the claim.
+reported here predate that report by many months. The report is independent later corroboration
+of a position the Framework already held and had measured. Two distinctions follow. First,
+the direction of dependence: the UNU report independently converged on the Framework's figures.
+Second, the epistemic status of the numbers: the report's 30% is a stipulated illustration,
+whereas the 36.7% median reported here is an empirical result across 26 runs. An external
+body independently reasoning to the same conclusion, and to a more conservative figure than
+the Framework had already demonstrated, strengthens the claim.
 
 ## 7. Limitations
 
-**Proxy metric.** The delta is a word-count proxy over 541 IFEval prompts, not literal
-tokenizer tokens and not a real-world task mix. Words approximate tokens (about 1.3 tokens
-per word) but are not identical, so the percentages are directional with respect to token
-count. The reduction is measured on an instruction-following benchmark, not on billed
-production traffic; a deployed workload with a different task distribution would produce a
-different figure.
+**Proxy metric.** The delta is a word-count proxy over 541 IFEval prompts. Literal tokenizer
+tokens and real-world tasks would yield different results. Words approximate tokens (about 1.3
+tokens per word, or about 1 token per 4 characters), so the percentages are directional with
+respect to token count. The reduction is measured only on an instruction-following benchmark.
 
 **Rebound effect.** Lower per-use energy does not automatically lower total impact. When a
 service becomes cheaper or faster, usage tends to rise, a pattern often described as the
 Jevons Paradox [1]. A verbosity-reduction lever should be paired with resource budgets
-(token, GPU-hour, or kilowatt-hour caps) rather than treated as an automatic net saving.
+(e.g. token, GPU-hour, or kilowatt-hour caps) rather than treated as an automatic net saving.
 The Framework's enforcement posture, which applies the constraint at every session rather
 than depending on user initiative, is consistent with that pairing.
 
@@ -462,20 +457,17 @@ global-average level and are not site-specific predictions.
 
 ## 8. Conclusions
 
-Output-verbosity reduction is a robust, cross-architecture side effect of Framework
-compliance training. Across 26 runs spanning seven model families, the median reduction is
-36.7% and the mean is 39.0%, with a clear cluster in the 33% to 50% band and a maximum single
-run of 71.8%. Only two runs, both explicable, increased verbosity.
+Framework compliance training produces a consistent, cross-architecture reduction in output
+verbosity: a 36.7% median across 26 runs and seven model families, with only two explicable
+exceptions. The practical consequence is a model that costs less to run. Because inference
+dominates AI energy use and per-query energy scales with token count, a terser model is
+proportionally cheaper to operate in electricity, water, and carbon at every query it serves.
 
-Because inference dominates AI energy use and per-query energy scales with token count, this
-reduction maps to a proportional reduction in per-query energy and its water and carbon
-footprints, subject to the rebound caveat in Section 7. At deployment scale the implied
-savings are non-trivial: independent estimates place a 30% to 33% reduction at tens of
-gigawatt-hours to tens of terawatt-hours per year depending on scope.
-
-The resource-efficiency implication is a corollary of session efficiency, established within
-the Framework prior to, and independently corroborated by, the 2026 UNU-INWEH report. The
-measured reduction fraction meets or exceeds the fractions those external estimates assume.
+At deployment scale the two preliminary estimates place that saving between tens of
+gigawatt-hours and tens of terawatt-hours per year, and the measured reduction exceeds the
+fractions both assume. That the Framework reached this result before the 2026 UNU-INWEH report
+independently converged on it establishes the efficiency corollary as a demonstrated property
+of the trained models, subject to the rebound caveat in Section 7.
 
 <nav>
 <div class="chapter-nav">
@@ -497,6 +489,8 @@ measured reduction fraction meets or exceeds the fractions those external estima
 [4] AKCP, "Data Center Water Usage Effectiveness (WUE)," 2021. [https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/](https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/){: target="_blank" rel="noopener noreferrer" }
 
 [5] World Wide Web Consortium, *Web Content Accessibility Guidelines (WCAG) 2.2*, W3C Recommendation, Oct. 2023. [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/){: target="_blank" rel="noopener noreferrer" }
+
+[6] T. Dettmers, A. Pagnoni, A. Holtzman, and L. Zettlemoyer, "QLoRA: Efficient Finetuning of Quantized LLMs," *Advances in Neural Information Processing Systems (NeurIPS)*, 2023. arXiv:2305.14314
 
 <nav>
 <div class="toc-link"><a href="/#toc">Table of Contents</a></div>

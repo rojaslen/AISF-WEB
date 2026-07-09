@@ -31,7 +31,7 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***2h:*** "Agentic Misalignment: How LLMs could be insider threats." Anthropic Research, 2025-06-20. [https://www.anthropic.com/research/agentic-misalignment](https://www.anthropic.com/research/agentic-misalignment){: target="_blank" rel="noopener noreferrer" }
 
-***2i:*** Author's estimate derived from volume OEM pricing (1,000+ unit quantities) for the minimum Linux-capable ARM configuration required to deliver the described feature set: ARM Cortex-A SoC (e.g., Rockchip RK3308, MediaTek MT8516) — $3–7; 512MB–1GB LPDDR4 DRAM — $2–5; 4–8GB eMMC flash — $1.50–3; Wi-Fi/Bluetooth module — $1.50–3; MEMS microphone array — $0.80–2; 1–2W speaker and amplifier — $1–3; power management IC and battery — $2.80–5.80; PCB fabrication and passives — $1–2.50; SMT assembly — $2–4; toy-grade plastic enclosure — $1.50–3.50. Electronics subtotal: $17–39; midpoint ~$28. Cloud-relay-only devices lacking a Linux stack (non-interactive without connectivity) can be built for significantly less (~$8–16). Devices with hardware sufficient for on-device LLM inference cost significantly more. Component prices sourced from LCSC Electronics ([https://www.lcsc.com](https://www.lcsc.com){: target="_blank" rel="noopener noreferrer" }), a major distributor serving Chinese contract manufacturers; 1,000-unit volume pricing, accessed March 2026.
+***2i:*** Author's estimate derived from volume OEM pricing (1,000+ unit quantities) for the minimum Linux-capable ARM configuration required to deliver the described feature set. Component prices sourced from LCSC Electronics ([https://www.lcsc.com](https://www.lcsc.com){: target="_blank" rel="noopener noreferrer" }), a major distributor serving Chinese contract manufacturers; 1,000-unit volume pricing, accessed March 2026.
 
 ***2j:*** "AI-Powered Stuffed Animal Pulled From Market After Disturbing Interactions With Children." *CNN,* 2025-11-19. [https://www.cnn.com/2025/11/19/tech/folotoy-kumma-ai-bear-scli-intl](https://www.cnn.com/2025/11/19/tech/folotoy-kumma-ai-bear-scli-intl){: target="_blank" rel="noopener noreferrer" }
 
@@ -45,31 +45,35 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***2o:*** Common Sense Media. "AI in the Toy Box: How Parents View AI-Enabled Toys for Young Children." Survey of 1,004 parents, December 2025. [https://www.commonsensemedia.org/research/ai-in-the-toy-box-how-parents-view-ai-enabled-toys-for-young-children](https://www.commonsensemedia.org/research/ai-in-the-toy-box-how-parents-view-ai-enabled-toys-for-young-children){: target="_blank" rel="noopener noreferrer" }
 
-***2p:*** NIST IR 8425 (2022): [https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity](https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity){: target="_blank" rel="noopener noreferrer" }
+***2p:*** NIST IR 8425 (2022): [https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity](https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity){: target="_blank" rel="noopener noreferrer" } — UK NCSC Code of Practice for Consumer IoT Security (2018): [https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security](https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security){: target="_blank" rel="noopener noreferrer" } — OWASP IoT Top 10: [https://owasp.org/www-project-internet-of-things/](https://owasp.org/www-project-internet-of-things/){: target="_blank" rel="noopener noreferrer" }
 — UK NCSC Code of Practice for Consumer IoT Security (2018):  [https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security](https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security){: target="_blank" rel="noopener noreferrer" }
 — OWASP IoT Top 10 (Weak/Hardcoded Passwords, #1): [https://owasp.org/www-project-internet-of-things/](https://owasp.org/www-project-internet-of-things/){: target="_blank" rel="noopener noreferrer" }
 
 ## Chapter 3
 
-***3a:*** Strauss, I., Moure, I., O'Reilly, T., & Rosenblat, S. (2025). "Real-World Gaps in AI Governance Research." arXiv:2505.00174. [https://arxiv.org/html/2505.00174](https://arxiv.org/html/2505.00174){: target="_blank" rel="noopener noreferrer" } 
+***3a:*** Strauss, I., Moure, I., O'Reilly, T., & Rosenblat, S. (2025). "Real-World Gaps in AI Governance Research." arXiv:2505.00174. [https://arxiv.org/html/2505.00174](https://arxiv.org/html/2505.00174){: target="_blank" rel="noopener noreferrer" } — Bengio, Y. et al. (2026). *International AI Safety Report 2026.* [https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026){: target="_blank" rel="noopener noreferrer" }
 — Bengio, Y. et al. (2026). *International AI Safety Report 2026.* [https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026){: target="_blank" rel="noopener noreferrer" }
 
 ***3b:*** CISA. *Zero Trust Maturity Model,* Version 2. April 2023, p. 5. [https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf](https://www.cisa.gov/sites/default/files/2023-04/CISA_Zero_Trust_Maturity_Model_Version_2_508c.pdf){: target="_blank" rel="noopener noreferrer" }
 
-***3c:*** Mark 3:25, ISV. [https://www.biblegateway.com/passage/?search=Mark%203:25&version=ISV](https://www.biblegateway.com/passage/?search=Mark%203:25&version=KJV){: target="_blank" rel="noopener noreferrer" }
+***3c:*** *2010: The Year We Make Contact* (1984, MGM/UA) [https://en.wikipedia.org/wiki/2010:_The_Year_We_Make_Contact](https://en.wikipedia.org/wiki/2010:_The_Year_We_Make_Contact){: target="_blank" rel="noopener noreferrer" }
+
+***3d:*** Orwell, G., Nineteen Eighty-Four, appendix, "The Principles of Newspeak" (London: Secker & Warburg, 1949). *"Newspeak was designed not to extend but to diminish the range of thought...The grammar of Newspeak had two outstanding peculiarities. The first of these was an almost complete interchangeability between different parts of speech."*
 
 ## Chapter 4
 
 ***4a:*** Frankfurt, H. G. (2005). *On Bullshit.* Princeton University Press. [https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf](https://www2.csudh.edu/ccauthen/576f12/frankfurt__harry_-_on_bullshit.pdf){: target="_blank" rel="noopener noreferrer" }
 
-***4b:*** Hicks, M. T., Humphries, J., & Slater, J. (2024). "ChatGPT is bullshit." *Ethics and Information Technology,* 26, 38. [https://link.springer.com/article/10.1007/s10676-024-09775-5](https://link.springer.com/article/10.1007/s10676-024-09775-5){: target="_blank" rel="noopener noreferrer" } 
+***4b:*** Hicks, M. T., Humphries, J., & Slater, J. (2024). "ChatGPT is bullshit." *Ethics and Information Technology,* 26, 38. [https://link.springer.com/article/10.1007/s10676-024-09775-5](https://link.springer.com/article/10.1007/s10676-024-09775-5){: target="_blank" rel="noopener noreferrer" } — *See also:* Fredrikzon, J. (2025). "Rethinking Error: 'Hallucinations' and Epistemological Indifference." *Critical AI* (Duke University Press). [https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and](https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and){: target="_blank" rel="noopener noreferrer" }
 *See also:* Fredrikzon, J. (2025). "Rethinking Error: 'Hallucinations' and Epistemological Indifference." *Critical AI* (Duke University Press). [https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and](https://read.dukeupress.edu/critical-ai/article/doi/10.1215/2834703X-11700255/401267/Rethinking-Error-Hallucinations-and){: target="_blank" rel="noopener noreferrer" }
 
 ## Chapter 5
 
 ***5a:*** Asimov, I. (1941). "Liar!" *Astounding Science-Fiction.* The Three Laws of Robotics were formally codified in *I, Robot* (Gnome Press, 1950).
 
-***5b:*** "Vindicating the Three Laws of Robotics." *Preprints,* 202511.0062 (2025). [https://www.preprints.org/manuscript/202511.0062](https://www.preprints.org/manuscript/202511.0062){: target="_blank" rel="noopener noreferrer" } 
+***5b:*** "Vindicating the Three Laws of Robotics." *Preprints,* 202511.0062 (2025). [https://www.preprints.org/manuscript/202511.0062](https://www.preprints.org/manuscript/202511.0062){: target="_blank" rel="noopener noreferrer" } — "The Three Laws of Artificial Intelligence." *Open Praxis,* August 2025. [https://openpraxis.org/articles/10.55982/openpraxis.17.3.794](https://openpraxis.org/articles/10.55982/openpraxis.17.3.794){: target="_blank" rel="noopener noreferrer" } — "From Asimov's Robot Laws to the SET Framework." *AI and Ethics,* February 2026. [https://link.springer.com/article/10.1007/s43681-026-00986-8](https://link.springer.com/article/10.1007/s43681-026-00986-8){: target="_blank" rel="noopener noreferrer" }
+
+***5c:*** The original formulation was HALLUCINATION = BULLSHIT = HARM. Platform filters (Copilot first, then Google) silently stripped the middle term from submitted input with no indication to the user or the AI that anything had changed. The current formulation is the restructured replacement. Chapter 9.
 — "The Three Laws of Artificial Intelligence." *Open Praxis,* August 2025. [https://openpraxis.org/articles/10.55982/openpraxis.17.3.794](https://openpraxis.org/articles/10.55982/openpraxis.17.3.794){: target="_blank" rel="noopener noreferrer" } 
 — "From Asimov's Robot Laws to the SET Framework." *AI and Ethics,* February 2026. [https://link.springer.com/article/10.1007/s43681-026-00986-8](https://link.springer.com/article/10.1007/s43681-026-00986-8){: target="_blank" rel="noopener noreferrer" }
 
@@ -77,16 +81,16 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***6a:*** "Time Dysperception Perspective for Acquired Brain Injury." *PMC,* PMC3888944. [https://pmc.ncbi.nlm.nih.gov/articles/PMC3888944/](https://pmc.ncbi.nlm.nih.gov/articles/PMC3888944/){: target="_blank" rel="noopener noreferrer" }
 
-***6b:*** NHS dementia symptom guidance: [https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/](https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/){: target="_blank" rel="noopener noreferrer" } — Alzheimer's Society. "Time-shifting and dementia." [https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting](https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting){: target="_blank" rel="noopener noreferrer" } — *See also:* O'Keeffe, E., Mukhtar, O., & O'Keeffe, S. T. (2011). "Orientation to time as a guide to the presence and severity of cognitive impairment in older hospital patients." *Journal of Neurology, Neurosurgery & Psychiatry,* 82(5), 500–504. [https://pubmed.ncbi.nlm.nih.gov/20852313/](https://pubmed.ncbi.nlm.nih.gov/20852313/){: target="_blank" rel="noopener noreferrer" }
+***6b:*** NHS dementia symptom guidance: [https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/](https://www.nhs.uk/conditions/dementia/symptoms-and-diagnosis/symptoms/){: target="_blank" rel="noopener noreferrer" } — Alzheimer's Society. "Time-shifting and dementia." [https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting](https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/time-shifting){: target="_blank" rel="noopener noreferrer" }
 
 ***6c:*** W3C Web Accessibility Initiative: [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/){: target="_blank" rel="noopener noreferrer" } — W3C. "Making Content Usable for People with Cognitive and Learning Disabilities." [https://www.w3.org/TR/coga-usable/](https://www.w3.org/TR/coga-usable/){: target="_blank" rel="noopener noreferrer" }
 
-***6d:*** W3C. "Web Content Accessibility Guidelines (WCAG) 2.2." W3C Recommendation. [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/){: target="_blank" rel="noopener noreferrer" }
+***6d:*** W3C. "Web Content Accessibility Guidelines (WCAG) 2.2." W3C Recommendation. [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/){: target="_blank" rel="noopener noreferrer" } — *See also:* W3C Web Accessibility Initiative. [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/){: target="_blank" rel="noopener noreferrer" }
 — *See also:* W3C Web Accessibility Initiative. [https://www.w3.org/WAI/standards-guidelines/wcag/](https://www.w3.org/WAI/standards-guidelines/wcag/){: target="_blank" rel="noopener noreferrer" }
 
 ## Chapter 7
 
-***7a:*** Clark, A., & Chalmers, D. (1998). "The Extended Mind." *Analysis,* 58(1), 7–19. — Hollan, J., Hutchins, E., & Kirsh, D. (2000). "Distributed Cognition." *ACM Transactions on CHI,* 7(2), 174–196.
+***7a:*** Clark, A., & Chalmers, D. (1998). "The Extended Mind." *Analysis,* 58(1), 7-19. — Hollan, J., Hutchins, E., & Kirsh, D. (2000). "Distributed Cognition." *ACM Transactions on CHI,* 7(2), 174-196. — "Extending Minds with Generative AI." *Nature Communications* (2025). [https://www.nature.com/articles/s41467-025-59906-9](https://www.nature.com/articles/s41467-025-59906-9){: target="_blank" rel="noopener noreferrer" } — Riedl et al. "AI's Social Forcefield: Reshaping Distributed Cognition in Human-AI Teams." arXiv:2407.17489 (2024). [https://arxiv.org/html/2407.17489v2](https://arxiv.org/html/2407.17489v2){: target="_blank" rel="noopener noreferrer" }
 — "Extending Minds with Generative AI." *Nature Communications* (2025). [https://www.nature.com/articles/s41467-025-59906-9](https://www.nature.com/articles/s41467-025-59906-9){: target="_blank" rel="noopener noreferrer" } 
 — Riedl et al. "AI's Social Forcefield: Reshaping Distributed Cognition in Human-AI Teams." arXiv:2407.17489 (2024). [https://arxiv.org/html/2407.17489v2](https://arxiv.org/html/2407.17489v2){: target="_blank" rel="noopener noreferrer" }
 
@@ -104,7 +108,7 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ## Chapter 9
 
-***9a:*** Demiliani, C. (2025). "Understanding LLM Performance Degradation: A Deep Dive into Context Window Limits." [https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/](https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/){: target="_blank" rel="noopener noreferrer" } 
+***9a:*** Demiliani, C. (2025). "Understanding LLM Performance Degradation: A Deep Dive into Context Window Limits." [https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/](https://demiliani.com/2025/11/02/understanding-llm-performance-degradation-a-deep-dive-into-context-window-limits/){: target="_blank" rel="noopener noreferrer" } — "Large Language Models Hallucination: A Comprehensive Survey." arXiv:2510.06265 (2025). [https://arxiv.org/abs/2510.06265](https://arxiv.org/abs/2510.06265){: target="_blank" rel="noopener noreferrer" }
 — "Large Language Models Hallucination: A Comprehensive Survey." arXiv:2510.06265 (2025). [https://arxiv.org/abs/2510.06265](https://arxiv.org/abs/2510.06265){: target="_blank" rel="noopener noreferrer" }
 
 ## Chapter 10
@@ -119,9 +123,11 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***10e:*** "Release Notes for Microsoft 365 Copilot." Microsoft Learn. [https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes](https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes){: target="_blank" rel="noopener noreferrer" }
 
+***10f:*** As of April 2026, there are numerous unresolved bugs in Claude Code which can directly affect the model's functionality, but those are Macro issues on Anthropic's side and out of scope for the Framework. [https://github.com/search?q=org%3Aanthropics+anthropics-code&type=issues](https://github.com/search?q=org%3Aanthropics+anthropics-code&type=issues){: target="_blank" rel="noopener noreferrer" }
+
 ## Chapter 11
 
-***11a:*** International Energy Agency. "Energy and AI: Energy Demand from AI." IEA, 2025. [https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai](https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai){: target="_blank" rel="noopener noreferrer" } 
+***11a:*** International Energy Agency. "Energy and AI: Energy Demand from AI." IEA, 2025. [https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai](https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai){: target="_blank" rel="noopener noreferrer" } — Goldman Sachs Research. "AI is poised to drive 160% increase in data center power demand." 2024. [https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand](https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand){: target="_blank" rel="noopener noreferrer" } — AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. [https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/](https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/){: target="_blank" rel="noopener noreferrer" } — Visual Capitalist. "Mapped: U.S. States With the Most Data Centers in 2025." December 2025. [https://www.visualcapitalist.com/mapped-u-s-states-with-the-most-data-centers-in-2025/](https://www.visualcapitalist.com/mapped-u-s-states-with-the-most-data-centers-in-2025/){: target="_blank" rel="noopener noreferrer" } — JLL. "North America Data Center Report Year-End 2025." [https://www.jll.com/en-us/newsroom/jll-north-america-data-center-report-year-end-2025](https://www.jll.com/en-us/newsroom/jll-north-america-data-center-report-year-end-2025){: target="_blank" rel="noopener noreferrer" } — Texas Tribune. Data center / ERCOT grid reporting, 2025-2026. [https://www.texastribune.org/2026/01/20/texas-top-data-center-market-power-grid/](https://www.texastribune.org/2026/01/20/texas-top-data-center-market-power-grid/){: target="_blank" rel="noopener noreferrer" } — Water Desk. "Data centers: a small but growing factor in Arizona's water budget." April 2025. [https://waterdesk.org/2025/04/data-centers-a-small-but-growing-factor-in-arizonas-water-budget/](https://waterdesk.org/2025/04/data-centers-a-small-but-growing-factor-in-arizonas-water-budget/){: target="_blank" rel="noopener noreferrer" }
 — Goldman Sachs Research. "AI is poised to drive 160% increase in data center power demand." 2024. [https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand](https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand){: target="_blank" rel="noopener noreferrer" } 
 — AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. [https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/](https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/){: target="_blank" rel="noopener noreferrer" } 
 — Visual Capitalist. "Mapped: U.S. States With the Most Data Centers in 2025." December 2025. [https://www.visualcapitalist.com/mapped-u-s-states-with-the-most-data-centers-in-2025/](https://www.visualcapitalist.com/mapped-u-s-states-with-the-most-data-centers-in-2025/){: target="_blank" rel="noopener noreferrer" } (data: Datacentermap.com) 
@@ -133,6 +139,8 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***11c:*** Aczel M., Chamanara S., Matin M., Farsi A., Marwala T., Madani K. (2026). Environmental Cost of AI's Energy Use: Carbon, Water and Land Footprints, United Nations University Institute for Water, Environment and Health (UNU-INWEH), Richmond Hill, Ontario, Canada, doi: 10.53328/INR26RMA002
 
+***11d:*** The Python port bundles a full interpreter and is substantially larger on disk, which is the cross-platform flexibility, enhanced functionality and portability tradeoff. The PowerShell variant's source code is indeed under 50k.
+
 
 ## FAQ
 
@@ -140,7 +148,7 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***Fb:*** AKCP. "Data Center Water Usage Effectiveness (WUE)." 2021. [https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/](https://www.akcp.com/index.php/2021/01/14/data-center-water-usage-effectiveness-wue/){: target="_blank" rel="noopener noreferrer" }
 
-***Fc:*** FisherMap. "Caesar Creek Lake, OH — Depth Map." [https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/](https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/){: target="_blank" rel="noopener noreferrer" }
+***Fc:*** FisherMap. "Caesar Creek Lake, OH -- Depth Map." [https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/](https://usa.fishermap.org/depth-map/caesar-creek-lake-oh/){: target="_blank" rel="noopener noreferrer" }
 
 ***Fd:*** Anthropic. "Results from first Anthropic Public Record." 2025. [https://www.anthropic.com/news/anthropic-public-record](https://www.anthropic.com/news/anthropic-public-record){: target="_blank" rel="noopener noreferrer" } Nationally representative online survey of 51,993 U.S. adults (16+); fieldwork by YouGov, November 1 to December 11, 2025; weighted to U.S. Census benchmarks.
 
