@@ -117,14 +117,14 @@ including intermediate training iterations retained for the record.
 | Runs with increased verbosity | 2 of 26 |
 
 The distribution is right-skewed toward reduction, with a pronounced cluster in the 30% to
-50% band and a thin tail of deep reducers. Two runs became more verbose; both are noted in
+40% band and a thin tail of deep reducers. Two runs became more verbose; both are noted in
 Table 3.
 
 <figure class="td-scope td-fig">
 <svg viewBox="0 0 480 210" role="img" aria-labelledby="fA-t fA-d" preserveAspectRatio="xMidYMid meet">
 <title id="fA-t">Distribution of token-delta values in 10-point bins</title>
-<desc id="fA-d">Histogram of 26 runs. The minus 40 to minus 30 percent bin is the tallest with 9 runs; the shaded minus 50 to minus 30 percent cluster holds 12 runs. One bin, plus 0 to plus 10 percent, represents the two runs that increased verbosity.</desc>
-<rect class="td-band" x="189.8" y="14" width="84.9" height="156.0"/>
+<desc id="fA-d">Histogram of 26 runs. The minus 40 to minus 30 percent bin is the tallest with 9 runs; the minus 50 to minus 30 percent cluster holds 12 runs. One bin, plus 0 to plus 10 percent, represents the two runs that increased verbosity.</desc>
+# <rect class="td-band" x="189.8" y="14" width="84.9" height="156.0"/>
 <line class="td-axis" x1="38" y1="170" x2="470" y2="170"/>
 <rect class="td-reduce" x="50.1" y="153.1" width="31.4" height="16.9" rx="2"/>
 <text class="td-cnt" x="65.8" y="150.1" text-anchor="middle">1</text>
@@ -154,7 +154,7 @@ Table 3.
 <text class="td-cnt" x="446.2" y="133.2" text-anchor="middle">2</text>
 <text class="td-val" x="446.2" y="182.0" text-anchor="end" transform="rotate(-40 446.2 182.0)">0..+10</text>
 </svg>
-<figcaption>Figure 2A-1. Distribution of token-delta values in 10-point bins (signed delta, 26 runs). The 33% to 50% reduction cluster is shaded; the single increase bin uses the contrasting color.</figcaption>
+<figcaption>Figure 2A-1. Distribution of token-delta values in 10-point bins (signed delta, 26 runs). The the single increase bin uses the contrasting color.</figcaption>
 </figure>
 
 **Table 2. Distribution by 10-point bin (signed delta).**
