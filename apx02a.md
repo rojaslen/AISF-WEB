@@ -124,7 +124,7 @@ Table 3.
 <svg viewBox="0 0 480 210" role="img" aria-labelledby="fA-t fA-d" preserveAspectRatio="xMidYMid meet">
 <title id="fA-t">Distribution of token-delta values in 10-point bins</title>
 <desc id="fA-d">Histogram of 26 runs. The minus 40 to minus 30 percent bin is the tallest with 9 runs; the minus 50 to minus 30 percent cluster holds 12 runs. One bin, plus 0 to plus 10 percent, represents the two runs that increased verbosity.</desc>
-# <rect class="td-band" x="189.8" y="14" width="84.9" height="156.0"/>
+<!--rect class="td-band" x="189.8" y="14" width="84.9" height="156.0"/-->
 <line class="td-axis" x1="38" y1="170" x2="470" y2="170"/>
 <rect class="td-reduce" x="50.1" y="153.1" width="31.4" height="16.9" rx="2"/>
 <text class="td-cnt" x="65.8" y="150.1" text-anchor="middle">1</text>
