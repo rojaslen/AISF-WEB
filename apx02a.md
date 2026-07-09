@@ -53,7 +53,7 @@ It has a narrower purpose: to consolidate the verbosity measurements into a sing
 distribution, and to quantify what that reduction implies for energy and water demand
 when a compliant model is deployed at scale. The verbosity reduction is a behavioral
 side effect established in Appendix 2; the resource implication is the corollary developed
-here and, at the whitepaper level, in Chapter 11.
+here and in Chapter 11.
 
 The framing is a direct consequence of the Framework's design goals. Compliance training
 suppresses two verbosity sources at once: decorative structure rejected on WCAG grounds
