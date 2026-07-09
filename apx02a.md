@@ -113,7 +113,7 @@ including intermediate training iterations retained for the record.
 | Median delta | -36.7% |
 | Mean delta | -39.0% |
 | Range | -71.8% to +6.1% |
-| Runs in 33% to 50% reduction band | 11 of 26 |
+| Runs in 30% to 50% reduction band | 12 of 26 |
 | Runs with increased verbosity | 2 of 26 |
 
 The distribution is right-skewed toward reduction, with a pronounced cluster in the 30% to
