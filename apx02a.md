@@ -27,8 +27,8 @@ analysis. It consolidates the IFEval [3] token-delta measurements across 26 fine
 runs spanning seven model families, characterizes their distribution, and estimates the
 deployment-scale energy and water implications of the observed reduction. Across
 instruct-tuned models, Framework compliance training reduces output verbosity by a
-median of 36.7% and a mean of 39.0% (IFEval word-count proxy, 541 prompts), with 11 of
-26 runs falling in the 33% to 50% reduction band and a maximum single-run reduction of
+median of 36.7% and a mean of 39.0% (IFEval word-count proxy, 541 prompts), with 9 of
+26 runs falling in the 30% to 40% reduction band and a maximum single-run reduction of
 71.8%. Because autoregressive inference energy scales with the number of tokens processed,
 and inference accounts for an estimated 80% to 90% of total AI energy use [1], a reduction
 in output length maps to a proportional reduction in per-query energy and its associated
@@ -113,7 +113,7 @@ including intermediate training iterations retained for the record.
 | Median delta | -36.7% |
 | Mean delta | -39.0% |
 | Range | -71.8% to +6.1% |
-| Runs in 30% to 50% reduction band | 12 of 26 |
+| Runs in 30% to 40% reduction band | 9 of 26 |
 | Runs with increased verbosity | 2 of 26 |
 
 The distribution is right-skewed toward reduction, with a pronounced cluster in the 30% to
@@ -171,8 +171,7 @@ Table 3.
 | -10% to 0% | 1 |
 | 0% to +10% (increase) | 2 |
 
-The -40% to -30% bin holds 9 of 26 runs; the -50% to -30% span (the 33% to 50% reduction
-cluster) holds 12.
+The -40% to -30% bin holds 9 of 26 runs; the -70% to -40% span holds 10.
 
 <figure class="td-scope td-fig">
 <svg viewBox="0 0 680 514" role="img" aria-labelledby="fB-t fB-d" preserveAspectRatio="xMidYMid meet">
