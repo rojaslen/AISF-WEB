@@ -302,10 +302,10 @@ disambiguates them and they are not merged.
 ## 4. Per-Query Energy Basis
 
 The resource relevance of output length follows from where AI spends energy. Training a
-frontier model is a large one-time cost, but the continuous inference phase that serves
-billions of interactions is estimated at 80% to 90% of total AI energy use [1]. Inference
-energy is dominated by autoregressive decoding, which processes tokens sequentially, so
-per-query energy rises with the number of tokens generated.
+frontier model is an ongoing cost, combined with the continuous inference phase that serves
+billions of interactions, are together estimated at 80% to 90% of total AI energy use [1].
+Inference energy is dominated by autoregressive decoding, which processes tokens sequentially,
+so per-query energy rises with the number of tokens generated.
 
 Output length is therefore a first-order determinant of per-query cost. A typical
 conversational language-model response uses roughly 200 times the energy of a text
