@@ -154,7 +154,7 @@ Table 3.
 <text class="td-cnt" x="446.2" y="133.2" text-anchor="middle">2</text>
 <text class="td-val" x="446.2" y="182.0" text-anchor="end" transform="rotate(-40 446.2 182.0)">0..+10</text>
 </svg>
-<figcaption>Figure 2A-1. Distribution of token-delta values in 10-point bins (signed delta, 26 runs). The the single increase bin uses the contrasting color.</figcaption>
+<figcaption>Figure 2A-1. Distribution of token-delta values in 10-point bins (signed delta, 26 runs). The single increase bin uses the contrasting color.</figcaption>
 </figure>
 
 **Table 2. Distribution by 10-point bin (signed delta).**
