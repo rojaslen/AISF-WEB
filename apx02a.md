@@ -27,8 +27,8 @@ analysis. It consolidates the IFEval [3] token-delta measurements across 26 fine
 runs spanning seven model families, characterizes their distribution, and estimates the
 deployment-scale energy and water implications of the observed reduction. Across
 instruct-tuned models, Framework compliance training reduces output verbosity by a
-median of 36.7% and a mean of 39.0% (IFEval word-count proxy, 541 prompts), with 9 of
-26 runs falling in the 30% to 40% reduction band and a maximum single-run reduction of
+median of 36.7% and a mean of 39.0% (IFEval word-count proxy, 541 prompts), with 19 of
+26 runs falling in the 30% to 70% reduction band and a maximum single-run reduction of
 71.8%. Because autoregressive inference energy scales with the number of tokens processed,
 and inference accounts for an estimated 80% to 90% of total AI energy use [1], a reduction
 in output length maps to a proportional reduction in per-query energy and its associated
@@ -113,17 +113,17 @@ including intermediate training iterations retained for the record.
 | Median delta | -36.7% |
 | Mean delta | -39.0% |
 | Range | -71.8% to +6.1% |
-| Runs in 30% to 40% reduction band | 9 of 26 |
+| Runs in 30% to 70% reduction band | 19 of 26 |
 | Runs with increased verbosity | 2 of 26 |
 
-The distribution is right-skewed toward reduction, with a pronounced cluster in the 30% to
-40% band and a thin tail of deep reducers. Two runs became more verbose; both are noted in
-Table 3.
+The distribution is right-skewed toward reduction: 19 of 26 runs fall in the 30% to 70%
+band, with a pronounced cluster in the 30% to 40% sub-band and a thin tail of deep reducers.
+Two runs became more verbose; both are noted in Table 3.
 
 <figure class="td-scope td-fig">
 <svg viewBox="0 0 480 210" role="img" aria-labelledby="fA-t fA-d" preserveAspectRatio="xMidYMid meet">
 <title id="fA-t">Distribution of token-delta values in 10-point bins</title>
-<desc id="fA-d">Histogram of 26 runs. The minus 40 to minus 30 percent bin is the tallest with 9 runs; the minus 50 to minus 30 percent cluster holds 12 runs. One bin, plus 0 to plus 10 percent, represents the two runs that increased verbosity.</desc>
+<desc id="fA-d">Histogram of 26 runs. The minus 40 to minus 30 percent bin is the tallest with 9 runs, and 19 of the 26 runs fall in the 30 to 70 percent reduction band. One bin, plus 0 to plus 10 percent, represents the two runs that increased verbosity.</desc>
 <!--rect class="td-band" x="189.8" y="14" width="84.9" height="156.0"/-->
 <line class="td-axis" x1="38" y1="170" x2="470" y2="170"/>
 <rect class="td-reduce" x="50.1" y="153.1" width="31.4" height="16.9" rx="2"/>
@@ -171,7 +171,9 @@ Table 3.
 | -10% to 0% | 1 |
 | 0% to +10% (increase) | 2 |
 
-The -40% to -30% bin holds 9 of 26 runs; the -70% to -40% span holds 10.
+The -40% to -30% bin holds 9 of 26 runs and the -70% to -40% span holds 10 more: 19 of 26
+runs fall in the 30% to 70% reduction band, a clear majority above the fractions the
+deployment estimates assume.
 
 <figure class="td-scope td-fig">
 <svg viewBox="0 0 680 514" role="img" aria-labelledby="fB-t fB-d" preserveAspectRatio="xMidYMid meet">
