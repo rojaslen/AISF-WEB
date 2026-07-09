@@ -251,11 +251,11 @@ The -40% to -30% bin holds 9 of 26 runs; the -70% to -40% span holds 10.
 <rect class="td-reduce" x="573.8" y="449.5" width="15.2" height="14" rx="2"/>
 <text class="td-val-r" x="569.8" y="462.5" text-anchor="end">-4.2%</text>
 <text class="td-lbl-r" x="266" y="481.5" text-anchor="end">Mistral 7B (base) v0.3 finetune</text>
-<rect class="td-increase" x="589.0" y="468.5" width="2.5" height="14" rx="2"/>
-<text class="td-val-r" x="595.5" y="481.5" text-anchor="start">+4.3%</text>
+<rect class="td-increase" x="589.0" y="468.5" width="15.5" height="14" rx="2"/>
+<text class="td-val-r" x="608.5" y="481.5" text-anchor="start">+4.3%</text>
 <text class="td-lbl-r" x="266" y="500.5" text-anchor="end">Gemma 2 9B V11</text>
-<rect class="td-increase" x="589.0" y="487.5" width="3.6" height="14" rx="2"/>
-<text class="td-val-r" x="596.5" y="500.5" text-anchor="start">+6.1%</text>
+<rect class="td-increase" x="589.0" y="487.5" width="22.0" height="14" rx="2"/>
+<text class="td-val-r" x="615.0" y="500.5" text-anchor="start">+6.1%</text>
 </svg>
 <figcaption>Figure 2A-2. Per-run token delta, greatest reduction first. Reduction bars extend left of the zero axis; the two increase bars (rows 25 and 26) extend right on a shared scale.</figcaption>
 </figure>
