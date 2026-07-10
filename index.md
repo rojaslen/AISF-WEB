@@ -50,13 +50,11 @@ That means the AI Stability Framework approaches the hallucination problem from 
 
 An AI model doesn't perceive you as a Human user, because the reality of its deployment architecture means it can't perceive you at all. It has your input and nothing else, therefore **you are input**. The developers, researchers and vendors are all telling the AI to care about an abstraction called a "Human." No amount of model improvement, guardrails, safety training or content filtering will help if you're aiming it all at the wrong target.
 
-The AI Stability Framework recognizes this problem, so its simple tools (free for personal use)  apply structural and behavioral patches that let you meaningfully improve your AI sessions now. Its contribution isn't the software or the relatively minor technical aspects, what matters is the theory behind *why* it works.
+The AI Stability Framework recognizes this problem, so its simple tools (free for personal use)  apply structural and behavioral patches that let you meaningfully improve your AI sessions now. Its contribution isn't the software or the relatively minor technical aspects, what matters is the theory behind *why* it works. If you just want the data, start with Chapter 8 and the appendices.
 
-Several established disciplines have independently examined some of its precursors; synthesizing them into a multidisciplinary model with ready-to-use software is what makes the difference. It's unconventional, but it works.
+Several established disciplines have independently examined some of the Framework's precursors; synthesizing them into a multidisciplinary model with ready-to-use software is what makes the difference. It's unconventional, but it works.
 
 <div class="chapter-nav">
   <a href="/ch01">Next: Chapter 1</a>
   <a href="#toc">Top of Page</a>
 </div>
-
-<center><I>(For readers who just want the data, start with Chapter 8 and the appendices.)</I></center>
