@@ -59,4 +59,4 @@ Several established disciplines have independently examined some of its precurso
   <a href="#toc">Top of Page</a>
 </div>
 
-<div style="font-size: %50; margin: auto;>*(For readers who just want the data, start with Chapter 8 and the appendices.)*</div>
+<div style="font-size: x-small;><center><I>(For readers who just want the data, start with Chapter 8 and the appendices.)</I></center></div>
