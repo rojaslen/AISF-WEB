@@ -54,7 +54,7 @@ The AI Stability Framework recognizes this problem, so its simple tools (free fo
 
 Several established disciplines have independently examined some of its precursors; synthesizing them into a multidisciplinary model with ready-to-use software is what makes the difference. It's unconventional, but it works.
 
-*(NOTE: For readers who just want the data, start with Chapter 8 and the appendices.)*
+<div style="font-size: small; halign: center;>*(For readers who just want the data, start with Chapter 8 and the appendices.)*</div>
 
 <div class="chapter-nav">
   <a href="/ch01">Next: Chapter 1</a>
