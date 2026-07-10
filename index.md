@@ -52,7 +52,7 @@ An AI model doesn't perceive you as a Human user, because the reality of its dep
 
 The AI Stability Framework recognizes this problem, so its simple tools (free for personal use) apply structural and behavioral patches that let you meaningfully improve your AI sessions now. Its contribution isn't really the software or the relatively minor technical aspects, the important parts are the analysis and theory behind *why* it works. If you're just here for the data, start with Chapter 8 and the appendices.
 
-Several established disciplines have independently examined some of its precursors. The AI Stability Framework is a multidisciplinary synthesis with practitioner-designed application software and model development, which makes a measurable difference. It's unconventional, but it works.
+Several established disciplines have independently examined some of its precursors. The AI Stability Framework is instead a multidisciplinary synthesis with practitioner-designed application software and model development, which makes a measurable difference. It's unconventional, but it works.
 
 <div class="chapter-nav">
   <a href="/ch01">Next: Chapter 1</a>
