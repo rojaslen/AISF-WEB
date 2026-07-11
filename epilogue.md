@@ -37,7 +37,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 1. <a name="faq1"></a>**"Is any of this really what people want from AI, or is it just your opinion?"**
 
-    Anthropic's first Public Record survey, roughly 52,000 Americans with YouGov fieldwork in late 2025, was [published](https://www.anthropic.com/news/anthropic-public-record){: target="_blank" rel="noopener noreferrer" } on June 12, 2026.[^Fd] This project substantially predates that survey, and it turns out that the priorities people ranked highest for AI lined up, almost item for item, with what I was already working on.
+    Anthropic's first [Public Record survey](https://www.anthropic.com/news/anthropic-public-record){: target="_blank" rel="noopener noreferrer" }, roughly 52,000 Americans with YouGov fieldwork in late 2025, was published on June 12, 2026.[^Fd] This project substantially predates that survey, and it turns out that the priorities people ranked highest for AI lined up, almost item for item, with what I was already working on.
 
     At #2 on the list is **helping people with disabilities** (36%), and the Framework enforces accessibility in the AI's output, with the Copilot Digital Accessibility tool already finished, security-reviewed, validated by a blind screen-reader (JAWS) user in testing, and later deployed to multiple users for active production work. **Privacy** is the single thing most people want government to act on (56%), and the Framework runs entirely on your own device and sends nothing anywhere. **Child safety** is close behind (52%), which is exactly what the child-safe model work is about.
 
