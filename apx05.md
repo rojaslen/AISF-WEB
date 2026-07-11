@@ -5,7 +5,7 @@ nav_order: 6
 ---
 
 # Appendix 5: Ruxpin Retrofit
-<img style="float: right; border: 1px solid #746C44; padding: 15px; background-color: #090B21" src="./assets/images/ruxpin-retrofit-unit2-logo.jpg" aria-label="Photo of Teddy Ruxpin toy, seated wearing green coveralls and matching vest (Unit 2)." width="25%">
+<img style="float: right; border: 1px solid #746C44; padding: 15px; background-color: #090B21" src="./assets/images/ruxpin-retrofit-unit2-logo.jpg" aria-label="Photo of Teddy Ruxpin toy (Unit 2), seated wearing green coveralls and matching vest." width="25%">
 
 - **Author:** Leonard Rojas
 - **Status:** *In progress*
@@ -84,7 +84,7 @@ Option B: a sealed device with no external connection is the actual goal, and it
 
 A Pi 5 (8 GB RAM) is tracked as a fallback that would fit the 7B model directly if the 3B track does not reach gate-clearance. However, using a Pi 5 significantly increases the component cost of electronics that can meet the model's Hardware Compatibility List (HCL) requirements. At typical retail electronic-toy price points, the Pi 5 represents a commercially prohibitive cost.
 
-**The units:** Two original Teddy Ruxpin units were acquired for this build. Unit 1 is a lower-condition eBay unit, designated for development and destructive testing: opening the chassis, testing electronics, prototyping the wiring. Unit 2 is a well-preserved example in excellent condition, confirmed working, acquired for the final build.
+**The units:** Two original Teddy Ruxpin units were acquired for this build. Unit 1 is a lower-condition eBay unit, designated for development and destructive testing: opening the chassis, testing electronics, prototyping the wiring. Unit 2 (pictured at the top of this document) is a well-preserved example in excellent condition, confirmed working, acquired for the final build.
 
 Unit 2 was unboxed on 2026-06-13. Condition: excellent in every respect. All animatronic components present and firmly attached. The outfit is in very good condition (green coveralls with matching removable vest and brown vinyl boots). Unit 2 is a later production variant, estimated 1986-87; the original 1985 edition shipped with a tan smock, matching Unit 1). Chassis housing reads "Worlds of Wonder 1985 Pat.Pend." consistent with the original design carried into later production runs.
 
@@ -184,8 +184,8 @@ Planned:
 | Language model -- Option A (Mistral 7B V5, Teddy adapter) | Gate cleared 2026-04-24 (665/671, 99.1%; all 6 failures adjudicated as instrument errors). Deployed via Ollama. Pi connects over local network. |
 | Language model -- Option B (Ministral-3B V1.0T, Teddy T-series) | CLM pretrain on ECD corpus complete. SFT complete. First battery run: 387/803 (48.2%). BLOCKED. Iteration in progress. |
 | TTS voice (en_US-teddy-medium) | VITS training complete; ONNX export complete; host-system TTS integration complete (Stage 8, 2026-06-20). |
-| Unit 1 | Assessed -- likely unusable as primary; designated dev/test unit. |
-| Unit 2 | Received and unboxed 2026-06-13. Condition confirmed excellent. Electronics testing next. |
+| Unit 1 | Unusable as primary; designated dev/test unit. |
+| Unit 2 | Excellent condition; electronics testing next. |
 | Chassis teardown | Pending (Unit 1 first; Unit 2 to follow for final build). |
 | Servo control | Not yet implemented. Path determined pending board(s) assessment. |
 | Motion sync | Not yet implemented. |
