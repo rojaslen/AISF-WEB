@@ -117,7 +117,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
     The industry-average Water Usage Effectiveness (WUE) for data center cooling is about 1.8 liters per kWh[^Fb]. That works out to a usage reduction of around 48.6 billion liters of water a year. That's ~39,600 Olympic-sized swimming pools or one Caesar Creek Lake,[^Fc] which can be found on maps of southwest Ohio.
 
-    Almost all Framework-trained models featured reduced output verbosity, with a measured range of 35.4% to 71.8% fewer words per response than the untrained base models (most clustering around 40%, see Appendix 2, §7.5). Fewer words means fewer tokens, which means fewer GPU cycles, which means fewer resources are required to process those tokens.
+    Almost all Framework-trained models featured reduced output verbosity, with a measured range of 35.4% to 71.8% fewer words per response than the untrained base models (most clustering in the 30-40% band, see [Appendix 2A](/apx02a), §3). Fewer words means fewer tokens, which means fewer GPU cycles, which means fewer resources are required to process those tokens.
 
 14. <a name="faq14"></a>**"Won't the platforms just block it?"**
 
