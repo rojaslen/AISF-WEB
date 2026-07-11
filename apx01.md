@@ -19,7 +19,7 @@ nav_order: 2
 [Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" } <br>
 *Bare PowerShell executable, works with Copilot, ChatGPT, Claude, Gemini and more. CC0 Public Domain (Windows only).*
 
-**A note on trust:** Always scan any downloaded software before running it — *including the AI Stability Framework*. A few solid options, including free and low-cost:
+<!--**A note on trust:** Always scan any downloaded software before running it — *including the AI Stability Framework*. A few solid options, including free and low-cost:
 
 - [Avast](https://www.avast.com/en-us/index#pc){: target="_blank" rel="noopener noreferrer" }
 - [AVG](https://www.avg.com/en-us/homepage#pc){: target="_blank" rel="noopener noreferrer" }
@@ -28,7 +28,7 @@ nav_order: 2
 - [McAfee](https://www.mcafee.com/){: target="_blank" rel="noopener noreferrer" }
 - [Norton 360](https://us.norton.com/){: target="_blank" rel="noopener noreferrer" }
 
-*(Malwarebytes users: the AISF-CORE-PS executable may trigger a false-positive quarantine. It passes all other scans above, including enterprise CrowdStrike. Manually whitelisting it in "Settings:Scan and detections:Allow list" works around this.)*
+*(Malwarebytes users: the AISF-CORE-PS executable may trigger a false-positive quarantine. It passes all other scans above, including enterprise CrowdStrike. Manually whitelisting it in "Settings:Scan and detections:Allow list" works around this.)*-->
 
 <nav>
 <div class="chapter-nav">
