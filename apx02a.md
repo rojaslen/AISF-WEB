@@ -59,7 +59,7 @@ The framing is a direct consequence of the Framework's design goals. Compliance 
 suppresses two verbosity sources at once: decorative structure rejected on WCAG grounds
 (enumerated markup, repeated content, filler placeholders), and meta-commentary suppressed
 by the conditional-activation curriculum. The terser output is simply the model responding
-to the user without embellishment and stopping.
+to the input without embellishment and stopping.
 
 ## 2. Measurement Method
 
