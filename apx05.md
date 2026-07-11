@@ -25,7 +25,7 @@ Teddy Ruxpin was also one of the best-known toys of the 1980s, making it one of 
 
 ## The AI Toy Problem
 
-AI-enabled children's toys are already on the market. The products gaining traction sidestep the hard technical problem: they offload the AI computation to the cloud. The toys themselves just have wi-fi, a microphone and a speaker; every word a child says to them is sent to a remote server for processing.
+AI-enabled children's toys are already on the market. The products gaining traction sidestep the hard technical problem: they offload the AI computation to a cloud-hosted general purpose model. The toys themselves just have wi-fi, a microphone and a speaker; every word a child says to them is sent to a remote server for processing.
 
 That approach is functional, but it trades one set of problems for another. <a href="/#toc">The rest of this project</a> explores those problems at length.
 
