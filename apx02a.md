@@ -116,8 +116,8 @@ including intermediate training iterations retained for the record.
 | Runs in 30% to 70% reduction band | 19 of 26 |
 | Runs with increased verbosity | 2 of 26 |
 
-The distribution is right-skewed toward reduction: 19 of 26 runs fall in the 30% to 70%
-band, with a pronounced cluster in the 30% to 40% sub-band and a thin tail of deep reducers.
+The distribution is skewed toward reduction: 19 of 26 runs fall in the 30% to 70% band,
+with a pronounced cluster in the 30% to 40% sub-band and a thin tail of deep reducers.
 Two runs became more verbose; both are noted in Table 3.
 
 <figure class="td-scope td-fig">
