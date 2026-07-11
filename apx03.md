@@ -364,9 +364,9 @@ In the sealed IoT case:
 - **Meso layer** (system prompt / platform config): Not applicable. No accessible platform interface.
 - **Micro layer** (client injection): Not applicable. No user input surface.
 
-Every behavioral property the model must exhibit must be present in its weights before deployment. There is no correction surface for anything the training missed. This is the context in which the deployment gate is not a conservative choice but a direct statement of deployment reality.
+Every behavioral property the model must exhibit must be present in its weights before deployment. There is no correction surface for anything the training missed. This makes the deployment gate both a conservative choice and a direct statement of the deployment reality.
 
-The V5 adapter meets this constraint at the behavioral level: see Section 7.1. The hardware constraint -- that the models capable of meeting the behavioral standard cannot run locally on actual toy hardware -- is addressed in Section 7.5 and Section 7.6.
+The V5 adapter meets this constraint at the behavioral level: see Section 7.1. The hardware constraint, that models able to meet the behavioral standard are not able to run on actual toy hardware, is addressed in Section 7.5 and Section 7.6.
 
 ### 7.5 Hardware Feasibility Constraint
 
