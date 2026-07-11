@@ -170,7 +170,7 @@ following configuration was validated to hardware constraint (confirmed 2026-03-
 <source src="/assets/av/submarine_curve.mp4" type="video/mp4">
 GPU VRAM training profile. If your browser does not support video playback, the still image shows the same profile.
 </video>
-<figcaption>Figure 1. GPU VRAM training profile, RTX 5060 Ti (representative training run). Shared VRAM traces the "submarine" curve: a periscope spike at model load, ~2 GB plateau during training, release on exit. Spike magnitude varies by model size; the plateau and release pattern are consistent across runs.</figcaption>
+<figcaption>Figure 1. GPU VRAM training profile, RTX 5060 Ti (representative training run). Shared VRAM traces the "submarine" curve: a sail (with occasional periscope spike at model load), ~2 GB plateau during training, release on exit. Spike magnitude varies by model size; the plateau and release pattern are consistent across runs.</figcaption>
 </figure>
 
 Gradient checkpointing is model-dependent: not required for Mistral 7B (16 GB has
