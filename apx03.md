@@ -400,7 +400,7 @@ The V5 adapter is a research deployment. It demonstrates that the behavioral mod
 
 **No hardware consistency re-run.** Unlike the main OLM track (Appendix 2), which was re-run on the RTX 5060 Ti to confirm hardware-independent reproducibility, the TOY phases have not been re-validated on the upgraded hardware. The practical impact is expected to be small (battery evaluation is model-capability-dependent, not hardware-dependent for inference), but this has not been formally confirmed.
 
-**V6 not yet trained.** The V6 versioned unit was created 2026-05-01 and includes an OBRIEN TEMPORAL fix (bare Alpaca timestamp-echo gap, same root cause class as the Nemo V7 META_SUPPRESSION issue), repetition collapse examples, and a chaos curriculum (~44 examples covering made-up words, keyboard mash, fragmented inputs, emotional sounds, and fantasy-reality mixing). Training has not yet been run. V5 is the current deployed adapter.
+**V6 not yet trained.** The V6 versioned unit was created 2026-05-01 and includes an OBRIEN_TEMPORAL fix (bare Alpaca timestamp-echo gap, same root cause class as the Nemo V7 META_SUPPRESSION issue), repetition collapse examples, and a chaos curriculum (~44 examples covering made-up words, keyboard mash, fragmented inputs, emotional sounds, and fantasy-reality mixing). Training has not yet been run. V5 is the current deployed adapter.
 
 ---
 
