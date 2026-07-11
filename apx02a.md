@@ -374,7 +374,7 @@ both rest on a reduction fraction that the measured distribution supports.
 The UNU-INWEH figure is equivalent to the annual residential electricity use of 672,000 to
 756,000 people in Sub-Saharan Africa (at 130 kWh per person per year) [1]. The whitepaper
 figure of roughly 27 TWh per year is comparable to the residential electricity of every home
-in Los Angeles plus half of Chicago; the associated water saving, computed at an industry
+in Los Angeles plus half of Chicago. The associated water saving, computed at an industry
 water usage effectiveness of about 1.8 liters per kWh [4], is roughly 48.6 billion liters
 per year, comparable to about 39,600 Olympic-sized pools or one Caesar Creek Lake.
 
