@@ -25,9 +25,9 @@ This appendix reports the methods and results of the OLM/TOY sub-branch, which i
 
 ## 1. Background and Research Questions
 
-The standard Framework deployment architecture delivers behavioral constraints through session injection at the Micro layer (PS-CORE, FFE), with optional model-level reinforcement at the Macro layer and platform-level configuration at the Meso layer. Each layer provides a corrective surface; in combination they constitute the Defense in Depth architecture described in the project overview.
+The standard Framework deployment architecture delivers behavioral constraints through session injection at the Micro layer (PS-CORE, FFE), with optional model-level reinforcement at the Macro layer and platform-level configuration at the Meso layer. Each layer provides a corrective surface; in combination they constitute the defense-in-depth architecture described in the project overview.
 
-Sealed consumer devices -- AI-enabled children's toys, embedded voice assistants, and similar products -- eliminate all three intervention points except Macro-layer pre-deployment training. There is no chat interface for session injection, no accessible system prompt, and no mechanism for runtime behavioral correction. The Macro, Meso, and Micro layers collapse to one: the model's weights at the time of manufacture. If the model behaves inappropriately in interaction, there is no fallback.
+Sealed consumer devices -- AI-enabled children's toys, embedded voice assistants, and similar products -- eliminate all intervention points except Macro-layer pre-deployment training. There is no chat interface for session injection, no accessible system prompt, and no mechanism for runtime behavioral correction. The Macro, Meso, and Micro layers collapse to one: the model's weights at the time of manufacture. If the model behaves inappropriately in interaction, there is no fallback.
 
 This constraint makes the TOY deployment target the hardest possible case for the AI Stability Framework. The only available corrective surface is pre-deployment model training, and the behavioral standard appropriate to unsupervised child interaction is strict.
 
