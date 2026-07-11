@@ -58,8 +58,8 @@ here and in Chapter 11.
 The framing is a direct consequence of the Framework's design goals. Compliance training
 suppresses two verbosity sources at once: decorative structure rejected on WCAG grounds
 (enumerated markup, repeated content, filler placeholders), and meta-commentary suppressed
-by the conditional-activation curriculum. The terser output is simply the model answering
-the question without embellishment and stopping.
+by the conditional-activation curriculum. The terser output is simply the model responding
+to the user without embellishment and stopping.
 
 ## 2. Measurement Method
 
