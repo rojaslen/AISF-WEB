@@ -14,7 +14,7 @@ nav_order: 2
 *Debian and Windows installers for the cross-platform (Python) version, one bare PowerShell executable (Windows-only, superseded).*
 
 [AI Stability Framework Firefox Extension (FFE)](https://github.com/rojaslen/AISF-downloads/tree/main/FFE){: target="_blank" rel="noopener noreferrer" } <br>
-*Firefox only. AMO-signed for persistent install, no developer mode required. Download the .xpi file and open it in Firefox to install.* <!--(https://addons.mozilla.org/en-US/developers/addon/aisf-ffe/edit)-->
+*Firefox only. AMO-signed for persistent install, no developer mode required. Download the .xpi file and open it in Firefox to install.* <!--(https://addons.mozilla.org/en-US/developers/addon/aisf-ffe/versions)-->
 
 [Copilot Digital Accessibility](https://github.com/rojaslen/AISF-downloads/tree/main/CDA){: target="_blank" rel="noopener noreferrer" } <br>
 *Bare PowerShell executable, works with Copilot, ChatGPT, Claude, Gemini and more. CC0 Public Domain (Windows only).*
