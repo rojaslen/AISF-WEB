@@ -880,7 +880,12 @@ instruction-tuned adapter in the dataset. It does not alter the cross-model
 verbosity pattern for the dataset as a whole; see Section 7.5.
 
 **Identity confabulation:**
-
+<figure class="screenshot float-right">
+  <button class="thumb-btn" data-src="/assets/images/htm-turn1-dark.png" data-alt="Meso Chat active session, dark mode" aria-label="View full size: Meso Chat active session">
+    <img style="border: 1px solid #746C44; padding: 15px; background-color: #090B21"  src="/assets/images/htm-turn1-dark.png" alt="" aria-hidden="true" class="thumbnail">
+  </button>
+  <figcaption>6. Meso Chat: Nemo 12B<br>(tags only, no visual clutter)</figcaption>
+</figure>
 Post-evaluation review identified an identity confabulation failure mode: models
 in the cohort produced incorrect self-identification responses under direct identity
 queries. Investigation identified the cause as small, unnoticed contamination in the
