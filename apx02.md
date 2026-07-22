@@ -1177,7 +1177,7 @@ reduction as measured by average words per response:
 *Gemma 2 9B V11 is the only instruction-tuned adapter in the dataset with a
 positive token delta. Mechanism not fully characterized.
 
-†Nemo 12B V6 token delta suppressed by OBRIEN TEMPORAL cascade: timestamp echo
+†Nemo 12B V6 token delta suppressed by OBRIEN_TEMPORAL cascade: timestamp echo
 inflated output verbosity during inference; IFEval strict instruction-level degraded
 -7.43 pp in the same run. Included as a documented failure mode, not a clean result.
 
@@ -1195,7 +1195,7 @@ positive delta without a fully characterized mechanism.
 
 The V6 outlier (-14.3%) falls outside the clean-run range due to a known failure mode.
 It is included because it supports a distinct finding: even in a run compromised by
-OBRIEN TEMPORAL cascade, the adapter still produced fewer tokens than its unmodified
+OBRIEN_TEMPORAL cascade, the adapter still produced fewer tokens than its unmodified
 baseline. The directional reduction is not contingent on adapter performance.
 
 The verbosity reduction is consistent with the WCAG plain language and minimal
