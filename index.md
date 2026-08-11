@@ -1,5 +1,5 @@
 ---
-title: "LeonardRojas.com: AI Stability Framework - Home"
+title: "LeonardRojas.com - Home Page"
 nav_order: 1
 ---
 <nav aria-label="Site navigation" markdown="1">
