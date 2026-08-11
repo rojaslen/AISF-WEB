@@ -1,5 +1,5 @@
 ---
-title: "LeonardRojas.com - AI Stability Framework: Table of Contents & Preface"
+title: "LeonardRojas.com: AI Stability Framework - Home"
 nav_order: 1
 ---
 <nav aria-label="Site navigation" markdown="1">
