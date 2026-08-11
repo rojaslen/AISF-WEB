@@ -17,6 +17,38 @@
 
 ---
 
+# Debian/XFCE ALT+Code Reference
+
+Right Alt is the Compose key.
+
+Type this in any window: RIGHT Alt, release, then ', then e → should give é
+
+The pattern is exactly what you asked for — consistent across every accented character, and it
+works in either order, so you don't have to remember which comes first:
+
+  ┌───────────┬─────────────────────┬───────────────┐
+  │ You want  │ Press Compose, then │      Or       │
+  ├───────────┼─────────────────────┼───────────────┤
+  │ á é í ó ú │ ' then the letter   │ letter then ' │
+  ├───────────┼─────────────────────┼───────────────┤
+  │ ñ         │ ~ then n            │ n then ~      │
+  ├───────────┼─────────────────────┼───────────────┤
+  │ ü         │ " then u            │ u then "      │
+  ├───────────┼─────────────────────┼───────────────┤
+  │ à è ì ò ù │ ` then the letter   │ letter then ` │
+  ├───────────┼─────────────────────┼───────────────┤
+  │ ç         │ , then c            │ c then ,      │
+  ├───────────┼─────────────────────┼───────────────┤
+  │ ¿         │ ? then ?            │               │
+  ├───────────┼─────────────────────┼───────────────┤
+  │ ¡         │ ! then !            │               │
+  └───────────┴─────────────────────┴───────────────┘
+
+  Capitals work the same way — Compose ' E gives É. So your three artists are: Rubén = Compose ' e;
+  Colón = Compose ' o; Santamaría = Compose ' i.
+
+---
+
 # HTML Copy-Pasta Templates
 
 - GitHub Pages/Jekyll Kramdown-formatted with attributes:

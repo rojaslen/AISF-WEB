@@ -1,5 +1,5 @@
 ---
-title: "Chapter 0: ToC & Preface"
+title: "LeonardRojas.com - AI Stability Framework, Chapter 0: ToC & Preface"
 nav_order: 1
 ---
 <nav aria-label="Site navigation" markdown="1">
