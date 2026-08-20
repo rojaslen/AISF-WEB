@@ -1,20 +1,23 @@
-# Windows Charmap ALT+Code Reference
+# Unicode Charmap Reference
+# Windows ALT+Code / Linux CTRL+SHIFT+U+Code
+# https://symbl.cc/en/unicode-table/
 ---
 
- — (em dash)    Alt+0151
+ — (em dash)    Alt+0151 /
 
- ™ (trademark)  Alt+0153
+ ™ (trademark)  Alt+0153 /
 
- § (section)    Alt+0167
+ § (section)    Alt+0167 /
 
- © (copyright)  Alt+0169
+ © (copyright)  Alt+0169 /
 
- ® (registered) Alt+0174
+ ® (registered) Alt+0174 /
 
- ± (plus/minus) Alt+0177
+ ± (plus/minus) Alt+0177 /
 
- ≈ (approx.)    Alt+247
+ ≈ (approx.)    Alt+247 /
 
+ ≠ (not equal)  / 2260
 ---
 
 # Debian/XFCE ALT+Code Reference
