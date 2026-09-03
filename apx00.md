@@ -339,6 +339,8 @@ Myra Cheng et al., "Sycophantic AI decreases prosocial intentions and promotes d
 
 State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, February 3, 2026.
 
+DeStefano-Tangorra, J.A. "AI Psychosis Is Real, Rare and Rising — and Your Life as a Founder Fits Every Risk Factor." *Entrepreneur,* via *Yahoo Tech,* 2026-08-26. [https://tech.yahoo.com/ai/chatgpt/articles/ai-psychosis-real-rare-rising-000000165.html](https://tech.yahoo.com/ai/chatgpt/articles/ai-psychosis-real-rare-rising-000000165.html){: target="_blank" rel="noopener noreferrer" } — Trade-press framing of chatbot sycophancy risk for a business audience, an angle not otherwise covered here. Secondary throughout; for the underlying research see 7f, 7g and 7h.
+
 ---
 
 <nav>
