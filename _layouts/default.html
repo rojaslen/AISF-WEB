@@ -12,6 +12,7 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <p class="sr-only">Screen reader notice: if you are using JAWS with Firefox, a platform bug in Firefox 149 prevents JAWS from entering browse mode on this site. Switching to Chrome or Edge restores full screen reader compatibility.</p>
+  <p class="sr-only">External links on this site open in a new tab.</p>
   <header class="site-header">
     <a href="{{ '/' | relative_url }}" class="site-brand">
       {% if site.logo %}
@@ -43,6 +44,12 @@
   (function () {
     var dialog = document.getElementById('lightbox');
     var img    = document.getElementById('lightbox-img');
+    // The thumbnail controls open a modal dialog. Set here rather than in the
+    // markup so the cue cannot drift from the behavior, and because the dialog
+    // does not exist without this script anyway.
+    document.querySelectorAll('.thumb-btn').forEach(function (btn) {
+      btn.setAttribute('aria-haspopup', 'dialog');
+    });
     document.addEventListener('click', function (e) {
       var btn = e.target.closest('.thumb-btn');
       if (btn) { img.src = btn.dataset.src; img.alt = btn.dataset.alt; dialog.showModal(); }
