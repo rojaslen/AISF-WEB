@@ -332,14 +332,18 @@ Alikhani, M., & Atwell, E. (2025). "BASIL: Bayesian Assessment of Sycophancy in 
 
 Ortutay. B. (2023). "States sue Meta claiming its social platforms are addictive and harm children’s mental health." Associated Press, October 24, 2023. [https://apnews.com/article/instagram-facebook-children-teens-harms-lawsuit-attorney-general-1805492a38f7cee111cbb865cc786c28](https://apnews.com/article/instagram-facebook-children-teens-harms-lawsuit-attorney-general-1805492a38f7cee111cbb865cc786c28){: target="_blank" rel="noopener noreferrer" }
 
+Meta AI. (n.d.). Meta’s Muse AI caught snooping on user chats. *Yahoo! Tech*. Retrieved from https://tech.yahoo.com/ai/meta-ai/articles/meta-muse-ai-caught-snooping-145257246.html
+
 Lee, M. (2026). "New Mexico jury says Meta harms children’s mental health and safety, violating state law." Associated Press, March 25, 2026. [https://apnews.com/article/meta-facebook-new-mexico-trial-28eabd8ec5f58c1d1ecddc21bb107de7](https://apnews.com/article/meta-facebook-new-mexico-trial-28eabd8ec5f58c1d1ecddc21bb107de7){: target="_blank" rel="noopener noreferrer" }
+
+Associated Press. (n.d.). Facebook parent Meta faces privacy lawsuit in New Mexico. AP News. Retrieved from [https://apnews.com/article/facebook-meta-new-mexico-privacy-lawsuit-3f822af6a0628b983f942754d21b5ba6](https://apnews.com/article/facebook-meta-new-mexico-privacy-lawsuit-3f822af6a0628b983f942754d21b5ba6){: target="_blank" rel="noopener noreferrer" }
 
 Myra Cheng et al., "Sycophantic AI decreases prosocial intentions and promotes dependence." Science391,eaec8352(2026).DOI:10.1126/science.aec8352
 [https://www.science.org/doi/10.1126/science.aec8352](https://www.science.org/doi/10.1126/science.aec8352){: target="_blank" rel="noopener noreferrer" }
 
-State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, February 3, 2026.
-
 DeStefano-Tangorra, J.A. "AI Psychosis Is Real, Rare and Rising — and Your Life as a Founder Fits Every Risk Factor." *Entrepreneur,* via *Yahoo Tech,* 2026-08-26. [https://tech.yahoo.com/ai/chatgpt/articles/ai-psychosis-real-rare-rising-000000165.html](https://tech.yahoo.com/ai/chatgpt/articles/ai-psychosis-real-rare-rising-000000165.html){: target="_blank" rel="noopener noreferrer" } — Trade-press framing of chatbot sycophancy risk for a business audience, an angle not otherwise covered here. Secondary throughout; for the underlying research see 7f, 7g and 7h.
+
+State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, February 3, 2026.
 
 ---
 

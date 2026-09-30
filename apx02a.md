@@ -12,7 +12,7 @@ nav_order: 3.5
 
 **Date:** 2026-07-07
 
-**Status:** Current (token-delta dataset spans 26 fine-tuning runs across seven model families, through Qwen2.5-Coder-14B v2.0F, 2026-07-06)
+**Status:** Current (token-delta dataset spans 26 fine-tuning runs across seven model families, through Qwen2.5-Coder-14B v2.0F, 2026-07-06; measured per-query energy added for Gemma 2 9B and Mistral Nemo 12B, 2026-09-30)
 
 ---
 
@@ -35,8 +35,11 @@ in output length maps to a proportional reduction in per-query energy and its as
 water and carbon footprints. The measured central tendency exceeds the reduction
 fractions assumed in both the Framework's own pre-testing session efficiency thesis
 (Chapter 11) and a subsequent 2026 United Nations University report [1], which serves as
-independent corroboration. Limitations, including the word-count proxy and the Jevons
-rebound effect, are stated in Section 7.
+independent corroboration. Section 4a measures per-query energy directly on two model pairs,
+finding the energy reduction within 0.4 percentage points of the token reduction in both cases,
+and attributes 94.7% of the reduction to the trained weights rather than to runtime instruction.
+Limitations, including the word-count proxy, the Jevons rebound effect, and the
+consumer-hardware basis of the direct measurements, are stated in Section 7.
 
 ---
 
@@ -356,7 +359,152 @@ two orders of magnitude. Table 4 gives representative per-query electricity figu
 A typical response at 0.420 Wh is roughly nine times a short-text answer, and a long
 response at 1.900 Wh is roughly four times a typical one. Reducing output length moves a
 query down this ladder. A verbosity reduction of the magnitude in Table 1 therefore reduces
-per-query energy by a comparable fraction, before any change in query volume.
+per-query energy by a comparable fraction, before any change in query volume. Section 4a
+measures that directly on two of this project's own models and finds the two fractions within
+0.4 percentage points of each other.
+
+## 4a. Measured Per-Query Energy
+
+Section 4 establishes the per-query energy ladder from published figures. This section measures
+it directly, on this project's own models, on the hardware the project runs on.
+
+### Measurement regime
+
+**Host.** Intel Core i9-9900K, 64 GB RAM, two NVIDIA GeForce RTX 5060 Ti 16 GB cards, Debian
+GNU/Linux 13. Every run below was single-card, on GPU 0; the second card sat at 4 W throughout.
+
+**GPU instrumentation.** NVIDIA-SMI version 595.91.07, NVML version 595.91, driver version
+595.91.07, CUDA version 13.2. Power sampled at 1 Hz per card, integrated trapezoidally per card
+and summed. The cards do not share sample timestamps, so merging the two streams on timestamp
+match understates the total; each card is integrated separately.
+
+**Whole-system instrumentation.** Ketotek KTEM01 Electricity Usage Monitor (120v US), in series
+with the host and carrying no other load. Cumulative kilowatt-hours read at two points 30
+minutes apart to derive the idle floor in the same state that produced the reading.
+
+**Prompt set.** The 541 prompts of Google Research IFEval [3], identical for both sides of every
+pair and in the same order.
+
+**Serving.** Ollama, both sides of every pair at Q4_K_M, the quantization the Framework model is
+deployed at. A quantization mismatch would measure the quantizer rather than the training.
+
+**Decoding.** Temperature 0.7, seed 42, generation capped at 2048 tokens as a runaway guard
+rather than a pinned length. No response reached the cap.
+
+**Reported quantity.** Marginal energy, idle floor removed. The floor is drawn whether or not a
+query is served, so it is not part of the cost of a query. It measured 68.00 W over 30 minutes.
+
+**Counterpart.** Each Framework model is measured against its own training parent, not against a
+convenient stand-in.
+
+### Results
+
+**Table 4a. Measured energy per query, marginal, whole-system.**
+
+| Model | Training parent | Tokens out, base | Tokens out, Framework | Token delta | Wh, base | Wh, Framework | Energy delta |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Gemma 2 9B | gemma-2-9b-it | 250.7 | 146.0 | -41.8% | 0.2335 | 0.1368 | -41.4% |
+| Mistral Nemo 12B | Mistral-Nemo-Instruct-2407 | 333.6 | 160.6 | -51.9% | 0.3636 | 0.1763 | -51.5% |
+
+<figure class="td-scope td-fig">
+<svg viewBox="0 0 520 130" role="img" aria-labelledby="fE-t fE-d" preserveAspectRatio="xMidYMid meet">
+<title id="fE-t">Token reduction against energy reduction</title>
+<desc id="fE-d">Paired horizontal bars showing percent reduction against each model's stock base. Gemma 2 9B: tokens 41.8 percent, energy 41.4 percent. Mistral Nemo 12B: tokens 51.9 percent, energy 51.5 percent. Each pair differs by 0.4 percentage points.</desc>
+<text class="td-lbl" x="150" y="29.5" text-anchor="end">Gemma 2 9B, tokens</text>
+<rect class="td-reduce" x="158" y="17.0" width="209.0" height="17" rx="2"/>
+<text class="td-val" x="371.0" y="29.5" text-anchor="start">-41.8%</text>
+<text class="td-lbl" x="150" y="54.5" text-anchor="end">Gemma 2 9B, energy</text>
+<rect class="td-reduce" x="158" y="42.0" width="207.0" height="17" rx="2"/>
+<text class="td-val" x="369.0" y="54.5" text-anchor="start">-41.4%</text>
+<text class="td-lbl" x="150" y="79.5" text-anchor="end">Mistral Nemo 12B, tokens</text>
+<rect class="td-reduce" x="158" y="67.0" width="259.5" height="17" rx="2"/>
+<text class="td-val" x="421.5" y="79.5" text-anchor="start">-51.9%</text>
+<text class="td-lbl" x="150" y="104.5" text-anchor="end">Mistral Nemo 12B, energy</text>
+<rect class="td-reduce" x="158" y="92.0" width="257.5" height="17" rx="2"/>
+<text class="td-val" x="419.5" y="104.5" text-anchor="start">-51.5%</text>
+</svg>
+<figcaption>Figure 2A-4. Token reduction against energy reduction, each measured against the model's own training parent. The pairs differ by 0.4 percentage points.</figcaption>
+</figure>
+
+### Energy tracks tokens because per-token cost does not move
+
+GPU energy per 1000 output tokens came out 0.8300 for the Gemma 2 base and 0.8355 for its
+Framework model, 0.9716 and 0.9803 for the Nemo pair. Flat to about 1% within a model across
+every condition tested, and higher for the larger model.
+
+Per-token cost is a property of the model and its quantization. Framework training changes how
+many tokens are emitted, not what each one costs, so the two fractions have to track. That is
+the mechanism behind the 0.4-point agreement in Table 4a.
+
+### Where the reduction comes from
+
+The deployed Gemma 2 Framework model carries a Four Laws block in its Modelfile, prepended to
+every request. Running the same weights with that block cleared separates trained behavior from
+runtime instruction.
+
+**Table 4b. Source of the reduction, Gemma 2 9B. GPU energy.**
+
+| Condition | Mean output tokens | Wh per query |
+|---|---:|---:|
+| Stock gemma-2-9b-it | 250.7 | 0.2081 |
+| Framework weights, system block cleared | 151.5 | 0.1248 |
+| Framework weights, as deployed | 146.0 | 0.1217 |
+
+Of the 104.7-token reduction, 99.2 comes from the weights and 5.5 from the runtime block. The
+cut is 94.7% trained.
+
+The runtime block costs about 180 input tokens per request and returns 5.5 fewer output tokens,
+a net 2.5% energy saving, so it is close to neutral by itself. The Framework model processes
+more total tokens per request than the base does, 384.3 against 306.0, and still uses 41.4% less
+energy: prefill reads the input in one parallel pass while decoding emits tokens one at a time.
+
+### Reproducibility
+
+The as-deployed condition was measured twice, eight hours apart, at 146.0 mean output tokens
+both times and 65.97 against 65.82 Wh. A difference of 0.23%. The effects reported here exceed
+run-to-run variation by roughly two orders of magnitude.
+
+### Cost
+
+At AEP Ohio residential pricing of $0.11 per kilowatt-hour, per million queries:
+
+**Table 4c. Electricity cost per million queries, AEP Ohio at $0.11/kWh.**
+
+| Model | Base | Framework | Saved |
+|---|---:|---:|---:|
+| Gemma 2 9B | $25.69 | $15.05 | $10.64 |
+| Mistral Nemo 12B | $40.00 | $19.39 | $20.61 |
+
+### Relationship to Table 1
+
+Table 1 measures words under greedy decoding through transformers at 4-bit NF4. This section
+measures tokenizer tokens under sampled decoding through Ollama at Q4_K_M. Both differences push
+the same way: sampling runs longer than greedy, and tokens outnumber words by roughly 1.3.
+
+Published against measured: Gemma 2 at -37.9% against -41.8%, Nemo at -48.6% against -51.9%.
+Both measured values sit three to four points more negative, in the same direction, on two
+models. The two methods corroborate each other. They are not the same measurement, and the
+offset is the size the regime difference predicts.
+
+### Consumer hardware
+
+These figures were measured on a desktop workstation with a single consumer GPU, serving one
+request at a time. Data-center inference batches many requests across accelerator-class
+hardware, so the absolute watt-hours in Table 4a describe this machine and do not transfer to
+that setting.
+
+The reductions do transfer. They are ratios between two models measured under identical
+conditions on the same hardware in the same hour, and what they establish is that the energy
+saving equals the token saving, with the mechanism identified.
+
+The measured values also sit inside the published ladder in Table 4, between short text
+generation at 0.047 Wh and a typical LLM response at 0.420 Wh, which is where a 9B to 12B model
+answering in 150 to 330 tokens belongs.
+
+### Pending
+
+A Mistral 7B pair will be added to Table 4a. Mistral is the most-used base family in this
+project, so its figures belong in this set.
 
 ## 5. Deployment-Scale Resource Estimates
 
@@ -409,7 +557,7 @@ beside the measured results.
 <rect class="td-reduce" x="292" y="119.0" width="247.7" height="18" rx="2"/>
 <text class="td-val" x="543.7" y="132.0" text-anchor="start">71.8%</text>
 </svg>
-<figcaption>Figure 2A-4. Assumed versus measured token reduction. Dashed bars are assumed values; solid bars are measured results.</figcaption>
+<figcaption>Figure 2A-5. Assumed versus measured token reduction. Dashed bars are assumed values; solid bars are measured results.</figcaption>
 </figure>
 
 **Table 6. Preliminary versus measured token reduction.**
@@ -456,6 +604,20 @@ than depending on user initiative, is consistent with that pairing.
 batching, data-center efficiency, and grid mix. The same watt-hour carries different carbon
 and water footprints by location. The scaling estimates in Section 5 are illustrative at the
 global-average level and are not site-specific predictions.
+
+**Consumer-hardware measurement.** The energy figures in Section 4a were measured on a single
+consumer GPU serving one request at a time. Data-center inference batches across
+accelerator-class hardware, so absolute watt-hours differ there. The reductions are ratios taken
+under identical conditions and are what carries across.
+
+**Decoding regime.** Section 4a samples at the deployed temperature and counts tokenizer tokens.
+Table 1 is greedy and counts words. The two corroborate rather than replicate, and the offset
+between them is consistent across both models measured.
+
+**Model coverage.** Two pairs measured so far, at 9B and 12B, both against Instruct parents. A
+Mistral 7B pair is pending. A model trained from a raw base has no clean counterpart on an
+instruction-following prompt set, since an untuned parent produces most of the apparent saving
+by itself.
 
 ## 8. Conclusions
 
