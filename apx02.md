@@ -1210,7 +1210,8 @@ this study's scope.
 
 The deployment-scale energy and water analysis, the consolidated 26-run token-delta
 distribution, and independent third-party corroboration (UNU-INWEH, 2026) are developed in
-[Appendix 2A: Output Verbosity Reduction and Resource Efficiency](/apx02a).
+[Appendix 2A: Output Verbosity Reduction and Resource Efficiency](/apx02a), which also measures
+per-query energy directly on three model pairs.
 
 ### 7.6 Chat Format System Prompt Dependency
 
