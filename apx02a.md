@@ -12,7 +12,7 @@ nav_order: 3.5
 
 **Date:** 2026-07-07
 
-**Status:** Current (token-delta dataset spans 26 fine-tuning runs across seven model families, through Qwen2.5-Coder-14B v2.0F, 2026-07-06; measured per-query energy added for Gemma 2 9B and Mistral Nemo 12B, 2026-09-30, and Mistral 7B, 2026-10-01)
+**Status:** Current (token-delta dataset spans 26 fine-tuning runs across seven model families, through Qwen2.5-Coder-14B v2.0F, 2026-07-06; measured per-query energy added for Gemma 2 9B and Mistral Nemo 12B, 2026-09-30, and Mistral 7B, 2026-10-01; per-token energy check added for Mistral Small 24B, 2026-10-03)
 
 ---
 
@@ -454,6 +454,14 @@ mean GPU draw did, 170.3 W against 182.7 W. The base side always runs first, so 
 runs on a card that has been under load for nearly an hour. Thermal drift would produce this
 pattern, though it was not isolated here. The direction is against the Framework model, so its
 -40.2% understates rather than overstates the saving its token count implies.
+
+The Mistral Small 24B pair, measured on a different path, agrees. Its exam run through AISE covered
+324 neutral items with no Framework content, both cards, transformers at 4-bit NF4, GPU energy
+only. It came out 2.849 Wh marginal per 1000 output tokens for the base and 2.745 for the Framework
+model, within the idle-floor variation of the run. The two sides produced nearly the same output,
+25,161 tokens against 25,552, so this pair confirms the per-token cost and says nothing about the
+reduction: its training parent is a raw base model, and the exam items fix the length of most
+answers.
 
 ### Where the reduction comes from
 
