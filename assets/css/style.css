@@ -32,6 +32,7 @@
   --color-btn-bg:       #180C78;   /* Button Blue */
   --color-btn-hover:    #1E0F95;   /* Faded Blue */
   --color-btn-text:     #FFFFFF;
+  --sizer-unselected:   0.55;      /* lowest passing as rendered: fill 3.04:1, letters 4.95:1 */
   --color-link:         #180C78;                 /* Button Blue -- active button */
   --color-link-visited: #6B6B6B;                /* grey -- visited, 4.63:1 on Bone */
   --color-link-hover:   #1E0F95;                 /* Faded Blue -- button hover */
@@ -53,6 +54,7 @@
     --color-alert-border: #746C44;
     --color-btn-bg:       #746C44;   /* Antique Gold: 3.67:1 on Deep Indigo */
     --color-btn-hover:    #7F764B;   /* keeps white text at 4.5:1 */
+    --sizer-unselected:   0.87;      /* fill 3.03:1, letters 4.82:1 */
     --color-link:         #E7D789;                  /* Pale Gold -- same vibrancy as btn on dark bg */
     --color-link-visited: rgba(231, 215, 137, 0.75); /* 75% -- inactive; 50% failed 4.5:1 */
     --color-link-hover:   #FFF8E0;                  /* near-white gold -- brighter hover */
@@ -172,16 +174,22 @@ html.font-l { font-size: 112.5%; }
   background-color: var(--color-btn-bg);
   border: 1px solid var(--color-btn-bg);
   color: var(--color-btn-text);
-  opacity: 0.45;
+  opacity: var(--sizer-unselected);
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: calc(0.72rem - 1pt);   /* unselected 1pt smaller: a visual cue */
   font-weight: 600;
   min-width: 1.3rem;
   min-height: 1.3rem;
   border-radius: 4px;
   padding: 0.15rem 0.3rem;
   line-height: 1;
+}
+
+/* Selected: full size, underlined. */
+.font-btn[aria-pressed="true"] {
+  font-size: 0.72rem;
+  text-decoration: underline;
 }
 
 .font-btn[aria-pressed="true"],
