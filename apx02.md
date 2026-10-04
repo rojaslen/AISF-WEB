@@ -307,28 +307,6 @@ content requirement).
 
 The T3 conflict is a measurement problem; RLHF makes it a training problem. Human raters reliably prefer the decorative emphasis and sycophantic verbosity that T3 rewards, so reward modeling actively selects for the same outputs WCAG prohibits, pushing against accessibility rather than merely failing to account for it.
 
-<style>
-.td-scope{--td-reduce:#283198;--td-increase:#A07840;--td-neutral:#8A8172;--td-band:rgba(96,88,56,0.14);--td-axis:#6B5E50;}
-@media (prefers-color-scheme: dark){.td-scope{--td-reduce:#6A8FC5;--td-increase:#E7D789;--td-neutral:#8C8C97;--td-band:rgba(231,215,137,0.12);--td-axis:#C0BDB9;}}
-.td-fig{max-width:720px;margin:1.25rem 0;}
-.td-fig svg{width:100%;height:auto;display:block;}
-.td-fig figcaption{font-size:0.85rem;color:var(--color-muted,#6B5E50);margin-top:0.35rem;}
-.td-reduce{fill:var(--td-reduce);}
-.td-increase{fill:var(--td-increase);}
-.td-t1{fill:var(--td-reduce);}
-.td-t2{fill:var(--td-neutral);}
-.td-t3{fill:var(--td-increase);}
-.td-slice{stroke:var(--color-bg,#FFF8F0);stroke-width:2;}
-.td-dot-base{fill:var(--td-neutral);}
-.td-dot-aisf{fill:var(--td-reduce);}
-.td-conn{stroke:var(--td-axis);stroke-width:2;}
-.td-axis{stroke:var(--td-axis);stroke-width:1;}
-.td-gate{stroke:var(--td-axis);stroke-width:1.5;stroke-dasharray:4 3;}
-.td-lbl-r{fill:currentColor;font:0.8rem system-ui,-apple-system,sans-serif;}
-.td-val-r{fill:currentColor;font:0.72rem system-ui,-apple-system,sans-serif;}
-.td-key{fill:currentColor;font:0.72rem system-ui,-apple-system,sans-serif;}
-</style>
-
 <figure class="td-scope td-fig">
 <svg viewBox="0 0 580 320" role="img" aria-labelledby="fd-t fd-d" preserveAspectRatio="xMidYMid meet">
 <title id="fd-t">IFEval instruction categories by WCAG tier</title>
@@ -882,7 +860,7 @@ verbosity pattern for the dataset as a whole; see Section 7.5.
 **Identity confabulation:**
 <figure class="screenshot float-right">
   <button class="thumb-btn" data-src="/assets/images/htm-turn1-dark.png" data-alt="Meso Chat active session, dark mode" aria-label="View full size: Meso Chat active session">
-    <img style="border: 1px solid #746C44; padding: 15px; background-color: #090B21"  src="/assets/images/htm-turn1-dark.png" alt="" aria-hidden="true" class="thumbnail">
+    <img src="/assets/images/htm-turn1-dark.png" alt="" aria-hidden="true" class="thumbnail">
   </button>
   <figcaption>Nemo 12B identity<br>confabulation shown.</figcaption>
 </figure>

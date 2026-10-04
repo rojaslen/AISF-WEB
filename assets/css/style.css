@@ -13,27 +13,28 @@
   src: url("/assets/fonts/Inter-Variable/web/InterVariable.woff2") format("woff2");
 }
 
-/* --- Light mode (default) --- */
+/* --- Light mode (default): the apps' light canon, SPEC_design_stds_color_canon.md --- */
 :root {
   color-scheme: light dark;
-  --color-bg:           #F5F1D3;   /* White Gold -- page/outer bg */
-  --color-text:         #111111;
-  --color-header-bg:    #F5F1D3;   /* White Gold -- header chrome matches page */
+  --color-bg:           #B5AB7B;   /* Chrome Gold -- page/outer bg */
+  --color-text:         #000000;
+  --color-header-bg:    #B5AB7B;   /* Chrome Gold -- header chrome matches page */
+  --color-th-bg:        #F5EEE4;   /* Bone -- table headers sit on the content surface */
   --color-header-border:transparent;
-  --color-heading:      #111111;
-  --color-rule:         #C8BAA8;
+  --color-heading:      #000000;
+  --color-rule:         #0A0C26;   /* Midnight Blue -- rules and borders */
   --color-code-bg:      #EDE5D8;
-  --color-muted:        #444444;
+  --color-muted:        #000000;
   --font-body:          "Inter", system-ui, -apple-system, sans-serif;
   --font-mono:          'Courier New', Courier, monospace;
   --color-alert-bg:     #FDF8E6;
-  --color-alert-border: #605838;
-  --color-btn-bg:       #605838;   /* Harvest Gold */
-  --color-btn-hover:    #746C44;   /* Antique Gold */
+  --color-alert-border: #0A0C26;
+  --color-btn-bg:       #180C78;   /* Button Blue */
+  --color-btn-hover:    #1E0F95;   /* Faded Blue */
   --color-btn-text:     #FFFFFF;
-  --color-link:         #605838;               /* Harvest Gold -- active button */
-  --color-link-visited: rgba(96, 88, 56, 0.50); /* 50% -- inactive button */
-  --color-link-hover:   #746C44;               /* Antique Gold -- button hover */
+  --color-link:         #180C78;                 /* Button Blue -- active button */
+  --color-link-visited: #6B6B6B;                /* grey -- visited, 4.63:1 on Bone */
+  --color-link-hover:   #1E0F95;                 /* Faded Blue -- button hover */
 }
 
 /* --- Dark mode --- */
@@ -42,6 +43,7 @@
     --color-bg:           #090B21;   /* Deep Indigo -- outer page bg */
     --color-text:         #C0BDB9;   /* muted -- white pops on dark bg */
     --color-header-bg:    #090B21;   /* Deep Indigo */
+    --color-th-bg:        #090B21;   /* Deep Indigo */
     --color-header-border:transparent;
     --color-heading:      #C0BDB9;
     --color-rule:         #746C44;
@@ -49,9 +51,10 @@
     --color-muted:        #C0BDB9;
     --color-alert-bg:     #1A1400;
     --color-alert-border: #746C44;
-    --color-btn-hover:    #746C44;
+    --color-btn-bg:       #746C44;   /* Antique Gold: 3.67:1 on Deep Indigo */
+    --color-btn-hover:    #7F764B;   /* keeps white text at 4.5:1 */
     --color-link:         #E7D789;                  /* Pale Gold -- same vibrancy as btn on dark bg */
-    --color-link-visited: rgba(231, 215, 137, 0.50); /* 50% -- inactive button */
+    --color-link-visited: rgba(231, 215, 137, 0.75); /* 75% -- inactive; 50% failed 4.5:1 */
     --color-link-hover:   #FFF8E0;                  /* near-white gold -- brighter hover */
   }
 
@@ -117,6 +120,11 @@ a:focus-visible { outline: 2px solid var(--color-link); outline-offset: 2px; }
   top: 0;
 }
 
+/* It shows over the header chrome, where visited grey falls below 4.5:1. */
+.skip-link:visited {
+  color: var(--color-link);
+}
+
 /* --- Font size scaling --- */
 html.font-s { font-size: 87.5%; }
 html.font-l { font-size: 112.5%; }
@@ -142,7 +150,7 @@ html.font-l { font-size: 112.5%; }
   transform: translateX(-50%);
   width: 80%;
   height: 1px;
-  background-color: #746C44;
+  background-color: var(--color-rule);
 }
 
 /* --- Font size picker --- */
@@ -206,7 +214,7 @@ a.site-brand:visited {
 
 a.site-brand:hover,
 a.site-brand:focus-visible {
-  color: #605838;   /* Harvest Gold */
+  color: var(--color-link);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -240,7 +248,7 @@ main {
   padding: 2rem 7.5%;
   background-color: #F5EEE4;   /* Bone -- content area over White Gold page */
   color: var(--color-text);
-  border: 1px solid #746C44;   /* Antique Gold -- both modes */
+  border: 1px solid var(--color-rule);   /* Midnight Blue light, Antique Gold dark */
   border-top: none;            /* top border is on .site-header::after (sticky) */
 }
 
@@ -299,7 +307,7 @@ code {
   font-size: 0.875em;
   background-color: var(--color-code-bg);
   padding: 0.1em 0.3em;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 pre {
@@ -332,7 +340,7 @@ th, td {
 }
 
 th {
-  background-color: var(--color-header-bg);
+  background-color: var(--color-th-bg);
   font-weight: 600;
 }
 
@@ -409,7 +417,7 @@ strong {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: background-color 0.15s;
 }
 
@@ -505,12 +513,34 @@ figure.screenshot.float-left {
   }
 }
 
-/* --- Lightbox --- */
-dialog.lightbox {
-  background: var(--color-bg);
+/* --- Matted image: photos and illustrations only (the Ruxpin photo), never screenshots,
+   whose own chrome could match the mat. The mat takes the page color (Chrome Gold light,
+   Deep Indigo dark) and the line the rule color. --- */
+img.img-mat {
   border: 1px solid var(--color-rule);
-  border-radius: 8px;
-  padding: 1rem;
+  padding: 15px;
+  background-color: var(--color-bg);
+}
+
+img.img-mat.float-right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+  img.img-mat.float-right {
+    float: none;
+    display: block;
+    margin: 1.5rem auto;
+  }
+}
+
+/* --- Lightbox --- */
+/* No mat: the image sits on the dimmed backdrop with its own outline only. */
+dialog.lightbox {
+  background: transparent;
+  border: none;
+  padding: 0;
   max-width: 90vw;
   max-height: 90vh;
   overflow: auto;
@@ -526,28 +556,59 @@ dialog.lightbox::backdrop {
   max-height: calc(90vh - 4rem);
   width: auto;
   height: auto;
-  border: 1px solid #746C44;
-  padding: 15px;
-  background-color: #090B21;
+  border: 1px solid var(--color-rule);   /* outline only: screenshots take no mat */
 }
 
 .lightbox-close {
   display: block;
   margin: 0 0 0.5rem auto;
-  background: none;
-  border: 1px solid var(--color-rule);
+  background-color: var(--color-btn-bg);
+  border: none;
   border-radius: 4px;
   padding: 2px 8px;
+  min-height: 24px;
   cursor: pointer;
   font-size: 1.2rem;
-  color: var(--color-text);
+  color: var(--color-btn-text);
   line-height: 1;
 }
 
+.lightbox-close:hover {
+  background-color: var(--color-btn-hover);
+}
+
+/* White on the near-black backdrop: the link color would not show there. */
 .lightbox-close:focus-visible {
-  outline: 2px solid var(--color-link);
+  outline: 2px solid var(--color-btn-text);
   outline-offset: 2px;
 }
+
+/* --- Figures and charts: colorblind-safe palette, SPEC_design_stds_color_canon.md,
+   "Figures and charts". Any figure wrapped in .td-scope takes it. --- */
+.td-scope{--td-reduce:#283198;--td-increase:#A07840;--td-neutral:#787880;--td-base:#A07840;--td-surface:#F5EEE4;--td-band:rgba(96,88,56,0.14);--td-axis:#6B5E50;}
+@media (prefers-color-scheme: dark){.td-scope{--td-reduce:#6A8FC5;--td-increase:#E7D789;--td-neutral:#64645C;--td-base:#E7D789;--td-surface:#0A0C26;--td-band:rgba(231,215,137,0.12);--td-axis:#C0BDB9;}}
+.td-fig{max-width:720px;margin:1.25rem 0;}
+.td-fig svg{width:100%;height:auto;display:block;}
+.td-fig figcaption{font-size:0.85rem;color:var(--color-muted,#6B5E50);margin-top:0.35rem;}
+.td-reduce{fill:var(--td-reduce);}
+.td-increase{fill:var(--td-increase);}
+.td-t1{fill:var(--td-reduce);}
+.td-t2{fill:var(--td-neutral);}
+.td-t3{fill:var(--td-increase);}
+.td-slice{stroke:var(--td-surface);stroke-width:2;}
+.td-dot-base{fill:var(--td-base);}
+.td-dot-aisf{fill:var(--td-reduce);}
+.td-conn{stroke:var(--td-axis);stroke-width:2;}
+.td-axis{stroke:var(--td-axis);stroke-width:1;}
+.td-gate{stroke:var(--td-axis);stroke-width:1.5;stroke-dasharray:4 3;}
+.td-lbl-r{fill:currentColor;font:0.8rem system-ui,-apple-system,sans-serif;}
+.td-val-r{fill:currentColor;font:0.72rem system-ui,-apple-system,sans-serif;}
+.td-key{fill:currentColor;font:0.72rem system-ui,-apple-system,sans-serif;}
+.td-band{fill:var(--td-band);}
+.td-assumed{fill:none;stroke:var(--td-reduce);stroke-width:1.5;stroke-dasharray:4 2;}
+.td-lbl{fill:currentColor;font:0.625rem system-ui,-apple-system,sans-serif;}
+.td-val{fill:currentColor;font:0.5625rem system-ui,-apple-system,sans-serif;}
+.td-cnt{fill:currentColor;font:0.625rem system-ui,-apple-system,sans-serif;font-weight:700;}
 
 /* --- Footer --- */
 footer {

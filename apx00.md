@@ -1,3 +1,9 @@
+---
+title: "Appendix 0: Endnotes"
+parent: "Appendices"
+nav_order: 1
+---
+
 # Endnotes
 
 All footnotes cited within body text are compiled here for comprehensive reference. Following this list are links to additional material of interest that was not directly referenced in any chapter.

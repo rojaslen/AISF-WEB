@@ -91,24 +91,6 @@ Twenty-six runs were measured across seven model families: Mistral 7B base and I
 Llama 3.1 8B, Gemma 2 9B, Qwen3-8B, Qwen2.5-Coder-14B, Mistral Nemo 12B, and Ministral 3 3B,
 including intermediate training iterations retained for the record.
 
-<style>
-.td-scope{--td-reduce:#283198;--td-increase:#A07840;--td-band:rgba(96,88,56,0.14);--td-axis:#6B5E50;}
-@media (prefers-color-scheme: dark){.td-scope{--td-reduce:#6A8FC5;--td-increase:#E7D789;--td-band:rgba(231,215,137,0.12);--td-axis:#C0BDB9;}}
-.td-fig{max-width:720px;margin:1.25rem 0;}
-.td-fig svg{width:100%;height:auto;display:block;}
-.td-fig figcaption{font-size:0.85rem;color:var(--color-muted,#6B5E50);margin-top:0.35rem;}
-.td-reduce{fill:var(--td-reduce);}
-.td-increase{fill:var(--td-increase);}
-.td-band{fill:var(--td-band);}
-.td-assumed{fill:none;stroke:var(--td-reduce);stroke-width:1.5;stroke-dasharray:4 2;}
-.td-axis{stroke:var(--td-axis);stroke-width:1;}
-.td-lbl{fill:currentColor;font:0.625rem system-ui,-apple-system,sans-serif;}
-.td-val{fill:currentColor;font:0.5625rem system-ui,-apple-system,sans-serif;}
-.td-cnt{fill:currentColor;font:0.625rem system-ui,-apple-system,sans-serif;font-weight:700;}
-.td-lbl-r{fill:currentColor;font:0.8rem system-ui,-apple-system,sans-serif;}
-.td-val-r{fill:currentColor;font:0.72rem system-ui,-apple-system,sans-serif;}
-</style>
-
 **Table 1. Summary statistics (26 runs).**
 
 | Statistic | Value |
