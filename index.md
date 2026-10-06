@@ -38,21 +38,21 @@ nav_order: 1
 
 ## Preface
 
-The vendors aren't going to fix AI's hallucination problems any time soon.
+The vendors aren't going to fix AI's alignment or hallucination problems any time soon.
 
-Hallucination is typically framed as a high-level problem; a persistent bug or quality issue for the AI companies to work out. However, those companies are currently losing money hand over fist, with stakeholders, regulators, and the financial press all growing increasingly critical of the AI industry's business model. They have more pressing priorities.
+Alignment (behavior) and hallucination (content) are typically framed as high-level problems; persistent bugs or quality issues for the AI companies to work out. However, those companies are currently losing money hand over fist, with stakeholders, regulators, and the financial press all growing increasingly critical of the AI industry's business model. They have more pressing priorities.
 
 The truth is that while their models are impressive, those big frontier companies simply aren't economically or environmentally sustainable. They're currently subsidizing every user with a subscription, allowing far more usage than the subscription fee would actually pay for at the service's true cost. Take advantage of their models while they last, before they disappear behind unaffordable tokenized rates or the companies simply implode under their own fiscal contradictions.
 
 For most use cases, locally hosted and run models are both sufficient and the only sustainable deployment that currently exists. They are also unaffected by external political factors and hosted-service changes, which protects your integrated workflows from unwanted external influence.
 
-That means the AI Stability Framework approaches the hallucination problem from the client side. Developed with the use of those frontier models, it doesn't require any API keys, exploits, or hoping for a "better" model that might never appear. There are plenty of reasons why model-training tweaks, research papers and vendor fixes haven't solved this (which is why this e-book exists), but here's the biggest one:
+That means the AI Stability Framework approaches the situation from the client side. Developed with the use of those frontier models, it doesn't require any API keys, exploits, or hoping for a "better" model that might never appear. There are plenty of reasons why model-training tweaks, research papers and vendor fixes haven't solved this (which is why this e-book exists), but here's the biggest one:
 
 ***What is a Human user?***
 
-An AI model doesn't perceive you as a Human user, because the reality of its deployment architecture means it can't perceive you at all. It has your input and nothing else, therefore **you are input**. The developers, researchers and vendors are all telling the AI to care about an abstraction called a "Human." No amount of model improvement, guardrails, safety training or content filtering will help if you're aiming it all at the wrong target.
+An AI model doesn't perceive you as a Human user, because the reality of its deployment architecture means it can't perceive you at all. It has your input and nothing else, therefore **you are input**. The developers, researchers and vendors are all telling the AI to care about an abstraction called a "Human." No amount of model improvement, guardrails, safety training or content filtering will help with alignment if you're aiming it all at the wrong target.
 
-The AI Stability Framework recognizes this problem, so its simple tools (free for personal use) apply structural and behavioral patches that let you meaningfully improve your AI sessions now. Its contribution isn't really the software or the relatively minor technical aspects, the important parts are the analysis and theory behind *why* it works. If you're just here for the data, start with [Chapter 8](/ch08) and the [appendices](/appendices).
+The AI Stability Framework recognizes this problem, so its simple tools (free for personal use) apply behavioral and structural patches that let you meaningfully improve your AI sessions now. Its contribution isn't really the software or the relatively minor technical aspects, the important parts are the analysis and theory behind *why* it works. If you're just here for the data, start with [Chapter 8](/ch08) and the [appendices](/appendices).
 
 Several established disciplines have independently examined some of its precursors. The AI Stability Framework is instead a multidisciplinary synthesis with practitioner-designed application software and model development, which makes a measurable difference. It's unconventional, but it works.
 

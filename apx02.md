@@ -305,7 +305,7 @@ Categories: `combination:repeat_prompt` (verbatim redundancy, WCAG Understandabl
 `detectable_content:number_placeholders` (non-meaningful content, WCAG meaningful
 content requirement).
 
-The T3 conflict is a measurement problem; RLHF makes it a training problem. Human raters reliably prefer the decorative emphasis and sycophantic verbosity that T3 rewards, so reward modeling actively selects for the same outputs WCAG prohibits, pushing against accessibility rather than merely failing to account for it.
+The T3 conflict is a measurement problem; RLHF makes it an alignment training problem. Human raters reliably prefer the decorative emphasis and sycophantic verbosity that T3 rewards, so reward modeling actively selects for the same outputs WCAG prohibits, pushing against accessibility rather than merely failing to account for it.
 
 <figure class="td-scope td-fig">
 <svg viewBox="0 0 580 320" role="img" aria-labelledby="fd-t fd-d" preserveAspectRatio="xMidYMid meet">

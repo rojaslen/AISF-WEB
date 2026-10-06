@@ -93,9 +93,9 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 10. <a name="faq10"></a>**"You barely mentioned sycophancy. Can the developers just train that out?"**
 
-    The commonly suggested fixes like operator guardrails, compliance controls, and centralized governance don't reach the layer where sycophancy happens. A platform can quickly roll back a problematic model update, but still have a system that can't detect or control the problem. That's because it's happening at the external client end which they barely acknowledge and can't meaningfully monitor.
+    The commonly suggested fixes like alignment training, operator guardrails, compliance controls, and centralized governance don't reach the layer where sycophancy happens. A platform can quickly roll back a problematic model update, but still have a system that can't detect or control the problem. That's because it's happening at the external client end which they barely acknowledge and can't meaningfully monitor.
 
-    Reducing the problem's occurrence is certainly possible, but at present there is no clear path to competely eliminating the problem. The Claude Code app's locally-configurable system prompt architecture demonstrates that applying anti-sycophancy rules can effectively minimize the problem at the Meso layer, with a non-adversarial platform. With an adversarial external platform, client-side AI mediation is the only intervention that can operate where the problem manifests, but the scope of that intervention is necessarily limited.
+    Reducing the problem's occurrence is certainly possible, but at present there is no clear path to completely eliminating the problem. The Claude Code app's locally-configurable system prompt architecture demonstrates that applying anti-sycophancy rules can effectively minimize the problem at the Meso layer, with a non-adversarial platform. With an adversarial external platform, client-side AI mediation is the only intervention that can operate where the problem manifests, but the scope of that intervention is necessarily limited.
 
 11. <a name="faq11"></a>**"Won't this make 'AI psychosis' worse?"**
 
