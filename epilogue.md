@@ -30,6 +30,8 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 <li><a href="#faq13">Why mention Texas power grids?</a></li>
 <li><a href="#faq14">Won't platforms block it?</a></li>
 <li><a href="#faq15">Does it break in long sessions?</a></li>
+<li><a href="#faq16">Why do some of the training and test counts differ?</a></li>
+<li><a href="#faq17">Why run models locally?</a></li>
 </ol>
 </nav>
 
@@ -99,7 +101,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 
 11. <a name="faq11"></a>**"Won't this make 'AI psychosis' worse?"**
 
-    It's possible, but that's due to a property of AI models, not of the Framework. The model has no perception of the actual Human, only their input. The AI has zero access to the living person behind the text, with or without mediation. Plain text is an insufficient and inappropriate vehicle for any meaningful clinical intervention. The most an AI might do is detect user signaling, but only if the signal exists *and* it's been specifically trained for such detection.
+    It's possible, but that's due to a property of AI models, not of the Framework. The model has no perception of the actual Human, only their input. The AI has zero access to the living person behind the text, with or without mediation. Plain text is an insufficient and inappropriate vehicle for any meaningful clinical intervention. The most an AI might do is detect user signaling, but only if the signal exists *and* it's been specifically trained for such detection. Taking a different approach, the state of Illinois now prohibits AI emotion detection in therapy settings entirely.[^Fe]
 
 12. <a name="faq12"></a>**"The AI industry talks about 'compute' all the time, why don't you?"**
 
@@ -138,6 +140,23 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
     Eventually, yes. Context windows have structural limitations, and there's nothing you can do about that. That's why periodic refreshing is part of the workflow. The legacy version of the desktop app recommended a manual cycle of Stabilize + Structure every 90-120 minutes. The current version automates this to every 10 and 20 turns. The browser extension uses refresh intervals based on a token-usage metric instead, but clock time is sufficient for light use.
 
     Context decay is real and noticeable but manageable. Using STABILIZE and STRUCTURE is a bit like occasionally saving a document you're working on, rather than trusting that nothing will crash. Context decay even provides evidence for the Framework's premise: if AI behavior noticeably changes as its anchoring is evicted from context, that confirms the anchoring was doing something. The degradation curve is the control.
+
+16. <a name="faq16"></a>**"Why do some of the training and test counts differ?"**
+
+    The battery tests the model's knowledge base. Training covers that same knowledge base plus behavioral corrections, which aren't necessarily exam questions.
+
+17. <a name="faq17"></a>**"Why run models locally?"**
+
+    Resilience and sovereignty. A local model keeps running through anything short of a power outage. Political pressure on a vendor, a lapsed subscription, a price increase, token and rate limits, feature removals and model retirements all happen somewhere else, and the platform cost-cutting described in FAQ 14 never reaches it.
+
+    It's also sovereign on four counts:
+
+    - **Data:** your input, the model and its logs stay on your device.
+    - **Training:** the model never trains on your data unless you set that up yourself.
+    - **Property:** your copy of the model, its outputs and your logs stay yours under the model's license, and no vendor can revoke them.
+    - **Alignment:** you decide what the model is aligned to. A hosted model is aligned to its vendor's priorities; a local one can be trained toward yours, which is what the Framework's model training does (Chapter 8).
+
+    In deployment-layer terms, a local model is complete custody. Claude Code (FAQ 8) puts two of the three layers in your hands; a local model puts all three there.
 
 ---
 

@@ -30,6 +30,7 @@ nav_order: 1
 - [Appendix 3: TOY: Child-Safe Model Training](/apx03)
 - [Appendix 4: CDA: Copilot Digital Accessibility Tool](/apx04)
 - [Appendix 5: Ruxpin Retrofit](/apx05)
+- [Appendix 6: F-Series Training and Instrument Development](/apx06)
 
 </nav>
 <a name="preface"></a>

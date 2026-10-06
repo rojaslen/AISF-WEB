@@ -9,7 +9,7 @@ nav_order: 6
 
 - **Author:** Leonard Rojas
 - **Status:** *In progress*
-- **Last Updated:** 2026-06-27
+- **Last Updated:** 2026-10-06
 
 ---
 
@@ -268,6 +268,10 @@ The `en_US-teddy-medium` voice model was developed with audio from the 1985-87 *
 
 The voice model is not suitable as general-purpose software and is not published, distributed or used for any purpose beyond this demonstration. The synthesized output does not approach commercial quality, and is intended solely as an approximation of a vintage device's original audio output profile for demonstration purposes.
 
+A model trained on recordings of a performance can simulate its sound and style in new speech, but it is not the performer. In *Lehrman v. Lovo, Inc.* (S.D.N.Y. 2025), the court held that copyright covers the recordings but not the voice itself, and allowed the voice actors' right-of-publicity claims to proceed.[^7]
+
+Right of publicity is a separate question from copyright, and the same limits answer it: the voice model is not used for advertising or trade, is not offered or distributed to anyone, and serves only this demonstration unit.
+
 ***I make no claim upon either the Teddy Ruxpin intellectual property or Mr. Baron's voice.***
 
 Should Mr. Baron wish to take possession and ownership of the voice model at any time, it shall be relinquished to him freely and in full upon request (including the procedural and programmatic documentation necessary for its usage and reproduction). This offer is limited to Mr. Baron himself (the voice's unique organic source, thus its only legitimate owner[^6]), and explicitly does ***not*** extend to the Jim Henson Company or any other entity.
@@ -294,3 +298,5 @@ I make no attempt to lay blame for the existence of this project branch at the f
 [^5]: [Internet Archive -- Search Result](https://archive.org/search?tab=all&query=Ruxpin&sort=-date&and%5B%5D=mediatype%3A%22audio%22&and%5B%5D=creator%3A%22worlds+of+wonder%22){: target="_blank" rel="noopener noreferrer" }
 
 [^6]: The celebrity examples of both Val Kilmer (actor) and Taylor Swift (musician) are instructive here. The first is a deceased artist's estate exploiting his likeness for a commercial production in which he definitionally could not otherwise participate or benefit from. The second is a living artist personally and intentionally protecting her own likeness and interests. While static recordings of particular performances may be a separate matter, *the voice itself* is a unique, non-severable, morphological property of Mr. Baron's physical person; it simply cannot be taken from him or owned by someone else. As of this writing Mr. Baron is still among the living, so Ms. Swift's case is the proper frame of reference.
+
+[^7]: *Lehrman v. Lovo, Inc.* (S.D.N.Y. July 10, 2025), opinion and order, Oetken, J. [https://www.nysd.uscourts.gov/sites/default/files/2025-07/Lovo%20v%20Lehrman.pdf](https://www.nysd.uscourts.gov/sites/default/files/2025-07/Lovo%20v%20Lehrman.pdf){: target="_blank" rel="noopener noreferrer" }

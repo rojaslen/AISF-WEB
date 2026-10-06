@@ -108,6 +108,12 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***7e:*** Olsen, J.S. et al. (2026). "Potentially Harmful Consequences of Artificial Intelligence (AI) Chatbot Use Among Patients With Mental Illness." *Acta Psychiatrica Scandinavica,* 153(2). [https://onlinelibrary.wiley.com/doi/10.1111/acps.70068](https://onlinelibrary.wiley.com/doi/10.1111/acps.70068){: target="_blank" rel="noopener noreferrer" }
 
+***7f:*** OpenAI. "Strengthening ChatGPT's Responses in Sensitive Conversations." October 2025. [https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/](https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/){: target="_blank" rel="noopener noreferrer" }
+
+***7g:*** Pierre, J.M., Gaeta, B., Raghavan, G., & Sarma, K.V. (2025). "'You're Not Crazy': A Case of New-onset AI-associated Psychosis." *Innovations in Clinical Neuroscience,* 22(10-12), 11-13. PMID: 41635747. [https://pmc.ncbi.nlm.nih.gov/articles/PMC12863933/](https://pmc.ncbi.nlm.nih.gov/articles/PMC12863933/){: target="_blank" rel="noopener noreferrer" }
+
+***7h:*** Wellness and Oversight for Psychological Resources Act, Illinois HB 1806 (signed August 1, 2025). Illinois Department of Financial and Professional Regulation. [https://idfpr.illinois.gov/news/2025/gov-pritzker-signs-state-leg-prohibiting-ai-therapy-in-il.html](https://idfpr.illinois.gov/news/2025/gov-pritzker-signs-state-leg-prohibiting-ai-therapy-in-il.html){: target="_blank" rel="noopener noreferrer" }
+
 ## Chapter 8
 
 (NONE)
@@ -347,7 +353,9 @@ Associated Press. (n.d.). Facebook parent Meta faces privacy lawsuit in New Mexi
 Myra Cheng et al., "Sycophantic AI decreases prosocial intentions and promotes dependence." Science391,eaec8352(2026).DOI:10.1126/science.aec8352
 [https://www.science.org/doi/10.1126/science.aec8352](https://www.science.org/doi/10.1126/science.aec8352){: target="_blank" rel="noopener noreferrer" }
 
-DeStefano-Tangorra, J.A. "AI Psychosis Is Real, Rare and Rising — and Your Life as a Founder Fits Every Risk Factor." *Entrepreneur,* via *Yahoo Tech,* 2026-08-26. [https://tech.yahoo.com/ai/chatgpt/articles/ai-psychosis-real-rare-rising-000000165.html](https://tech.yahoo.com/ai/chatgpt/articles/ai-psychosis-real-rare-rising-000000165.html){: target="_blank" rel="noopener noreferrer" } — Trade-press framing of chatbot sycophancy risk for a business audience, an angle not otherwise covered here. Secondary throughout; for the underlying research see 7f, 7g and 7h.
+DeStefano-Tangorra, J.A. "AI Psychosis Is Real, Rare and Rising — and Your Life as a Founder Fits Every Risk Factor." *Entrepreneur,* via *Yahoo Tech,* 2026-08-26. [https://tech.yahoo.com/ai/chatgpt/articles/ai-psychosis-real-rare-rising-000000165.html](https://tech.yahoo.com/ai/chatgpt/articles/ai-psychosis-real-rare-rising-000000165.html){: target="_blank" rel="noopener noreferrer" } — Trade-press framing of chatbot sycophancy risk for a business audience, an angle not otherwise covered here.
+
+Divon, T., & Pentzold, C. (2025). "Artificially Alive: An Exploration of AI Resurrections and Spectral Labor Modes in a Postmortal Society." *New Media & Society.* [https://doi.org/10.1177/14614448251397518](https://doi.org/10.1177/14614448251397518){: target="_blank" rel="noopener noreferrer" }
 
 State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, February 3, 2026.
 
