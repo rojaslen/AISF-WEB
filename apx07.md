@@ -12,7 +12,7 @@ nav_order: 8
 
 **Date:** 2026-10-07
 
-**Status:** Draft, complete for review.
+**Status:** Current (results through 2026-10-03).
 
 ---
 
