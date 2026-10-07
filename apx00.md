@@ -357,6 +357,8 @@ DeStefano-Tangorra, J.A. "AI Psychosis Is Real, Rare and Rising — and Your Lif
 
 Divon, T., & Pentzold, C. (2025). "Artificially Alive: An Exploration of AI Resurrections and Spectral Labor Modes in a Postmortal Society." *New Media & Society.* [https://doi.org/10.1177/14614448251397518](https://doi.org/10.1177/14614448251397518){: target="_blank" rel="noopener noreferrer" }
 
+Datacurve. "DeepSWE: Measuring frontier coding agents on original, long-horizon engineering tasks." Leaderboard, retrieved 2026-10-07.  [https://deepswe.datacurve.ai/](https://deepswe.datacurve.ai/){: target="_blank" rel="noopener noreferrer" }
+
 State of Ohio (OOD). "App security review." ServiceNow Incident INC11132214, February 3, 2026.
 
 ---

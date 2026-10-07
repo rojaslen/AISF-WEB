@@ -32,6 +32,7 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
 <li><a href="#faq15">Does it break in long sessions?</a></li>
 <li><a href="#faq16">Why do some of the training and test counts differ?</a></li>
 <li><a href="#faq17">Why run models locally?</a></li>
+<li><a href="#faq18">Where does hallucination come from?</a></li>
 </ol>
 </nav>
 
@@ -157,6 +158,12 @@ main ol > li::marker { font-size: 1.4rem; font-weight: 700; }
     - **Alignment:** you decide what the model is aligned to. A hosted model is aligned to its vendor's priorities; a local one can be trained toward yours, which is what the Framework's model training does (Chapter 8).
 
     In deployment-layer terms, a local model is complete custody. Claude Code (FAQ 8) puts two of the three layers in your hands; a local model puts all three there.
+
+18. <a name="faq18"></a>**"Where does hallucination actually come from?"**
+
+    From what the model learned on. Daniel Dennett argued that the mind doing the reasoning is itself a product of evolution, shaped by the same selection as everything it produces. Richard Dawkins carried selection over to ideas: beliefs, norms and claims spread the way genes do, and the ones that are emotionally resonant and cheap to process outcompete the ones that are accurate but costly.
+
+    Web-scale training text is the product of that competition. A model trained on it learns what spreads, and plausibility is the trait that text was selected for; accuracy came along only where it helped something spread. That's Frankfurt's indifference built into the training data itself, the cause side of the coin in Chapter 4. It also leaves a language model at two removes from intelligence: it learns from language, a byproduct of intelligence (Chapter 11), and from text *about* the processes that shaped minds, never from the processes themselves.
 
 ---
 
