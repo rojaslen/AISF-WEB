@@ -177,8 +177,8 @@ html.font-l { font-size: 112.5%; }
   opacity: var(--sizer-unselected);
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: calc(0.72rem - 1pt);   /* unselected 1pt smaller: a visual cue */
-  font-weight: 600;
+  font-size: calc(0.72rem - 2pt);   /* unselected 2pt smaller, normal weight: visual cues */
+  font-weight: normal;
   min-width: 1.3rem;
   min-height: 1.3rem;
   border-radius: 4px;
@@ -189,6 +189,7 @@ html.font-l { font-size: 112.5%; }
 /* Selected: full size, underlined. */
 .font-btn[aria-pressed="true"] {
   font-size: 0.72rem;
+  font-weight: bold;
   text-decoration: underline;
 }
 
