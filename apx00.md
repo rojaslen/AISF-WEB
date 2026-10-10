@@ -52,8 +52,8 @@ All footnotes cited within body text are compiled here for comprehensive referen
 ***2o:*** Common Sense Media. "AI in the Toy Box: How Parents View AI-Enabled Toys for Young Children." Survey of 1,004 parents, December 2025. [https://www.commonsensemedia.org/research/ai-in-the-toy-box-how-parents-view-ai-enabled-toys-for-young-children](https://www.commonsensemedia.org/research/ai-in-the-toy-box-how-parents-view-ai-enabled-toys-for-young-children){: target="_blank" rel="noopener noreferrer" }
 
 ***2p:*** NIST IR 8425 (2022): [https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity](https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program/consumer-iot-cybersecurity){: target="_blank" rel="noopener noreferrer" } — UK NCSC Code of Practice for Consumer IoT Security (2018): [https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security](https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security){: target="_blank" rel="noopener noreferrer" } — OWASP IoT Top 10: [https://owasp.org/www-project-internet-of-things/](https://owasp.org/www-project-internet-of-things/){: target="_blank" rel="noopener noreferrer" }
-— UK NCSC Code of Practice for Consumer IoT Security (2018):  [https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security](https://www.gov.uk/government/publications/code-of-practice-for-consumer-iot-security/code-of-practice-for-consumer-iot-security){: target="_blank" rel="noopener noreferrer" }
-— OWASP IoT Top 10 (Weak/Hardcoded Passwords, #1): [https://owasp.org/www-project-internet-of-things/](https://owasp.org/www-project-internet-of-things/){: target="_blank" rel="noopener noreferrer" }
+
+***2q:*** "2026 Usage Policy update." Anthropic News, 2026-10-08. [https://www.anthropic.com/news/2026-usage-policy-update](https://www.anthropic.com/news/2026-usage-policy-update){: target="_blank" rel="noopener noreferrer" }
 
 ## Chapter 3
 
@@ -124,7 +124,7 @@ All footnotes cited within body text are compiled here for comprehensive referen
 — "Large Language Models Hallucination: A Comprehensive Survey." arXiv:2510.06265 (2025). [https://arxiv.org/abs/2510.06265](https://arxiv.org/abs/2510.06265){: target="_blank" rel="noopener noreferrer" }
 
 ***9b:*** OpenAI (August 26, 2025). "Helping people when they need it most." [https://openai.com/index/helping-people-when-they-need-it-most/](https://openai.com/index/helping-people-when-they-need-it-most/)
-— "Our safeguards work more reliably in common, short exchanges. We have learned over time that these safeguards can sometimes be less reliable in long interactions: as the back-and-forth grows, parts of the model’s safety training may degrade."
+— "Our safeguards work more reliably in common, short exchanges. We have learned over time that these safeguards can sometimes be less reliable in long interactions: as the back-and-forth grows, parts of the model's safety training may degrade."
 
 ## Chapter 10
 
@@ -342,11 +342,11 @@ Shapira, N., Benade, G., & Procaccia, A. (2026). "How RLHF Amplifies Sycophancy.
 
 Alikhani, M., & Atwell, E. (2025). "BASIL: Bayesian Assessment of Sycophancy in LLMs." Northeastern University. arXiv:2508.16846. [https://arxiv.org/abs/2508.16846](https://arxiv.org/abs/2508.16846){: target="_blank" rel="noopener noreferrer" } — News coverage: [https://news.northeastern.edu/2025/11/24/ai-sycophancy-research/](https://news.northeastern.edu/2025/11/24/ai-sycophancy-research/){: target="_blank" rel="noopener noreferrer" }
 
-Ortutay. B. (2023). "States sue Meta claiming its social platforms are addictive and harm children’s mental health." Associated Press, October 24, 2023. [https://apnews.com/article/instagram-facebook-children-teens-harms-lawsuit-attorney-general-1805492a38f7cee111cbb865cc786c28](https://apnews.com/article/instagram-facebook-children-teens-harms-lawsuit-attorney-general-1805492a38f7cee111cbb865cc786c28){: target="_blank" rel="noopener noreferrer" }
+Ortutay. B. (2023). "States sue Meta claiming its social platforms are addictive and harm children's mental health." Associated Press, October 24, 2023. [https://apnews.com/article/instagram-facebook-children-teens-harms-lawsuit-attorney-general-1805492a38f7cee111cbb865cc786c28](https://apnews.com/article/instagram-facebook-children-teens-harms-lawsuit-attorney-general-1805492a38f7cee111cbb865cc786c28){: target="_blank" rel="noopener noreferrer" }
 
-Meta AI. (n.d.). Meta’s Muse AI caught snooping on user chats. *Yahoo! Tech*. Retrieved from https://tech.yahoo.com/ai/meta-ai/articles/meta-muse-ai-caught-snooping-145257246.html
+Meta AI. (n.d.). Meta's Muse AI caught snooping on user chats. *Yahoo! Tech*. Retrieved from https://tech.yahoo.com/ai/meta-ai/articles/meta-muse-ai-caught-snooping-145257246.html
 
-Lee, M. (2026). "New Mexico jury says Meta harms children’s mental health and safety, violating state law." Associated Press, March 25, 2026. [https://apnews.com/article/meta-facebook-new-mexico-trial-28eabd8ec5f58c1d1ecddc21bb107de7](https://apnews.com/article/meta-facebook-new-mexico-trial-28eabd8ec5f58c1d1ecddc21bb107de7){: target="_blank" rel="noopener noreferrer" }
+Lee, M. (2026). "New Mexico jury says Meta harms children's mental health and safety, violating state law." Associated Press, March 25, 2026. [https://apnews.com/article/meta-facebook-new-mexico-trial-28eabd8ec5f58c1d1ecddc21bb107de7](https://apnews.com/article/meta-facebook-new-mexico-trial-28eabd8ec5f58c1d1ecddc21bb107de7){: target="_blank" rel="noopener noreferrer" }
 
 Associated Press. (n.d.). Facebook parent Meta faces privacy lawsuit in New Mexico. AP News. Retrieved from [https://apnews.com/article/facebook-meta-new-mexico-privacy-lawsuit-3f822af6a0628b983f942754d21b5ba6](https://apnews.com/article/facebook-meta-new-mexico-privacy-lawsuit-3f822af6a0628b983f942754d21b5ba6){: target="_blank" rel="noopener noreferrer" }
 
