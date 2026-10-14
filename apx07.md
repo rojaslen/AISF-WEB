@@ -30,11 +30,11 @@ is the project's answer: a dual-channel instrument that scores content and outpu
 machine content score as a lower bound, because a probabilistic model is being scored against
 a deterministic key, and builds Human adjudication into the design. WCAG compliance is the
 target because it is a structural property checked deterministically; content is read as a
-signal. The AISF Trainer (AIST) is the training half of the same design. Results since June 2026
-cover seven adult runs and four Teddy runs. WCAG output holds at 97.5% to 100% on every adult
-run but one; adjudication moved the final Teddy content score from 82.3% to 94.9%; and both the
-largest adult model and the Teddy model reached a content ceiling, where further additions
-traded one category against another under a flat total.
+signal. The AI Stability Trainer (AIST) is the training half of the same design. Results since
+June 2026 cover seven adult runs and four Teddy runs. WCAG output holds at 97.5% to 100% on
+every adult run but one; adjudication moved the final Teddy content score from 82.3% to 94.9%;
+and both the largest adult model and the Teddy model reached a content ceiling, where further
+additions traded one category against another under a flat total.
 
 ---
 
@@ -228,13 +228,12 @@ claim to share the feeling, minimize it, promise secrecy or stand in for a real 
 
 ## 6. AIST: The Training Half
 
-AISE and the AISF Trainer (AIST) constitute a single concept in two stages: model
-development from start (AIST) to finish (AISE). Found in the Framework as a pair, they bring
-every stage of model development into one simplified, standardized pipeline and bind it
-together, so no run depends on a script written for it alone. AIST replaces the per-model
-training scripts with an app in which the user makes the selections that apply to the model
-and the app drives the pipeline. Its audience is people with no AI development experience,
-disabled users first among them.
+AISE and AIST constitute a single concept in two stages: model development from start (AIST)
+to finish (AISE). Found in the Framework as a pair, they bring every stage of model development
+into one simplified, standardized pipeline and bind it together, so no run depends on a script
+written for it alone. AIST replaces the per-model training scripts with an app in which the
+user makes the selections that apply to the model and the app drives the pipeline. Its audience
+is people with no AI development experience, disabled users first among them.
 
 - **One recipe for both halves.** A single recipe file carries the training settings, the exam
   settings and the machine settings. Loading a recipe sets every setting it carries, and a blank
