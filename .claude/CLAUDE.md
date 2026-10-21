@@ -124,7 +124,6 @@ The following are Source of Truth and must NEVER be modified:
 
 ### WORKING ENVIRONMENT & REQUIRED READING (P3)
 
-- Read `/mnt/debbie/Tech/APP/_DEV/AISF/AISF-WEB/.claude/change.log` at session start -- two most recent dated entries; current status SOT.
 - Read `/mnt/debbie/Tech/APP/_DEV/AISF/AI Stability Framework/change.log` at session start -- two most recent dated entries; current status SOT.
 - Read `/mnt/debbie/Tech/APP/_DEV/AISF/AI Stability Framework/TODO.md` at session start -- action items SOT.
 - Read `/mnt/debbie/Tech/APP/_DEV/AISF/.lib/specs.claudignore` at session start.
@@ -215,7 +214,7 @@ The following are Source of Truth and must NEVER be modified:
   - `change.log` (root project log)
     - Changelogs are the ONLY files in which histories are to be recorded.
   - `[branch]/change.log` (when branch-specific work is included)
-  - `/mnt/debbie/Tech/APP/_DEV/AISF-WEB/.claude/change.log` (when AISF-WEB repo work is included)
+  - AISF-WEB repo work: root `change.log`, entries led `AISF-WEB:`
   - `[branch]/README.*` (when branch-specific work is included)
   - `MAIN_PROJECT_README.md` (not a changelog)
   - `TODO.md` (list of *pending-only* action items - not a changelog or status report)
