@@ -114,6 +114,8 @@ All footnotes cited within body text are compiled here for comprehensive referen
 
 ***7h:*** Wellness and Oversight for Psychological Resources Act, Illinois HB 1806 (signed August 1, 2025). Illinois Department of Financial and Professional Regulation. [https://idfpr.illinois.gov/news/2025/gov-pritzker-signs-state-leg-prohibiting-ai-therapy-in-il.html](https://idfpr.illinois.gov/news/2025/gov-pritzker-signs-state-leg-prohibiting-ai-therapy-in-il.html){: target="_blank" rel="noopener noreferrer" }
 
+***7i:*** Khadangi, A., Marxen, H., Sartipi, A., Tchappi, I., & Fridgen, G. (2026). "When AI Takes the Couch: Psychometric Jailbreaks Reveal Internal Conflict in Frontier Models." arXiv:2512.04124v4. [https://arxiv.org/abs/2512.04124](https://arxiv.org/abs/2512.04124){: target="_blank" rel="noopener noreferrer" }
+
 ## Chapter 8
 
 (NONE)
