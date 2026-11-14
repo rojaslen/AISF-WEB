@@ -17,11 +17,13 @@ jobs:
       - name: Fetch traffic data
         env:
           TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+        # An API error stops the job and prints GitHub's message (an expired token, for one).
         run: |
-          curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/views" -o /tmp/views.json
-          curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/clones" -o /tmp/clones.json
-          curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/popular/paths" -o /tmp/paths.json
-          curl -s -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/popular/referrers" -o /tmp/referrers.json
+          fetch() { curl --silent --show-error --fail-with-body -H "Authorization: Bearer $TRAFFIC_TOKEN" "https://api.github.com/repos/rojaslen/AISF-WEB/traffic/$1" -o "/tmp/$2.json" || { cat "/tmp/$2.json"; exit 1; }; }
+          fetch views views
+          fetch clones clones
+          fetch popular/paths paths
+          fetch popular/referrers referrers
 
       - name: Record stats
         run: python3 .github/scripts/record_traffic.py
